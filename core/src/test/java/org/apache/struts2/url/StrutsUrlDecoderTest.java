@@ -18,7 +18,6 @@
  */
 package org.apache.struts2.url;
 
-import org.apache.struts2.StrutsConstants;
 import org.junit.Before;
 import org.junit.Test;
 

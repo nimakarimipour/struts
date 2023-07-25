@@ -18,10 +18,10 @@
  */
 package org.apache.struts2.views.freemarker;
 
+import com.opensymphony.xwork2.ActionSupport;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import com.opensymphony.xwork2.ActionSupport;
 
 
 /**

@@ -18,12 +18,13 @@
  */
 package org.apache.struts2.dispatcher;
 
-import java.io.IOException;
 import org.apache.struts2.StrutsInternalTestCase;
 
-import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.List;
+
 import static org.easymock.EasyMock.createMock;
 import static org.easymock.EasyMock.expect;
 import static org.easymock.EasyMock.expectLastCall;

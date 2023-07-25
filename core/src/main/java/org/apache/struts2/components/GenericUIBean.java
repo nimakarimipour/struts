@@ -18,13 +18,12 @@
  */
 package org.apache.struts2.components;
 
+import com.opensymphony.xwork2.util.ValueStack;
+import org.apache.struts2.util.ContainUtil;
+import org.apache.struts2.views.annotations.StrutsTag;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.apache.struts2.views.annotations.StrutsTag;
-import org.apache.struts2.util.ContainUtil;
-
-import com.opensymphony.xwork2.util.ValueStack;
 
 /**
  * <!-- START SNIPPET: javadoc -->

@@ -18,10 +18,10 @@
  */
 package com.opensymphony.xwork2.util.finder;
 
-import java.net.URL;
-import java.util.Enumeration;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
+import java.util.Enumeration;
 
 /**
  * Classes implementing this interface can find resources and load classes, usually delegating to a class

@@ -21,18 +21,17 @@ package org.apache.struts2.components;
 import com.opensymphony.xwork2.inject.Inject;
 import com.opensymphony.xwork2.util.ValueStack;
 import com.opensymphony.xwork2.util.reflection.ReflectionProvider;
-
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import java.io.Writer;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.ArrayList;
-import java.util.List;
-
+import org.apache.struts2.StrutsException;
 import org.apache.struts2.dispatcher.PrepareOperations;
 import org.apache.struts2.views.annotations.StrutsTag;
-import org.apache.struts2.StrutsException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.Writer;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 @StrutsTag(name="debug", tldTagClass="org.apache.struts2.views.jsp.ui.DebugTag",
         description="Prints debugging information (Only if 'struts.devMode' is enabled)")

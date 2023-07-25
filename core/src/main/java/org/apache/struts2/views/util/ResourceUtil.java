@@ -19,6 +19,7 @@
 package org.apache.struts2.views.util;
 
 import org.apache.struts2.RequestUtils;
+
 import javax.servlet.http.HttpServletRequest;
 
 public class ResourceUtil {

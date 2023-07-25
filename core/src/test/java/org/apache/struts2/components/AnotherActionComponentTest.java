@@ -18,9 +18,9 @@
  */
 package org.apache.struts2.components;
 
-import org.apache.struts2.views.jsp.AbstractTagTest;
-import org.apache.struts2.TestConfigurationProvider;
 import org.apache.struts2.StrutsException;
+import org.apache.struts2.TestConfigurationProvider;
+import org.apache.struts2.views.jsp.AbstractTagTest;
 
 public class AnotherActionComponentTest extends AbstractTagTest  {
 

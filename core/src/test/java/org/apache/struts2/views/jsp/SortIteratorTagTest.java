@@ -18,17 +18,15 @@
  */
 package org.apache.struts2.views.jsp;
 
+import com.opensymphony.xwork2.Action;
+import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.views.jsp.iterator.SortIteratorTag;
+
+import javax.servlet.jsp.JspException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
-
-import javax.servlet.jsp.JspException;
-
-import org.apache.struts2.views.jsp.iterator.SortIteratorTag;
-
-import com.opensymphony.xwork2.Action;
-import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * Test case to test SortIteratorTag.

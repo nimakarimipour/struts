@@ -21,10 +21,8 @@ package com.opensymphony.xwork2.validator;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.TextProviderFactory;
 import com.opensymphony.xwork2.XWorkTestCase;
-import com.opensymphony.xwork2.util.ValueStack;
 import com.opensymphony.xwork2.validator.validators.RegexFieldValidator;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 

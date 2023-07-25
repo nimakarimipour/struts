@@ -18,10 +18,10 @@
  */
 package org.apache.struts2.views.jsp.ui;
 
-import java.util.LinkedHashMap;
-
 import org.apache.struts2.TestAction;
 import org.apache.struts2.views.jsp.AbstractUITagTest;
+
+import java.util.LinkedHashMap;
 
 public class OptGroupTest extends AbstractUITagTest {
 

@@ -18,12 +18,11 @@
  */
 package org.apache.struts2.dispatcher;
 
-import javax.servlet.http.HttpServletRequest;
-
+import com.opensymphony.xwork2.config.ConfigurationManager;
 import org.apache.struts2.dispatcher.mapper.ActionMapper;
 import org.apache.struts2.dispatcher.mapper.ActionMapping;
 
-import com.opensymphony.xwork2.config.ConfigurationManager;
+import javax.servlet.http.HttpServletRequest;
 
 
 /**

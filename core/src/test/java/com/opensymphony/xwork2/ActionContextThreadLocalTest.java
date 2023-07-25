@@ -20,8 +20,6 @@ package com.opensymphony.xwork2;
 
 import junit.framework.TestCase;
 
-import java.util.HashMap;
-
 
 /**
  * Simple Test ActionContext's ThreadLocal

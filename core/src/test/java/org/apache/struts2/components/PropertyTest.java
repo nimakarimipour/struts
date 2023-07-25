@@ -18,15 +18,14 @@
  */
 package org.apache.struts2.components;
 
-import java.io.StringWriter;
-import java.util.Map;
-
-import org.apache.struts2.StrutsInternalTestCase;
-import org.apache.struts2.util.StrutsTypeConverter;
-
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.conversion.impl.XWorkConverter;
 import com.opensymphony.xwork2.util.ValueStack;
+import org.apache.struts2.StrutsInternalTestCase;
+import org.apache.struts2.util.StrutsTypeConverter;
+
+import java.io.StringWriter;
+import java.util.Map;
 
 /**
  *

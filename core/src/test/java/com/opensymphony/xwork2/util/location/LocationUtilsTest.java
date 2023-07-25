@@ -18,15 +18,14 @@
  */
 package com.opensymphony.xwork2.util.location;
 
-import java.util.List;
-import java.util.Optional;
-
+import junit.framework.TestCase;
 import org.apache.struts2.config.StrutsJavaConfiguration;
 import org.apache.struts2.config.entities.BeanConfig;
 import org.apache.struts2.config.entities.BeanSelectionConfig;
 import org.apache.struts2.config.entities.ConstantConfig;
 
-import junit.framework.TestCase;
+import java.util.List;
+import java.util.Optional;
 
 public class LocationUtilsTest extends TestCase {
     

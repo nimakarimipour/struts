@@ -18,17 +18,16 @@
  */
 package org.apache.struts2.views.freemarker.tags;
 
-import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.inject.Container;
 import com.opensymphony.xwork2.util.ValueStack;
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
 import freemarker.ext.beans.BeansWrapper;
 import freemarker.template.SimpleNumber;
 import freemarker.template.SimpleSequence;
 import freemarker.template.TemplateModel;
 import freemarker.template.TemplateModelException;
 import freemarker.template.TemplateTransformModel;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.struts2.components.Component;
 
 import javax.servlet.http.HttpServletRequest;

@@ -29,7 +29,6 @@ import org.apache.struts2.dispatcher.StaticContentLoader;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
 
-
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;

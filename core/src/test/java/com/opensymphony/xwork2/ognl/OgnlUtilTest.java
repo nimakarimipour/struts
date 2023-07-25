@@ -35,7 +35,6 @@ import com.opensymphony.xwork2.util.Owner;
 import com.opensymphony.xwork2.util.ValueStack;
 import com.opensymphony.xwork2.util.location.LocatableProperties;
 import com.opensymphony.xwork2.util.reflection.ReflectionContextState;
-import java.beans.BeanInfo;
 import ognl.InappropriateExpressionException;
 import ognl.MethodFailedException;
 import ognl.NoSuchPropertyException;
@@ -48,6 +47,7 @@ import ognl.SimpleNode;
 import org.apache.struts2.StrutsConstants;
 import org.apache.struts2.StrutsException;
 
+import java.beans.BeanInfo;
 import java.beans.IntrospectionException;
 import java.lang.reflect.Method;
 import java.text.DateFormat;

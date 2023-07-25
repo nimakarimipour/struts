@@ -18,7 +18,14 @@
  */
 package com.opensymphony.xwork2.conversion.impl;
 
-import com.opensymphony.xwork2.*;
+import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.ModelDrivenAction;
+import com.opensymphony.xwork2.SimpleAction;
+import com.opensymphony.xwork2.StubTextProvider;
+import com.opensymphony.xwork2.StubValueStack;
+import com.opensymphony.xwork2.TestBean;
+import com.opensymphony.xwork2.TextProvider;
+import com.opensymphony.xwork2.XWorkTestCase;
 import com.opensymphony.xwork2.ognl.OgnlValueStack;
 import com.opensymphony.xwork2.test.ModelDrivenAction2;
 import com.opensymphony.xwork2.test.User;
@@ -29,8 +36,6 @@ import com.opensymphony.xwork2.util.FurColor;
 import com.opensymphony.xwork2.util.ValueStack;
 import com.opensymphony.xwork2.util.reflection.ReflectionContextState;
 import ognl.OgnlRuntime;
-import ognl.TypeConverter;
-import org.apache.struts2.components.*;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -40,12 +45,19 @@ import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
 
 import static org.junit.Assert.assertArrayEquals;
-
-import java.util.Date;
-import java.util.Set;
 
 public class XWorkConverterTest extends XWorkTestCase {
 

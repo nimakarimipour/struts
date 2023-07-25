@@ -18,12 +18,11 @@
  */
 package org.apache.struts2.views.jsp.ui;
 
-import java.util.Arrays;
-import java.util.List;
-
+import com.opensymphony.xwork2.Action;
 import org.apache.struts2.TestAction;
 
-import com.opensymphony.xwork2.Action;
+import java.util.Arrays;
+import java.util.List;
 
 public class LocaleTestAction extends TestAction implements Action {
 

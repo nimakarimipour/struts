@@ -25,8 +25,8 @@ import com.opensymphony.xwork2.conversion.TypeConverterHolder;
 import com.opensymphony.xwork2.inject.EarlyInitializable;
 import com.opensymphony.xwork2.inject.Inject;
 import com.opensymphony.xwork2.util.ClassLoaderUtil;
-import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.struts2.StrutsException;
 
 import java.io.IOException;

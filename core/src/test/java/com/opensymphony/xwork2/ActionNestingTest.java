@@ -28,7 +28,6 @@ import com.opensymphony.xwork2.mock.MockResult;
 import com.opensymphony.xwork2.util.ValueStack;
 import com.opensymphony.xwork2.util.location.LocatableProperties;
 
-import java.util.HashMap;
 import java.util.Map;
 
 

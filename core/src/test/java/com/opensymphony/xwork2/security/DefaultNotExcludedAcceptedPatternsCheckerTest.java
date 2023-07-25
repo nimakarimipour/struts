@@ -23,8 +23,6 @@ import com.opensymphony.xwork2.XWorkTestCase;
 import java.util.Set;
 import java.util.regex.Pattern;
 
-import static org.junit.Assert.*;
-
 public class DefaultNotExcludedAcceptedPatternsCheckerTest extends XWorkTestCase {
 
     public void testNoExclusionAcceptAllPatternsChecker() {

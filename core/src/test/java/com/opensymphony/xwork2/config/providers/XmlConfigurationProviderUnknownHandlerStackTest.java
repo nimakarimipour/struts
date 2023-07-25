@@ -18,11 +18,11 @@
  */
 package com.opensymphony.xwork2.config.providers;
 
+import com.opensymphony.xwork2.DefaultUnknownHandlerManager;
 import com.opensymphony.xwork2.UnknownHandlerManager;
 import com.opensymphony.xwork2.config.ConfigurationException;
 import com.opensymphony.xwork2.config.ConfigurationProvider;
 import com.opensymphony.xwork2.config.entities.UnknownHandlerConfig;
-import com.opensymphony.xwork2.DefaultUnknownHandlerManager;
 
 import java.util.List;
 

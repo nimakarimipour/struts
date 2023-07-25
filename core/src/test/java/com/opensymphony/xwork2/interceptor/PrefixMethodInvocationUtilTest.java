@@ -21,9 +21,13 @@ package com.opensymphony.xwork2.interceptor;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.ActionProxy;
 import junit.framework.TestCase;
-import static org.easymock.EasyMock.*;
 
 import java.lang.reflect.Method;
+
+import static org.easymock.EasyMock.createMock;
+import static org.easymock.EasyMock.expect;
+import static org.easymock.EasyMock.replay;
+import static org.easymock.EasyMock.verify;
 
 /**
  * Test case for PrefixMethodInovcationUtil.

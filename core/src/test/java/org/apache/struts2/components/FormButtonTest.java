@@ -18,13 +18,12 @@
  */
 package org.apache.struts2.components;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.TestBean;
+import com.opensymphony.xwork2.util.ValueStack;
 import org.apache.struts2.StrutsInternalTestCase;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
-
-import com.opensymphony.xwork2.ActionContext;
-import com.opensymphony.xwork2.util.ValueStack;
 
 /**
  *

@@ -19,12 +19,16 @@
 package com.opensymphony.xwork2.config.providers;
 
 import com.opensymphony.xwork2.XWorkTestCase;
-import static org.easymock.EasyMock.*;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import java.util.Map;
+
+import static org.easymock.EasyMock.createMock;
+import static org.easymock.EasyMock.expect;
+import static org.easymock.EasyMock.replay;
+import static org.easymock.EasyMock.verify;
 
 /**
  * <code>XmlHelperTest</code>

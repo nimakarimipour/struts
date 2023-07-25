@@ -35,7 +35,6 @@ import org.apache.struts2.dispatcher.Parameter;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
 import java.util.Collections;
 import java.util.Enumeration;
 import java.util.Locale;

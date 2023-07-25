@@ -20,7 +20,6 @@ package org.apache.struts2.factory;
 
 import com.opensymphony.xwork2.ActionProxy;
 import com.opensymphony.xwork2.ActionProxyFactory;
-import com.opensymphony.xwork2.DefaultActionProxyFactory;
 import com.opensymphony.xwork2.inject.Container;
 import com.opensymphony.xwork2.inject.Initializable;
 import com.opensymphony.xwork2.inject.Inject;

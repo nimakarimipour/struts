@@ -18,12 +18,11 @@
  */
 package org.apache.struts2.components.template;
 
-import java.io.Writer;
-import java.util.Map;
-
+import com.opensymphony.xwork2.util.ValueStack;
 import org.apache.struts2.components.UIBean;
 
-import com.opensymphony.xwork2.util.ValueStack;
+import java.io.Writer;
+import java.util.Map;
 
 /**
  * Context used when rendering templates.

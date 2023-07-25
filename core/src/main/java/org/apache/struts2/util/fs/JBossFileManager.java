@@ -22,8 +22,8 @@ import com.opensymphony.xwork2.util.fs.DefaultFileManager;
 import com.opensymphony.xwork2.util.fs.FileRevision;
 import com.opensymphony.xwork2.util.fs.JarEntryRevision;
 import com.opensymphony.xwork2.util.fs.Revision;
-import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;

@@ -15,9 +15,10 @@
  */
 package com.opensymphony.xwork2.ognl;
 
+import org.apache.commons.lang3.BooleanUtils;
+
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
-import org.apache.commons.lang3.BooleanUtils;
 
 /**
  * Default OGNL Cache factory implementation.

@@ -24,13 +24,23 @@ import com.opensymphony.xwork2.config.ConfigurationException;
 import com.opensymphony.xwork2.config.providers.XmlHelper;
 import com.opensymphony.xwork2.inject.Inject;
 import com.opensymphony.xwork2.util.DomHelper;
-import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
-import org.w3c.dom.*;
+import org.apache.logging.log4j.Logger;
+import org.w3c.dom.CharacterData;
+import org.w3c.dom.Comment;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.EntityReference;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
 import java.io.InputStream;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * Parse the validation file. (eg. MyAction-validation.xml, MyAction-actionAlias-validation.xml)

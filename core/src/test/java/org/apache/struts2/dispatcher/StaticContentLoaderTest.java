@@ -18,18 +18,15 @@
  */
 package org.apache.struts2.dispatcher;
 
-import java.io.IOException;
-
-import javax.servlet.http.HttpServletResponse;
-
+import com.mockobjects.dynamic.C;
+import com.mockobjects.dynamic.Mock;
 import junit.framework.TestCase;
-
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.mock.web.MockServletContext;
 
-import com.mockobjects.dynamic.C;
-import com.mockobjects.dynamic.Mock;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 
 public class StaticContentLoaderTest extends TestCase {

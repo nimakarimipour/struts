@@ -18,17 +18,16 @@
  */
 package org.apache.struts2.views.jsp;
 
-import java.io.File;
-import java.net.URL;
-
-import javax.servlet.jsp.tagext.DynamicAttributes;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
 import org.apache.struts2.StrutsInternalTestCase;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+
+import javax.servlet.jsp.tagext.DynamicAttributes;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.File;
+import java.net.URL;
 
 /**
  * DynAttribsTest test case.

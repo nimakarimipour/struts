@@ -21,8 +21,8 @@ package org.apache.struts2.dispatcher.listener;
 import org.apache.struts2.dispatcher.HostConfig;
 
 import javax.servlet.ServletContext;
-import java.util.Iterator;
 import java.util.Collections;
+import java.util.Iterator;
 
 /**
  * Host configuration that just holds a ServletContext

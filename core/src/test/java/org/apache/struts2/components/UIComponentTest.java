@@ -40,8 +40,6 @@ import org.apache.struts2.views.jsp.ui.TextFieldTag;
 import org.apache.struts2.views.jsp.ui.TextareaTag;
 import org.apache.struts2.views.jsp.ui.TokenTag;
 
-import com.opensymphony.xwork2.ActionContext;
-
 
 /**
  * Test case common for all UI component in general.

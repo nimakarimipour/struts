@@ -23,7 +23,9 @@ import com.opensymphony.xwork2.FileManagerFactory;
 import com.opensymphony.xwork2.XWorkTestCase;
 
 import java.io.InputStream;
-import java.net.*;
+import java.net.JarURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 /**
  * FileManager Tester.

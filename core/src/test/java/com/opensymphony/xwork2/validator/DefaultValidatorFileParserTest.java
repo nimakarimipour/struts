@@ -21,7 +21,11 @@ package com.opensymphony.xwork2.validator;
 import com.mockobjects.dynamic.C;
 import com.mockobjects.dynamic.Mock;
 import com.opensymphony.xwork2.util.ClassLoaderUtil;
-import com.opensymphony.xwork2.validator.validators.*;
+import com.opensymphony.xwork2.validator.validators.ExpressionValidator;
+import com.opensymphony.xwork2.validator.validators.IntRangeFieldValidator;
+import com.opensymphony.xwork2.validator.validators.RegexFieldValidator;
+import com.opensymphony.xwork2.validator.validators.RequiredFieldValidator;
+import com.opensymphony.xwork2.validator.validators.RequiredStringValidator;
 import junit.framework.TestCase;
 import org.apache.struts2.StrutsException;
 

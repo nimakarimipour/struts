@@ -18,7 +18,12 @@
  */
 package com.opensymphony.xwork2.conversion.impl;
 
-import com.opensymphony.xwork2.*;
+import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.AnnotatedTestBean;
+import com.opensymphony.xwork2.GenericsBean;
+import com.opensymphony.xwork2.ModelDrivenAnnotationAction;
+import com.opensymphony.xwork2.SimpleAnnotationAction;
+import com.opensymphony.xwork2.XWorkTestCase;
 import com.opensymphony.xwork2.test.AnnotationUser;
 import com.opensymphony.xwork2.test.ModelDrivenAnnotationAction2;
 import com.opensymphony.xwork2.util.Bar;
@@ -31,7 +36,14 @@ import java.math.BigInteger;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
 
 import static org.junit.Assert.assertArrayEquals;
 

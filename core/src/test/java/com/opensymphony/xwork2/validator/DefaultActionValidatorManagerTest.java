@@ -36,7 +36,6 @@ import com.opensymphony.xwork2.util.fs.DefaultFileManagerFactory;
 import org.apache.struts2.StrutsException;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 

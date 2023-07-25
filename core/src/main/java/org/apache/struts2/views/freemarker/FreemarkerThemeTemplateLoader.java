@@ -18,17 +18,15 @@
  */
 package org.apache.struts2.views.freemarker;
 
-import java.io.IOException;
-import java.io.Reader;
-import java.util.List;
-
+import com.opensymphony.xwork2.inject.Inject;
+import freemarker.cache.TemplateLoader;
 import org.apache.struts2.StrutsConstants;
 import org.apache.struts2.components.template.Template;
 import org.apache.struts2.components.template.TemplateEngine;
 
-import com.opensymphony.xwork2.inject.Inject;
-
-import freemarker.cache.TemplateLoader;
+import java.io.IOException;
+import java.io.Reader;
+import java.util.List;
 
 /**
  * When loading a template, if sees theme token in path, does a template search through

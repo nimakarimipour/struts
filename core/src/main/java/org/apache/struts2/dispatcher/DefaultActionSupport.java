@@ -18,11 +18,10 @@
  */
 package org.apache.struts2.dispatcher;
 
-import javax.servlet.http.HttpServletRequest;
-
+import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.ServletActionContext;
 
-import com.opensymphony.xwork2.ActionSupport;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * A simple action support class that sets properties to be able to serve

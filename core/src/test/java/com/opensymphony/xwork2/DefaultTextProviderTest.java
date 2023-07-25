@@ -18,7 +18,10 @@
  */
 package com.opensymphony.xwork2;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 /**
  * Unit test for {@link DefaultTextProvider}.

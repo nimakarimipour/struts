@@ -20,7 +20,6 @@ package com.opensymphony.xwork2;
 
 import com.opensymphony.xwork2.config.entities.ActionConfig;
 import com.opensymphony.xwork2.config.providers.SomeUnknownHandler;
-
 import junit.framework.TestCase;
 
 import java.util.ArrayList;

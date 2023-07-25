@@ -18,15 +18,14 @@
  */
 package org.apache.struts2.views.jsp;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
+import com.opensymphony.xwork2.Action;
+import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.util.SubsetIteratorFilter.Decider;
 import org.apache.struts2.views.jsp.iterator.SubsetIteratorTag;
 
-import com.opensymphony.xwork2.Action;
-import com.opensymphony.xwork2.ActionSupport;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 
 /**

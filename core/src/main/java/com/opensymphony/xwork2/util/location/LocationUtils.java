@@ -19,7 +19,6 @@
 package com.opensymphony.xwork2.util.location;
 
 import com.opensymphony.xwork2.util.ClassLoaderUtil;
-
 import org.apache.struts2.config.StrutsJavaConfiguration;
 import org.w3c.dom.Element;
 import org.xml.sax.Locator;

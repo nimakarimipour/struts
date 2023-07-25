@@ -21,7 +21,6 @@ package com.opensymphony.xwork2.ognl.accessor;
 import ognl.ObjectPropertyAccessor;
 import ognl.OgnlException;
 import org.apache.struts2.dispatcher.HttpParameters;
-import org.apache.struts2.dispatcher.Parameter;
 
 import java.util.Map;
 

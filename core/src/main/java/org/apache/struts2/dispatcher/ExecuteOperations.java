@@ -18,8 +18,8 @@
  */
 package org.apache.struts2.dispatcher;
 
-import org.apache.struts2.dispatcher.mapper.ActionMapping;
 import org.apache.struts2.RequestUtils;
+import org.apache.struts2.dispatcher.mapper.ActionMapping;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;

@@ -16,12 +16,15 @@
 
 package com.opensymphony.xwork2.inject;
 
-import static com.opensymphony.xwork2.inject.Container.DEFAULT_NAME;
-
-import static java.lang.annotation.ElementType.*;
 import java.lang.annotation.Retention;
-import static java.lang.annotation.RetentionPolicy.RUNTIME;
 import java.lang.annotation.Target;
+
+import static com.opensymphony.xwork2.inject.Container.DEFAULT_NAME;
+import static java.lang.annotation.ElementType.CONSTRUCTOR;
+import static java.lang.annotation.ElementType.FIELD;
+import static java.lang.annotation.ElementType.METHOD;
+import static java.lang.annotation.ElementType.PARAMETER;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
  * <p>Annotates members and parameters which should have their value[s]

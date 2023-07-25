@@ -18,25 +18,22 @@
  */
 package org.apache.struts2.dispatcher;
 
+import com.mockobjects.constraint.Constraint;
+import com.mockobjects.constraint.IsAnything;
+import com.mockobjects.constraint.IsEqual;
+import com.mockobjects.dynamic.Mock;
+import junit.framework.TestCase;
+import org.springframework.mock.web.MockHttpServletRequest;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
-import org.springframework.mock.web.MockHttpServletRequest;
-
-import junit.framework.TestCase;
-
-import com.mockobjects.constraint.Constraint;
-import com.mockobjects.constraint.IsAnything;
-import com.mockobjects.constraint.IsEqual;
-import com.mockobjects.dynamic.Mock;
-import java.util.AbstractMap;
 
 
 /**

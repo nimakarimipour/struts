@@ -26,7 +26,6 @@ import org.apache.logging.log4j.Logger;
 import org.apache.struts2.dispatcher.HttpParameters;
 
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.TreeMap;
 

@@ -18,16 +18,15 @@
  */
 package org.apache.struts2.config;
 
-import java.util.Locale;
-
-import com.opensymphony.xwork2.XWorkTestCase;
 import com.opensymphony.xwork2.LocalizedTextProvider;
+import com.opensymphony.xwork2.XWorkTestCase;
 import com.opensymphony.xwork2.config.ConfigurationException;
+import com.opensymphony.xwork2.inject.ContainerBuilder;
 import com.opensymphony.xwork2.test.StubConfigurationProvider;
+import com.opensymphony.xwork2.util.location.LocatableProperties;
 import org.apache.struts2.StrutsConstants;
 
-import com.opensymphony.xwork2.inject.ContainerBuilder;
-import com.opensymphony.xwork2.util.location.LocatableProperties;
+import java.util.Locale;
 
 public class StrutsBeanSelectionProviderTest extends XWorkTestCase {
 

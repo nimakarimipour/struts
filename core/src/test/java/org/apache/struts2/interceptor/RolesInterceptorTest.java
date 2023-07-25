@@ -18,13 +18,12 @@
  */
 package org.apache.struts2.interceptor;
 
-import java.util.Arrays;
-import java.util.List;
-
-import org.apache.struts2.StrutsInternalTestCase;
-
 import com.mockobjects.servlet.MockHttpServletRequest;
 import com.mockobjects.servlet.MockHttpServletResponse;
+import org.apache.struts2.StrutsInternalTestCase;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class RolesInterceptorTest extends StrutsInternalTestCase {
 

@@ -21,11 +21,16 @@ package org.apache.struts2.views.util;
  * <code>ResourceUtilTest</code>
  *
  */
-import javax.servlet.http.HttpServletRequest;
 
 import junit.framework.TestCase;
 
-import static org.easymock.EasyMock.*;
+import javax.servlet.http.HttpServletRequest;
+
+import static org.easymock.EasyMock.createMock;
+import static org.easymock.EasyMock.expect;
+import static org.easymock.EasyMock.replay;
+import static org.easymock.EasyMock.reset;
+import static org.easymock.EasyMock.verify;
 
 public class ResourceUtilTest extends TestCase {
 

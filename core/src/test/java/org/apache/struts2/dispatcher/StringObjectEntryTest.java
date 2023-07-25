@@ -18,9 +18,9 @@
  */
 package org.apache.struts2.dispatcher;
 
-import static org.junit.Assert.assertNotEquals;
-
 import junit.framework.TestCase;
+
+import static org.junit.Assert.assertNotEquals;
 
 public class StringObjectEntryTest extends TestCase {
     public void testGetKey() {

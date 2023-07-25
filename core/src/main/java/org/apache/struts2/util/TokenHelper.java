@@ -22,8 +22,8 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.LocalizedTextProvider;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.struts2.dispatcher.Parameter;
 import org.apache.struts2.dispatcher.HttpParameters;
+import org.apache.struts2.dispatcher.Parameter;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;

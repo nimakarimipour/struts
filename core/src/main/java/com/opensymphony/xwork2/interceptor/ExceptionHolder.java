@@ -20,8 +20,8 @@ package com.opensymphony.xwork2.interceptor;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.StringWriter;
 import java.io.Serializable;
+import java.io.StringWriter;
 
 /**
  * <!-- START SNIPPET: javadoc -->

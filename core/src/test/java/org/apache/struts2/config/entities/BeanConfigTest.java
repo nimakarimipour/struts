@@ -18,12 +18,11 @@
  */
 package org.apache.struts2.config.entities;
 
-import org.junit.Assert;
-import org.junit.Test;
-
 import com.opensymphony.xwork2.TestBean;
 import com.opensymphony.xwork2.inject.Container;
 import com.opensymphony.xwork2.inject.Scope;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class BeanConfigTest {
     @Test

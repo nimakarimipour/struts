@@ -18,12 +18,12 @@
  */
 package org.apache.struts2.config;
 
-import java.util.List;
-import java.util.Optional;
-
 import org.apache.struts2.config.entities.BeanConfig;
 import org.apache.struts2.config.entities.BeanSelectionConfig;
 import org.apache.struts2.config.entities.ConstantConfig;
+
+import java.util.List;
+import java.util.Optional;
 
 public interface StrutsJavaConfiguration {
     List<BeanConfig> beans();

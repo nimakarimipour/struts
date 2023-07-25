@@ -18,11 +18,11 @@
  */
 package org.apache.struts2.components.template;
 
+import junit.framework.TestCase;
+
 import java.io.File;
 import java.net.URL;
 import java.util.Map;
-
-import junit.framework.TestCase;
 
 /**
  * Test case for BaseTemplateEngine

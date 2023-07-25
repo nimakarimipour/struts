@@ -21,7 +21,12 @@ package com.opensymphony.xwork2;
 import com.opensymphony.xwork2.interceptor.ValidationAware;
 
 import java.io.Serializable;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Provides a default implementation of ValidationAware. Returns new collections for

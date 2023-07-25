@@ -18,15 +18,14 @@
  */
 package org.apache.struts2.interceptor;
 
+import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.ActionInvocation;
+import com.opensymphony.xwork2.mock.MockActionInvocation;
+import org.apache.struts2.StrutsInternalTestCase;
+import org.apache.struts2.dispatcher.HttpParameters;
+
 import java.util.HashMap;
 import java.util.Map;
-
-import com.opensymphony.xwork2.ActionInvocation;
-import org.apache.struts2.StrutsInternalTestCase;
-
-import com.opensymphony.xwork2.ActionContext;
-import com.opensymphony.xwork2.mock.MockActionInvocation;
-import org.apache.struts2.dispatcher.HttpParameters;
 
 /**
  * Unit test for ChecboxInterceptor.

@@ -18,14 +18,12 @@
  */
 package org.apache.struts2.dispatcher.mapper;
 
+import org.apache.struts2.StrutsInternalTestCase;
+import org.apache.struts2.views.jsp.StrutsMockHttpServletRequest;
+
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-
-import junit.framework.TestCase;
-
-import org.apache.struts2.StrutsInternalTestCase;
-import org.apache.struts2.views.jsp.StrutsMockHttpServletRequest;
 
 /**
  * Unit test for {@link RestfulActionMapper}.

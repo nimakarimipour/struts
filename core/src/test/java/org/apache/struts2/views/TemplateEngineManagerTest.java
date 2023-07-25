@@ -18,19 +18,17 @@
  */
 package org.apache.struts2.views;
 
-import java.util.HashSet;
-
+import com.mockobjects.dynamic.C;
+import com.mockobjects.dynamic.Mock;
+import com.opensymphony.xwork2.inject.Container;
 import junit.framework.TestCase;
-
 import org.apache.struts2.components.template.FreemarkerTemplateEngine;
 import org.apache.struts2.components.template.JspTemplateEngine;
 import org.apache.struts2.components.template.Template;
 import org.apache.struts2.components.template.TemplateEngine;
 import org.apache.struts2.components.template.TemplateEngineManager;
 
-import com.mockobjects.dynamic.C;
-import com.mockobjects.dynamic.Mock;
-import com.opensymphony.xwork2.inject.Container;
+import java.util.HashSet;
 
 /**
  * TemplateEngineManagerTest

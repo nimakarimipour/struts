@@ -31,11 +31,8 @@ import ognl.MethodAccessor;
 import ognl.OgnlRuntime;
 import ognl.PropertyAccessor;
 import org.apache.commons.lang3.BooleanUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.apache.struts2.StrutsConstants;
 
-import java.util.Map;
 import java.util.Set;
 
 /**

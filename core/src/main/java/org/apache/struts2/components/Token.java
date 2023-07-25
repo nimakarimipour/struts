@@ -18,15 +18,13 @@
  */
 package org.apache.struts2.components;
 
-import java.util.Map;
+import com.opensymphony.xwork2.util.ValueStack;
+import org.apache.struts2.util.TokenHelper;
+import org.apache.struts2.views.annotations.StrutsTag;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.apache.struts2.views.annotations.StrutsTag;
-import org.apache.struts2.util.TokenHelper;
-
-import com.opensymphony.xwork2.util.ValueStack;
+import java.util.Map;
 
 /**
  * <!-- START SNIPPET: javadoc -->

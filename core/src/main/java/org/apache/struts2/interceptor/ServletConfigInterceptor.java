@@ -18,10 +18,9 @@
  */
 package org.apache.struts2.interceptor;
 
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.ActionInvocation;
+import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
 import org.apache.struts2.StrutsStatics;
 import org.apache.struts2.action.ApplicationAware;
 import org.apache.struts2.action.ParametersAware;
@@ -32,9 +31,9 @@ import org.apache.struts2.action.ServletResponseAware;
 import org.apache.struts2.action.SessionAware;
 import org.apache.struts2.interceptor.servlet.ServletPrincipalProxy;
 
-import com.opensymphony.xwork2.ActionContext;
-import com.opensymphony.xwork2.ActionInvocation;
-import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * <!-- START SNIPPET: description -->

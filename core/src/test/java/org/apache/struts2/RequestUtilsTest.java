@@ -22,11 +22,16 @@ package org.apache.struts2;
  * <code>RequestUtilsTest</code>
  *
  */
+
 import junit.framework.TestCase;
-import static org.easymock.EasyMock.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
+
+import static org.easymock.EasyMock.createMock;
+import static org.easymock.EasyMock.expect;
+import static org.easymock.EasyMock.replay;
+import static org.easymock.EasyMock.verify;
 
 public class RequestUtilsTest extends TestCase {
 

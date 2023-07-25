@@ -18,15 +18,14 @@
  */
 package org.apache.struts2.views.jsp.iterator;
 
-import java.util.Comparator;
-
-import javax.servlet.jsp.JspException;
-
-import org.apache.struts2.views.annotations.StrutsTag;
-import org.apache.struts2.views.annotations.StrutsTagAttribute;
 import org.apache.struts2.util.MakeIterator;
 import org.apache.struts2.util.SortIteratorFilter;
+import org.apache.struts2.views.annotations.StrutsTag;
+import org.apache.struts2.views.annotations.StrutsTagAttribute;
 import org.apache.struts2.views.jsp.StrutsBodyTagSupport;
+
+import javax.servlet.jsp.JspException;
+import java.util.Comparator;
 
 /**
  * <!-- START SNIPPET: javadoc -->

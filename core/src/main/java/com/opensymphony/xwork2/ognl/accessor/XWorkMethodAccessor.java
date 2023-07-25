@@ -19,7 +19,11 @@
 package com.opensymphony.xwork2.ognl.accessor;
 
 import com.opensymphony.xwork2.util.reflection.ReflectionContextState;
-import ognl.*;
+import ognl.MethodFailedException;
+import ognl.ObjectMethodAccessor;
+import ognl.OgnlContext;
+import ognl.OgnlRuntime;
+import ognl.PropertyAccessor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

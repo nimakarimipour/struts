@@ -18,11 +18,11 @@
  */
 package com.opensymphony.xwork2.config.providers;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
-
 import org.apache.commons.lang3.SystemUtils;
 import org.apache.struts2.StrutsInternalTestCase;
+
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
 
 public class EnvsValueSubstitutorTest extends StrutsInternalTestCase {
 

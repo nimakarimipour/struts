@@ -21,9 +21,7 @@ package com.opensymphony.xwork2.mock;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.SimpleAction;
 import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
-import com.opensymphony.xwork2.interceptor.Interceptor;
 import com.opensymphony.xwork2.interceptor.WithLazyParams;
-import org.junit.Assert;
 
 public class MockLazyInterceptor extends AbstractInterceptor implements WithLazyParams {
 

@@ -20,10 +20,10 @@ package com.opensymphony.xwork2.ognl.accessor;
 
 import com.opensymphony.xwork2.ognl.ObjectProxy;
 import com.opensymphony.xwork2.util.reflection.ReflectionContextState;
+import ognl.OgnlContext;
 import ognl.OgnlException;
 import ognl.OgnlRuntime;
 import ognl.PropertyAccessor;
-import ognl.OgnlContext;
 
 import java.util.Map;
 

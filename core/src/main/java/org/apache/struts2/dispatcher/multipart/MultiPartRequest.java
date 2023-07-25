@@ -18,11 +18,9 @@
  */
 package org.apache.struts2.dispatcher.multipart;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.apache.struts2.dispatcher.LocalizedMessage;
 
-import java.io.File;
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.Enumeration;
 import java.util.List;

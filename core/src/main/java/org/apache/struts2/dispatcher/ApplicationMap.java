@@ -18,13 +18,12 @@
  */
 package org.apache.struts2.dispatcher;
 
+import javax.servlet.ServletContext;
 import java.io.Serializable;
 import java.util.AbstractMap;
 import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.Set;
-
-import javax.servlet.ServletContext;
 
 /**
  * A simple implementation of the {@link java.util.Map} interface to handle a collection of attributes and

@@ -18,13 +18,12 @@
  */
 package org.apache.struts2.views.jsp;
 
-import java.util.Iterator;
-
+import com.opensymphony.xwork2.Action;
+import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.util.IteratorGenerator.Converter;
 import org.apache.struts2.views.jsp.iterator.IteratorGeneratorTag;
 
-import com.opensymphony.xwork2.Action;
-import com.opensymphony.xwork2.ActionSupport;
+import java.util.Iterator;
 
 /**
  * Test case for IteratorGeneratorTag.

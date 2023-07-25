@@ -19,7 +19,11 @@
 package com.opensymphony.xwork2.util;
 
 import com.opensymphony.xwork2.ActionContext;
-import com.opensymphony.xwork2.config.*;
+import com.opensymphony.xwork2.config.Configuration;
+import com.opensymphony.xwork2.config.ConfigurationException;
+import com.opensymphony.xwork2.config.ConfigurationManager;
+import com.opensymphony.xwork2.config.ConfigurationProvider;
+import com.opensymphony.xwork2.config.ContainerProvider;
 import com.opensymphony.xwork2.config.providers.StrutsDefaultConfigurationProvider;
 import com.opensymphony.xwork2.config.providers.XmlConfigurationProvider;
 import com.opensymphony.xwork2.inject.Container;

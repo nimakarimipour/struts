@@ -24,7 +24,6 @@ import com.opensymphony.xwork2.ActionSupport;
 import junit.framework.TestCase;
 import org.apache.struts2.dispatcher.HttpParameters;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 
 import static org.easymock.EasyMock.createMock;

@@ -18,14 +18,13 @@
  */
 package org.apache.struts2.views.jsp.iterator;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import com.opensymphony.xwork2.util.ValueStack;
 import org.apache.struts2.components.AppendIterator;
 import org.apache.struts2.components.Component;
 import org.apache.struts2.views.jsp.ContextBeanTag;
 
-import com.opensymphony.xwork2.util.ValueStack;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * Append a list of iterators. The values of the iterators will be merged

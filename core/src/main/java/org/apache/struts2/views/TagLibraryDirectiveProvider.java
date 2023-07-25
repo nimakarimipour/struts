@@ -20,11 +20,6 @@ package org.apache.struts2.views;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import com.opensymphony.xwork2.util.ValueStack;
-
 /**
  * Provides Velocity implementation classes for a tag library
  */

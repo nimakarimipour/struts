@@ -18,13 +18,12 @@
  */
 package org.apache.struts2.dispatcher.servlet;
 
+import org.apache.struts2.dispatcher.HostConfig;
 import org.apache.struts2.util.MakeIterator;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import java.util.Iterator;
-
-import org.apache.struts2.dispatcher.HostConfig;
 
 /**
  * Host configuration that wraps a ServletConfig

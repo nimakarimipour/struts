@@ -18,16 +18,14 @@
  */
 package org.apache.struts2.views.freemarker;
 
-import java.util.List;
-
+import com.opensymphony.xwork2.ActionContext;
+import freemarker.ext.beans.CollectionModel;
+import freemarker.template.ObjectWrapper;
 import org.apache.struts2.StrutsInternalTestCase;
 import org.apache.struts2.util.ListEntry;
 import org.apache.struts2.util.StrutsUtil;
 
-import com.opensymphony.xwork2.ActionContext;
-
-import freemarker.ext.beans.CollectionModel;
-import freemarker.template.ObjectWrapper;
+import java.util.List;
 
 
 /**

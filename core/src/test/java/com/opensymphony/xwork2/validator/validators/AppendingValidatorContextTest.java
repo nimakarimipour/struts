@@ -18,10 +18,6 @@
  */
 package com.opensymphony.xwork2.validator.validators;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-
 import com.opensymphony.xwork2.CompositeTextProvider;
 import com.opensymphony.xwork2.TextProvider;
 import com.opensymphony.xwork2.TextProviderFactory;
@@ -30,6 +26,10 @@ import com.opensymphony.xwork2.validator.DelegatingValidatorContext;
 import com.opensymphony.xwork2.validator.ValidatorContext;
 import com.opensymphony.xwork2.validator.VisitorValidatorTestAction;
 import com.opensymphony.xwork2.validator.validators.VisitorFieldValidator.AppendingValidatorContext;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 public class AppendingValidatorContextTest extends XWorkTestCase {
 

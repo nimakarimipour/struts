@@ -18,13 +18,13 @@
  */
 package org.apache.struts2.util;
 
+import junit.framework.TestCase;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
-
-import junit.framework.TestCase;
 
 
 /**

@@ -18,21 +18,8 @@
  */
 package org.apache.struts2.views.freemarker.tags;
 
-import java.io.StringWriter;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.Map;
-
-import org.apache.struts2.StrutsInternalTestCase;
-import org.apache.struts2.components.Component;
-import org.springframework.mock.web.MockHttpServletRequest;
-import org.springframework.mock.web.MockHttpServletResponse;
-
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ognl.OgnlValueStack;
-
 import freemarker.ext.util.WrapperTemplateModel;
 import freemarker.template.AdapterTemplateModel;
 import freemarker.template.TemplateBooleanModel;
@@ -44,6 +31,17 @@ import freemarker.template.TemplateModelIterator;
 import freemarker.template.TemplateNumberModel;
 import freemarker.template.TemplateScalarModel;
 import freemarker.template.TemplateSequenceModel;
+import org.apache.struts2.StrutsInternalTestCase;
+import org.apache.struts2.components.Component;
+import org.springframework.mock.web.MockHttpServletRequest;
+import org.springframework.mock.web.MockHttpServletResponse;
+
+import java.io.StringWriter;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class TagModelTest extends StrutsInternalTestCase {
 

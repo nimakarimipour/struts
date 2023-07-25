@@ -20,7 +20,11 @@ package com.opensymphony.xwork2.validator;
 
 import com.opensymphony.xwork2.TextProviderFactory;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 /**

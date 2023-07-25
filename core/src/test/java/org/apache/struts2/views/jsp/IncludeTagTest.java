@@ -18,16 +18,19 @@
  */
 package org.apache.struts2.views.jsp;
 
-import static org.easymock.EasyMock.*;
+import com.mockobjects.servlet.MockRequestDispatcher;
+import org.apache.struts2.StrutsException;
+import org.apache.struts2.components.Include;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-import org.apache.struts2.StrutsException;
-import org.apache.struts2.components.Include;
-
-import com.mockobjects.servlet.MockRequestDispatcher;
+import static org.easymock.EasyMock.anyObject;
+import static org.easymock.EasyMock.createMock;
+import static org.easymock.EasyMock.expectLastCall;
+import static org.easymock.EasyMock.replay;
+import static org.easymock.EasyMock.verify;
 
 /**
  * Unit test of {@link IncludeTag}.

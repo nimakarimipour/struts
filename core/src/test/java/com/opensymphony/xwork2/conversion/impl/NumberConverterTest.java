@@ -20,8 +20,8 @@ package com.opensymphony.xwork2.conversion.impl;
 
 import com.opensymphony.xwork2.SimpleFooAction;
 import com.opensymphony.xwork2.XWorkTestCase;
-import org.apache.struts2.conversion.TypeConversionException;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.struts2.conversion.TypeConversionException;
 
 import java.math.BigDecimal;
 import java.util.Locale;

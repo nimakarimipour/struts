@@ -18,7 +18,6 @@
  */
 package org.apache.struts2.dispatcher.listener;
 
-import org.apache.struts2.StrutsStatics;
 import org.apache.struts2.dispatcher.Dispatcher;
 import org.apache.struts2.dispatcher.InitOperations;
 import org.apache.struts2.dispatcher.PrepareOperations;

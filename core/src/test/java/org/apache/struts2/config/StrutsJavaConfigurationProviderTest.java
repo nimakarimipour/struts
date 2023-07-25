@@ -18,19 +18,6 @@
  */
 package org.apache.struts2.config;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
-
-import org.apache.struts2.StrutsConstants;
-import org.apache.struts2.config.entities.BeanConfig;
-import org.apache.struts2.config.entities.BeanSelectionConfig;
-import org.apache.struts2.config.entities.ConstantConfig;
-import org.junit.Assert;
-import org.junit.Test;
-
 import com.opensymphony.xwork2.TestBean;
 import com.opensymphony.xwork2.config.Configuration;
 import com.opensymphony.xwork2.config.impl.MockConfiguration;
@@ -38,6 +25,18 @@ import com.opensymphony.xwork2.inject.Container;
 import com.opensymphony.xwork2.inject.ContainerBuilder;
 import com.opensymphony.xwork2.inject.Scope;
 import com.opensymphony.xwork2.util.location.LocatableProperties;
+import org.apache.struts2.StrutsConstants;
+import org.apache.struts2.config.entities.BeanConfig;
+import org.apache.struts2.config.entities.BeanSelectionConfig;
+import org.apache.struts2.config.entities.ConstantConfig;
+import org.junit.Assert;
+import org.junit.Test;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
 
 public class StrutsJavaConfigurationProviderTest {
     @Test

@@ -19,10 +19,9 @@
 package org.apache.struts2.views.jsp.ui;
 
 import com.opensymphony.xwork2.ActionContext;
-import ognl.OgnlException;
-
 import com.opensymphony.xwork2.inject.Inject;
 import com.opensymphony.xwork2.ognl.OgnlUtil;
+import ognl.OgnlException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

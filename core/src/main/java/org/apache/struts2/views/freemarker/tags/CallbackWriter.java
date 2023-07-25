@@ -18,14 +18,13 @@
  */
 package org.apache.struts2.views.freemarker.tags;
 
+import freemarker.template.TemplateModelException;
+import freemarker.template.TransformControl;
+import org.apache.struts2.components.Component;
+
 import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
-
-import org.apache.struts2.components.Component;
-
-import freemarker.template.TemplateModelException;
-import freemarker.template.TransformControl;
 
 /**
  */

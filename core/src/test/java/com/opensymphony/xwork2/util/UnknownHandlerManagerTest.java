@@ -18,16 +18,16 @@
  */
 package com.opensymphony.xwork2.util;
 
-import java.util.List;
-
+import com.opensymphony.xwork2.DefaultUnknownHandlerManager;
 import com.opensymphony.xwork2.UnknownHandler;
 import com.opensymphony.xwork2.UnknownHandlerManager;
 import com.opensymphony.xwork2.UnknownHandlerManagerMock;
-import com.opensymphony.xwork2.DefaultUnknownHandlerManager;
 import com.opensymphony.xwork2.config.ConfigurationException;
 import com.opensymphony.xwork2.config.ConfigurationProvider;
 import com.opensymphony.xwork2.config.providers.ConfigurationTestBase;
 import com.opensymphony.xwork2.config.providers.SomeUnknownHandler;
+
+import java.util.List;
 
 /**
  * Test UnknownHandlerUtil

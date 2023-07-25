@@ -22,7 +22,11 @@ import com.opensymphony.xwork2.util.ValueStack;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.ResourceBundle;
 
 /**
  * This is a composite {@link TextProvider} that takes in an array or {@link java.util.List} of {@link TextProvider}s, it will

@@ -19,7 +19,6 @@
 package com.opensymphony.xwork2.ognl.accessor;
 
 import com.opensymphony.xwork2.conversion.impl.XWorkConverter;
-import com.opensymphony.xwork2.ognl.OgnlValueStack;
 import com.opensymphony.xwork2.util.reflection.ReflectionContextState;
 import ognl.ObjectPropertyAccessor;
 import ognl.OgnlException;

@@ -18,10 +18,10 @@
  */
 package org.apache.struts2.views.jsp.ui;
 
-import java.util.Map;
-
 import org.apache.struts2.TestAction;
 import org.apache.struts2.views.jsp.AbstractUITagTest;
+
+import java.util.Map;
 
 
 /**

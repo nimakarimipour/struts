@@ -21,7 +21,8 @@ package org.apache.struts2.dispatcher;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertNotSame;
 
 public class ParameterTest {
 

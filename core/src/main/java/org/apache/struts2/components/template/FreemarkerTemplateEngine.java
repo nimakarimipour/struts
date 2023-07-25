@@ -28,7 +28,6 @@ import freemarker.template.Configuration;
 import freemarker.template.SimpleHash;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.views.freemarker.FreemarkerManager;
 
 import javax.servlet.ServletContext;
@@ -37,7 +36,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Freemarker based template engine.

@@ -28,8 +28,8 @@ import com.opensymphony.xwork2.XWorkTestCase;
 import com.opensymphony.xwork2.config.entities.ActionConfig;
 import com.opensymphony.xwork2.config.entities.InterceptorConfig;
 import com.opensymphony.xwork2.validator.ValidationInterceptor;
-import org.junit.Assert;
 import org.easymock.EasyMock;
+import org.junit.Assert;
 
 import java.util.HashMap;
 
