@@ -20,7 +20,11 @@ package org.apache.struts2.showcase.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class ExampleAction extends ActionSupport {
 	public static final String CONSTANT = "Struts Rocks!";

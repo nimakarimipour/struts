@@ -20,15 +20,14 @@
  */
 package it.org.apache.struts2.showcase;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
-
+import com.gargoylesoftware.htmlunit.Page;
+import com.gargoylesoftware.htmlunit.WebClient;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.gargoylesoftware.htmlunit.Page;
-import com.gargoylesoftware.htmlunit.WebClient;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 
 public class FileDownloadTest {
     @Test

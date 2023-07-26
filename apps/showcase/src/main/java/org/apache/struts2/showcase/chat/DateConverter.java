@@ -22,8 +22,8 @@ package org.apache.struts2.showcase.chat;
 
 import com.opensymphony.xwork2.conversion.impl.XWorkConverter;
 import com.opensymphony.xwork2.inject.Inject;
-import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.struts2.util.StrutsTypeConverter;
 
 import java.text.ParseException;

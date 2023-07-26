@@ -20,12 +20,11 @@
  */
 package it.org.apache.struts2.showcase;
 
-import org.junit.Assert;
-import org.junit.Test;
-
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.DomElement;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class FreeMarkerManagerTest {
     @Test

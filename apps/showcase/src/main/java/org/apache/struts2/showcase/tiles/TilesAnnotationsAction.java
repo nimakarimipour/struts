@@ -18,13 +18,12 @@
  */
 package org.apache.struts2.showcase.tiles;
 
+import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.ParentPackage;
 import org.apache.struts2.convention.annotation.Result;
 import org.apache.struts2.tiles.annotation.TilesDefinition;
 import org.apache.struts2.tiles.annotation.TilesPutAttribute;
-
-import com.opensymphony.xwork2.ActionSupport;
 
 @Namespace("/tiles")
 @ParentPackage("tiles")

@@ -18,11 +18,10 @@
  */
 package it.org.apache.struts2.showcase;
 
-import org.junit.Assert;
-import org.junit.Test;
-
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.gargoylesoftware.htmlunit.WebClient;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class StaticContentTest {
 

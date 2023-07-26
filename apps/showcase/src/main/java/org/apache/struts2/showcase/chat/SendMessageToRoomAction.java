@@ -21,10 +21,9 @@
 package org.apache.struts2.showcase.chat;
 
 import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.action.SessionAware;
 
 import java.util.Map;
-
-import org.apache.struts2.action.SessionAware;
 
 public class SendMessageToRoomAction extends ActionSupport implements SessionAware {
 

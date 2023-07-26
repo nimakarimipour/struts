@@ -18,8 +18,6 @@
  */
 package org.apache.struts2.showcase.validation;
 
-import java.sql.Date;
-
 import com.opensymphony.xwork2.validator.annotations.DateRangeFieldValidator;
 import com.opensymphony.xwork2.validator.annotations.EmailValidator;
 import com.opensymphony.xwork2.validator.annotations.FieldExpressionValidator;
@@ -29,6 +27,8 @@ import com.opensymphony.xwork2.validator.annotations.RequiredFieldValidator;
 import com.opensymphony.xwork2.validator.annotations.RequiredStringValidator;
 import com.opensymphony.xwork2.validator.annotations.StringLengthFieldValidator;
 import com.opensymphony.xwork2.validator.annotations.UrlValidator;
+
+import java.sql.Date;
 
 /**
  * <!-- START SNIPPET: ajaxFormSubmit -->
