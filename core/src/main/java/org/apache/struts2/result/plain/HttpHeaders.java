@@ -25,11 +25,11 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 class HttpHeaders {
 
-    private final List<HttpHeader<String>> stringHeaders = new ArrayList<>();
+    private final List<HttpHeader<@RUntainted String>> stringHeaders = new ArrayList<>();
     private final List<HttpHeader<Long>> dateHeaders = new ArrayList<>();
     private final List<HttpHeader<Integer>> intHeaders = new ArrayList<>();
 
-    public HttpHeaders add(@RUntainted String name, String value) {
+    public HttpHeaders add(@RUntainted String name, @RUntainted String value) {
         stringHeaders.add(new StringHttpHeader(name, value));
         return this;
     }
@@ -44,7 +44,7 @@ class HttpHeaders {
         return this;
     }
 
-    public List<HttpHeader<String>> getStringHeaders() {
+    public List<HttpHeader<@RUntainted String>> getStringHeaders() {
         return Collections.unmodifiableList(stringHeaders);
     }
 

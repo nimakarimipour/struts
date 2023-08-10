@@ -19,12 +19,12 @@
 package org.apache.struts2.result.plain;
 import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
-class StringHttpHeader implements HttpHeader<String> {
+class StringHttpHeader implements HttpHeader<@RUntainted String> {
 
     private final @RUntainted String name;
-    private final String value;
+    private final @RUntainted String value;
 
-    public StringHttpHeader(@RUntainted String name, String value) {
+    public StringHttpHeader(@RUntainted String name, @RUntainted String value) {
         this.name = name;
         this.value = value;
     }
@@ -33,7 +33,7 @@ class StringHttpHeader implements HttpHeader<String> {
         return name;
     }
 
-    public String getValue() {
+    public @RUntainted String getValue() {
         return value;
     }
 

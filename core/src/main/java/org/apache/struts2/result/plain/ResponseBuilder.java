@@ -49,7 +49,7 @@ public class ResponseBuilder {
         return this;
     }
 
-    public ResponseBuilder withHeader(@RUntainted String name, String value) {
+    public ResponseBuilder withHeader(@RUntainted String name, @RUntainted String value) {
         headers.add(name, value);
         return this;
     }
@@ -79,7 +79,7 @@ public class ResponseBuilder {
         return this;
     }
 
-    public ResponseBuilder withContentType(String contentType) {
+    public ResponseBuilder withContentType(@RUntainted String contentType) {
         headers.add(CONTENT_TYPE, contentType);
         return this;
     }
@@ -89,7 +89,7 @@ public class ResponseBuilder {
         return this;
     }
 
-    public Iterable<HttpHeader<String>> getStringHeaders() {
+    public Iterable<HttpHeader<@RUntainted String>> getStringHeaders() {
         return headers.getStringHeaders();
     }
 
