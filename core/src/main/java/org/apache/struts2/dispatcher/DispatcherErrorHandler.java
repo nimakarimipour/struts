@@ -43,6 +43,6 @@ public interface DispatcherErrorHandler {
      * @param code HTTP Error Code, see {@link javax.servlet.http.HttpServletResponse} for possible error codes
      * @param e Exception to report
      */
-    public void handleError(HttpServletRequest request, HttpServletResponse response, int code, @RUntainted Exception e);
+    public void handleError(HttpServletRequest request, HttpServletResponse response, int code, Exception e);
 
 }

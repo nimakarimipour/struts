@@ -125,7 +125,7 @@ public class HttpHeaderResult implements Result {
      *
      * @return a Map of all HTTP headers.
      */
-    public Map<String, String> getHeaders() {
+    public @RUntainted Map<@RUntainted String, @RUntainted String> getHeaders() {
         return headers;
     }
 

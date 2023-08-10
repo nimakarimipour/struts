@@ -21,6 +21,7 @@ package org.apache.struts2.result;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.Result;
 import com.opensymphony.xwork2.util.TextParseUtil;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.struts2.StrutsStatics;
@@ -214,7 +215,7 @@ public abstract class StrutsResultSupport implements Result, StrutsStatics {
      * @param invocation The action invocation instance
      * @return the resulting string
      */
-    protected @RUntainted String conditionalParse(String param, ActionInvocation invocation) {
+    protected @RPolyTainted String conditionalParse(@RPolyTainted String param, ActionInvocation invocation) {
         if (parse && param != null && invocation != null) {
             return TextParseUtil.translateVariables(
                 param, 

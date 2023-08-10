@@ -71,7 +71,7 @@ public class DefaultDispatcherErrorHandler implements DispatcherErrorHandler {
         }
     }
 
-    public void handleError(HttpServletRequest request, HttpServletResponse response, int code, @RUntainted Exception e) {
+    public void handleError(HttpServletRequest request, HttpServletResponse response, int code, Exception e) {
         Boolean devModeOverride = PrepareOperations.getDevModeOverride();
         if (devModeOverride != null ? devModeOverride : devMode) {
             handleErrorInDevMode(response, code, e);
@@ -80,7 +80,7 @@ public class DefaultDispatcherErrorHandler implements DispatcherErrorHandler {
         }
     }
 
-    protected void sendErrorResponse(HttpServletRequest request, HttpServletResponse response, int code, @RUntainted Exception e) {
+    protected void sendErrorResponse(HttpServletRequest request, HttpServletResponse response, int code, Exception e) {
         try {
             // WW-1977: Only put errors in the request when code is a 500 error
             if (code == HttpServletResponse.SC_INTERNAL_SERVER_ERROR) {

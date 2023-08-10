@@ -79,10 +79,10 @@ public class StreamResult extends StrutsResultSupport {
 
     public static final String DEFAULT_PARAM = "inputName";
 
-    protected String contentType = "text/plain";
+    protected @RUntainted String contentType = "text/plain";
     protected String contentLength;
-    protected String contentDisposition = "inline";
-    protected String contentCharSet;
+    protected @RUntainted String contentDisposition = "inline";
+    protected @RUntainted String contentCharSet;
     protected String inputName = "inputStream";
     protected InputStream inputStream;
     protected int bufferSize = 1024;
@@ -145,7 +145,7 @@ public class StreamResult extends StrutsResultSupport {
     /**
      * @param contentType The contentType to set.
      */
-    public void setContentType(String contentType) {
+    public void setContentType(@RUntainted String contentType) {
         this.contentType = contentType;
     }
 
@@ -173,7 +173,7 @@ public class StreamResult extends StrutsResultSupport {
     /**
      * @param contentDisposition the Content-disposition header value to use.
      */
-    public void setContentDisposition(String contentDisposition) {
+    public void setContentDisposition(@RUntainted String contentDisposition) {
         this.contentDisposition = contentDisposition;
     }
 
@@ -187,7 +187,7 @@ public class StreamResult extends StrutsResultSupport {
     /**
      * @param contentCharSet the charset to use on the header when sending the stream
      */
-    public void setContentCharSet(String contentCharSet) {
+    public void setContentCharSet(@RUntainted String contentCharSet) {
         this.contentCharSet = contentCharSet;
     }
 

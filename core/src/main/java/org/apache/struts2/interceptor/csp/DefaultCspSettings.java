@@ -96,8 +96,8 @@ public class DefaultCspSettings implements CspSettings {
         return Objects.toString(nonce);
     }
 
-    private @RUntainted byte[] getRandomBytes() {
-        @RUntainted byte[] ret = new byte[NONCE_RANDOM_LENGTH];
+    private @RUntainted byte @RUntainted [] getRandomBytes() {
+        @RUntainted byte @RUntainted [] ret = new byte[NONCE_RANDOM_LENGTH];
         sRand.nextBytes(ret);
         return ret;
     }
