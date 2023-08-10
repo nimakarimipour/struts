@@ -25,6 +25,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.reflect.MethodUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: description -->
@@ -159,7 +160,7 @@ public class DefaultWorkflowInterceptor extends MethodFilterInterceptor {
      */
     @Override
     protected String doIntercept(ActionInvocation invocation) throws Exception {
-        Object action = invocation.getAction();
+        @RUntainted Object action = invocation.getAction();
 
         if (action instanceof ValidationAware) {
             ValidationAware validationAwareAction = (ValidationAware) action;
@@ -207,7 +208,7 @@ public class DefaultWorkflowInterceptor extends MethodFilterInterceptor {
      *
      * @throws Exception in case of any errors
      */
-    protected String processInputConfig(final Object action, final String method, final String currentResultName) throws Exception {
+    protected String processInputConfig(final @RUntainted Object action, final String method, final String currentResultName) throws Exception {
         String resultName = currentResultName;
         InputConfig annotation = MethodUtils.getAnnotation(action.getClass().getMethod(method, EMPTY_CLASS_ARRAY),
                 InputConfig.class ,true,true);

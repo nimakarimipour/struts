@@ -29,6 +29,7 @@ import org.apache.struts2.result.plain.ResponseBuilder;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * This result can only be used in code, as a result of action's method, eg.:

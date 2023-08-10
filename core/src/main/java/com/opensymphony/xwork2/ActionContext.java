@@ -34,6 +34,7 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -403,7 +404,7 @@ public class ActionContext implements Serializable {
      * @param key the key used to find the value.
      * @return the value that was found using the key or <tt>null</tt> if the key was not found.
      */
-    public Object get(String key) {
+    public @RUntainted Object get(String key) {
         return context.get(key);
     }
 
@@ -462,7 +463,7 @@ public class ActionContext implements Serializable {
      *
      * @return current ServletResponse
      */
-    public HttpServletResponse getServletResponse() {
+    public @RUntainted HttpServletResponse getServletResponse() {
         return (HttpServletResponse) get(StrutsStatics.HTTP_RESPONSE);
     }
 

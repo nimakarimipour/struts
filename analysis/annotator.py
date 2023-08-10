@@ -19,7 +19,7 @@ import shutil
 from pathlib import Path
 
 VERSION = '1.3.8-SNAPSHOT'
-MODULE = 'apps'
+MODULE = 'core'
 BENCHMARK = 'struts-{}'.format(MODULE)
 OUT_DIR = '/tmp/ucr-tainting/{}'.format(BENCHMARK)
 ANNOTATOR_JAR = "{}/.m2/repository/edu/ucr/cs/riple/annotator/annotator-core/{}/annotator-core-{}.jar".format(str(Path.home()), VERSION, VERSION)

@@ -44,6 +44,7 @@ import java.io.CharArrayWriter;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.Locale;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Renders a view using the Freemarker template engine.
@@ -67,7 +68,7 @@ public class FreemarkerResult extends StrutsResultSupport {
      * the current context is available to subclasses via these protected fields
      */
     protected String location;
-    private String pContentType = "text/html";
+    private @RUntainted String pContentType = "text/html";
     private static final String PARENT_TEMPLATE_WRITER = FreemarkerResult.class.getName() + ".parentWriter";
 
     public FreemarkerResult() {
@@ -83,7 +84,7 @@ public class FreemarkerResult extends StrutsResultSupport {
         this.freemarkerManager = mgr;
     }
 
-    public void setContentType(String aContentType) {
+    public void setContentType(@RUntainted String aContentType) {
         pContentType = aContentType;
     }
 
@@ -93,7 +94,7 @@ public class FreemarkerResult extends StrutsResultSupport {
      *
      * @return the content type
      */
-    public String getContentType() {
+    public @RUntainted String getContentType() {
         return pContentType;
     }
 
@@ -136,7 +137,7 @@ public class FreemarkerResult extends StrutsResultSupport {
             }
         }
 
-        Template template = configuration.getTemplate(absoluteLocation, deduceLocale());
+        @RUntainted Template template = configuration.getTemplate(absoluteLocation, deduceLocale());
         TemplateModel model = createModel();
 
         // Give subclasses a chance to hook into preprocessing
@@ -318,21 +319,21 @@ public class FreemarkerResult extends StrutsResultSupport {
      * @return true to process the template, false to suppress template processing.
      * @throws IOException in case of IO errors
      */
-    protected boolean preTemplateProcess(Template template, TemplateModel model) throws IOException {
-        Object attrContentType = template.getCustomAttribute("content_type");
+    protected boolean preTemplateProcess(@RUntainted Template template, TemplateModel model) throws IOException {
+        @RUntainted Object attrContentType = template.getCustomAttribute("content_type");
 
-        HttpServletResponse response = ServletActionContext.getResponse();
+        @RUntainted HttpServletResponse response = ServletActionContext.getResponse();
         if (response.getContentType() == null) {
             if (attrContentType != null) {
                 response.setContentType(attrContentType.toString());
             } else {
-                String contentType = getContentType();
+                @RUntainted String contentType = getContentType();
 
                 if (contentType == null) {
                     contentType = "text/html";
                 }
 
-                String encoding = template.getEncoding();
+                @RUntainted String encoding = template.getEncoding();
 
                 if (encoding != null) {
                     contentType = contentType + "; charset=" + encoding;

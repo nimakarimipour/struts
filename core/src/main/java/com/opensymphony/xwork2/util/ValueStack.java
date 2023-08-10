@@ -21,6 +21,7 @@ package com.opensymphony.xwork2.util;
 import com.opensymphony.xwork2.ActionContext;
 
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * ValueStack allows multiple beans to be pushed in and dynamic EL expressions to be evaluated against it. When

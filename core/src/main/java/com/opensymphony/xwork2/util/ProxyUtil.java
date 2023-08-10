@@ -30,6 +30,7 @@ import java.lang.reflect.Modifier;
 import java.lang.reflect.Proxy;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <code>ProxyUtil</code>
@@ -57,7 +58,7 @@ public class ProxyUtil {
      * @return the ultimate target class (or the plain class of the given
      * object as fallback; never {@code null})
      */
-    public static Class<?> ultimateTargetClass(Object candidate) {
+    public static Class<?> ultimateTargetClass(@RUntainted Object candidate) {
         Class<?> result = null;
         if (isSpringAopProxy(candidate))
             result = springUltimateTargetClass(candidate);
@@ -115,8 +116,8 @@ public class ProxyUtil {
      * @return the ultimate target class (or the plain class of the given
      * object as fallback; never {@code null})
      */
-    private static Class<?> springUltimateTargetClass(Object candidate) {
-        Object current = candidate;
+    private static Class<?> springUltimateTargetClass(@RUntainted Object candidate) {
+        @RUntainted Object current = candidate;
         Class<?> result = null;
         while (null != current && implementsInterface(current.getClass(), SPRING_TARGETCLASSAWARE_CLASS_NAME)) {
             try {
@@ -169,10 +170,10 @@ public class ProxyUtil {
      * @return the singleton target object, or {@code null} in any other case
      * (not a spring proxy, not an existing singleton target)
      */
-    private static Object getSingletonTarget(Object candidate) {
+    private static @RUntainted Object getSingletonTarget(@RUntainted Object candidate) {
         try {
             if (implementsInterface(candidate.getClass(), SPRING_ADVISED_CLASS_NAME)) {
-                Object targetSource = MethodUtils.invokeMethod(candidate, "getTargetSource");
+                @RUntainted Object targetSource = MethodUtils.invokeMethod(candidate, "getTargetSource");
                 if (implementsInterface(targetSource.getClass(), SPRING_SINGLETONTARGETSOURCE_CLASS_NAME)) {
                     return MethodUtils.invokeMethod(targetSource, "getTarget");
                 }
