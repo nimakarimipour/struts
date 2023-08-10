@@ -20,6 +20,7 @@ package com.opensymphony.xwork2.interceptor.annotations;
 
 import com.opensymphony.xwork2.Action;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -90,6 +91,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD})
 public @interface InputConfig {
-    String methodName() default "";
+    @RUntainted String methodName() default "";
     String resultName() default Action.INPUT;
 }
