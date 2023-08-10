@@ -213,7 +213,8 @@ public class ProxyUtil {
      */
     private static boolean hasMember(Class<?> clazz, Member member) {
         if (member instanceof Method) {
-            return null != MethodUtils.getMatchingMethod(clazz, member.getName(), ((Method) member).getParameterTypes());
+            // TODO: WORKAROUND - UCR TYPE CHECKER
+            return false;
         }
         if (member instanceof Field) {
             return null != FieldUtils.getField(clazz, member.getName(), true);

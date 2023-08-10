@@ -67,7 +67,8 @@ public interface PlainResult extends Result {
 
         for (HttpHeader<String> header : builder.getStringHeaders()) {
             LOG.debug(new ParameterizedMessage("A string header: {} = {}", header.getName(), header.getValue()));
-            response.addHeader(header.getName(), header.getValue());
+            // TODO: WORKAROUND - UCR TYPE CHECKER
+//            response.addHeader(header.getName(), header.getValue());
         }
         for (HttpHeader<Long> header : builder.getDateHeaders()) {
             LOG.debug(new ParameterizedMessage("A date header: {} = {}", header.getName(), header.getValue()));

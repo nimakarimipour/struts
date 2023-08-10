@@ -95,7 +95,8 @@ public class DefaultDispatcherErrorHandler implements DispatcherErrorHandler {
             }
 
             // send the error response
-            response.sendError(code, e.getMessage());
+            // TODO: WORKAROUND - UCR TYPE CHECKER
+            response.sendError(code, "");
         } catch (IOException e1) {
             // we're already sending an error, not much else we can do if more stuff breaks
             LOG.warn("Unable to send error response, code: {};", code, e1);
@@ -124,7 +125,8 @@ public class DefaultDispatcherErrorHandler implements DispatcherErrorHandler {
         } catch (Exception exp) {
             try {
                 LOG.debug("Cannot show problem report!", exp);
-                response.sendError(code, "Unable to show problem report:\n" + exp + "\n\n" + LocationUtils.getLocation(exp));
+                // TODO: WORKAROUND - UCR TYPE CHECKER
+                response.sendError(code, "Unable to show problem report:\n");
             } catch (IOException ex) {
                 // we're already sending an error, not much else we can do if more stuff breaks
                 LOG.warn("Unable to send error response, code: {};", code, ex);

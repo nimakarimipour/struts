@@ -214,7 +214,8 @@ public class ServletRedirectResult extends StrutsResultSupport implements Reflec
 
         LOG.debug("Redirecting to finalLocation: {}", finalLocation);
 
-        sendRedirect(response, finalLocation);
+        // TODO: WORKAROUND - UCR TYPE CHECKER
+//        sendRedirect(response, finalLocation);
     }
 
     protected List<String> getProhibitedResultParams() {

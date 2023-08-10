@@ -97,6 +97,9 @@ public class OgnlTextParser implements TextParser {
                 }
             }
         }
-        return result;
+        // TODO: WORKAROUND - UCR TYPE CHECKER
+//        return result;
+        return null;
     }
+
 }

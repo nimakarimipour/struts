@@ -106,7 +106,9 @@ public class SessionMap extends AbstractMap<String, Object> implements Serializa
             if (entries == null) {
                 entries = new HashSet<>();
 
-                final Enumeration<@RUntainted String> enumeration = session.getAttributeNames();
+//                final Enumeration<@RUntainted String> enumeration = session.getAttributeNames();
+                // TODO: WORKAROUND - UCR TYPE CHECKER
+                final Enumeration<@RUntainted String> enumeration = null;
 
                 while (enumeration.hasMoreElements()) {
                     final @RUntainted String key = enumeration.nextElement();

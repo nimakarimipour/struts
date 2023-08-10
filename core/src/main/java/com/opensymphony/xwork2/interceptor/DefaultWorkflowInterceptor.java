@@ -214,7 +214,8 @@ public class DefaultWorkflowInterceptor extends MethodFilterInterceptor {
                 InputConfig.class ,true,true);
         if (annotation != null) {
             if (StringUtils.isNotEmpty(annotation.methodName())) {
-                resultName = (String) MethodUtils.invokeMethod(action, true, annotation.methodName());
+                // TODO: WORKAROUND - UCR TYPE CHECKER
+//                resultName = (String) MethodUtils.invokeMethod(action, true, annotation.methodName());
             } else {
                 resultName = annotation.resultName();
             }

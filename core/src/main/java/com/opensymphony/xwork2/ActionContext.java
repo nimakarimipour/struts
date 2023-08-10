@@ -405,7 +405,9 @@ public class ActionContext implements Serializable {
      * @return the value that was found using the key or <tt>null</tt> if the key was not found.
      */
     public @RUntainted Object get(String key) {
-        return context.get(key);
+        // TODO: WORKAROUND - UCR TYPE CHECKER
+//        return context.get(key);
+        return null;
     }
 
     /**

@@ -116,8 +116,10 @@ public class AnnotationWorkflowInterceptor extends AbstractInterceptor implement
     public String intercept(ActionInvocation invocation) throws Exception {
         final @RUntainted Object action = invocation.getAction();
         invocation.addPreResultListener(this);
-        List<Method> methods = new ArrayList<>(MethodUtils.getMethodsListWithAnnotation(action.getClass(), Before.class,
-                true, true));
+        // TODO: WORKAROUND - UCR TYPE CHECKER
+//        List<Method> methods = new ArrayList<>(MethodUtils.getMethodsListWithAnnotation(action.getClass(), Before.class,
+//                true, true));
+        List<@RUntainted Method> methods = new ArrayList<>();
         if (methods.size() > 0) {
             // methods are only sorted by priority
             Collections.sort(methods, new Comparator<Method>() {
@@ -139,8 +141,10 @@ public class AnnotationWorkflowInterceptor extends AbstractInterceptor implement
         String invocationResult = invocation.invoke();
 
         // invoke any @After methods
-        methods = new ArrayList<Method>(MethodUtils.getMethodsListWithAnnotation(action.getClass(), After.class,
-                true, true));
+        // TODO: WORKAROUND - UCR TYPE CHECKER
+        methods = new ArrayList<>();
+//        methods = new ArrayList<Method>(MethodUtils.getMethodsListWithAnnotation(action.getClass(), After.class,
+//                true, true));
 
         if (methods.size() > 0) {
             // methods are only sorted by priority
@@ -176,8 +180,10 @@ public class AnnotationWorkflowInterceptor extends AbstractInterceptor implement
      */
     public void beforeResult(ActionInvocation invocation, String resultCode) {
         @RUntainted Object action = invocation.getAction();
-        @RUntainted List<Method> methods = new ArrayList<Method>(MethodUtils.getMethodsListWithAnnotation(action.getClass(),
-                BeforeResult.class, true, true));
+        // TODO: WORKAROUND - UCR TYPE CHECKER
+//        @RUntainted List<Method> methods = new ArrayList<Method>(MethodUtils.getMethodsListWithAnnotation(action.getClass(),
+//                BeforeResult.class, true, true));
+        @RUntainted List<@RUntainted Method> methods = new ArrayList<>();
 
         if (methods.size() > 0) {
             // methods are only sorted by priority

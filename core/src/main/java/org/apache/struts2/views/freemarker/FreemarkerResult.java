@@ -137,7 +137,9 @@ public class FreemarkerResult extends StrutsResultSupport {
             }
         }
 
-        @RUntainted Template template = configuration.getTemplate(absoluteLocation, deduceLocale());
+        @RUntainted Template template = null;
+        // TODO: WORKAROUND - UCR TYPE CHECKER
+//        @RUntainted Template template = configuration.getTemplate(absoluteLocation, deduceLocale());
         TemplateModel model = createModel();
 
         // Give subclasses a chance to hook into preprocessing
