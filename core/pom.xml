@@ -227,10 +227,10 @@
                                 <arg>-AannotatedPackages=org.apache.struts2</arg>
                                 <arg>-AenableCustomCheck</arg>
                                 <arg>-AenableSerialization</arg>
-                                <arg>-AserializationConfigPath=/tmp/ucr-tainting/struts-core/taint.xml</arg>
+                                <arg>-AserializationConfigPath=/home/nima/Developer/taint-benchmarks/struts/annotator-out/core/checker.xml</arg>
                                 <arg>-XDcompilePolicy=simple</arg>
                                 <arg>-parameters</arg>
-                                <arg>-Xplugin:ErrorProne -XepDisableAllChecks -Xep:AnnotatorScanner:ERROR -XepOpt:AnnotatorScanner:ConfigPath=/tmp/ucr-tainting/struts-core/scanner.xml</arg>
+                                <arg>-Xplugin:ErrorProne -XepDisableAllChecks -Xep:AnnotatorScanner:ERROR -XepOpt:AnnotatorScanner:ConfigPath=/home/nima/Developer/taint-benchmarks/struts/annotator-out/core/scanner.xml</arg>
                             </compilerArgs>
                         </configuration>
                     </plugin>
