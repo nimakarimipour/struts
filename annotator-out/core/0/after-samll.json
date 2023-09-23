@@ -1,0 +1,135 @@
+{
+  "errors": [
+    {
+      "messageKey": "argument",
+      "region": {
+        "symbol": "doExecute(java.lang.String,com.opensymphony.xwork2.ActionInvocation)",
+        "class": "org.apache.struts2.result.StreamResult"
+      },
+      "fixes": [
+        {
+          "annotation": "untainted",
+          "location": {
+            "path": "/home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/StreamResult.java",
+            "type-variable-position": [
+              [
+                0
+              ]
+            ],
+            "method": "doExecute(java.lang.String,com.opensymphony.xwork2.ActionInvocation)",
+            "kind": "PARAMETER",
+            "name": "invocation",
+            "index": 1,
+            "class": "org.apache.struts2.result.StreamResult"
+          }
+        },
+        {
+          "annotation": "untainted",
+          "location": {
+            "path": "/home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/StreamResult.java",
+            "type-variable-position": [
+              [
+                0
+              ]
+            ],
+            "field": "contentCharSet",
+            "kind": "FIELD",
+            "class": "org.apache.struts2.result.StreamResult"
+          }
+        },
+        {
+          "annotation": "untainted",
+          "location": {
+            "path": "/home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/StreamResult.java",
+            "type-variable-position": [
+              [
+                0
+              ]
+            ],
+            "field": "contentType",
+            "kind": "FIELD",
+            "class": "org.apache.struts2.result.StreamResult"
+          }
+        }
+      ]
+    },
+    {
+      "messageKey": "argument",
+      "region": {
+        "symbol": "doExecute(java.lang.String,com.opensymphony.xwork2.ActionInvocation)",
+        "class": "org.apache.struts2.result.StreamResult"
+      },
+      "fixes": [
+        {
+          "annotation": "untainted",
+          "location": {
+            "path": "/home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/StreamResult.java",
+            "type-variable-position": [
+              [
+                0
+              ]
+            ],
+            "method": "doExecute(java.lang.String,com.opensymphony.xwork2.ActionInvocation)",
+            "kind": "PARAMETER",
+            "name": "invocation",
+            "index": 1,
+            "class": "org.apache.struts2.result.StreamResult"
+          }
+        },
+        {
+          "annotation": "untainted",
+          "location": {
+            "path": "/home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/StreamResult.java",
+            "type-variable-position": [
+              [
+                0
+              ]
+            ],
+            "field": "contentType",
+            "kind": "FIELD",
+            "class": "org.apache.struts2.result.StreamResult"
+          }
+        }
+      ]
+    },
+    {
+      "messageKey": "argument",
+      "region": {
+        "symbol": "doExecute(java.lang.String,com.opensymphony.xwork2.ActionInvocation)",
+        "class": "org.apache.struts2.result.StreamResult"
+      },
+      "fixes": [
+        {
+          "annotation": "untainted",
+          "location": {
+            "path": "/home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/StreamResult.java",
+            "type-variable-position": [
+              [
+                0
+              ]
+            ],
+            "method": "doExecute(java.lang.String,com.opensymphony.xwork2.ActionInvocation)",
+            "kind": "PARAMETER",
+            "name": "invocation",
+            "index": 1,
+            "class": "org.apache.struts2.result.StreamResult"
+          }
+        },
+        {
+          "annotation": "untainted",
+          "location": {
+            "path": "/home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/StreamResult.java",
+            "type-variable-position": [
+              [
+                0
+              ]
+            ],
+            "field": "contentDisposition",
+            "kind": "FIELD",
+            "class": "org.apache.struts2.result.StreamResult"
+          }
+        }
+      ]
+    }
+  ]
+}

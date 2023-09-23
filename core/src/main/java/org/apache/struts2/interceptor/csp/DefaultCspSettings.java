@@ -28,6 +28,7 @@ import java.util.Base64;
 import java.util.Objects;
 
 import static java.lang.String.format;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Default implementation of {@link CspSettings}.

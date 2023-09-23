@@ -1,0 +1,15 @@
+Method: translateVariables(java.lang.String,com.opensymphony.xwork2.util.ValueStack,com.opensymphony.xwork2.util.TextParseUtil.ParsedValueEvaluator)
+Actual Node: TextParseUtil.translateVariables(param, invocation.getStack(), new EncodingParsedValueEvaluator())
+Return Type: @RTainted String
+Receiver: TextParseUtil
+Has Valid Receiver: true
+Argument: param, type: @RPolyTainted String, isPolyOrUntainted: true
+Argument: invocation.getStack(), type: @RTainted ValueStack, isPolyOrUntainted: false
+Argument: new EncodingParsedValueEvaluator(), type: @RTainted StrutsResultSupport.@RTainted EncodingParsedValueEvaluator, isPolyOrUntainted: false
+No Tainted Params: false
+Method: getStack()
+Actual Node: invocation.getStack()
+Return Type: @RTainted ValueStack
+Receiver: invocation
+Has Valid Receiver: true
+No Tainted Params: true

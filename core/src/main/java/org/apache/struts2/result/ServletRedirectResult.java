@@ -44,6 +44,7 @@ import java.util.List;
 import java.util.Map;
 
 import static javax.servlet.http.HttpServletResponse.SC_FOUND;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Calls the {@link HttpServletResponse#sendRedirect(String) sendRedirect}
