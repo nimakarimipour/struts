@@ -26,6 +26,7 @@ import java.util.Collections;
 import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A simple implementation of the {@link java.util.Map} interface to handle a collection of HTTP session
@@ -105,10 +106,10 @@ public class SessionMap extends AbstractMap<String, Object> implements Serializa
             if (entries == null) {
                 entries = new HashSet<>();
 
-                final Enumeration<String> enumeration = session.getAttributeNames();
+                final Enumeration<@RUntainted String> enumeration = session.getAttributeNames();
 
                 while (enumeration.hasMoreElements()) {
-                    final String key = enumeration.nextElement();
+                    final @RUntainted String key = enumeration.nextElement();
                     final Object value = session.getAttribute(key);
                     entries.add(new StringObjectEntry(key, value) {
                         @Override

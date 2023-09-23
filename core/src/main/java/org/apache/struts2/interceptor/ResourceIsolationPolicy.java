@@ -19,6 +19,7 @@
 package org.apache.struts2.interceptor;
 
 import javax.servlet.http.HttpServletRequest;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Interface for the resource isolation policies to be used for fetch metadata checks.

@@ -19,6 +19,7 @@
 package org.apache.struts2.result.plain;
 
 import javax.servlet.http.Cookie;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class ResponseBuilder {
 
@@ -96,7 +97,7 @@ public class ResponseBuilder {
         return headers.getDateHeaders();
     }
 
-    public Iterable<HttpHeader<Integer>> getIntHeaders() {
+    public Iterable<@RUntainted HttpHeader<Integer>> getIntHeaders() {
         return headers.getIntHeaders();
     }
 
