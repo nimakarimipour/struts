@@ -1,0 +1,100 @@
+2023-10-16T10:50:57.864173702:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:51:20.279004859:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:51:44.236165403:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:52:06.383796925:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:52:29.890555042:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:52:53.576110916:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:53:16.788202635:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:53:40.433486346:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:54:04.060702969:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:54:27.720334212:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:54:51.312623167:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:55:14.539270982:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:55:37.681315266:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:56:00.750731092:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:56:23.864134369:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:56:47.516295272:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:57:11.133553516:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:57:34.586696784:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:57:58.056593945:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:58:21.680377001:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:58:45.259644344:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:59:08.515180751:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:59:32.063348602:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T10:59:55.187388571:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:00:18.474308692:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:00:41.968478630:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:01:05.261549631:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:01:28.496204439:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:01:51.647620659:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:02:15.129102462:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:02:38.774709917:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:03:02.528218217:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:03:25.849967030:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:03:48.931931010:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:04:12.483877815:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:04:35.502515968:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:04:58.491570612:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:05:21.780604828:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:05:45.153932953:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:06:08.844973722:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:06:32.602311733:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:06:56.064675354:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:07:19.281839752:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:07:42.926282618:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:08:06.451620496:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:08:29.624321441:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:08:52.918455836:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-16T11:09:16.602568298:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
+2023-10-19T11:15:01.220840141:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl remote-api -am
+
+2023-10-19T11:15:01.704106038:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl remote-api -am
+

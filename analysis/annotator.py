@@ -19,11 +19,10 @@ import shutil
 from pathlib import Path
 
 VERSION = '1.3.9-SNAPSHOT'
-MODULE = 'remote-api'
-BENCHMARK = 'struts-{}'.format(MODULE)
-OUT_DIR = '/home/nima/Developer/taint-benchmarks/struts/annotator-out/core'
-ANNOTATOR_JAR = "{}/.m2/repository/edu/ucr/cs/riple/annotator/annotator-core/{}/annotator-core-{}.jar".format(str(Path.home()), VERSION, VERSION)
+MODULE = 'core'
 REPO = subprocess.check_output(['git', 'rev-parse', '--show-toplevel']).strip().decode('utf-8')
+OUT_DIR = '{}/annotator-out/core'.format(REPO)
+ANNOTATOR_JAR = "{}/.m2/repository/edu/ucr/cs/riple/annotator/annotator-core/{}/annotator-core-{}.jar".format(str(Path.home()), VERSION, VERSION)
 
 def prepare():
     os.makedirs(OUT_DIR, exist_ok=True)
