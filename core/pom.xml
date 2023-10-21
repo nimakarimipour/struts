@@ -225,7 +225,7 @@
                                 <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
                                 <arg>-Awarns</arg>
                                 <arg>-AannotatedPackages=org.apache.struts2</arg>
-                                <arg>-AenableCustomCheck</arg>
+                                <arg>-AenableLibraryCheck</arg>
                                 <arg>-AenableSerialization</arg>
                                 <arg>-AserializationConfigPath=/home/nima/Developer/taint-benchmarks/struts/annotator-out/core/checker.xml</arg>
                                 <arg>-XDcompilePolicy=simple</arg>
