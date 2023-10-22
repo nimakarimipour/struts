@@ -98,3 +98,5 @@
 
 2023-10-19T11:15:01.704106038:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl remote-api -am
 
+2023-10-21T15:21:24.995904739:cd /home/nima/Developer/taint-benchmarks/struts && mvn clean compile -DskipTests -pl core -am
+
