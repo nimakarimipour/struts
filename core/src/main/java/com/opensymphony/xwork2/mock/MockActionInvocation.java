@@ -28,6 +28,7 @@ import com.opensymphony.xwork2.util.ValueStack;
 
 import java.util.ArrayList;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Mock for an {@link ActionInvocation}.
@@ -39,7 +40,7 @@ import java.util.List;
  */
 public class MockActionInvocation implements ActionInvocation {
 
-    private Object action;
+    private @RUntainted Object action;
     private ActionContext invocationContext;
     private ActionEventListener actionEventListener;
     private ActionProxy proxy;
@@ -49,11 +50,11 @@ public class MockActionInvocation implements ActionInvocation {
 
     private List<PreResultListener> preResultListeners = new ArrayList<>();
 
-    public Object getAction() {
+    public @RUntainted Object getAction() {
         return action;
     }
 
-    public void setAction(Object action) {
+    public void setAction(@RUntainted Object action) {
         this.action = action;
     }
 

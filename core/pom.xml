@@ -226,7 +226,7 @@
                                 <arg>-Awarns</arg>
                                 <arg>-AannotatedPackages=org.apache.struts2,com.opensymphony.xwork2</arg>
                                 <arg>-AenableLibraryCheck</arg>
-                                <arg>-AenableSerialization</arg>
+                                <!-- <arg>-AenableSerialization</arg> -->
                                 <arg>-AserializationConfigPath=/home/nima/Developer/taint-benchmarks/struts/annotator-out/core/checker.xml</arg>
                                 <arg>-XDcompilePolicy=simple</arg>
                                 <arg>-parameters</arg>

@@ -29,6 +29,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.Serializable;
 import java.util.Locale;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * The Default ActionProxy implementation

@@ -21,6 +21,7 @@ package org.apache.struts2.dispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Implementation of this interface is used to handle internal errors or missing resources.
@@ -42,6 +43,6 @@ public interface DispatcherErrorHandler {
      * @param code HTTP Error Code, see {@link javax.servlet.http.HttpServletResponse} for possible error codes
      * @param e Exception to report
      */
-    public void handleError(HttpServletRequest request, HttpServletResponse response, int code, Exception e);
+    public void handleError(HttpServletRequest request, HttpServletResponse response, int code, @RUntainted Exception e);
 
 }

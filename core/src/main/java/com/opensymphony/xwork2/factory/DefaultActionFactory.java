@@ -23,6 +23,7 @@ import com.opensymphony.xwork2.config.entities.ActionConfig;
 import com.opensymphony.xwork2.inject.Inject;
 
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Default implementation
@@ -36,7 +37,7 @@ public class DefaultActionFactory implements ActionFactory {
         this.objectFactory = objectFactory;
     }
 
-    public Object buildAction(String actionName, String namespace, ActionConfig config, Map<String, Object> extraContext) throws Exception {
+    public @RUntainted Object buildAction(String actionName, String namespace, ActionConfig config, Map<String, Object> extraContext) throws Exception {
         return objectFactory.buildBean(config.getClassName(), extraContext);
     }
 
