@@ -29,6 +29,8 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Collection;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -127,7 +129,7 @@ public abstract class StrutsResultSupport implements Result, StrutsStatics {
     private boolean parse;
     private boolean encode;
     private String location;
-    private String lastFinalLocation;
+    private @RUntainted String lastFinalLocation;
 
     public StrutsResultSupport() {
         this(null, true, false);
@@ -213,7 +215,7 @@ public abstract class StrutsResultSupport implements Result, StrutsStatics {
      * @param invocation The action invocation instance
      * @return the resulting string
      */
-    protected String conditionalParse(String param, ActionInvocation invocation) {
+    protected @RPolyTainted String conditionalParse(@RPolyTainted String param, ActionInvocation invocation) {
         if (parse && param != null && invocation != null) {
             return TextParseUtil.translateVariables(
                 param, 
@@ -278,5 +280,5 @@ public abstract class StrutsResultSupport implements Result, StrutsStatics {
      * @param invocation    the execution state of the action.
      * @throws Exception if an error occurs while executing the result.
      */
-    protected abstract void doExecute(String finalLocation, ActionInvocation invocation) throws Exception;
+    protected abstract void doExecute(@RUntainted String finalLocation, ActionInvocation invocation) throws Exception;
 }

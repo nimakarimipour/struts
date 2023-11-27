@@ -86,6 +86,8 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.regex.Pattern;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * A utility class the actual dispatcher delegates most of its tasks to. Each instance
@@ -133,7 +135,7 @@ public class Dispatcher {
     /**
      * Store state of StrutsConstants.STRUTS_I18N_ENCODING setting.
      */
-    private String defaultEncoding;
+    private @RUntainted String defaultEncoding;
 
     /**
      * Store state of StrutsConstants.STRUTS_LOCALE setting.
@@ -293,7 +295,7 @@ public class Dispatcher {
      * @param val New setting
      */
     @Inject(StrutsConstants.STRUTS_I18N_ENCODING)
-    public void setDefaultEncoding(String val) {
+    public void setDefaultEncoding(@RUntainted String val) {
         defaultEncoding = val;
     }
 
@@ -866,7 +868,7 @@ public class Dispatcher {
      * @param response The response
      */
     public void prepare(HttpServletRequest request, HttpServletResponse response) {
-        String encoding = null;
+        @RUntainted String encoding = null;
         if (defaultEncoding != null) {
             encoding = defaultEncoding;
         }
@@ -903,7 +905,7 @@ public class Dispatcher {
         }
     }
 
-    private void applyEncoding(HttpServletResponse response, String encoding) {
+    private void applyEncoding(HttpServletResponse response, @RUntainted String encoding) {
         try {
             if (!encoding.equals(response.getCharacterEncoding())) {
                 response.setCharacterEncoding(encoding);

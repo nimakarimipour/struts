@@ -29,6 +29,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -113,9 +114,9 @@ public class AnnotationWorkflowInterceptor extends AbstractInterceptor implement
      * @see com.opensymphony.xwork2.interceptor.Interceptor#intercept(com.opensymphony.xwork2.ActionInvocation)
      */
     public String intercept(ActionInvocation invocation) throws Exception {
-        final Object action = invocation.getAction();
+        final @RUntainted Object action = invocation.getAction();
         invocation.addPreResultListener(this);
-        List<Method> methods = new ArrayList<>(MethodUtils.getMethodsListWithAnnotation(action.getClass(), Before.class,
+        List<@RUntainted Method> methods = new ArrayList<>(MethodUtils.getMethodsListWithAnnotation(action.getClass(), Before.class,
                 true, true));
         if (methods.size() > 0) {
             // methods are only sorted by priority
@@ -150,7 +151,7 @@ public class AnnotationWorkflowInterceptor extends AbstractInterceptor implement
                             true).priority());
                 }
             });
-            for (Method m : methods) {
+            for (@RUntainted Method m : methods) {
                 MethodUtils.invokeMethod(action, true, m.getName());
             }
         }
@@ -174,8 +175,8 @@ public class AnnotationWorkflowInterceptor extends AbstractInterceptor implement
      * @see com.opensymphony.xwork2.interceptor.PreResultListener#beforeResult(com.opensymphony.xwork2.ActionInvocation,String)
      */
     public void beforeResult(ActionInvocation invocation, String resultCode) {
-        Object action = invocation.getAction();
-        List<Method> methods = new ArrayList<Method>(MethodUtils.getMethodsListWithAnnotation(action.getClass(),
+        @RUntainted Object action = invocation.getAction();
+        List<@RUntainted Method> methods = new ArrayList<@RUntainted Method>(MethodUtils.getMethodsListWithAnnotation(action.getClass(),
                 BeforeResult.class, true, true));
 
         if (methods.size() > 0) {
@@ -187,7 +188,7 @@ public class AnnotationWorkflowInterceptor extends AbstractInterceptor implement
                             true, true).priority());
                 }
             });
-            for (Method m : methods) {
+            for (@RUntainted Method m : methods) {
                 try {
                     MethodUtils.invokeMethod(action, true, m.getName());
                 } catch (Exception e) {

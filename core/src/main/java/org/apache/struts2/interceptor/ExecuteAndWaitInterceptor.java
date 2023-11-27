@@ -38,6 +38,7 @@ import org.apache.struts2.views.freemarker.FreemarkerResult;
 
 import javax.servlet.http.HttpSession;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: description -->
