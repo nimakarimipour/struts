@@ -19,6 +19,7 @@
 package com.opensymphony.xwork2.config;
 
 import org.apache.struts2.StrutsException;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * ConfigurationException

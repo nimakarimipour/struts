@@ -21,6 +21,7 @@ package com.opensymphony.xwork2;
 import com.opensymphony.xwork2.config.entities.ActionConfig;
 
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * An unknown handler manager contains a list of UnknownHandler and iterates on them by order

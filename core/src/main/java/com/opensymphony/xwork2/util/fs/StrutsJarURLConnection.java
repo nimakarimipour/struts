@@ -34,6 +34,7 @@ import java.security.PrivilegedActionException;
 import java.security.PrivilegedExceptionAction;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * WW-4901 If was needed, decouples from underlying implementation of {@link URL#openConnection()}
@@ -120,7 +121,7 @@ class StrutsJarURLConnection extends URLConnection implements AutoCloseable {
             jarFile = AccessController.doPrivileged(
                     new PrivilegedExceptionAction<JarFile>() {
                         public JarFile run() throws IOException {
-                            Path tmpFile = Files.createTempFile("jar_cache", null);
+                            @RUntainted Path tmpFile = Files.createTempFile("jar_cache", null);
                             try {
                                 Files.copy(in, tmpFile, StandardCopyOption.REPLACE_EXISTING);
                                 JarFile jarFile = new JarFile(tmpFile.toFile(), true, JarFile.OPEN_READ

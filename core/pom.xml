@@ -225,7 +225,9 @@
                                 <!-- <arg>-Awarns</arg> -->
                                 <arg>-nowarn</arg>
                                 <arg>-AannotatedPackages=org.apache.struts2,com.opensymphony.xwork2</arg>
-                                <arg>-AenableLibraryCheck</arg>
+                                <arg>-AenableLibraryCheck=${env.ANNOTATOR_LIBRARY}</arg>
+                                <arg>-AenablePolyTaintInference=${env.ANNOTATOR_POLY}</arg>
+                                <arg>-AenableTypeArgumentInference=${env.ANNOTATOR_TYPE_ARG}</arg>
                                 <arg>-AenableSerialization</arg>
                                 <arg>-AserializationConfigPath=/home/nima/Developer/taint-benchmarks/struts/annotator-out/core/checker.xml</arg>
                                 <arg>-XDcompilePolicy=simple</arg>
