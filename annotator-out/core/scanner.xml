@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><scanner><serialization active="true"/><uuid>9128998e-7518-4616-83ab-4951ecef9055</uuid><path>/home/nima/Developer/taint-benchmarks/struts/annotator-out/core/0</path><processor><LOMBOK active="true"/></processor><annotations/></scanner>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><scanner><serialization active="true"/><uuid>9128998e-7518-4616-83ab-4951ecef9055</uuid><path>/Users/kknock/RIPLE/taint/summer/struts/annotator-out/core/0</path><processor><LOMBOK active="true"/></processor><annotations/></scanner>

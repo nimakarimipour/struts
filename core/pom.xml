@@ -201,7 +201,7 @@
                                 <path>
                                     <groupId>edu.ucr.cs.riple.taint</groupId>
                                     <artifactId>ucrtainting-checker</artifactId>
-                                    <version>0.1</version>
+                                    <version>0.1-alpha-3-SNAPSHOT</version>
                                 </path>
                                 <!-- <path>
                                     <groupId>edu.ucr.cs.riple.annotator</groupId>
@@ -225,12 +225,14 @@
                                 <!-- <arg>-Awarns</arg> -->
                                 <arg>-nowarn</arg>
                                 <arg>-AannotatedPackages=org.apache.struts2,com.opensymphony.xwork2</arg>
-                                <arg>-AenableLibraryCheck</arg>
+                                <arg>-AenableLibraryCheck=true</arg>
+                                <arg>-AenablePolyTaintInference=true</arg>
+                                <arg>-AenableTypeArgumentInference=true</arg>
                                 <arg>-AenableSerialization</arg>
-                                <arg>-AserializationConfigPath=/home/nima/Developer/taint-benchmarks/struts/annotator-out/core/checker.xml</arg>
+                                <arg>-AserializationConfigPath=/Users/kknock/RIPLE/taint/summer/commons-configuration/annotator-out/checker.xml</arg>
                                 <arg>-XDcompilePolicy=simple</arg>
                                 <arg>-parameters</arg>
-                                <!-- <arg>-Xplugin:ErrorProne -XepDisableAllChecks -Xep:AnnotatorScanner:ERROR -XepOpt:AnnotatorScanner:ConfigPath=/home/nima/Developer/taint-benchmarks/struts/annotator-out/core/scanner.xml</arg> -->
+                                <!-- <arg>-Xplugin:ErrorProne -XepDisableAllChecks -Xep:AnnotatorScanner:ERROR -XepOpt:AnnotatorScanner:ConfigPath=/Users/kknock/RIPLE/taint/summer/struts/annotator-out/core/scanner.xml</arg> -->
                             </compilerArgs>
                         </configuration>
                     </plugin>
@@ -240,7 +242,7 @@
                 <dependency>
                     <groupId>org.checkerframework</groupId>
                     <artifactId>checker</artifactId>
-                    <version>3.40.0</version>
+                    <version>3.42.0</version>
                 </dependency>
             </dependencies>
         </profile>

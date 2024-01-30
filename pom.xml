@@ -269,7 +269,7 @@
                                 <path>
                                     <groupId>edu.ucr.cs.riple.taint</groupId>
                                     <artifactId>ucrtainting-checker</artifactId>
-                                    <version>0.1</version>
+                                    <version>0.1-alpha-3-SNAPSHOT</version>
                                 </path>
                                 <!-- <path>
                                     <groupId>edu.ucr.cs.riple.annotator</groupId>
@@ -299,7 +299,7 @@
                 <dependency>
                     <groupId>org.checkerframework</groupId>
                     <artifactId>checker</artifactId>
-                    <version>3.40.0</version>
+                    <version>3.42.0</version>
                 </dependency>
             </dependencies>
         </profile>
@@ -372,7 +372,7 @@
         <dependency>
             <groupId>org.checkerframework</groupId>
             <artifactId>checker-qual</artifactId>
-            <version>3.40.0</version>
+            <version>3.42.0</version>
         </dependency>
         <dependency>
             <groupId>com.google.errorprone</groupId>
