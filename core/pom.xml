@@ -201,7 +201,7 @@
                                 <path>
                                     <groupId>edu.ucr.cs.riple.taint</groupId>
                                     <artifactId>ucrtainting-checker</artifactId>
-                                    <version>0.1</version>
+                                    <version>0.1-alpha-2</version>
                                 </path>
                                 <!-- <path>
                                     <groupId>edu.ucr.cs.riple.annotator</groupId>
@@ -223,10 +223,12 @@
                                 <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED</arg>
                                 <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
                                 <!-- <arg>-Awarns</arg> -->
-                                <arg>-nowarn</arg>
+                                <!-- <arg>-nowarn</arg> -->
                                 <arg>-AannotatedPackages=org.apache.struts2,com.opensymphony.xwork2</arg>
-                                <arg>-AenableLibraryCheck</arg>
                                 <arg>-AenableSerialization</arg>
+                                <arg>-AenableLibraryCheck=${env.ANNOTATOR_LIBRARY}</arg>
+                                <arg>-AenablePolyTaintInference=${env.ANNOTATOR_POLY}</arg>
+                                <arg>-AenableTypeArgumentInference=${env.ANNOTATOR_TYPE_ARG}</arg>
                                 <arg>-AserializationConfigPath=/home/nima/Developer/taint-benchmarks/struts/annotator-out/core/checker.xml</arg>
                                 <arg>-XDcompilePolicy=simple</arg>
                                 <arg>-parameters</arg>
