@@ -35,6 +35,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.ResourceBundle;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A default implementation of the {@link ValidatorContext} interface.
@@ -118,7 +119,7 @@ public class DelegatingValidatorContext implements ValidatorContext {
         return fieldName;
     }
 
-    public Locale getLocale() {
+    public @RUntainted Locale getLocale() {
         return localeProvider.getLocale();
     }
 
@@ -277,7 +278,7 @@ public class DelegatingValidatorContext implements ValidatorContext {
         }
 
         @Override
-        public Locale getLocale() {
+        public @RUntainted Locale getLocale() {
             return getLocaleProvider().getLocale();
         }
 

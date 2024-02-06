@@ -32,6 +32,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.jar.JarEntry;
 import java.util.jar.JarInputStream;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>ResolverUtil is used to locate classes that are available in the/a class path and meet
@@ -398,14 +399,14 @@ public class ResolverUtil<T> {
      *        the values of <i>parent</i> would be <i>org/apache</i>
      * @param location a File object representing a directory
      */
-    private void loadImplementationsInDirectory(Test test, String parent, File location) {
-        File[] files = location.listFiles();
+    private void loadImplementationsInDirectory(Test test, String parent, @RUntainted File location) {
+        @RUntainted File[] files = location.listFiles();
         StringBuilder builder = null;
 
-        for (File file : files) {
+        for (@RUntainted File file : files) {
             builder = new StringBuilder(100);
             builder.append(parent).append("/").append(file.getName());
-            String packageOrClass = ( parent == null ? file.getName() : builder.toString() );
+            @RUntainted String packageOrClass = ( parent == null ? file.getName() : builder.toString() );
 
             if (file.isDirectory()) {
                 loadImplementationsInDirectory(test, packageOrClass, file);
@@ -431,9 +432,9 @@ public class ResolverUtil<T> {
      */
     private void loadImplementationsInJar(Test test, String parent, File jarfile) {
         try(JarInputStream jarStream = new JarInputStream(new FileInputStream(jarfile))) {
-            JarEntry entry;
+            @RUntainted JarEntry entry;
             while ((entry = jarStream.getNextJarEntry() ) != null) {
-                String name = entry.getName();
+                @RUntainted String name = entry.getName();
                 if (!entry.isDirectory() && name.startsWith(parent) && isTestApplicable(test, name)) {
                     addIfMatching(test, name);
                 }
@@ -451,11 +452,11 @@ public class ResolverUtil<T> {
      * @param test the test used to determine if the class matches
      * @param fqn the fully qualified name of a class
      */
-    protected void addIfMatching(Test test, String fqn) {
+    protected void addIfMatching(Test test, @RUntainted String fqn) {
         try {
             ClassLoader loader = getClassLoader();
             if (test.doesMatchClass()) {
-                String externalName = fqn.substring(0, fqn.indexOf('.')).replace('/', '.');
+                @RUntainted String externalName = fqn.substring(0, fqn.indexOf('.')).replace('/', '.');
                 if (LOG.isDebugEnabled()) {
                     LOG.debug("Checking to see if class " + externalName + " matches criteria [" + test + "]");
                 }

@@ -26,6 +26,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.Collection;
 import java.util.Objects;
 import java.util.regex.Pattern;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * URLValidator checks that a given field is a String and a valid URL

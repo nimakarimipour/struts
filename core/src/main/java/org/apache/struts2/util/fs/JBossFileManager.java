@@ -34,6 +34,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * FileManager implementation used with JBoss AS
@@ -80,11 +82,11 @@ public class JBossFileManager extends DefaultFileManager {
     }
 
     @Override
-    public void monitorFile(URL fileUrl) {
+    public void monitorFile(@RUntainted URL fileUrl) {
         if (reloadingConfigs && isJBossUrl(fileUrl)) {
             String fileName = fileUrl.toString();
             LOG.debug("Creating revision for URL: {}", fileName);
-            URL normalizedUrl = normalizeToFileProtocol(fileUrl);
+            @RUntainted URL normalizedUrl = normalizeToFileProtocol(fileUrl);
             LOG.debug("Normalized URL for [{}] is [{}]", fileName, normalizedUrl);
             Revision revision;
             if ("file".equals(normalizedUrl.getProtocol())) {
@@ -101,7 +103,7 @@ public class JBossFileManager extends DefaultFileManager {
     }
 
     @Override
-    public URL normalizeToFileProtocol(URL url) {
+    public @RUntainted URL normalizeToFileProtocol(@RUntainted URL url) {
         if (isJBossUrl(url))                {
             try {
                 return getJBossPhysicalUrl(url);
@@ -144,7 +146,7 @@ public class JBossFileManager extends DefaultFileManager {
      * @return URL pointing to physical file or original URL
      * @throws java.io.IOException If conversion fails
      */
-    protected URL getJBossPhysicalUrl(URL url) throws IOException {
+    protected @RPolyTainted URL getJBossPhysicalUrl(@RPolyTainted URL url) throws IOException {
         Object content = url.openConnection().getContent();
         String classContent = content.getClass().toString();
         LOG.debug("Reading physical URL for [{}]", url);
@@ -178,7 +180,7 @@ public class JBossFileManager extends DefaultFileManager {
         return urls;
     }
 
-    private File readJBossPhysicalFile(Object content) {
+    private @RPolyTainted File readJBossPhysicalFile(@RPolyTainted Object content) {
         try {
             Method method = content.getClass().getDeclaredMethod("getPhysicalFile");
             return (File) method.invoke(content);
@@ -192,7 +194,7 @@ public class JBossFileManager extends DefaultFileManager {
         return null;
     }
 
-    private URL readJBoss5Url(Object content) {
+    private @RPolyTainted URL readJBoss5Url(@RPolyTainted Object content) {
         try {
             Method method = content.getClass().getDeclaredMethod("getHandler");
             method.setAccessible(true);

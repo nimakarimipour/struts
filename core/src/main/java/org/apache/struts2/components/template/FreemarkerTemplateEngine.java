@@ -36,6 +36,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Freemarker based template engine.
@@ -67,7 +68,7 @@ public class FreemarkerTemplateEngine extends BaseTemplateEngine {
     	// get the various items required from the stack
         ValueStack stack = templateContext.getStack();
         ActionContext context = stack.getActionContext();
-        ServletContext servletContext = context.getServletContext();
+        @RUntainted ServletContext servletContext = context.getServletContext();
         HttpServletRequest req = context.getServletRequest();
         HttpServletResponse res = context.getServletResponse();
 
@@ -133,7 +134,7 @@ public class FreemarkerTemplateEngine extends BaseTemplateEngine {
         Writer writer = templateContext.getWriter();
         final Writer wrapped = writer;
         writer = new Writer() {
-            public void write(char cbuf[], int off, int len) throws IOException {
+            public void write(@RUntainted char cbuf[], int off, int len) throws IOException {
                 wrapped.write(cbuf, off, len);
             }
 

@@ -23,6 +23,7 @@ import com.opensymphony.xwork2.util.ValueStack;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Default implementation of UrlProvider
@@ -62,7 +63,7 @@ public class ComponentUrlProvider implements UrlProvider {
         this.parameters = parameters;
     }
 
-    public String determineActionURL(String action, String namespace, String method, HttpServletRequest req, HttpServletResponse res, Map parameters, String scheme, boolean includeContext, boolean encodeResult, boolean forceAddSchemeHostAndPort, boolean escapeAmp) {
+    public @RUntainted String determineActionURL(String action, String namespace, String method, HttpServletRequest req, HttpServletResponse res, Map parameters, String scheme, boolean includeContext, boolean encodeResult, boolean forceAddSchemeHostAndPort, boolean escapeAmp) {
         return component.determineActionURL(action, namespace, method, req, res, parameters, scheme, includeContext, encodeResult, forceAddSchemeHostAndPort, escapeAmp);
     }
 
@@ -70,7 +71,7 @@ public class ComponentUrlProvider implements UrlProvider {
         return component.determineNamespace(namespace, stack, req);
     }
 
-    public String findString(String expr) {
+    public @RUntainted String findString(@RUntainted String expr) {
         return component.findString(expr);
     }
 
@@ -94,7 +95,7 @@ public class ComponentUrlProvider implements UrlProvider {
         this.httpServletResponse = httpServletResponse;
     }
 
-    public String getIncludeParams() {
+    public @RUntainted String getIncludeParams() {
         return includeParams;
     }
 
@@ -118,7 +119,7 @@ public class ComponentUrlProvider implements UrlProvider {
         return isPutInContext() ? ((ContextBean)component).getVar() :  null;
     }
 
-    public String getValue() {
+    public @RUntainted String getValue() {
         return value;
     }
 

@@ -37,6 +37,7 @@ import java.io.Writer;
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Implementation of the {@link UrlRenderer} interface that creates URLs suitable in a servlet environment.
@@ -82,7 +83,7 @@ public class ServletUrlRenderer implements UrlRenderer {
             }
         }
 
-        String result;
+        @RUntainted String result;
         ActionInvocation ai = ActionContext.getContext().getActionInvocation();
         if (urlComponent.getValue() == null && urlComponent.getAction() != null) {
             result = urlComponent.determineActionURL(urlComponent.getAction(), urlComponent.getNamespace(), urlComponent.getMethod(), urlComponent.getHttpServletRequest(), urlComponent.getHttpServletResponse(), urlComponent.getParameters(), scheme, urlComponent.isIncludeContext(), urlComponent.isEncode(), urlComponent.isForceAddSchemeHostAndPort(), urlComponent.isEscapeAmp());
@@ -103,7 +104,7 @@ public class ServletUrlRenderer implements UrlRenderer {
             }
             result = urlHelper.buildUrl(_value, urlComponent.getHttpServletRequest(), urlComponent.getHttpServletResponse(), urlComponent.getParameters(), scheme, urlComponent.isIncludeContext(), urlComponent.isEncode(), urlComponent.isForceAddSchemeHostAndPort(), urlComponent.isEscapeAmp());
         }
-        String anchor = urlComponent.getAnchor();
+        @RUntainted String anchor = urlComponent.getAnchor();
         if (StringUtils.isNotEmpty(anchor)) {
             result += '#' + urlComponent.findString(anchor);
         }

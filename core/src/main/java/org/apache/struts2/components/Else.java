@@ -23,6 +23,7 @@ import org.apache.struts2.views.annotations.StrutsTag;
 
 import java.io.Writer;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->

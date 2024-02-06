@@ -40,6 +40,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.StringTokenizer;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -268,7 +269,7 @@ public class DefaultStaticContentLoader implements StaticContentLoader {
             }
 
             // set the content-type header
-            String contentType = getContentType(path);
+            @RUntainted String contentType = getContentType(path);
             if (contentType != null) {
                 response.setContentType(contentType);
             }
@@ -329,7 +330,7 @@ public class DefaultStaticContentLoader implements StaticContentLoader {
      * @param name The resource name
      * @return The mime type
      */
-    protected String getContentType(String name) {
+    protected @RUntainted String getContentType(String name) {
         // NOT using the code provided activation.jar to avoid adding yet another dependency
         // this is generally OK, since these are the main files we server up
         if (name.endsWith(".js")) {

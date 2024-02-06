@@ -27,6 +27,8 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 
 /**
@@ -109,7 +111,7 @@ public class ClassLoaderUtil {
      *
      * @return the resource
      */
-    public static URL getResource(String resourceName, Class callingClass) {
+    public static @RPolyTainted URL getResource(@RPolyTainted String resourceName, @RPolyTainted Class callingClass) {
         URL url = Thread.currentThread().getContextClassLoader().getResource(resourceName);
 
         if (url == null) {
@@ -140,7 +142,7 @@ public class ClassLoaderUtil {
     * @param callingClass The Class object of the calling object
     * @return resource as a stream
     */
-    public static InputStream getResourceAsStream(String resourceName, Class callingClass) {
+    public static @RPolyTainted InputStream getResourceAsStream(@RPolyTainted String resourceName, @RPolyTainted Class callingClass) {
         URL url = getResource(resourceName, callingClass);
 
         try {

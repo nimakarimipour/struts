@@ -21,6 +21,7 @@ package com.opensymphony.xwork2.validator;
 import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * This class serves 2 purpose :
@@ -53,7 +54,7 @@ public interface ValidatorFileParser {
      * @param resourceName file name of the resource
      * @return List list of ValidatorConfig
      */
-    List<ValidatorConfig> parseActionValidatorConfigs(ValidatorFactory validatorFactory, InputStream is, String resourceName);
+    List<ValidatorConfig> parseActionValidatorConfigs(ValidatorFactory validatorFactory, @RUntainted InputStream is, String resourceName);
 
     /**
      * Parses validator definitions (register various validators with XWork).
@@ -62,5 +63,5 @@ public interface ValidatorFileParser {
      * @param is The input stream
      * @param resourceName The location of the input stream
      */
-    void parseValidatorDefinitions(Map<String,String> validators, InputStream is, String resourceName);
+    void parseValidatorDefinitions(Map<String,String> validators, @RUntainted InputStream is, String resourceName);
 }

@@ -32,6 +32,7 @@ import java.io.InputStream;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Base class for template engines.
@@ -59,11 +60,11 @@ public abstract class BaseTemplateEngine implements TemplateEngine {
     }
 
     private Properties readNewProperties(Template template) {
-        String propName = buildPropertyFilename(template);
+        @RUntainted String propName = buildPropertyFilename(template);
         return loadProperties(propName);
     }
 
-    private Properties loadProperties(String propName) {
+    private Properties loadProperties(@RUntainted String propName) {
         InputStream is = readProperty(propName);
         Properties props = new Properties();
         if (is != null) {
@@ -72,7 +73,7 @@ public abstract class BaseTemplateEngine implements TemplateEngine {
         return props;
     }
 
-    private InputStream readProperty(String propName) {
+    private InputStream readProperty(@RUntainted String propName) {
         InputStream is = tryReadingPropertyFileFromFileSystem(propName);
         if (is == null) {
             is = readPropertyFromClasspath(propName);
@@ -119,14 +120,14 @@ public abstract class BaseTemplateEngine implements TemplateEngine {
         }
     }
 
-    private String buildPropertyFilename(Template template) {
+    private @RUntainted String buildPropertyFilename(Template template) {
         return template.getDir() + "/" + template.getTheme() + "/" + getThemePropertiesFileName();
     }
 
     /**
      * WW-1292 let's try getting it from the filesystem
      */
-    private InputStream tryReadingPropertyFileFromFileSystem(String propName) {
+    private InputStream tryReadingPropertyFileFromFileSystem(@RUntainted String propName) {
         File propFile = new File(propName);
         try {
             return createFileInputStream(propFile);

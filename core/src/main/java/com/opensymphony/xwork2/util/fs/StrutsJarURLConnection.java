@@ -34,6 +34,7 @@ import java.security.PrivilegedActionException;
 import java.security.PrivilegedExceptionAction;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * WW-4901 If was needed, decouples from underlying implementation of {@link URL#openConnection()}
@@ -53,7 +54,7 @@ class StrutsJarURLConnection extends URLConnection implements AutoCloseable {
     private String entryName;
     private URL jarFileURL;
 
-    private StrutsJarURLConnection(URL url) throws IOException {
+    private StrutsJarURLConnection(@RUntainted URL url) throws IOException {
         super(url);
 
         URLConnection conn = this.url.openConnection();
@@ -71,10 +72,10 @@ class StrutsJarURLConnection extends URLConnection implements AutoCloseable {
     /**
     * A fixed copy of {@link JarURLConnection#parseSpecs(URL)}
     */
-    private void parseSpecs(URL url) throws MalformedURLException, UnsupportedEncodingException {
-        String spec = url.getFile();
+    private void parseSpecs(@RUntainted URL url) throws MalformedURLException, UnsupportedEncodingException {
+        @RUntainted String spec = url.getFile();
 
-        int separator = spec.indexOf("!/");
+        @RUntainted int separator = spec.indexOf("!/");
         /*
          * REMIND: we don't handle nested JAR URLs
          */
@@ -83,7 +84,7 @@ class StrutsJarURLConnection extends URLConnection implements AutoCloseable {
         }
 
         // start of fixing JarURLConnection#parseSpecs(URL) via handling MalformedURLException
-        String jarFileSpec = spec.substring(0, separator++);
+        @RUntainted String jarFileSpec = spec.substring(0, separator++);
         try {
             jarFileURL = new URL(jarFileSpec);
         } catch (MalformedURLException e) {
@@ -185,7 +186,7 @@ class StrutsJarURLConnection extends URLConnection implements AutoCloseable {
         }
     }
 
-    static StrutsJarURLConnection openConnection(URL url) throws IOException {
+    static StrutsJarURLConnection openConnection(@RUntainted URL url) throws IOException {
         return new StrutsJarURLConnection(url);
     }
 }

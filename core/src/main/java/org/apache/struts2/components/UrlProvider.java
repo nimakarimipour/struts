@@ -23,6 +23,7 @@ import com.opensymphony.xwork2.util.ValueStack;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Implementations of this interface can be used to build a URL
@@ -45,15 +46,15 @@ public interface UrlProvider {
 
     String getVar();
 
-    String getValue();
+    @RUntainted String getValue();
 
-    String findString(String value);
+    @RUntainted String findString(@RUntainted String value);
 
     void setValue(String string);
 
     String getUrlIncludeParams();
 
-    String getIncludeParams();
+    @RUntainted String getIncludeParams();
 
     Map<String, Object> getParameters();
 
@@ -69,7 +70,7 @@ public interface UrlProvider {
 
     String getMethod();
 
-    HttpServletResponse getHttpServletResponse();
+    @RUntainted HttpServletResponse getHttpServletResponse();
 
     boolean isIncludeContext();
 
@@ -83,11 +84,11 @@ public interface UrlProvider {
 
     String getWindowState();
 
-    String determineActionURL(String action, String namespace, String method, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Map<String, ?> parameters, String scheme, boolean includeContext, boolean encode, boolean forceAddSchemeHostAndPort, boolean escapeAmp);
+    @RUntainted String determineActionURL(String action, String namespace, String method, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Map<String, ?> parameters, String scheme, boolean includeContext, boolean encode, boolean forceAddSchemeHostAndPort, boolean escapeAmp);
 
     String determineNamespace(String namespace, ValueStack stack, HttpServletRequest req);
 
-    String getAnchor();
+    @RUntainted String getAnchor();
 
     String getPortletUrlType();
 

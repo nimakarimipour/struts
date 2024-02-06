@@ -41,6 +41,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Parse the validation file. (eg. MyAction-validation.xml, MyAction-actionAlias-validation.xml)
@@ -79,10 +80,10 @@ public class DefaultValidatorFileParser implements ValidatorFileParser {
         this.objectFactory = fac;
     }
 
-    public List<ValidatorConfig> parseActionValidatorConfigs(ValidatorFactory validatorFactory, InputStream is, final String resourceName) {
+    public List<ValidatorConfig> parseActionValidatorConfigs(ValidatorFactory validatorFactory, @RUntainted InputStream is, final String resourceName) {
         List<ValidatorConfig> validatorCfgs = new ArrayList<>();
 
-        InputSource in = new InputSource(is);
+        @RUntainted InputSource in = new InputSource(is);
         in.setSystemId(resourceName);
 
         Map<String, String> dtdMappings = new HashMap<>();
@@ -119,9 +120,9 @@ public class DefaultValidatorFileParser implements ValidatorFileParser {
     }
 
 
-    public void parseValidatorDefinitions(Map<String, String> validators, InputStream is, String resourceName) {
+    public void parseValidatorDefinitions(Map<String, String> validators, @RUntainted InputStream is, String resourceName) {
 
-        InputSource in = new InputSource(is);
+        @RUntainted InputSource in = new InputSource(is);
         in.setSystemId(resourceName);
 
         Map<String, String> dtdMappings = new HashMap<>();

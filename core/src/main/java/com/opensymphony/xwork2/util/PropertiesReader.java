@@ -25,6 +25,7 @@ import java.io.StringWriter;
 import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -180,7 +181,7 @@ public class PropertiesReader extends LineNumberReader {
         }
 
         // parse the line
-        String[] property = parseProperty(line);
+        @RUntainted String[] property = parseProperty(line);
         propertyName = unescapeJava(property[0]);
         propertyValue = unescapeJava(property[1], delimiter);
         return true;
@@ -244,11 +245,11 @@ public class PropertiesReader extends LineNumberReader {
      * @return an array with the property's key and value
      * @since 1.2
      */
-    private String[] parseProperty(String line) {
+    private @RUntainted String[] parseProperty(String line) {
         // sorry for this spaghetti code, please replace it as soon as
         // possible with a regexp when the Java 1.3 requirement is dropped
 
-        String[] result = new String[2];
+        @RUntainted String[] result = new String[2];
         StringBuilder key = new StringBuilder();
         StringBuilder value = new StringBuilder();
 
@@ -441,7 +442,7 @@ public class PropertiesReader extends LineNumberReader {
      * @param str the <code>String</code> to unescape, may be null
      * @return a new unescaped <code>String</code>, <code>null</code> if null string input
      */
-    public static String unescapeJava(String str) {
+    public static String unescapeJava(@RUntainted String str) {
         if (str == null) {
             return null;
         }
@@ -471,7 +472,7 @@ public class PropertiesReader extends LineNumberReader {
      * @throws IllegalArgumentException if the Writer is <code>null</code>
      * @throws IOException              if error occurs on underlying Writer
      */
-    public static void unescapeJava(Writer out, String str) throws IOException {
+    public static void unescapeJava(Writer out, @RUntainted String str) throws IOException {
         if (out == null) {
             throw new IllegalArgumentException("The Writer must not be null");
         }
@@ -483,7 +484,7 @@ public class PropertiesReader extends LineNumberReader {
         boolean hadSlash = false;
         boolean inUnicode = false;
         for (int i = 0; i < sz; i++) {
-            char ch = str.charAt(i);
+            @RUntainted char ch = str.charAt(i);
             if (inUnicode) {
                 // if in unicode, then we're reading unicode
                 // values in somehow

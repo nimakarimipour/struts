@@ -46,6 +46,8 @@ import javax.xml.transform.dom.DOMResult;
 import javax.xml.transform.sax.SAXTransformerFactory;
 import javax.xml.transform.sax.TransformerHandler;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * Helper class to create and retrieve information from location-enabled
@@ -69,7 +71,7 @@ public class DomHelper {
      * @param inputSource the inputSource to read the document from
      * @return the W3C Document
      */
-    public static Document parse(InputSource inputSource) {
+    public static Document parse(@RUntainted InputSource inputSource) {
         return parse(inputSource, null);
     }
 
@@ -83,7 +85,7 @@ public class DomHelper {
      * @param dtdMappings a map of DTD names and public ids
      * @return the W3C Document
      */
-    public static Document parse(InputSource inputSource, Map<String, String> dtdMappings) {
+    public static Document parse(@RUntainted InputSource inputSource, Map<String, String> dtdMappings) {
 
         SAXParserFactory factory = null;
         String parserProp = System.getProperty("xwork.saxParserFactory");

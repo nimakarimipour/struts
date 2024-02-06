@@ -42,6 +42,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Default validator factory
@@ -120,7 +121,7 @@ public class DefaultValidatorFactory implements ValidatorFactory, Initializable 
             while (urls.hasNext()) {
                 URL u = urls.next();
                 try {
-                    URI uri = new URI(u.toExternalForm().replaceAll(" ", "%20"));
+                    @RUntainted URI uri = new URI(u.toExternalForm().replaceAll(" ", "%20"));
                     if (!uri.isOpaque() && "file".equalsIgnoreCase(uri.getScheme())) {
                         File f = new File(uri);
                         FilenameFilter filter = new FilenameFilter() {
@@ -189,13 +190,13 @@ public class DefaultValidatorFactory implements ValidatorFactory, Initializable 
         retrieveValidatorConfiguration(resourceName);
 
         // Add custom (plugin) specific validator configurations
-        for (File file : files) {
+        for (@RUntainted File file : files) {
             retrieveValidatorConfiguration(file.getName());
         }
     }
 
-    private void retrieveValidatorConfiguration(String resourceName) {
-        InputStream is = ClassLoaderUtil.getResourceAsStream(resourceName, DefaultValidatorFactory.class);
+    private void retrieveValidatorConfiguration(@RUntainted String resourceName) {
+        @RUntainted InputStream is = ClassLoaderUtil.getResourceAsStream(resourceName, DefaultValidatorFactory.class);
         if (is != null) {
             validatorFileParser.parseValidatorDefinitions(validators, is, resourceName);
         }

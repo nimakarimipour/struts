@@ -44,6 +44,7 @@ import java.io.CharArrayWriter;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.Locale;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Renders a view using the Freemarker template engine.
@@ -55,7 +56,7 @@ public class FreemarkerResult extends StrutsResultSupport {
     private static final Logger LOG = LogManager.getLogger(FreemarkerResult.class);
 
     protected ActionInvocation invocation;
-    protected Configuration configuration;
+    protected @RUntainted Configuration configuration;
     protected ObjectWrapper wrapper;
     protected FreemarkerManager freemarkerManager;
     private Writer writer;
@@ -66,8 +67,8 @@ public class FreemarkerResult extends StrutsResultSupport {
      *
      * the current context is available to subclasses via these protected fields
      */
-    protected String location;
-    private String pContentType = "text/html";
+    protected @RUntainted String location;
+    private @RUntainted String pContentType = "text/html";
     private static final String PARENT_TEMPLATE_WRITER = FreemarkerResult.class.getName() + ".parentWriter";
 
     public FreemarkerResult() {
@@ -83,7 +84,7 @@ public class FreemarkerResult extends StrutsResultSupport {
         this.freemarkerManager = mgr;
     }
 
-    public void setContentType(String aContentType) {
+    public void setContentType(@RUntainted String aContentType) {
         pContentType = aContentType;
     }
 
@@ -93,7 +94,7 @@ public class FreemarkerResult extends StrutsResultSupport {
      *
      * @return the content type
      */
-    public String getContentType() {
+    public @RUntainted String getContentType() {
         return pContentType;
     }
 
@@ -113,7 +114,7 @@ public class FreemarkerResult extends StrutsResultSupport {
      * @throws IOException       in case of IO errors
      * @throws TemplateException in case of freemarker template errors
      */
-    public void doExecute(String locationArg, ActionInvocation invocation) throws IOException, TemplateException {
+    public void doExecute(@RUntainted String locationArg, ActionInvocation invocation) throws IOException, TemplateException {
         this.location = locationArg;
         this.invocation = invocation;
         this.configuration = getConfiguration();
@@ -122,11 +123,11 @@ public class FreemarkerResult extends StrutsResultSupport {
         ActionContext ctx = invocation.getInvocationContext();
         HttpServletRequest req = ctx.getServletRequest();
 
-        String absoluteLocation;
+        @RUntainted String absoluteLocation;
         if (location.startsWith("/")) {
             absoluteLocation = location;
         } else {
-            String namespace = invocation.getProxy().getNamespace();
+            @RUntainted String namespace = invocation.getProxy().getNamespace();
             if (namespace == null || namespace.length() == 0 || namespace.equals("/")) {
                 absoluteLocation = "/" + location;
             } else if (namespace.startsWith("/")) {
@@ -136,7 +137,7 @@ public class FreemarkerResult extends StrutsResultSupport {
             }
         }
 
-        Template template = configuration.getTemplate(absoluteLocation, deduceLocale());
+        @RUntainted Template template = configuration.getTemplate(absoluteLocation, deduceLocale());
         TemplateModel model = createModel();
 
         // Give subclasses a chance to hook into preprocessing
@@ -206,7 +207,7 @@ public class FreemarkerResult extends StrutsResultSupport {
      * @return the freemarker configuration object
      * @throws TemplateException in case of freemarker configuration errors
      */
-    protected Configuration getConfiguration() throws TemplateException {
+    protected @RUntainted Configuration getConfiguration() throws TemplateException {
         return freemarkerManager.getConfiguration(ServletActionContext.getServletContext());
     }
 
@@ -288,7 +289,7 @@ public class FreemarkerResult extends StrutsResultSupport {
      *
      * @return the locale from action if action implements the {@link LocaleProvider}) or local from configuration
      */
-    protected Locale deduceLocale() {
+    protected @RUntainted Locale deduceLocale() {
         if (invocation.getAction() instanceof LocaleProvider) {
             return ((LocaleProvider) invocation.getAction()).getLocale();
         } else {
@@ -318,21 +319,21 @@ public class FreemarkerResult extends StrutsResultSupport {
      * @return true to process the template, false to suppress template processing.
      * @throws IOException in case of IO errors
      */
-    protected boolean preTemplateProcess(Template template, TemplateModel model) throws IOException {
-        Object attrContentType = template.getCustomAttribute("content_type");
+    protected boolean preTemplateProcess(@RUntainted Template template, TemplateModel model) throws IOException {
+        @RUntainted Object attrContentType = template.getCustomAttribute("content_type");
 
-        HttpServletResponse response = ServletActionContext.getResponse();
+        @RUntainted HttpServletResponse response = ServletActionContext.getResponse();
         if (response.getContentType() == null) {
             if (attrContentType != null) {
                 response.setContentType(attrContentType.toString());
             } else {
-                String contentType = getContentType();
+                @RUntainted String contentType = getContentType();
 
                 if (contentType == null) {
                     contentType = "text/html";
                 }
 
-                String encoding = template.getEncoding();
+                @RUntainted String encoding = template.getEncoding();
 
                 if (encoding != null) {
                     contentType = contentType + "; charset=" + encoding;

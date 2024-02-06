@@ -30,6 +30,7 @@ import java.lang.reflect.Modifier;
 import java.lang.reflect.Proxy;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <code>ProxyUtil</code>
@@ -57,7 +58,7 @@ public class ProxyUtil {
      * @return the ultimate target class (or the plain class of the given
      * object as fallback; never {@code null})
      */
-    public static Class<?> ultimateTargetClass(Object candidate) {
+    public static Class<?> ultimateTargetClass(@RUntainted Object candidate) {
         Class<?> result = null;
         if (isSpringAopProxy(candidate))
             result = springUltimateTargetClass(candidate);
@@ -91,7 +92,7 @@ public class ProxyUtil {
      * @param member the member to check
      * @param object the object to check
      */
-    public static boolean isProxyMember(Member member, Object object) {
+    public static boolean isProxyMember(@RUntainted Member member, Object object) {
         if (!Modifier.isStatic(member.getModifiers()) && !isProxy(object)) {
             return false;
         }
@@ -115,8 +116,8 @@ public class ProxyUtil {
      * @return the ultimate target class (or the plain class of the given
      * object as fallback; never {@code null})
      */
-    private static Class<?> springUltimateTargetClass(Object candidate) {
-        Object current = candidate;
+    private static Class<?> springUltimateTargetClass(@RUntainted Object candidate) {
+        @RUntainted Object current = candidate;
         Class<?> result = null;
         while (null != current && implementsInterface(current.getClass(), SPRING_TARGETCLASSAWARE_CLASS_NAME)) {
             try {
@@ -146,7 +147,7 @@ public class ProxyUtil {
      * Check whether the given member is a member of a spring proxy.
      * @param member the member to check
      */
-    private static boolean isSpringProxyMember(Member member) {
+    private static boolean isSpringProxyMember(@RUntainted Member member) {
         try {
             Class<?> clazz = ClassLoaderUtil.loadClass(SPRING_ADVISED_CLASS_NAME, ProxyUtil.class);
             if (hasMember(clazz, member))
@@ -169,10 +170,10 @@ public class ProxyUtil {
      * @return the singleton target object, or {@code null} in any other case
      * (not a spring proxy, not an existing singleton target)
      */
-    private static Object getSingletonTarget(Object candidate) {
+    private static @RUntainted Object getSingletonTarget(@RUntainted Object candidate) {
         try {
             if (implementsInterface(candidate.getClass(), SPRING_ADVISED_CLASS_NAME)) {
-                Object targetSource = MethodUtils.invokeMethod(candidate, "getTargetSource");
+                @RUntainted Object targetSource = MethodUtils.invokeMethod(candidate, "getTargetSource");
                 if (implementsInterface(targetSource.getClass(), SPRING_SINGLETONTARGETSOURCE_CLASS_NAME)) {
                     return MethodUtils.invokeMethod(targetSource, "getTarget");
                 }
@@ -210,7 +211,7 @@ public class ProxyUtil {
      * @param clazz the class to check
      * @param member the member to check
      */
-    private static boolean hasMember(Class<?> clazz, Member member) {
+    private static boolean hasMember(Class<?> clazz, @RUntainted Member member) {
         if (member instanceof Method) {
             return null != MethodUtils.getMatchingMethod(clazz, member.getName(), ((Method) member).getParameterTypes());
         }
