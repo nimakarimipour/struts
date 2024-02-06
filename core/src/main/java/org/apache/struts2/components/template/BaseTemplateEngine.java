@@ -32,6 +32,7 @@ import java.io.InputStream;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Base class for template engines.
@@ -126,7 +127,7 @@ public abstract class BaseTemplateEngine implements TemplateEngine {
     /**
      * WW-1292 let's try getting it from the filesystem
      */
-    private InputStream tryReadingPropertyFileFromFileSystem(String propName) {
+    private InputStream tryReadingPropertyFileFromFileSystem(@RUntainted String propName) {
         File propFile = new File(propName);
         try {
             return createFileInputStream(propFile);

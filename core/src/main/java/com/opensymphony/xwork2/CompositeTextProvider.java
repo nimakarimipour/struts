@@ -27,6 +27,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.ResourceBundle;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * This is a composite {@link TextProvider} that takes in an array or {@link java.util.List} of {@link TextProvider}s, it will
@@ -208,7 +209,7 @@ public class CompositeTextProvider implements TextProvider {
      * @return the first valid message for the key or default value
      * @see com.opensymphony.xwork2.TextProvider#getText(String, String, java.util.List, com.opensymphony.xwork2.util.ValueStack)
      */
-    public String getText(String key, String defaultValue, List<?> args, ValueStack stack) {
+    public @RUntainted String getText(String key, String defaultValue, List<?> args, ValueStack stack) {
         // if there's one text provider that gives us a msg not the same as defaultValue
         // for this key, we are ok, else try the next
         // text provider

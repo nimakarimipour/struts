@@ -35,6 +35,7 @@ import java.nio.charset.CharsetDecoder;
 import java.nio.charset.CoderResult;
 import java.nio.charset.CodingErrorAction;
 import java.util.LinkedList;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A speedy implementation of ByteArrayOutputStream. It's not synchronized, and it
@@ -189,7 +190,7 @@ public class FastByteArrayOutputStream extends OutputStream {
         }
     }
 
-    private static CoderResult decodeAndWrite(Writer writer, ByteBuffer in, CharBuffer out, CharsetDecoder decoder, boolean endOfInput) throws IOException {
+    private static CoderResult decodeAndWrite(Writer writer, ByteBuffer in, @RUntainted CharBuffer out, CharsetDecoder decoder, boolean endOfInput) throws IOException {
         CoderResult result = decoder.decode(in, out, endOfInput);
         // To begin processing of decoded data
         out.flip();

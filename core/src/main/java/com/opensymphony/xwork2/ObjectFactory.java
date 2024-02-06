@@ -40,6 +40,7 @@ import org.apache.struts2.StrutsConstants;
 
 import java.io.Serializable;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * ObjectFactory is responsible for building the core framework objects. Users may register their 
@@ -127,7 +128,7 @@ public class ObjectFactory implements Serializable {
      * @return The class itself
      * @throws ClassNotFoundException if class not found in classpath
      */
-    public Class getClassInstance(String className) throws ClassNotFoundException {
+    public Class getClassInstance(@RUntainted String className) throws ClassNotFoundException {
         if (ccl != null) {
             return ccl.loadClass(className);
         }

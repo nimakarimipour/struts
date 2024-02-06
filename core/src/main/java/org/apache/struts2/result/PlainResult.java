@@ -29,6 +29,7 @@ import org.apache.struts2.result.plain.ResponseBuilder;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * This result can only be used in code, as a result of action's method, eg.:
@@ -72,12 +73,12 @@ public interface PlainResult extends Result {
             LOG.debug(new ParameterizedMessage("A date header: {} = {}", header.getName(), header.getValue()));
             response.addDateHeader(header.getName(), header.getValue());
         }
-        for (HttpHeader<Integer> header : builder.getIntHeaders()) {
+        for (HttpHeader<@RUntainted Integer> header : builder.getIntHeaders()) {
             LOG.debug(new ParameterizedMessage("An int header: {} = {}", header.getName(), header.getValue()));
             response.addIntHeader(header.getName(), header.getValue());
         }
 
-        for (Cookie cookie : builder.getCookies()) {
+        for (@RUntainted Cookie cookie : builder.getCookies()) {
             LOG.debug(new ParameterizedMessage("A cookie: {} = {}", cookie.getName(), cookie.getValue()));
             response.addCookie(cookie);
         }

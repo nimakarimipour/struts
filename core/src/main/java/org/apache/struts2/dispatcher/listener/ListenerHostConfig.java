@@ -23,6 +23,7 @@ import org.apache.struts2.dispatcher.HostConfig;
 import javax.servlet.ServletContext;
 import java.util.Collections;
 import java.util.Iterator;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Host configuration that just holds a ServletContext

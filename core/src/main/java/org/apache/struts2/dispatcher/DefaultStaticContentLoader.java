@@ -40,6 +40,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.StringTokenizer;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -268,7 +269,7 @@ public class DefaultStaticContentLoader implements StaticContentLoader {
             }
 
             // set the content-type header
-            String contentType = getContentType(path);
+            @RUntainted String contentType = getContentType(path);
             if (contentType != null) {
                 response.setContentType(contentType);
             }

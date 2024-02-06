@@ -19,6 +19,7 @@
 package com.opensymphony.xwork2.util;
 
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * OGNL implementation of {@link TextParser}

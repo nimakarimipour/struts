@@ -73,6 +73,7 @@ import static java.lang.String.format;
 import static org.apache.commons.lang3.StringUtils.defaultString;
 import static org.apache.commons.lang3.StringUtils.isNotEmpty;
 import static org.apache.commons.lang3.StringUtils.trimToNull;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * This is a base XWork2 {@link ConfigurationProvider} for loading configuration from a parsed
@@ -210,9 +211,9 @@ public abstract class XmlDocConfigurationProvider implements ConfigurationProvid
     }
 
     protected void registerBean(Element child, Map<String, Node> loadedBeans, ContainerBuilder containerBuilder) {
-        String type = child.getAttribute("type");
+        @RUntainted String type = child.getAttribute("type");
         String name = child.getAttribute("name");
-        String impl = child.getAttribute("class");
+        @RUntainted String impl = child.getAttribute("class");
         String onlyStatic = child.getAttribute("static");
         String scopeStr = child.getAttribute("scope");
         boolean optional = "true".equals(child.getAttribute("optional"));

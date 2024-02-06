@@ -20,6 +20,7 @@ package org.apache.struts2.dispatcher;
 
 import javax.servlet.ServletContext;
 import java.util.Iterator;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Abstraction for host configuration information such as init params or the servlet context.

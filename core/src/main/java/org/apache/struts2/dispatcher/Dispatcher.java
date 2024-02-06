@@ -86,6 +86,7 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.regex.Pattern;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A utility class the actual dispatcher delegates most of its tasks to. Each instance
@@ -143,7 +144,7 @@ public class Dispatcher {
     /**
      * Store state of StrutsConstants.STRUTS_MULTIPART_SAVEDIR setting.
      */
-    private String multipartSaveDir;
+    private @RUntainted String multipartSaveDir;
 
     /**
      * Stores the value of {@link StrutsConstants#STRUTS_MULTIPART_PARSER} setting
@@ -235,7 +236,7 @@ public class Dispatcher {
     /**
      * Keeps current reference to external world and must be protected to support class inheritance
      */
-    protected ServletContext servletContext;
+    protected @RUntainted ServletContext servletContext;
     protected Map<String, String> initParams;
 
     /**
@@ -303,7 +304,7 @@ public class Dispatcher {
      * @param val New setting
      */
     @Inject(StrutsConstants.STRUTS_MULTIPART_SAVEDIR)
-    public void setMultipartSaveDir(String val) {
+    public void setMultipartSaveDir(@RUntainted String val) {
         multipartSaveDir = val;
     }
 
@@ -433,7 +434,7 @@ public class Dispatcher {
 
     private void loadConfigPaths(String configPaths) {
         String[] files = configPaths.split(CONFIG_SPLIT_REGEX);
-        for (String file : files) {
+        for (@RUntainted String file : files) {
             if (file.endsWith(".xml")) {
                 configurationManager.addContainerProvider(createStrutsXmlConfigurationProvider(file, servletContext));
             } else {
@@ -442,7 +443,7 @@ public class Dispatcher {
         }
     }
 
-    protected XmlConfigurationProvider createStrutsXmlConfigurationProvider(String filename, ServletContext ctx) {
+    protected XmlConfigurationProvider createStrutsXmlConfigurationProvider(@RUntainted String filename, ServletContext ctx) {
         return new StrutsXmlConfigurationProvider(filename, ctx);
     }
 
@@ -450,7 +451,7 @@ public class Dispatcher {
      * @deprecated since 6.2.0, use {@link #createStrutsXmlConfigurationProvider(String, ServletContext)}
      */
     @Deprecated
-    protected XmlConfigurationProvider createStrutsXmlConfigurationProvider(String filename, boolean errorIfMissing, ServletContext ctx) {
+    protected XmlConfigurationProvider createStrutsXmlConfigurationProvider(@RUntainted String filename, boolean errorIfMissing, ServletContext ctx) {
         return createStrutsXmlConfigurationProvider(filename, ctx);
     }
 
@@ -458,7 +459,7 @@ public class Dispatcher {
         String configClasses = initParams.get("javaConfigClasses");
         if (configClasses != null) {
             String[] classes = configClasses.split(CONFIG_SPLIT_REGEX);
-            for (String cname : classes) {
+            for (@RUntainted String cname : classes) {
                 try {
                     Class<?> cls = ClassLoaderUtil.loadClass(cname, this.getClass());
                     StrutsJavaConfiguration config = (StrutsJavaConfiguration) cls.newInstance();
@@ -482,7 +483,7 @@ public class Dispatcher {
         String configProvs = initParams.get("configProviders");
         if (configProvs != null) {
             String[] classes = configProvs.split(CONFIG_SPLIT_REGEX);
-            for (String cname : classes) {
+            for (@RUntainted String cname : classes) {
                 try {
                     Class cls = ClassLoaderUtil.loadClass(cname, this.getClass());
                     ConfigurationProvider prov = (ConfigurationProvider) cls.newInstance();
@@ -824,10 +825,10 @@ public class Dispatcher {
      * @return the path to save uploaded files to
      */
     protected String getSaveDir() {
-        String saveDir = multipartSaveDir.trim();
+        @RUntainted String saveDir = multipartSaveDir.trim();
 
         if (saveDir.equals("")) {
-            File tempdir = (File) servletContext.getAttribute("javax.servlet.context.tempdir");
+            @RUntainted File tempdir = (File) servletContext.getAttribute("javax.servlet.context.tempdir");
             LOG.info("Unable to find 'struts.multipart.saveDir' property setting. Defaulting to javax.servlet.context.tempdir");
 
             if (tempdir != null) {
@@ -903,7 +904,7 @@ public class Dispatcher {
         }
     }
 
-    private void applyEncoding(HttpServletResponse response, String encoding) {
+    private void applyEncoding(HttpServletResponse response, @RUntainted String encoding) {
         try {
             if (!encoding.equals(response.getCharacterEncoding())) {
                 response.setCharacterEncoding(encoding);

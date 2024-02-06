@@ -41,6 +41,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * An interceptor that handles setting the locale specified in a session as the locale for the current action request.
@@ -394,7 +395,7 @@ public class I18nInterceptor extends AbstractInterceptor {
         public Locale store(ActionInvocation invocation, Locale locale) {
             HttpServletResponse response = ServletActionContext.getResponse();
 
-            Cookie cookie = new Cookie(attributeName, locale.toString());
+            @RUntainted Cookie cookie = new Cookie(attributeName, locale.toString());
             cookie.setMaxAge(1209600); // two weeks
             response.addCookie(cookie);
 

@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.util.ValueStack;
 
 import java.util.List;
 import java.util.ResourceBundle;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Provides access to {@link ResourceBundle}s and their underlying text messages.
@@ -156,7 +157,7 @@ public interface TextProvider {
      * @param stack        the value stack to use for finding the text
      * @return the message as found in the resource bundle, or defaultValue if none is found
      */
-    String getText(String key, String defaultValue, List<?> args, ValueStack stack);
+    @RUntainted String getText(String key, String defaultValue, List<?> args, ValueStack stack);
 
     /**
      * Gets a message based on a key using the supplied args, as defined in

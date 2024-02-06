@@ -28,6 +28,7 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: description -->
@@ -182,9 +183,9 @@ public class HttpHeaderResult implements Result {
         }
 
         if (headers != null) {
-            for (Map.Entry<String, String> entry : headers.entrySet()) {
+            for (Map.Entry<@RUntainted String, String> entry : headers.entrySet()) {
                 String value = entry.getValue();
-                String finalValue = parse ? TextParseUtil.translateVariables(value, stack) : value;
+                @RUntainted String finalValue = parse ? TextParseUtil.translateVariables(value, stack) : value;
                 response.addHeader(entry.getKey(), finalValue);
             }
         }
@@ -198,7 +199,7 @@ public class HttpHeaderResult implements Result {
             }
             if (errorCode != -1) {
                 if (errorMessage != null) {
-                    String finalMessage = parse ? TextParseUtil.translateVariables(errorMessage, stack) : errorMessage;
+                    @RUntainted String finalMessage = parse ? TextParseUtil.translateVariables(errorMessage, stack) : errorMessage;
                     response.sendError(errorCode, finalMessage);
                 } else {
                     response.sendError(errorCode);

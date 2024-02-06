@@ -29,6 +29,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashSet;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Interceptor that implements Cross-Origin Embedder Policy on incoming requests used to protect a
@@ -47,7 +48,7 @@ public class CoepInterceptor extends AbstractInterceptor implements PreResultLis
     private static final String COEP_REPORT_HEADER = "Cross-Origin-Embedder-Policy-Report-Only";
 
     private final Set<String> exemptedPaths = new HashSet<>();
-    private String header = COEP_ENFORCING_HEADER;
+    private @RUntainted String header = COEP_ENFORCING_HEADER;
 
     @Override
     public String intercept(ActionInvocation invocation) throws Exception {

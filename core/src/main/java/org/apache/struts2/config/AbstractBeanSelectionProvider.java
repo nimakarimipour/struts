@@ -32,6 +32,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.Properties;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * TODO lukaszlenart: write a JavaDoc
@@ -64,7 +65,7 @@ public abstract class AbstractBeanSelectionProvider implements BeanSelectionProv
 
     protected void alias(Class type, String key, ContainerBuilder builder, Properties props, Scope scope) {
         if (!builder.contains(type, Container.DEFAULT_NAME)) {
-            String foundName = props.getProperty(key, DEFAULT_BEAN_NAME);
+            @RUntainted String foundName = props.getProperty(key, DEFAULT_BEAN_NAME);
             if (builder.contains(type, foundName)) {
                 LOG.trace("Choosing bean ({}) for ({})", foundName, type.getName());
                 builder.alias(type, foundName, Container.DEFAULT_NAME);

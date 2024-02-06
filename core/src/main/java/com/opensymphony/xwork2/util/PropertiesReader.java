@@ -25,6 +25,7 @@ import java.io.StringWriter;
 import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -483,7 +484,7 @@ public class PropertiesReader extends LineNumberReader {
         boolean hadSlash = false;
         boolean inUnicode = false;
         for (int i = 0; i < sz; i++) {
-            char ch = str.charAt(i);
+            @RUntainted char ch = str.charAt(i);
             if (inUnicode) {
                 // if in unicode, then we're reading unicode
                 // values in somehow

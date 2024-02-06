@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 
 /**
@@ -68,7 +69,7 @@ public class TextParseUtil {
      * @param evaluator The parsed Value evaluator (could be null).
      * @return the parsed (and possibly evaluated) variable String.
      */
-    public static String translateVariables(String expression, ValueStack stack, ParsedValueEvaluator evaluator) {
+    public static @RUntainted String translateVariables(String expression, ValueStack stack, ParsedValueEvaluator evaluator) {
     	return translateVariables(new char[]{'$', '%'}, expression, stack, String.class, evaluator).toString();
     }
 
@@ -124,7 +125,7 @@ public class TextParseUtil {
      * @param evaluator value evaluator
      * @return Converted object from variable translation.
      */
-    public static Object translateVariables(char[] openChars, String expression, ValueStack stack, Class asType, ParsedValueEvaluator evaluator) {
+    public static @RUntainted Object translateVariables(char[] openChars, String expression, ValueStack stack, Class asType, ParsedValueEvaluator evaluator) {
         return translateVariables(openChars, expression, stack, asType, evaluator, TextParser.DEFAULT_LOOP_COUNT);
     }
 

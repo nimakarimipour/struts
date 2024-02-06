@@ -30,6 +30,7 @@ import java.io.Writer;
 import java.math.RoundingMode;
 import java.text.NumberFormat;
 import java.util.Currency;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -139,16 +140,16 @@ public class Number extends ContextBean {
     }
 
     public boolean end(Writer writer, String body) {
-        java.lang.Number number = findNumberName();
+        java.lang.@RUntainted Number number = findNumberName();
 
         if (number != null) {
 
-            NumberFormat format = getNumberFormat();
+            @RUntainted NumberFormat format = getNumberFormat();
             findCurrency(format);
             setNumberFormatParameters(format);
             setRoundingMode(format);
 
-            String msg = format.format(number);
+            @RUntainted String msg = format.format(number);
             try {
                 if (getVar() == null) {
                     writer.write(msg);
@@ -198,7 +199,7 @@ public class Number extends ContextBean {
         }
     }
 
-    private java.lang.Number findNumberName() {
+    private java.lang.@RUntainted Number findNumberName() {
         java.lang.Number number = null;
         // find the name on the valueStack
         try {
@@ -238,7 +239,7 @@ public class Number extends ContextBean {
         }
     }
 
-    private NumberFormat getNumberFormat() {
+    private @RUntainted NumberFormat getNumberFormat() {
         NumberFormat format = null;
         if (type == null) {
             try {

@@ -28,6 +28,7 @@ import com.opensymphony.xwork2.util.ValueStack;
 
 import java.util.ArrayList;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Mock for an {@link ActionInvocation}.

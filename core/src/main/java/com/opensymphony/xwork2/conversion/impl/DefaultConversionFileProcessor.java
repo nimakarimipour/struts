@@ -31,6 +31,7 @@ import org.apache.logging.log4j.Logger;
 import java.io.InputStream;
 import java.util.Map;
 import java.util.Properties;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Default implementation of {@link ConversionFileProcessor}
@@ -62,7 +63,7 @@ public class DefaultConversionFileProcessor implements ConversionFileProcessor {
                 Properties prop = new Properties();
                 prop.load(is);
 
-                for (Map.Entry<Object, Object> entry : prop.entrySet()) {
+                for (Map.Entry<Object, @RUntainted Object> entry : prop.entrySet()) {
                     String key = (String) entry.getKey();
 
                     if (mapping.containsKey(key)) {

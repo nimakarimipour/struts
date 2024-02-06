@@ -43,6 +43,7 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @author David Blevins
@@ -51,7 +52,7 @@ public class ResourceFinder {
     private static final Logger LOG = LogManager.getLogger(ResourceFinder.class);
 
     private final URL[] urls;
-    private final String path;
+    private final @RUntainted String path;
     private final ClassLoaderInterface classLoaderInterface;
     private final List<String> resourcesNotLoaded = new ArrayList<>();
 
@@ -59,15 +60,15 @@ public class ResourceFinder {
         this(null, new ClassLoaderInterfaceDelegate(Thread.currentThread().getContextClassLoader()), urls);
     }
 
-    public ResourceFinder(String path) {
+    public ResourceFinder(@RUntainted String path) {
         this(path, new ClassLoaderInterfaceDelegate(Thread.currentThread().getContextClassLoader()), (URL[]) null);
     }
 
-    public ResourceFinder(String path, URL... urls) {
+    public ResourceFinder(@RUntainted String path, URL... urls) {
         this(path, new ClassLoaderInterfaceDelegate(Thread.currentThread().getContextClassLoader()), urls);
     }
 
-    public ResourceFinder(String path, ClassLoaderInterface classLoaderInterface) {
+    public ResourceFinder(@RUntainted String path, ClassLoaderInterface classLoaderInterface) {
         this(path, classLoaderInterface, (URL[]) null);
     }
 
@@ -86,7 +87,7 @@ public class ResourceFinder {
      * @param urls  URLs (typically file: or jar:) within which to search for resources, instead of the
      *              ClassLoader.  If null, fallback to a ClassLoader instead.
      */
-    public ResourceFinder(String path, ClassLoaderInterface classLoaderInterface, URL... urls) {
+    public ResourceFinder(@RUntainted String path, ClassLoaderInterface classLoaderInterface, URL... urls) {
         path = StringUtils.trimToEmpty(path);
         if (!path.isEmpty() && !StringUtils.endsWith(path, "/")) {
             path += "/";  // Only append terminator to nonempty paths, otherwise JAR entry lookups break.
@@ -287,7 +288,7 @@ public class ResourceFinder {
      * @return a list of the content of each resource URL found
      * @throws IOException if any of the urls cannot be read
      */
-    public Map<String, String> mapAllStrings(String uri) throws IOException {
+    public Map<String, String> mapAllStrings(@RUntainted String uri) throws IOException {
         Map<String, String> strings = new HashMap<>();
         Map<String, URL> resourcesMap = getResourcesMap(uri);
         if (resourcesMap == null) {
@@ -338,7 +339,7 @@ public class ResourceFinder {
      * @return a list of the content of each resource URL found
      * @throws IOException if classLoader.getResources throws an exception
      */
-    public Map<String, String> mapAvailableStrings(String uri) throws IOException {
+    public Map<String, String> mapAvailableStrings(@RUntainted String uri) throws IOException {
         resourcesNotLoaded.clear();
         Map<String, URL> resourcesMap = getResourcesMap(uri);
         Map<String, String> strings = new HashMap<>(resourcesMap != null ? resourcesMap.size() : 0);
@@ -473,7 +474,7 @@ public class ResourceFinder {
      * @throws IOException in case of IO errors
      * @throws ClassNotFoundException when class is not found
      */
-    public Map<String, Class> mapAllClasses(String uri) throws IOException, ClassNotFoundException {
+    public Map<String, Class> mapAllClasses(@RUntainted String uri) throws IOException, ClassNotFoundException {
         Map<String, String> map = mapAllStrings(uri);
         Map<String, Class> classes = new HashMap<>(map != null ? map.size() : 0);
         if (map == null) {
@@ -520,7 +521,7 @@ public class ResourceFinder {
      * @return map of available classes
      * @throws IOException if classLoader.getResources throws an exception
      */
-    public Map<String, Class> mapAvailableClasses(String uri) throws IOException {
+    public Map<String, Class> mapAvailableClasses(@RUntainted String uri) throws IOException {
         resourcesNotLoaded.clear();
         Map<String, String> map = mapAvailableStrings(uri);
         Map<String, Class> classes = new HashMap<>(map != null ? map.size() : 0);
@@ -973,7 +974,7 @@ public class ResourceFinder {
      * @return corresponding resource as map of properties
      * @throws IOException if the URL cannot be read or is not in properties file format
      */
-    public Map<String, Properties> mapAllProperties(String uri) throws IOException {
+    public Map<String, Properties> mapAllProperties(@RUntainted String uri) throws IOException {
         Map<String, URL> map = getResourcesMap(uri);
         Map<String, Properties> propertiesMap = new HashMap<>(map != null ? map.size() : 0);
         if (map == null) {
@@ -1021,7 +1022,7 @@ public class ResourceFinder {
      * @return corresponding resource as map of available properties
      * @throws IOException if classLoader.getResources throws an exception
      */
-    public Map<String, Properties> mapAvailableProperties(String uri) throws IOException {
+    public Map<String, Properties> mapAvailableProperties(@RUntainted String uri) throws IOException {
         resourcesNotLoaded.clear();
         Map<String, URL> map = getResourcesMap(uri);
         Map<String, Properties> propertiesMap = new HashMap<>(map != null ? map.size() : 0);
@@ -1048,8 +1049,8 @@ public class ResourceFinder {
     //
     // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
-    public Map<String, URL> getResourcesMap(String uri) throws IOException {
-        String basePath = path + uri;
+    public Map<String, URL> getResourcesMap(@RUntainted String uri) throws IOException {
+        @RUntainted String basePath = path + uri;
 
         Map<String, URL> resources = new HashMap<>();
         if (!basePath.endsWith("/")) {
@@ -1098,7 +1099,7 @@ public class ResourceFinder {
         }
 
         while (urlsForURI.hasMoreElements()) {
-            URL location = urlsForURI.nextElement();
+            @RUntainted URL location = urlsForURI.nextElement();
 
             try {
                 if ("jar".equals(location.getProtocol())) {
@@ -1143,7 +1144,7 @@ public class ResourceFinder {
         }
 
         while (urlsForURI.hasMoreElements()) {
-            URL location = urlsForURI.nextElement();
+            @RUntainted URL location = urlsForURI.nextElement();
 
             LOG.debug("       url (location): " + location);
 
@@ -1205,15 +1206,15 @@ public class ResourceFinder {
         }
     }
 
-    private static void readJarEntries(URL location, String basePath, Map<String, URL> resources) throws IOException {
-        JarURLConnection conn = (JarURLConnection) location.openConnection();
-        JarFile jarfile;
+    private static void readJarEntries(@RUntainted URL location, @RUntainted String basePath, Map<String, URL> resources) throws IOException {
+        @RUntainted JarURLConnection conn = (JarURLConnection) location.openConnection();
+        @RUntainted JarFile jarfile;
         jarfile = conn.getJarFile();
 
-        Enumeration<JarEntry> entries = jarfile.entries();
+        Enumeration<@RUntainted JarEntry> entries = jarfile.entries();
         while (entries != null && entries.hasMoreElements()) {
-            JarEntry entry = entries.nextElement();
-            String name = entry.getName();
+            @RUntainted JarEntry entry = entries.nextElement();
+            @RUntainted String name = entry.getName();
 
             if (entry.isDirectory() || !name.startsWith(basePath) || name.length() == basePath.length()) {
                 continue;
@@ -1310,7 +1311,7 @@ public class ResourceFinder {
 
     private URL findResource(String resourceName, URL... search) {
         for (int i = 0; i < search.length; i++) {
-            URL currentUrl = search[i];
+            @RUntainted URL currentUrl = search[i];
             if (currentUrl == null) {
                 continue;
             }
@@ -1376,7 +1377,7 @@ public class ResourceFinder {
                         fixedResName = fixedResName.substring(1);
                     }
                     buf.append(fixedResName);
-                    String filename = buf.toString();
+                    @RUntainted String filename = buf.toString();
                     File file = new File(filename);
                     File file2 = new File(URLDecoder.decode(filename));
 
@@ -1410,7 +1411,7 @@ public class ResourceFinder {
         return null;
     }
 
-    private URL targetURL(URL base, String name) throws MalformedURLException {
+    private URL targetURL(@RUntainted URL base, String name) throws MalformedURLException {
         StringBuilder sb = new StringBuilder(base.getFile().length() + name.length());
         sb.append(base.getFile());
         sb.append(name);

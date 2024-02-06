@@ -26,6 +26,7 @@ import org.apache.struts2.views.annotations.StrutsTagAttribute;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.Writer;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * ClosingUIBean is the standard superclass for UI components such as div etc.

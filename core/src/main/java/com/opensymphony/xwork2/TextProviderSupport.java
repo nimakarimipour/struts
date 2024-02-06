@@ -26,6 +26,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Default TextProvider implementation.
@@ -252,7 +253,7 @@ public class TextProviderSupport implements ResourceBundleTextProvider {
      * @param stack        the value stack to use for finding the text
      * @return the message as found in the resource bundle, or defaultValue if none is found
      */
-    public String getText(String key, String defaultValue, List<?> args, ValueStack stack) {
+    public @RUntainted String getText(String key, String defaultValue, List<?> args, ValueStack stack) {
         Object[] argsArray = ((args != null) ? args.toArray() : null);
         Locale locale;
         if (stack == null){

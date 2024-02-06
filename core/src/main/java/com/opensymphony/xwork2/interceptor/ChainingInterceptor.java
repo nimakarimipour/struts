@@ -38,6 +38,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 
 /**
@@ -171,7 +172,7 @@ public class ChainingInterceptor extends AbstractInterceptor {
         Map<String, Object> ctxMap = invocation.getInvocationContext().getContextMap();
         for (Object object : list) {
             if (shouldCopy(object)) {
-                Object action = invocation.getAction();
+                @RUntainted Object action = invocation.getAction();
                 Class<?> editable = null;
                 if(ProxyUtil.isProxy(action)) {
                     editable = ProxyUtil.ultimateTargetClass(action);

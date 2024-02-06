@@ -21,18 +21,19 @@ package org.apache.struts2.interceptor.debugging;
 import java.io.PrintWriter;
 import java.io.Writer;
 import java.util.Stack;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class PrettyPrintWriter {
 
     private final PrintWriter writer;
-    private final Stack<String> elementStack = new Stack<>();
-    private final char[] lineIndenter;
+    private final Stack<@RUntainted String> elementStack = new Stack<>();
+    private final @RUntainted char[] lineIndenter;
 
     private boolean tagInProgress;
     private int depth;
     private boolean readyForNewLine;
     private boolean tagIsEmpty;
-    private String newLine;
+    private @RUntainted String newLine;
     private boolean escape = true;
 
     private static final char[] NULL = "&#x0;".toCharArray();
@@ -66,7 +67,7 @@ public class PrettyPrintWriter {
         this(writer, new char[]{' ', ' '});
     }
 
-    public void startNode(String name) {
+    public void startNode(@RUntainted String name) {
         tagIsEmpty = false;
         finishTag();
         writer.write('<');
@@ -86,7 +87,7 @@ public class PrettyPrintWriter {
         writeText(writer, text);
     }
 
-    public void addAttribute(String key, String value) {
+    public void addAttribute(@RUntainted String key, String value) {
         writer.write(' ');
         writer.write(key);
         writer.write('=');
@@ -106,7 +107,7 @@ public class PrettyPrintWriter {
     private void writeText(String text) {
         int length = text.length();
         for (int i = 0; i < length; i++) {
-            char c = text.charAt(i);
+            @RUntainted char c = text.charAt(i);
             switch (c) {
                 case '\0':
                     this.writer.write(NULL);

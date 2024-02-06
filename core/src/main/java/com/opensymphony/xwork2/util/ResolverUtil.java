@@ -32,6 +32,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.jar.JarEntry;
 import java.util.jar.JarInputStream;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>ResolverUtil is used to locate classes that are available in the/a class path and meet
@@ -455,7 +456,7 @@ public class ResolverUtil<T> {
         try {
             ClassLoader loader = getClassLoader();
             if (test.doesMatchClass()) {
-                String externalName = fqn.substring(0, fqn.indexOf('.')).replace('/', '.');
+                @RUntainted String externalName = fqn.substring(0, fqn.indexOf('.')).replace('/', '.');
                 if (LOG.isDebugEnabled()) {
                     LOG.debug("Checking to see if class " + externalName + " matches criteria [" + test + "]");
                 }

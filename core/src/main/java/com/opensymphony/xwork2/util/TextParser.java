@@ -17,6 +17,7 @@
  * under the License.
  */
 package com.opensymphony.xwork2.util;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Used to parse expressions like ${foo.bar} or %{bar.foo} but it is up tp the TextParser's
