@@ -36,6 +36,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -172,10 +173,10 @@ public class UrlSet {
         }
     }
 
-    public UrlSet excludePaths(String pathString) throws MalformedURLException {
-        String[] paths = pathString.split(File.pathSeparator);
+    public UrlSet excludePaths(@RUntainted String pathString) throws MalformedURLException {
+        @RUntainted String[] paths = pathString.split(File.pathSeparator);
         UrlSet urlSet = this;
-        for (String path : paths) {
+        for (@RUntainted String path : paths) {
             if (StringUtils.isNotEmpty(path)) {
                 File file = new File(path);
                 urlSet = urlSet.exclude(file);
@@ -205,10 +206,10 @@ public class UrlSet {
      * @throws IOException in case of IO errors
      */
     public UrlSet includeClassesUrl(ClassLoaderInterface classLoaderInterface, FileProtocolNormalizer normalizer) throws IOException {
-        Enumeration<URL> rootUrlEnumeration = classLoaderInterface.getResources("");
+        Enumeration<@RUntainted URL> rootUrlEnumeration = classLoaderInterface.getResources("");
         while (rootUrlEnumeration.hasMoreElements()) {
-            URL url = rootUrlEnumeration.nextElement();
-            String externalForm = StringUtils.removeEnd(url.toExternalForm(), "/");
+            @RUntainted URL url = rootUrlEnumeration.nextElement();
+            @RUntainted String externalForm = StringUtils.removeEnd(url.toExternalForm(), "/");
             if (externalForm.endsWith(".war/WEB-INF/classes")) {
                 //if it is inside a war file, get the url to the file
                 externalForm = StringUtils.substringBefore(externalForm, "/WEB-INF/classes");
@@ -247,11 +248,11 @@ public class UrlSet {
         List<URL> list = new ArrayList<>();
 
         //find jars
-        ArrayList<URL> urls = Collections.list(classLoader.getResources("META-INF"));
+        ArrayList<@RUntainted URL> urls = Collections.list(classLoader.getResources("META-INF"));
 
-        for (URL url : urls) {
+        for (@RUntainted URL url : urls) {
             if ("jar".equalsIgnoreCase(url.getProtocol())) {
-                String externalForm = url.toExternalForm();
+                @RUntainted String externalForm = url.toExternalForm();
                 //build a URL pointing to the jar, instead of the META-INF dir
                 url = new URL(StringUtils.substringBefore(externalForm, "META-INF"));
                 list.add(url);
@@ -274,11 +275,11 @@ public class UrlSet {
         List<URL> list = new ArrayList<>();
 
         //find jars
-        ArrayList<URL> urls = Collections.list(classLoader.getResources("META-INF"));
+        ArrayList<@RUntainted URL> urls = Collections.list(classLoader.getResources("META-INF"));
 
-        for (URL url : urls) {
+        for (@RUntainted URL url : urls) {
             if (protocols.contains(url.getProtocol())) {
-                String externalForm = url.toExternalForm();
+                @RUntainted String externalForm = url.toExternalForm();
                 //build a URL pointing to the jar, instead of the META-INF dir
                 url = new URL(StringUtils.substringBefore(externalForm, "META-INF"));
                 list.add(url);

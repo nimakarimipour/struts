@@ -35,6 +35,7 @@ import java.nio.charset.CharsetDecoder;
 import java.nio.charset.CoderResult;
 import java.nio.charset.CodingErrorAction;
 import java.util.LinkedList;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A speedy implementation of ByteArrayOutputStream. It's not synchronized, and it
@@ -91,7 +92,7 @@ public class FastByteArrayOutputStream extends OutputStream {
         if (encoding != null) {
             CharsetDecoder decoder = getDecoder(encoding);
             // Create buffer for characters decoding
-            CharBuffer charBuffer = CharBuffer.allocate(buffer.length);
+            @RUntainted CharBuffer charBuffer = CharBuffer.allocate(buffer.length);
             // Create buffer for bytes
             float bytesPerChar = decoder.charset().newEncoder().maxBytesPerChar();
             ByteBuffer byteBuffer = ByteBuffer.allocate((int) (buffer.length + bytesPerChar));
@@ -151,7 +152,7 @@ public class FastByteArrayOutputStream extends OutputStream {
         out.write(new String(bytes, 0, length));
     }
 
-    private static void decodeAndWriteOut(Writer writer, byte[] bytes, int length, ByteBuffer in, CharBuffer out, CharsetDecoder decoder, boolean endOfInput) throws IOException {
+    private static void decodeAndWriteOut(Writer writer, byte[] bytes, int length, ByteBuffer in, @RUntainted CharBuffer out, CharsetDecoder decoder, boolean endOfInput) throws IOException {
         // Append bytes to current buffer
         // Previous data maybe partially decoded, this part will appended to previous
         in.put(bytes, 0, length);
@@ -160,7 +161,7 @@ public class FastByteArrayOutputStream extends OutputStream {
         decodeAndWriteBuffered(writer, in, out, decoder, endOfInput);
     }
 
-    private static void decodeAndWriteBuffered(Writer writer, ByteBuffer in, CharBuffer out, CharsetDecoder decoder, boolean endOfInput) throws IOException {
+    private static void decodeAndWriteBuffered(Writer writer, ByteBuffer in, @RUntainted CharBuffer out, CharsetDecoder decoder, boolean endOfInput) throws IOException {
         // Decode
         CoderResult result;
         do {
@@ -189,7 +190,7 @@ public class FastByteArrayOutputStream extends OutputStream {
         }
     }
 
-    private static CoderResult decodeAndWrite(Writer writer, ByteBuffer in, CharBuffer out, CharsetDecoder decoder, boolean endOfInput) throws IOException {
+    private static CoderResult decodeAndWrite(Writer writer, ByteBuffer in, @RUntainted CharBuffer out, CharsetDecoder decoder, boolean endOfInput) throws IOException {
         CoderResult result = decoder.decode(in, out, endOfInput);
         // To begin processing of decoded data
         out.flip();

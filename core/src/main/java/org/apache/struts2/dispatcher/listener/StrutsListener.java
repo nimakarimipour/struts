@@ -24,6 +24,7 @@ import org.apache.struts2.dispatcher.PrepareOperations;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Servlet listener for Struts.  The preferred way to use Struts is as a filter via the
@@ -34,7 +35,7 @@ import javax.servlet.ServletContextListener;
 public class StrutsListener implements ServletContextListener {
     private PrepareOperations prepare;
 
-    public void contextInitialized(ServletContextEvent sce) {
+    public void contextInitialized(@RUntainted ServletContextEvent sce) {
         InitOperations init = new InitOperations();
         Dispatcher dispatcher = null;
         try {

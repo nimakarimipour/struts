@@ -23,6 +23,7 @@ import com.opensymphony.xwork2.ActionProxy;
 import com.opensymphony.xwork2.config.Configuration;
 import com.opensymphony.xwork2.config.entities.ActionConfig;
 import org.apache.commons.lang3.StringUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Mock for an {@link ActionProxy}.
@@ -36,7 +37,7 @@ public class MockActionProxy implements ActionProxy {
     ActionConfig config;
     boolean executeResult;
     ActionInvocation invocation;
-    String namespace;
+    @RUntainted String namespace;
     String method;
     boolean executedCalled;
     String returnedResult;
@@ -99,11 +100,11 @@ public class MockActionProxy implements ActionProxy {
         this.invocation = invocation;
     }
 
-    public String getNamespace() {
+    public @RUntainted String getNamespace() {
         return namespace;
     }
 
-    public void setNamespace(String namespace) {
+    public void setNamespace(@RUntainted String namespace) {
         this.namespace = namespace;
     }
 

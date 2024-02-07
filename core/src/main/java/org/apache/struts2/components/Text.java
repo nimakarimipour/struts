@@ -32,6 +32,8 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -180,7 +182,7 @@ public class Text extends ContextBean implements Param.UnnamedParametric {
             defaultMessage = actualName;
         }
 
-        String msg = TextProviderHelper.getText(actualName, defaultMessage, values, getStack());
+        @RUntainted String msg = TextProviderHelper.getText(actualName, defaultMessage, values, getStack());
 
         if (msg != null) {
             try {
@@ -211,7 +213,7 @@ public class Text extends ContextBean implements Param.UnnamedParametric {
         values.add(value);
     }
 
-    private String prepare(String value) {
+    private @RPolyTainted String prepare(@RPolyTainted String value) {
         String result = value;
         if (escapeHtml) {
             result = StringEscapeUtils.escapeHtml4(result);

@@ -28,6 +28,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Contains initialization operations
@@ -81,10 +82,10 @@ public class InitOperations {
      * @return The dispatcher on the thread.
      */
     protected Dispatcher createDispatcher(HostConfig filterConfig) {
-        Map<String, String> params = new HashMap<>();
-        for (Iterator<String> parameterNames = filterConfig.getInitParameterNames(); parameterNames.hasNext(); ) {
-            String name = parameterNames.next();
-            String value = filterConfig.getInitParameter(name);
+        Map<String, @RUntainted String> params = new HashMap<>();
+        for (Iterator<@RUntainted String> parameterNames = filterConfig.getInitParameterNames(); parameterNames.hasNext(); ) {
+            @RUntainted String name = parameterNames.next();
+            @RUntainted String value = filterConfig.getInitParameter(name);
             params.put(name, value);
         }
         return new Dispatcher(filterConfig.getServletContext(), params);

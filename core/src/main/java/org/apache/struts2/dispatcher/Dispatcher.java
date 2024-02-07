@@ -86,6 +86,8 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.regex.Pattern;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * A utility class the actual dispatcher delegates most of its tasks to. Each instance
@@ -133,7 +135,7 @@ public class Dispatcher {
     /**
      * Store state of StrutsConstants.STRUTS_I18N_ENCODING setting.
      */
-    private String defaultEncoding;
+    private @RUntainted String defaultEncoding;
 
     /**
      * Store state of StrutsConstants.STRUTS_LOCALE setting.
@@ -143,7 +145,7 @@ public class Dispatcher {
     /**
      * Store state of StrutsConstants.STRUTS_MULTIPART_SAVEDIR setting.
      */
-    private String multipartSaveDir;
+    private @RUntainted String multipartSaveDir;
 
     /**
      * Stores the value of {@link StrutsConstants#STRUTS_MULTIPART_PARSER} setting
@@ -235,8 +237,8 @@ public class Dispatcher {
     /**
      * Keeps current reference to external world and must be protected to support class inheritance
      */
-    protected ServletContext servletContext;
-    protected Map<String, String> initParams;
+    protected @RUntainted ServletContext servletContext;
+    protected Map<String, @RUntainted String> initParams;
 
     /**
      * Create the Dispatcher instance for a given ServletContext and set of initialization parameters.
@@ -244,7 +246,7 @@ public class Dispatcher {
      * @param servletContext Our servlet context
      * @param initParams     The set of initialization parameters
      */
-    public Dispatcher(ServletContext servletContext, Map<String, String> initParams) {
+    public Dispatcher(@RUntainted ServletContext servletContext, Map<String, @RUntainted String> initParams) {
         this.servletContext = servletContext;
         this.initParams = initParams;
     }
@@ -293,7 +295,7 @@ public class Dispatcher {
      * @param val New setting
      */
     @Inject(StrutsConstants.STRUTS_I18N_ENCODING)
-    public void setDefaultEncoding(String val) {
+    public void setDefaultEncoding(@RUntainted String val) {
         defaultEncoding = val;
     }
 
@@ -303,7 +305,7 @@ public class Dispatcher {
      * @param val New setting
      */
     @Inject(StrutsConstants.STRUTS_MULTIPART_SAVEDIR)
-    public void setMultipartSaveDir(String val) {
+    public void setMultipartSaveDir(@RUntainted String val) {
         multipartSaveDir = val;
     }
 
@@ -424,16 +426,16 @@ public class Dispatcher {
     }
 
     private void init_TraditionalXmlConfigurations() {
-        String configPaths = initParams.get("config");
+        @RUntainted String configPaths = initParams.get("config");
         if (configPaths == null) {
             configPaths = DEFAULT_CONFIGURATION_PATHS;
         }
         loadConfigPaths(configPaths);
     }
 
-    private void loadConfigPaths(String configPaths) {
-        String[] files = configPaths.split(CONFIG_SPLIT_REGEX);
-        for (String file : files) {
+    private void loadConfigPaths(@RUntainted String configPaths) {
+        @RUntainted String[] files = configPaths.split(CONFIG_SPLIT_REGEX);
+        for (@RUntainted String file : files) {
             if (file.endsWith(".xml")) {
                 configurationManager.addContainerProvider(createStrutsXmlConfigurationProvider(file, servletContext));
             } else {
@@ -442,7 +444,7 @@ public class Dispatcher {
         }
     }
 
-    protected XmlConfigurationProvider createStrutsXmlConfigurationProvider(String filename, ServletContext ctx) {
+    protected XmlConfigurationProvider createStrutsXmlConfigurationProvider(@RUntainted String filename, ServletContext ctx) {
         return new StrutsXmlConfigurationProvider(filename, ctx);
     }
 
@@ -450,7 +452,7 @@ public class Dispatcher {
      * @deprecated since 6.2.0, use {@link #createStrutsXmlConfigurationProvider(String, ServletContext)}
      */
     @Deprecated
-    protected XmlConfigurationProvider createStrutsXmlConfigurationProvider(String filename, boolean errorIfMissing, ServletContext ctx) {
+    protected XmlConfigurationProvider createStrutsXmlConfigurationProvider(@RUntainted String filename, boolean errorIfMissing, ServletContext ctx) {
         return createStrutsXmlConfigurationProvider(filename, ctx);
     }
 
@@ -823,11 +825,11 @@ public class Dispatcher {
      *
      * @return the path to save uploaded files to
      */
-    protected String getSaveDir() {
-        String saveDir = multipartSaveDir.trim();
+    protected @RUntainted String getSaveDir() {
+        @RUntainted String saveDir = multipartSaveDir.trim();
 
         if (saveDir.equals("")) {
-            File tempdir = (File) servletContext.getAttribute("javax.servlet.context.tempdir");
+            @RUntainted File tempdir = (File) servletContext.getAttribute("javax.servlet.context.tempdir");
             LOG.info("Unable to find 'struts.multipart.saveDir' property setting. Defaulting to javax.servlet.context.tempdir");
 
             if (tempdir != null) {
@@ -866,7 +868,7 @@ public class Dispatcher {
      * @param response The response
      */
     public void prepare(HttpServletRequest request, HttpServletResponse response) {
-        String encoding = null;
+        @RUntainted String encoding = null;
         if (defaultEncoding != null) {
             encoding = defaultEncoding;
         }
@@ -903,7 +905,7 @@ public class Dispatcher {
         }
     }
 
-    private void applyEncoding(HttpServletResponse response, String encoding) {
+    private void applyEncoding(HttpServletResponse response, @RUntainted String encoding) {
         try {
             if (!encoding.equals(response.getCharacterEncoding())) {
                 response.setCharacterEncoding(encoding);
