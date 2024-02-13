@@ -201,7 +201,7 @@
                                 <path>
                                     <groupId>edu.ucr.cs.riple.taint</groupId>
                                     <artifactId>ucrtainting-checker</artifactId>
-                                    <version>0.1-alpha-2</version>
+                                    <version>${env.UCRT_VERSION}</version>
                                 </path>
                                 <!-- <path>
                                     <groupId>edu.ucr.cs.riple.annotator</groupId>
@@ -223,7 +223,7 @@
                                 <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED</arg>
                                 <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
                                 <!-- <arg>-Awarns</arg> -->
-                                <!-- <arg>-nowarn</arg> -->
+                                <arg>-nowarn</arg>
                                 <arg>-AannotatedPackages=org.apache.struts2,com.opensymphony.xwork2</arg>
                                 <arg>-AenableSerialization</arg>
                                 <arg>-AenableLibraryCheck=${env.ANNOTATOR_LIBRARY}</arg>
@@ -242,7 +242,7 @@
                 <dependency>
                     <groupId>org.checkerframework</groupId>
                     <artifactId>checker</artifactId>
-                    <version>3.40.0</version>
+                    <version>${env.CF_VERSION}</version>
                 </dependency>
             </dependencies>
         </profile>

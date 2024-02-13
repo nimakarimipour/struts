@@ -81,10 +81,10 @@
     </distributionManagement>
 
     <modules>
-<!--        <module>bom</module>-->
+        <!--        <module>bom</module>-->
         <module>core</module>
-<!--        <module>plugins</module>-->
-<!--        <module>bundles</module>-->
+        <!--        <module>plugins</module>-->
+        <!--        <module>bundles</module>-->
         <module>apps</module>
     </modules>
 
@@ -269,7 +269,7 @@
                                 <path>
                                     <groupId>edu.ucr.cs.riple.taint</groupId>
                                     <artifactId>ucrtainting-checker</artifactId>
-                                    <version>0.1-alpha-2</version>
+                                    <version>${env.UCRT_VERSION}</version>
                                 </path>
                                 <!-- <path>
                                     <groupId>edu.ucr.cs.riple.annotator</groupId>
@@ -299,7 +299,7 @@
                 <dependency>
                     <groupId>org.checkerframework</groupId>
                     <artifactId>checker</artifactId>
-                    <version>3.40.0</version>
+                    <version>${env.CF_VERSION}</version>
                 </dependency>
             </dependencies>
         </profile>
@@ -372,7 +372,7 @@
         <dependency>
             <groupId>org.checkerframework</groupId>
             <artifactId>checker-qual</artifactId>
-            <version>3.40.0</version>
+            <version>${env.CF_VERSION}</version>
         </dependency>
         <dependency>
             <groupId>com.google.errorprone</groupId>
@@ -382,7 +382,7 @@
         <dependency>
             <groupId>edu.ucr.cs.riple.taint</groupId>
             <artifactId>ucrtainting-checker-qual</artifactId>
-            <version>0.1</version>
+            <version>${env.UCRT_VERSION}</version>
         </dependency>
     </dependencies>
 
