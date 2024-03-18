@@ -34,6 +34,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Executes the discovered request information.  This filter requires the {@link StrutsPrepareFilter} to have already
@@ -43,9 +44,9 @@ public class StrutsExecuteFilter implements StrutsStatics, Filter {
     protected PrepareOperations prepare;
     protected ExecuteOperations execute;
 
-    protected FilterConfig filterConfig;
+    protected @RUntainted FilterConfig filterConfig;
 
-    public void init(FilterConfig filterConfig) throws ServletException {
+    public void init(@RUntainted FilterConfig filterConfig) throws ServletException {
         this.filterConfig = filterConfig;
     }
 

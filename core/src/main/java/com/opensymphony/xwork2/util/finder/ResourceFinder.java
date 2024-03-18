@@ -43,6 +43,8 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * @author David Blevins
@@ -51,7 +53,7 @@ public class ResourceFinder {
     private static final Logger LOG = LogManager.getLogger(ResourceFinder.class);
 
     private final URL[] urls;
-    private final String path;
+    private final @RUntainted String path;
     private final ClassLoaderInterface classLoaderInterface;
     private final List<String> resourcesNotLoaded = new ArrayList<>();
 
@@ -59,15 +61,15 @@ public class ResourceFinder {
         this(null, new ClassLoaderInterfaceDelegate(Thread.currentThread().getContextClassLoader()), urls);
     }
 
-    public ResourceFinder(String path) {
+    public ResourceFinder(@RUntainted String path) {
         this(path, new ClassLoaderInterfaceDelegate(Thread.currentThread().getContextClassLoader()), (URL[]) null);
     }
 
-    public ResourceFinder(String path, URL... urls) {
+    public ResourceFinder(@RUntainted String path, URL... urls) {
         this(path, new ClassLoaderInterfaceDelegate(Thread.currentThread().getContextClassLoader()), urls);
     }
 
-    public ResourceFinder(String path, ClassLoaderInterface classLoaderInterface) {
+    public ResourceFinder(@RUntainted String path, ClassLoaderInterface classLoaderInterface) {
         this(path, classLoaderInterface, (URL[]) null);
     }
 
@@ -86,7 +88,7 @@ public class ResourceFinder {
      * @param urls  URLs (typically file: or jar:) within which to search for resources, instead of the
      *              ClassLoader.  If null, fallback to a ClassLoader instead.
      */
-    public ResourceFinder(String path, ClassLoaderInterface classLoaderInterface, URL... urls) {
+    public ResourceFinder(@RUntainted String path, ClassLoaderInterface classLoaderInterface, URL... urls) {
         path = StringUtils.trimToEmpty(path);
         if (!path.isEmpty() && !StringUtils.endsWith(path, "/")) {
             path += "/";  // Only append terminator to nonempty paths, otherwise JAR entry lookups break.
@@ -148,16 +150,16 @@ public class ResourceFinder {
     //
     // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
-    public URL find(String uri) throws IOException {
+    public URL find(@RUntainted String uri) throws IOException {
         String fullUri = path + uri;
 
         return getResource(fullUri);
     }
 
-    public List<URL> findAll(String uri) throws IOException {
+    public List<URL> findAll(@RUntainted String uri) throws IOException {
         String fullUri = path + uri;
 
-        Enumeration<URL> resources = getResources(fullUri);
+        Enumeration<@RUntainted URL> resources = getResources(fullUri);
         List<URL> list = new ArrayList<>();
         if (resources == null) {
             LOG.trace("Null resources URL enumeration for [{}], should not be possible!", uri);
@@ -185,7 +187,7 @@ public class ResourceFinder {
      * @throws IOException if a resource pointed out by the uri param could not be find
      * @see ClassLoader#getResource(String)
      */
-    public String findString(String uri) throws IOException {
+    public String findString(@RUntainted String uri) throws IOException {
         String fullUri = path + uri;
 
         URL resource = getResource(fullUri);
@@ -203,12 +205,12 @@ public class ResourceFinder {
      * @return a list of the content of each resource URL found
      * @throws IOException if any of the found URLs are unable to be read.
      */
-    public List<String> findAllStrings(String uri) throws IOException {
+    public List<String> findAllStrings(@RUntainted String uri) throws IOException {
         String fulluri = path + uri;
 
         List<String> strings = new ArrayList<>();
 
-        Enumeration<URL> resources = getResources(fulluri);
+        Enumeration<@RUntainted URL> resources = getResources(fulluri);
         if (resources == null) {
             LOG.trace("Null resources URL enumeration for [{}], should not be possible!", uri);
             throw new IllegalStateException("Null resources URL enumeration produced for uri: " + uri);
@@ -230,13 +232,13 @@ public class ResourceFinder {
      * @return a list of the content of each resource URL found
      * @throws IOException if classLoader.getResources throws an exception
      */
-    public List<String> findAvailableStrings(String uri) throws IOException {
+    public List<String> findAvailableStrings(@RUntainted String uri) throws IOException {
         resourcesNotLoaded.clear();
         String fulluri = path + uri;
 
         List<String> strings = new ArrayList<>();
 
-        Enumeration<URL> resources = getResources(fulluri);
+        Enumeration<@RUntainted URL> resources = getResources(fulluri);
         if (resources == null) {
             LOG.trace("Null resources URL enumeration for [{}], should not be possible!", uri);
             throw new IllegalStateException("Null resources URL enumeration produced for uri: " + uri);
@@ -287,7 +289,7 @@ public class ResourceFinder {
      * @return a list of the content of each resource URL found
      * @throws IOException if any of the urls cannot be read
      */
-    public Map<String, String> mapAllStrings(String uri) throws IOException {
+    public Map<String, String> mapAllStrings(@RUntainted String uri) throws IOException {
         Map<String, String> strings = new HashMap<>();
         Map<String, URL> resourcesMap = getResourcesMap(uri);
         if (resourcesMap == null) {
@@ -338,7 +340,7 @@ public class ResourceFinder {
      * @return a list of the content of each resource URL found
      * @throws IOException if classLoader.getResources throws an exception
      */
-    public Map<String, String> mapAvailableStrings(String uri) throws IOException {
+    public Map<String, String> mapAvailableStrings(@RUntainted String uri) throws IOException {
         resourcesNotLoaded.clear();
         Map<String, URL> resourcesMap = getResourcesMap(uri);
         Map<String, String> strings = new HashMap<>(resourcesMap != null ? resourcesMap.size() : 0);
@@ -374,7 +376,7 @@ public class ResourceFinder {
      * @throws IOException in case of IO errors
      * @throws ClassNotFoundException when class is not found
      */
-    public Class findClass(String uri) throws IOException, ClassNotFoundException {
+    public Class findClass(@RUntainted String uri) throws IOException, ClassNotFoundException {
         String className = findString(uri);
         return (Class) classLoaderInterface.loadClass(className);
     }
@@ -394,7 +396,7 @@ public class ResourceFinder {
      * @throws IOException in case of IO errors
      * @throws ClassNotFoundException when class is not found
      */
-    public List<Class> findAllClasses(String uri) throws IOException, ClassNotFoundException {
+    public List<Class> findAllClasses(@RUntainted String uri) throws IOException, ClassNotFoundException {
         List<String> strings = findAllStrings(uri);
         List<Class> classes = new ArrayList<>(strings != null ? strings.size() : 0);
         if (strings == null) {
@@ -423,7 +425,7 @@ public class ResourceFinder {
      * @return list of available classes
      * @throws IOException if classLoader.getResources throws an exception
      */
-    public List<Class> findAvailableClasses(String uri) throws IOException {
+    public List<Class> findAvailableClasses(@RUntainted String uri) throws IOException {
         resourcesNotLoaded.clear();
         List<String> strings = findAvailableStrings(uri);
         List<Class> classes = new ArrayList<>(strings != null ? strings.size() : 0);
@@ -473,7 +475,7 @@ public class ResourceFinder {
      * @throws IOException in case of IO errors
      * @throws ClassNotFoundException when class is not found
      */
-    public Map<String, Class> mapAllClasses(String uri) throws IOException, ClassNotFoundException {
+    public Map<String, Class> mapAllClasses(@RUntainted String uri) throws IOException, ClassNotFoundException {
         Map<String, String> map = mapAllStrings(uri);
         Map<String, Class> classes = new HashMap<>(map != null ? map.size() : 0);
         if (map == null) {
@@ -520,7 +522,7 @@ public class ResourceFinder {
      * @return map of available classes
      * @throws IOException if classLoader.getResources throws an exception
      */
-    public Map<String, Class> mapAvailableClasses(String uri) throws IOException {
+    public Map<String, Class> mapAvailableClasses(@RUntainted String uri) throws IOException {
         resourcesNotLoaded.clear();
         Map<String, String> map = mapAvailableStrings(uri);
         Map<String, Class> classes = new HashMap<>(map != null ? map.size() : 0);
@@ -833,7 +835,7 @@ public class ResourceFinder {
      * @return corresponding resource as properties
      * @throws IOException if the URL cannot be read or is not in properties file format
      */
-    public Properties findProperties(String uri) throws IOException {
+    public Properties findProperties(@RUntainted String uri) throws IOException {
         String fulluri = path + uri;
 
         URL resource = getResource(fulluri);
@@ -872,12 +874,12 @@ public class ResourceFinder {
      * @return corresponding resource as list of properties
      * @throws IOException if the URL cannot be read or is not in properties file format
      */
-    public List<Properties> findAllProperties(String uri) throws IOException {
+    public List<Properties> findAllProperties(@RUntainted String uri) throws IOException {
         String fulluri = path + uri;
 
         List<Properties> properties = new ArrayList<>();
 
-        Enumeration<URL> resources = getResources(fulluri);
+        Enumeration<@RUntainted URL> resources = getResources(fulluri);
         if (resources == null) {
             LOG.trace("Null resources URL enumeration for [{}], should not be possible!", uri);
             throw new IllegalStateException("Null resources URL enumeration produced for uri: " + uri);
@@ -919,13 +921,13 @@ public class ResourceFinder {
      * @return corresponding resource as list of properties
      * @throws IOException if classLoader.getResources throws an exception
      */
-    public List<Properties> findAvailableProperties(String uri) throws IOException {
+    public List<Properties> findAvailableProperties(@RUntainted String uri) throws IOException {
         resourcesNotLoaded.clear();
         String fulluri = path + uri;
 
         List<Properties> properties = new ArrayList<>();
 
-        Enumeration<URL> resources = getResources(fulluri);
+        Enumeration<@RUntainted URL> resources = getResources(fulluri);
         if (resources == null) {
             LOG.trace("Null resources URL enumeration for [{}], should not be possible!", uri);
             throw new IllegalStateException("Null resources URL enumeration produced for uri: " + uri);
@@ -973,7 +975,7 @@ public class ResourceFinder {
      * @return corresponding resource as map of properties
      * @throws IOException if the URL cannot be read or is not in properties file format
      */
-    public Map<String, Properties> mapAllProperties(String uri) throws IOException {
+    public Map<String, Properties> mapAllProperties(@RUntainted String uri) throws IOException {
         Map<String, URL> map = getResourcesMap(uri);
         Map<String, Properties> propertiesMap = new HashMap<>(map != null ? map.size() : 0);
         if (map == null) {
@@ -1021,7 +1023,7 @@ public class ResourceFinder {
      * @return corresponding resource as map of available properties
      * @throws IOException if classLoader.getResources throws an exception
      */
-    public Map<String, Properties> mapAvailableProperties(String uri) throws IOException {
+    public Map<String, Properties> mapAvailableProperties(@RUntainted String uri) throws IOException {
         resourcesNotLoaded.clear();
         Map<String, URL> map = getResourcesMap(uri);
         Map<String, Properties> propertiesMap = new HashMap<>(map != null ? map.size() : 0);
@@ -1048,14 +1050,14 @@ public class ResourceFinder {
     //
     // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
-    public Map<String, URL> getResourcesMap(String uri) throws IOException {
+    public Map<String, URL> getResourcesMap(@RUntainted String uri) throws IOException {
         String basePath = path + uri;
 
         Map<String, URL> resources = new HashMap<>();
         if (!basePath.endsWith("/")) {
             basePath += "/";
         }
-        Enumeration<URL> urlsForURI = getResources(basePath);
+        Enumeration<@RUntainted URL> urlsForURI = getResources(basePath);
         if (urlsForURI == null) {
             LOG.trace("Null resources URL enumeration for [{}], should not be possible!", uri);
             throw new IllegalStateException("Null resources URL enumeration produced for uri: " + uri);
@@ -1084,14 +1086,14 @@ public class ResourceFinder {
      *
      * @throws IOException in case of IO errors
      */
-    public Set<String> findPackages(String uri) throws IOException {
+    public Set<String> findPackages(@RUntainted String uri) throws IOException {
         String basePath = path + uri;
 
         Set<String> resources = new HashSet<>();
         if (!basePath.endsWith("/")) {
             basePath += "/";
         }
-        Enumeration<URL> urlsForURI = getResources(basePath);
+        Enumeration<@RUntainted URL> urlsForURI = getResources(basePath);
         if (urlsForURI == null) {
             LOG.trace("Null resources URL enumeration for [{}], should not be possible!", uri);
             throw new IllegalStateException("Null resources URL enumeration produced for uri: " + uri);
@@ -1120,7 +1122,7 @@ public class ResourceFinder {
      *
      * @throws IOException in case of IO errors
      */
-    public Map<URL, Set<String>> findPackagesMap(String uri) throws IOException {
+    public Map<URL, Set<String>> findPackagesMap(@RUntainted String uri) throws IOException {
         String basePath = path + uri;
 
         LOG.trace("    basePath(initial): " + basePath);
@@ -1131,7 +1133,7 @@ public class ResourceFinder {
 
         LOG.trace("    basePath(final): " + basePath);
 
-        Enumeration<URL> urlsForURI = getResources(basePath);
+        Enumeration<@RUntainted URL> urlsForURI = getResources(basePath);
         Map<URL, Set<String>> result = new HashMap<>();
         if (urlsForURI == null) {
             LOG.trace("Null resources URL enumeration for [{}], should not be possible!", uri);
@@ -1205,12 +1207,12 @@ public class ResourceFinder {
         }
     }
 
-    private static void readJarEntries(URL location, String basePath, Map<String, URL> resources) throws IOException {
+    private static void readJarEntries(URL location, @RUntainted String basePath, Map<String, URL> resources) throws IOException {
         JarURLConnection conn = (JarURLConnection) location.openConnection();
         JarFile jarfile;
         jarfile = conn.getJarFile();
 
-        Enumeration<JarEntry> entries = jarfile.entries();
+        Enumeration<@RUntainted JarEntry> entries = jarfile.entries();
         while (entries != null && entries.hasMoreElements()) {
             JarEntry entry = entries.nextElement();
             String name = entry.getName();
@@ -1278,14 +1280,14 @@ public class ResourceFinder {
         }
     }
 
-    private URL getResource(String fullUri) {
+    private URL getResource(@RUntainted String fullUri) {
         if (urls == null) {
             return classLoaderInterface.getResource(fullUri);
         }
         return findResource(fullUri, urls);
     }
 
-    private Enumeration<URL> getResources(String fulluri) throws IOException {
+    private Enumeration<@RUntainted URL> getResources(@RUntainted String fulluri) throws IOException {
         if (urls == null) {
             LOG.debug("    urls (member) null, using classLoaderInterface to get resources");
 
@@ -1294,7 +1296,7 @@ public class ResourceFinder {
 
         LOG.debug("    urls (member) non-null, using findResource to get resources");
 
-        ArrayList<URL> resources = new ArrayList<>(urls != null ? urls.length : 0);
+        ArrayList<@RUntainted URL> resources = new ArrayList<>(urls != null ? urls.length : 0);
         for (URL url : urls) {
             URL resource = findResource(fulluri, url);
 
@@ -1308,7 +1310,7 @@ public class ResourceFinder {
         return Collections.enumeration(resources);
     }
 
-    private URL findResource(String resourceName, URL... search) {
+    private @RUntainted URL findResource(@RUntainted String resourceName, URL... search) {
         for (int i = 0; i < search.length; i++) {
             URL currentUrl = search[i];
             if (currentUrl == null) {
@@ -1410,7 +1412,7 @@ public class ResourceFinder {
         return null;
     }
 
-    private URL targetURL(URL base, String name) throws MalformedURLException {
+    private @RPolyTainted URL targetURL(@RUntainted URL base, @RPolyTainted String name) throws MalformedURLException {
         StringBuilder sb = new StringBuilder(base.getFile().length() + name.length());
         sb.append(base.getFile());
         sb.append(name);

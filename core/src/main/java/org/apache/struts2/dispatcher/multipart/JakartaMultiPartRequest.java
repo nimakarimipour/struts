@@ -43,6 +43,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Multipart form data request adapter for Jakarta Commons Fileupload package.
@@ -65,7 +66,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
      * @param request the request containing the multipart
      * @throws java.io.IOException is thrown if encoding fails.
      */
-    public void parse(HttpServletRequest request, String saveDir) throws IOException {
+    public void parse(HttpServletRequest request, @RUntainted String saveDir) throws IOException {
         try {
             setLocale(request);
             processUpload(request, saveDir);
@@ -97,7 +98,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
         }
     }
 
-    protected void processUpload(HttpServletRequest request, String saveDir) throws FileUploadException, UnsupportedEncodingException {
+    protected void processUpload(HttpServletRequest request, @RUntainted String saveDir) throws FileUploadException, UnsupportedEncodingException {
         if (ServletFileUpload.isMultipartContent(request)) {
             for (FileItem item : parseRequest(request, saveDir)) {
                 LOG.debug("Found file item: [{}]", item.getFieldName());
@@ -166,7 +167,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
         item.delete();
     }
 
-    protected List<FileItem> parseRequest(HttpServletRequest servletRequest, String saveDir) throws FileUploadException {
+    protected List<FileItem> parseRequest(HttpServletRequest servletRequest, @RUntainted String saveDir) throws FileUploadException {
         DiskFileItemFactory fac = createDiskFileItemFactory(saveDir);
         ServletFileUpload upload = createServletFileUpload(fac);
         return upload.parseRequest(createRequestContext(servletRequest));
@@ -186,7 +187,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
         return upload;
     }
 
-    protected DiskFileItemFactory createDiskFileItemFactory(String saveDir) {
+    protected DiskFileItemFactory createDiskFileItemFactory(@RUntainted String saveDir) {
         DiskFileItemFactory fac = new DiskFileItemFactory();
         // Make sure that the data is written to file, even if the file is empty.
         fac.setSizeThreshold(-1);

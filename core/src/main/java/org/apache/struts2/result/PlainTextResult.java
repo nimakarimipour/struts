@@ -29,6 +29,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.nio.charset.Charset;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A result that send the content out as plain text. Useful typically when needed
@@ -62,7 +63,7 @@ public class PlainTextResult extends StrutsResultSupport {
 
     private static final long serialVersionUID = 3633371605905583950L;
 
-    private String charSet;
+    private @RUntainted String charSet;
 
     public PlainTextResult() {
         super();
@@ -86,7 +87,7 @@ public class PlainTextResult extends StrutsResultSupport {
      *
      * @param charSet The character set
      */
-    public void setCharSet(String charSet) {
+    public void setCharSet(@RUntainted String charSet) {
         this.charSet = charSet;
     }
 
@@ -123,7 +124,7 @@ public class PlainTextResult extends StrutsResultSupport {
     }
 
     protected void sendStream(PrintWriter writer, InputStreamReader reader) throws IOException {
-        char[] buffer = new char[BUFFER_SIZE];
+        @RUntainted char[] buffer = new char[BUFFER_SIZE];
         int charRead;
         while ((charRead = reader.read(buffer)) != -1) {
             writer.write(buffer, 0, charRead);

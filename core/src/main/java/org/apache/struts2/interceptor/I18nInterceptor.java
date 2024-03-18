@@ -41,6 +41,8 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * An interceptor that handles setting the locale specified in a session as the locale for the current action request.
@@ -57,7 +59,7 @@ public class I18nInterceptor extends AbstractInterceptor {
 
     protected String parameterName = DEFAULT_PARAMETER;
     protected String requestOnlyParameterName = DEFAULT_REQUEST_ONLY_PARAMETER;
-    protected String attributeName = DEFAULT_SESSION_ATTRIBUTE;
+    protected @RUntainted String attributeName = DEFAULT_SESSION_ATTRIBUTE;
     protected String requestCookieParameterName = DEFAULT_COOKIE_PARAMETER;
     protected Storage storage = Storage.SESSION;
 
@@ -71,7 +73,7 @@ public class I18nInterceptor extends AbstractInterceptor {
         this.parameterName = parameterName;
     }
 
-    public void setAttributeName(String attributeName) {
+    public void setAttributeName(@RUntainted String attributeName) {
         this.attributeName = attributeName;
     }
 
@@ -229,7 +231,7 @@ public class I18nInterceptor extends AbstractInterceptor {
     protected interface LocaleHandler {
         Locale find();
         Locale read(ActionInvocation invocation);
-        Locale store(ActionInvocation invocation, Locale locale);
+        Locale store(ActionInvocation invocation, @RUntainted Locale locale);
         boolean shouldStore();
     }
 
@@ -254,7 +256,7 @@ public class I18nInterceptor extends AbstractInterceptor {
         }
 
         @Override
-        public Locale store(ActionInvocation invocation, Locale locale) {
+        public Locale store(ActionInvocation invocation, @RUntainted Locale locale) {
             return locale;
         }
 
@@ -391,7 +393,7 @@ public class I18nInterceptor extends AbstractInterceptor {
         }
 
         @Override
-        public Locale store(ActionInvocation invocation, Locale locale) {
+        public Locale store(ActionInvocation invocation, @RUntainted Locale locale) {
             HttpServletResponse response = ServletActionContext.getResponse();
 
             Cookie cookie = new Cookie(attributeName, locale.toString());

@@ -45,6 +45,7 @@ import java.util.Collection;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Struts base utility class, for use in Velocity and Freemarker templates
@@ -282,7 +283,7 @@ public class StrutsUtil {
             writer = aWriter;
         }
 
-        public void write(int aByte) {
+        public void write(@RUntainted int aByte) {
             writer.write(aByte);
         }
 
