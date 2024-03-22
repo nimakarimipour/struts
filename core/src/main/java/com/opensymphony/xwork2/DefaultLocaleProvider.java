@@ -25,6 +25,7 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.message.ParameterizedMessage;
 
 import java.util.Locale;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Default implementation of {@link LocaleProvider}
@@ -34,7 +35,7 @@ public class DefaultLocaleProvider implements LocaleProvider {
     private final static Logger LOG = LogManager.getLogger(DefaultLocaleProvider.class);
 
     @Override
-    public Locale getLocale() {
+    public @RUntainted Locale getLocale() {
         ActionContext ctx = ActionContext.getContext();
         if (ctx != null) {
             return ctx.getLocale();

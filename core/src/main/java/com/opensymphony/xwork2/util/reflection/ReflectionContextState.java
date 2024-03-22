@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.conversion.impl.XWorkConverter;
 
 import java.util.HashMap;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Manages variables in the reflection context and returns values

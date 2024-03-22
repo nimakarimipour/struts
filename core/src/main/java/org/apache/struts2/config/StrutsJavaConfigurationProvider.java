@@ -40,6 +40,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class StrutsJavaConfigurationProvider implements ConfigurationProvider {
     private static final Logger LOG = LogManager.getLogger(StrutsJavaConfigurationProvider.class);

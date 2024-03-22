@@ -44,6 +44,7 @@ import javax.servlet.jsp.PageContext;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -121,7 +122,7 @@ public class ActionComponent extends ContextBean {
     protected ActionProxyFactory actionProxyFactory;
     protected ActionProxy proxy;
     protected String name;
-    protected String namespace;
+    protected @RUntainted String namespace;
     protected boolean executeResult;
     protected boolean ignoreContextParams;
     protected boolean flush = true;
@@ -292,7 +293,7 @@ public class ActionComponent extends ContextBean {
     }
 
     @StrutsTagAttribute(description = "Namespace for action to call", defaultValue = "namespace from where tag is used")
-    public void setNamespace(String namespace) {
+    public void setNamespace(@RUntainted String namespace) {
         this.namespace = namespace;
     }
 

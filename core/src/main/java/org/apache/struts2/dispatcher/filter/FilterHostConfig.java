@@ -24,26 +24,27 @@ import org.apache.struts2.util.MakeIterator;
 import javax.servlet.FilterConfig;
 import javax.servlet.ServletContext;
 import java.util.Iterator;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Host configuration that wraps FilterConfig
  */
 public class FilterHostConfig implements HostConfig {
 
-    private FilterConfig config;
+    private @RUntainted FilterConfig config;
 
-    public FilterHostConfig(FilterConfig config) {
+    public FilterHostConfig(@RUntainted FilterConfig config) {
         this.config = config;
     }
-    public String getInitParameter(String key) {
+    public @RUntainted String getInitParameter(@RUntainted String key) {
         return config.getInitParameter(key);
     }
 
-    public Iterator<String> getInitParameterNames() {
+    public Iterator<@RUntainted String> getInitParameterNames() {
         return MakeIterator.convert(config.getInitParameterNames());
     }
 
-    public ServletContext getServletContext() {
+    public @RUntainted ServletContext getServletContext() {
         return config.getServletContext();
     }
 }

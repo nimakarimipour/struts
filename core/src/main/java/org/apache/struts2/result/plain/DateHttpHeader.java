@@ -17,18 +17,19 @@
  * under the License.
  */
 package org.apache.struts2.result.plain;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 class DateHttpHeader implements HttpHeader<Long> {
 
-    private final String name;
+    private final @RUntainted String name;
     private final Long value;
 
-    public DateHttpHeader(String name, Long value) {
+    public DateHttpHeader(@RUntainted String name, Long value) {
         this.name = name;
         this.value = value;
     }
 
-    public String getName() {
+    public @RUntainted String getName() {
         return name;
     }
 
