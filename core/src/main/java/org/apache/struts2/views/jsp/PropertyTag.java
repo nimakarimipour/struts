@@ -24,6 +24,7 @@ import org.apache.struts2.components.Property;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Property
@@ -32,7 +33,7 @@ public class PropertyTag extends ComponentTagSupport {
 
     private static final long serialVersionUID = 435308349113743852L;
 
-    private String defaultValue;
+    private @RUntainted String defaultValue;
     private String value;
     private boolean escapeHtml = true;
     private boolean escapeJavaScript = false;
@@ -57,7 +58,7 @@ public class PropertyTag extends ComponentTagSupport {
         tag.setEscapeCsv(escapeCsv);
     }
 
-    public void setDefault(String defaultValue) {
+    public void setDefault(@RUntainted String defaultValue) {
         this.defaultValue = defaultValue;
     }
 
@@ -73,7 +74,7 @@ public class PropertyTag extends ComponentTagSupport {
         this.value = value;
     }
 
-    public void setDefaultValue(String defaultValue) {
+    public void setDefaultValue(@RUntainted String defaultValue) {
         this.defaultValue = defaultValue;
     }
 

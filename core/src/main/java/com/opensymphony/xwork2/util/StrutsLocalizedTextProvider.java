@@ -29,6 +29,8 @@ import org.apache.logging.log4j.Logger;
 import java.beans.PropertyDescriptor;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * Provides support for localization in the framework, it can be used to read only default bundles,

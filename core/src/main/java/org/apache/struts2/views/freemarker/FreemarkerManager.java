@@ -66,6 +66,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * <p>
@@ -168,10 +170,10 @@ public class FreemarkerManager {
 
 
 
-    protected String templatePath;
+    protected @RUntainted String templatePath;
     protected boolean nocache;
     protected boolean debug;
-    protected Configuration config;
+    protected @RUntainted Configuration config;
     protected ObjectWrapper wrapper;
     protected String contentType = null;
     protected boolean noCharsetInContentType = true;
@@ -259,7 +261,7 @@ public class FreemarkerManager {
         return contentType;
     }
 
-    public synchronized Configuration getConfiguration(ServletContext servletContext) {
+    public synchronized @RUntainted Configuration getConfiguration(@RUntainted ServletContext servletContext) {
         if (config == null) {
             try {
                 init(servletContext);
@@ -272,7 +274,7 @@ public class FreemarkerManager {
         return config;
     }
 
-    public void init(ServletContext servletContext) throws TemplateException {
+    public void init(@RUntainted ServletContext servletContext) throws TemplateException {
         config = createConfiguration(servletContext);
 
         // Set defaults:
@@ -325,7 +327,7 @@ public class FreemarkerManager {
      * @return a instance of the freemarker configuration object
      * @throws TemplateException in case of errors during creating the configuration
      */
-    protected Configuration createConfiguration(ServletContext servletContext) throws TemplateException {
+    protected @RPolyTainted Configuration createConfiguration(@RPolyTainted ServletContext servletContext) throws TemplateException {
         Version incompatibleImprovements = getFreemarkerVersion(servletContext);
 
         Configuration configuration = new Configuration(incompatibleImprovements);
@@ -357,7 +359,7 @@ public class FreemarkerManager {
         return configuration;
     }
 
-    protected Version getFreemarkerVersion(ServletContext servletContext) {
+    protected @RPolyTainted Version getFreemarkerVersion(@RPolyTainted ServletContext servletContext) {
         Version incompatibleImprovements = Configuration.VERSION_2_3_28;
 
         String incompatibleImprovementsParam = servletContext.getInitParameter("freemarker." + Configuration.INCOMPATIBLE_IMPROVEMENTS_KEY_SNAKE_CASE);
@@ -441,7 +443,7 @@ public class FreemarkerManager {
      * @param templatePath the template path to create a loader for
      * @return a newly created template loader
      */
-    protected TemplateLoader createTemplateLoader(ServletContext servletContext, String templatePath) {
+    protected TemplateLoader createTemplateLoader(ServletContext servletContext, @RUntainted String templatePath) {
         TemplateLoader templatePathLoader = null;
 
          try {

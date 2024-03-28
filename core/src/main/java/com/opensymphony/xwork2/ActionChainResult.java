@@ -30,6 +30,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
 * <!-- START SNIPPET: description -->
@@ -229,7 +230,7 @@ public class ActionChainResult implements Result {
         proxy.execute();
     }
 
-    protected String translateVariables(String text) {
+    protected @RUntainted String translateVariables(String text) {
         return TextParseUtil.translateVariables(text, ActionContext.getContext().getValueStack());
     }
 

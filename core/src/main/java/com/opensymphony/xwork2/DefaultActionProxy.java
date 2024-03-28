@@ -29,6 +29,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.Serializable;
 import java.util.Locale;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * The Default ActionProxy implementation
@@ -51,7 +52,7 @@ public class DefaultActionProxy implements ActionProxy, Serializable {
     protected LocalizedTextProvider localizedTextProvider;
 
     protected String actionName;
-    protected String namespace;
+    protected @RUntainted String namespace;
     protected String method;
     protected boolean executeResult;
     protected boolean cleanupContext;
@@ -78,7 +79,7 @@ public class DefaultActionProxy implements ActionProxy, Serializable {
      * @param executeResult execute result
      * @param cleanupContext cleanup context
      */
-    protected DefaultActionProxy(ActionInvocation inv, String namespace, String actionName, String methodName, boolean executeResult, boolean cleanupContext) {
+    protected DefaultActionProxy(ActionInvocation inv, @RUntainted String namespace, String actionName, String methodName, boolean executeResult, boolean cleanupContext) {
 
         this.invocation = inv;
         this.cleanupContext = cleanupContext;
@@ -139,7 +140,7 @@ public class DefaultActionProxy implements ActionProxy, Serializable {
         return invocation;
     }
 
-    public String getNamespace() {
+    public @RUntainted String getNamespace() {
         return namespace;
     }
 

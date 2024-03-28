@@ -51,6 +51,8 @@ import java.util.Map;
 import java.util.Stack;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * Base class to extend for UI components.
@@ -242,7 +244,7 @@ public class Component {
      * @param expr OGNL expression.
      * @return the String value found.
      */
-    protected String findString(String expr) {
+    protected @RPolyTainted String findString(@RPolyTainted String expr) {
         return (String) findValue(expr, String.class);
     }
 
@@ -292,7 +294,7 @@ public class Component {
      * @param expression the expression. Returns <tt>null</tt> if expr is null.
      * @return the value, <tt>null</tt> if not found.
      */
-    protected Object findValue(String expression) {
+    protected @RUntainted Object findValue(String expression) {
         if (expression == null) {
             return null;
         }
@@ -377,7 +379,7 @@ public class Component {
      * @param toType     the type expected to find.
      * @return the Object found, or <tt>null</tt> if not found.
      */
-    protected Object findValue(String expression, Class<?> toType) {
+    protected @RPolyTainted Object findValue(@RPolyTainted String expression, Class<?> toType) {
         if (toType == String.class) {
             if (ComponentUtils.containsExpression(expression)) {
                 return TextParseUtil.translateVariables('%', expression, stack);
@@ -406,7 +408,7 @@ public class Component {
      * @param escapeAmp                 should ampersand (&amp;) be escaped to &amp;amp;
      * @return the action url.
      */
-    protected String determineActionURL(String action, String namespace, String method,
+    protected @RUntainted String determineActionURL(String action, String namespace, String method,
                                         HttpServletRequest req, HttpServletResponse res, Map<String, Object> parameters, String scheme,
                                         boolean includeContext, boolean encodeResult, boolean forceAddSchemeHostAndPort,
                                         boolean escapeAmp) {
@@ -442,7 +444,7 @@ public class Component {
         return result;
     }
 
-    protected String getNamespace(ValueStack stack) {
+    protected @RUntainted String getNamespace(ValueStack stack) {
         ActionContext context = ActionContext.of(stack.getContext());
         ActionInvocation invocation = context.getActionInvocation();
         return invocation.getProxy().getNamespace();

@@ -24,6 +24,7 @@ import org.apache.struts2.components.Component;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see ActionComponent
@@ -33,7 +34,7 @@ public class ActionTag extends ContextBeanTag {
     private static final long serialVersionUID = -5384167073331678855L;
 
     protected String name;
-    protected String namespace;
+    protected @RUntainted String namespace;
     protected boolean executeResult;
     protected boolean ignoreContextParams;
     protected boolean flush = true;
@@ -66,7 +67,7 @@ public class ActionTag extends ContextBeanTag {
         this.name = name;
     }
 
-    public void setNamespace(String namespace) {
+    public void setNamespace(@RUntainted String namespace) {
         this.namespace = namespace;
     }
 

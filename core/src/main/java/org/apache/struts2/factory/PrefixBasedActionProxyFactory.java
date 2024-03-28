@@ -32,6 +32,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: description -->
@@ -94,7 +95,7 @@ public class PrefixBasedActionProxyFactory extends StrutsActionProxyFactory impl
         }
     }
 
-    public ActionProxy createActionProxy(String namespace, String actionName, String methodName,
+    public ActionProxy createActionProxy(@RUntainted String namespace, String actionName, String methodName,
                                          Map<String, Object> extraContext, boolean executeResult, boolean cleanupContext) {
 
         String uri = namespace + (namespace.endsWith("/") ? actionName : "/" + actionName);
