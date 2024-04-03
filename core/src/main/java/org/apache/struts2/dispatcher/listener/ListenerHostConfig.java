@@ -23,26 +23,27 @@ import org.apache.struts2.dispatcher.HostConfig;
 import javax.servlet.ServletContext;
 import java.util.Collections;
 import java.util.Iterator;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Host configuration that just holds a ServletContext
  */
 public class ListenerHostConfig implements HostConfig {
-    private ServletContext servletContext;
+    private @RUntainted ServletContext servletContext;
 
-    public ListenerHostConfig(ServletContext servletContext) {
+    public ListenerHostConfig(@RUntainted ServletContext servletContext) {
         this.servletContext = servletContext;
     }
 
-    public String getInitParameter(String key) {
+    public @RUntainted String getInitParameter(String key) {
         return null;
     }
 
-    public Iterator<String> getInitParameterNames() {
+    public Iterator<@RUntainted String> getInitParameterNames() {
         return Collections.<String>emptyList().iterator();
     }
 
-    public ServletContext getServletContext() {
+    public @RUntainted ServletContext getServletContext() {
         return servletContext;  
     }
 }

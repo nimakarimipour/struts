@@ -34,6 +34,7 @@ import java.util.Collections;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -55,7 +56,7 @@ public class ReloadingClassLoader extends ClassLoader {
 
     private Set<Pattern> acceptClasses = Collections.emptySet();
 
-    public ReloadingClassLoader(final ClassLoader pParent) {
+    public ReloadingClassLoader(final @RUntainted ClassLoader pParent) {
         super(pParent);
         parent = pParent;
         URL parentRoot = pParent.getResource("");
@@ -148,7 +149,7 @@ public class ReloadingClassLoader extends ClassLoader {
         return delegate.getResourceAsStream(name);
     }
 
-    public Class loadClass(String name) throws ClassNotFoundException {
+    public Class loadClass(@RUntainted String name) throws ClassNotFoundException {
         return isAccepted(name) ? delegate.loadClass(name) : parent.loadClass(name);
     }
 

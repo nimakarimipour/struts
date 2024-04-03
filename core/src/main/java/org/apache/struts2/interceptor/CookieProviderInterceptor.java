@@ -28,6 +28,7 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: description -->

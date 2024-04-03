@@ -28,6 +28,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Read resources from a jar file
@@ -35,7 +36,7 @@ import java.util.zip.ZipFile;
 public class JarResourceStore extends AbstractResourceStore {
     private static final Logger LOG = LogManager.getLogger(JarResourceStore.class);
 
-    public JarResourceStore(File file) {
+    public JarResourceStore(@RUntainted File file) {
         super(file);
     }
 

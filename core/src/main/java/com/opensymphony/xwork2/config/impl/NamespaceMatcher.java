@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.util.PatternMatcher;
 
 import java.util.Map;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Matches namespace strings against a wildcard pattern matcher

@@ -25,6 +25,7 @@ import org.apache.struts2.views.annotations.StrutsTag;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->

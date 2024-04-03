@@ -19,6 +19,7 @@
 package org.apache.struts2.conversion;
 
 import org.apache.struts2.StrutsException;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * TypeConversionException should be thrown by any TypeConverters which fail to convert values

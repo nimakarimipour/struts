@@ -23,6 +23,7 @@ import org.apache.struts2.views.freemarker.tags.StrutsModels;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * The default Struts tag library
