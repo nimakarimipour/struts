@@ -1,0 +1,619 @@
+/Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/components/Component.java:[201,25] error: [argument] incompatible argument for parameter str of Writer.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 1
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/mapper/ActionMapping.java:[85,15] error: [return] incompatible types in return.
+  type of expression: @RTainted String
+  method return type: @RUntainted String, index: 2
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/ActionContext.java:[408,26] error: [return] incompatible types in return.
+  type of expression: @RTainted Object
+  method return type: @RUntainted Object, index: 3
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/ObjectFactory.java:[133,33] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+  found   : @RTainted String
+  required: @RUntainted String, index: 4
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[139,38] error: [argument] incompatible argument for parameter c of PrintWriter.write.
+  found   : @RTainted char
+  required: @RUntainted int, index: 5
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassLoaderUtil.java:[178,76] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+  found   : @RTainted String
+  required: @RUntainted String, index: 6
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassLoaderUtil.java:[184,76] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+  found   : @RTainted String
+  required: @RUntainted String, index: 7
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassLoaderUtil.java:[186,67] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+  found   : @RTainted String
+  required: @RUntainted String, index: 8
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/Dispatcher.java:[1033,58] error: [argument] incompatible argument for parameter e of DispatcherErrorHandler.handleError.
+  found   : @RTainted Exception
+  required: @RUntainted Exception, index: 9
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/config/providers/XmlConfigurationProvider.java:[227,60] error: [argument] incompatible argument for parameter fileName of XmlConfigurationProvider.loadConfigurationFiles.
+  found   : @RTainted String
+  required: @RUntainted String, index: 10
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/SessionMap.java:[109,93] error: [assignment] incompatible types in assignment.
+  found   : @RTainted Enumeration<@RTainted String>
+  required: @RTainted Enumeration<@RUntainted String>, index: 11
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/location/LocationImpl.java:[69,23] error: [assignment] incompatible types in assignment.
+  found   : @RTainted String
+  required: @RUntainted String, index: 12
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/result/StrutsResultSupport.java:[207,42] error: [assignment] incompatible types in assignment.
+  found   : @RTainted String
+  required: @RUntainted String, index: 13
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/components/template/BaseTemplateEngine.java:[124,67] error: [return] incompatible types in return.
+  type of expression: @RTainted String
+  method return type: @RUntainted String, index: 14
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/listener/ListenerHostConfig.java:[43,55] error: [return] incompatible types in return.
+  type of expression: @RTainted Iterator<@RTainted String>
+  method return type: @RTainted Iterator<@RUntainted String>, index: 15
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/views/util/DefaultUrlHelper.java:[179,15] error: [return] incompatible types in return.
+  type of expression: @RTainted String
+  method return type: @RUntainted String, index: 16
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/interceptor/I18nInterceptor.java:[131,53] error: [argument] incompatible argument for parameter locale of LocaleHandler.store.
+  found   : @RTainted Locale
+  required: @RUntainted Locale, index: 17
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/util/fs/JBossFileManager.java:[155,45] error: [return] incompatible types in return.
+  type of expression: @RTainted URL
+  method return type: @RPolyTainted URL, index: 18
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/util/fs/JBossFileManager.java:[157,32] error: [return] incompatible types in return.
+  type of expression: @RTainted URL
+  method return type: @RPolyTainted URL, index: 19
+[ERROR] error: Error in AnnotatedTypeMirror.fromExpression(ReturnsReceiverAnnotatedTypeFactory, Collections.synchronizedMap(new HashMap<String, Revision>())): null
+[ERROR]   ; The Checker Framework crashed.  Please report the crash.  Version: Checker Framework 3.42.0. 
+  Compilation unit: /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/DefaultFileManager.java
+  Last visited tree at line 43 column 1:
+  public class DefaultFileManager implements FileManager {
+  Exception: java.lang.NullPointerException; java.lang.NullPointerException
+/Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassPathFinder.java:[186,72] error: [assignment] incompatible types in assignment.
+  found   : @RTainted URL @RUntainted []
+  required: @RUntainted URL @RUntainted [], index: 28
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/DebuggingInterceptor.java:[362,25] error: [argument] incompatible argument for parameter name of PrettyPrintWriter.startNode.
+  found   : @RTainted String
+  required: @RUntainted String, index: 29
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[178,51] error: [return] incompatible types in return.
+  type of expression: @RTainted Object
+  method return type: @RUntainted Object, index: 30
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[178,52] error: [argument] incompatible argument for parameter object of MethodUtils.invokeMethod.
+  found   : @RTainted Object
+  required: @RUntainted Object, index: 31
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[216,57] error: [argument] incompatible argument for parameter cls of MethodUtils.getMatchingMethod.
+  found   : @RTainted Class<capture#01[ extends @RTainted Object super @RUntainted Void]>
+  required: @RUntainted Class<?[ extends @RTainted Object super @RUntainted Void]>, index: 32
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/components/Text.java:[190,40] error: [argument] incompatible argument for parameter str of Writer.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 33
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/StrutsJarURLConnection.java:[89,33] error: [argument] incompatible argument for parameter spec of URL constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 34
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/StrutsJarURLConnection.java:[96,49] error: [argument] incompatible argument for parameter spec of URL constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 35
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/OgnlTextParser.java:[100,15] error: [return] incompatible types in return.
+  type of expression: @RTainted Object
+  method return type: @RUntainted Object, index: 36
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/ognl/OgnlValueStack.java:[248,11] error: [override.return] Incompatible return type.
+  found   : @RTainted Object
+  required: @RUntainted Object
+  Consequence: method in @RTainted OgnlValueStack
+    @RTainted Object findValue(@RTainted OgnlValueStack this, @RTainted String p0, @RTainted boolean p1)
+  cannot override method in @RTainted ValueStack
+    @RUntainted Object findValue(@RTainted ValueStack this, @RTainted String p0, @RTainted boolean p1), index: 37
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/ognl/OgnlValueStack.java:[319,11] error: [override.return] Incompatible return type.
+  found   : @RTainted Object
+  required: @RUntainted Object
+  Consequence: method in @RTainted OgnlValueStack
+    @RTainted Object findValue(@RTainted OgnlValueStack this, @RTainted String p0, @RTainted Class</*RAW*/> p1, @RTainted boolean p2)
+  cannot override method in @RTainted ValueStack
+    @RUntainted Object findValue(@RTainted ValueStack this, @RTainted String p0, @RTainted Class</*RAW*/> p1, @RTainted boolean p2), index: 38
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/interceptor/CookieProviderInterceptor.java:[89,35] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.addCookie.
+  found   : @RTainted Cookie
+  required: @RUntainted Cookie, index: 39
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/multipart/StrutsUploadedFile.java:[29,20] error: [assignment] incompatible types in assignment.
+  found   : @RTainted File
+  required: @RUntainted File, index: 40
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ClassLoaderInterfaceDelegate.java:[37,49] error: [override.param] Incompatible parameter type for name.
+  found   : @RUntainted String
+  required: @RTainted String
+  Consequence: method in @RTainted ClassLoaderInterfaceDelegate
+    @RTainted Class<? extends @RTainted Object> loadClass(@RTainted ClassLoaderInterfaceDelegate this, @RUntainted String p0) throws @RTainted ClassNotFoundException
+  cannot override method in @RTainted ClassLoaderInterface
+    @RTainted Class<? extends @RTainted Object> loadClass(@RTainted ClassLoaderInterface this, @RTainted String p0) throws @RTainted ClassNotFoundException, index: 41
+[ERROR] Error in computing required fixes: objectFactory.buildBean(config.getClassName(), extraContext) return, exception:java.lang.NullPointerException
+java.lang.NullPointerException
+/Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/factory/DefaultActionFactory.java:[41,38] error: [return] incompatible types in return.
+  type of expression: @RTainted Object
+  method return type: @RUntainted Object, index: 42
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/components/Date.java:[351,41] error: [argument] incompatible argument for parameter str of Writer.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 43
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/DefaultDispatcherErrorHandler.java:[127,91] error: [argument] incompatible argument for parameter arg1 of HttpServletResponse.sendError.
+  found   : @RTainted String
+  required: @RUntainted String, index: 44
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/validator/DefaultValidatorFactory.java:[126,42] error: [argument] incompatible argument for parameter uri of File constructor.
+  found   : @RTainted URI
+  required: @RUntainted URI, index: 45
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/validator/DefaultValidatorFactory.java:[164,75] error: [argument] incompatible argument for parameter pathname of File constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 46
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/components/ComponentUrlProvider.java:[74,60] error: [override.param] Incompatible parameter type for expr.
+  found   : @RUntainted String
+  required: @RTainted String
+  Consequence: method in @RTainted ComponentUrlProvider
+    @RUntainted String findString(@RTainted ComponentUrlProvider this, @RUntainted String p0)
+  cannot override method in @RTainted UrlProvider
+    @RUntainted String findString(@RTainted UrlProvider this, @RTainted String p0), index: 47
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/interceptor/annotations/AnnotationWorkflowInterceptor.java:[142,18] error: [assignment] incompatible types in assignment.
+  found   : @RUntainted ArrayList<@RTainted Method>
+  required: @RTainted List<@RUntainted Method>, index: 48
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ResourceFinder.java:[1214,67] error: [assignment] incompatible types in assignment.
+  found   : @RTainted Enumeration<@RTainted JarEntry>
+  required: @RTainted Enumeration<@RUntainted JarEntry>, index: 49
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ResourceFinder.java:[1309,38] error: [return] incompatible types in return.
+  type of expression: @RTainted Enumeration<@RTainted URL>
+  method return type: @RTainted Enumeration<@RUntainted URL>, index: 50
+[INFO] 51 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  53.052 s
+[INFO] Finished at: 2024-03-22T11:03:52-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project struts2-core: Compilation failure: Compilation failure: 
+[ERROR]  Library: true, Poly: true, Type Argument: true, Validation: false, Side Effect: false
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/components/Component.java:[201,25] error: [argument] incompatible argument for parameter str of Writer.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 1
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/mapper/ActionMapping.java:[85,15] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted String
+[ERROR]   method return type: @RUntainted String, index: 2
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/ActionContext.java:[408,26] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted Object
+[ERROR]   method return type: @RUntainted Object, index: 3
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/ObjectFactory.java:[133,33] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 4
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[139,38] error: [argument] incompatible argument for parameter c of PrintWriter.write.
+[ERROR]   found   : @RTainted char
+[ERROR]   required: @RUntainted int, index: 5
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassLoaderUtil.java:[178,76] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 6
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassLoaderUtil.java:[184,76] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 7
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassLoaderUtil.java:[186,67] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 8
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/Dispatcher.java:[1033,58] error: [argument] incompatible argument for parameter e of DispatcherErrorHandler.handleError.
+[ERROR]   found   : @RTainted Exception
+[ERROR]   required: @RUntainted Exception, index: 9
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/config/providers/XmlConfigurationProvider.java:[227,60] error: [argument] incompatible argument for parameter fileName of XmlConfigurationProvider.loadConfigurationFiles.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 10
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/SessionMap.java:[109,93] error: [assignment] incompatible types in assignment.
+[ERROR]   found   : @RTainted Enumeration<@RTainted String>
+[ERROR]   required: @RTainted Enumeration<@RUntainted String>, index: 11
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/location/LocationImpl.java:[69,23] error: [assignment] incompatible types in assignment.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 12
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/result/StrutsResultSupport.java:[207,42] error: [assignment] incompatible types in assignment.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 13
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/components/template/BaseTemplateEngine.java:[124,67] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted String
+[ERROR]   method return type: @RUntainted String, index: 14
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/listener/ListenerHostConfig.java:[43,55] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted Iterator<@RTainted String>
+[ERROR]   method return type: @RTainted Iterator<@RUntainted String>, index: 15
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/views/util/DefaultUrlHelper.java:[179,15] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted String
+[ERROR]   method return type: @RUntainted String, index: 16
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/interceptor/I18nInterceptor.java:[131,53] error: [argument] incompatible argument for parameter locale of LocaleHandler.store.
+[ERROR]   found   : @RTainted Locale
+[ERROR]   required: @RUntainted Locale, index: 17
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/util/fs/JBossFileManager.java:[155,45] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted URL
+[ERROR]   method return type: @RPolyTainted URL, index: 18
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/util/fs/JBossFileManager.java:[157,32] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted URL
+[ERROR]   method return type: @RPolyTainted URL, index: 19
+[ERROR] error: Error in AnnotatedTypeMirror.fromExpression(ReturnsReceiverAnnotatedTypeFactory, Collections.synchronizedMap(new HashMap<String, Revision>())): null
+[ERROR]   ; The Checker Framework crashed.  Please report the crash.  Version: Checker Framework 3.42.0. 
+[ERROR]   Compilation unit: /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/DefaultFileManager.java
+[ERROR]   Last visited tree at line 43 column 1:
+[ERROR]   public class DefaultFileManager implements FileManager {
+[ERROR]   Exception: java.lang.NullPointerException; java.lang.NullPointerException
+[ERROR]   	at org.checkerframework.javacutil.TreePathUtil.getAssignmentContext(TreePathUtil.java:275)
+[ERROR]   	at org.checkerframework.framework.util.typeinference.TypeArgInferenceUtil.assignedTo(TypeArgInferenceUtil.java:147)
+[ERROR]   	at org.checkerframework.framework.util.typeinference.DefaultTypeArgumentInference.inferTypeArgs(DefaultTypeArgumentInference.java:124)
+[ERROR]   	at org.checkerframework.framework.util.AnnotatedTypes.findTypeArguments(AnnotatedTypes.java:752)
+[ERROR]   	at org.checkerframework.framework.type.AnnotatedTypeFactory.methodFromUse(AnnotatedTypeFactory.java:2392)
+[ERROR]   	at org.checkerframework.framework.type.AnnotatedTypeFactory.methodFromUse(AnnotatedTypeFactory.java:2338)
+[ERROR]   	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.methodFromUse(GenericAnnotatedTypeFactory.java:2187)
+[ERROR]   	at org.checkerframework.framework.type.TypeFromExpressionVisitor.visitMethodInvocation(TypeFromExpressionVisitor.java:390)
+[ERROR]   	at org.checkerframework.framework.type.TypeFromExpressionVisitor.visitMethodInvocation(TypeFromExpressionVisitor.java:77)
+[ERROR]   	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodInvocation.accept(JCTree.java:1650)
+[ERROR]   	at jdk.compiler/com.sun.source.util.SimpleTreeVisitor.visit(SimpleTreeVisitor.java:80)
+[ERROR]   	at org.checkerframework.framework.type.TypeFromTree.fromExpression(TypeFromTree.java:40)
+[ERROR]   	at org.checkerframework.framework.type.AnnotatedTypeFactory.fromExpression(AnnotatedTypeFactory.java:1700)
+[ERROR]   	at org.checkerframework.framework.type.AnnotatedTypeFactory.getAnnotatedType(AnnotatedTypeFactory.java:1370)
+[ERROR]   	at org.checkerframework.framework.flow.CFAbstractTransfer.getValueFromFactory(CFAbstractTransfer.java:211)
+[ERROR]   	at org.checkerframework.framework.flow.CFAbstractTransfer.visitMethodInvocation(CFAbstractTransfer.java:957)
+[ERROR]   	at org.checkerframework.framework.flow.CFAbstractTransfer.visitMethodInvocation(CFAbstractTransfer.java:98)
+[ERROR]   	at org.checkerframework.dataflow.cfg.node.MethodInvocationNode.accept(MethodInvocationNode.java:122)
+[ERROR]   	at org.checkerframework.dataflow.analysis.AbstractAnalysis.callTransferFunction(AbstractAnalysis.java:349)
+[ERROR]   	at org.checkerframework.dataflow.analysis.ForwardAnalysisImpl.callTransferFunction(ForwardAnalysisImpl.java:377)
+[ERROR]   	at org.checkerframework.dataflow.analysis.ForwardAnalysisImpl.performAnalysisBlock(ForwardAnalysisImpl.java:151)
+[ERROR]   	at org.checkerframework.dataflow.analysis.ForwardAnalysisImpl.performAnalysis(ForwardAnalysisImpl.java:105)
+[ERROR]   	at org.checkerframework.framework.flow.CFAbstractAnalysis.performAnalysis(CFAbstractAnalysis.java:147)
+[ERROR]   	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.analyze(GenericAnnotatedTypeFactory.java:1592)
+[ERROR]   	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.performFlowAnalysis(GenericAnnotatedTypeFactory.java:1444)
+[ERROR]   	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.checkAndPerformFlowAnalysis(GenericAnnotatedTypeFactory.java:1991)
+[ERROR]   	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.preProcessClassTree(GenericAnnotatedTypeFactory.java:426)
+[ERROR]   	at org.checkerframework.common.basetype.BaseTypeVisitor.visitClass(BaseTypeVisitor.java:553)
+[ERROR]   	at org.checkerframework.common.basetype.BaseTypeVisitor.visitClass(BaseTypeVisitor.java:187)
+[ERROR]   	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCClassDecl.accept(JCTree.java:808)
+[ERROR]   	at jdk.compiler/com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:56)
+[ERROR]   	at org.checkerframework.framework.source.SourceVisitor.visit(SourceVisitor.java:86)
+[ERROR]   	at org.checkerframework.framework.source.SourceChecker.typeProcess(SourceChecker.java:1050)
+[ERROR]   	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:558)
+[ERROR]   	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:551)
+[ERROR]   	at org.checkerframework.javacutil.AbstractTypeProcessor$AttributionTaskListener.finished(AbstractTypeProcessor.java:188)
+[ERROR]   	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:828)
+[ERROR]   	at jdk.compiler/com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:132)
+[ERROR]   	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1418)
+[ERROR]   	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1365)
+[ERROR]   	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:960)
+[ERROR]   	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:311)
+[ERROR]   	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:170)
+[ERROR]   	at jdk.compiler/com.sun.tools.javac.Main.compile(Main.java:57)
+[ERROR]   	at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:43)
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/DefaultFileManager.java:[51,101] error: [assignment] incompatible types in assignment.
+[ERROR]   found   : @RTainted List<@RTainted URL>
+[ERROR]   required: @RTainted List<@RUntainted URL>, index: 20
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/DefaultFileManager.java:[86,48] error: [override.param] Incompatible parameter type for fileUrl.
+[ERROR]   found   : @RUntainted URL
+[ERROR]   required: @RTainted URL
+[ERROR]   Consequence: method in @RTainted DefaultFileManager
+[ERROR]     @RTainted InputStream loadFile(@RTainted DefaultFileManager this, @RUntainted URL p0)
+[ERROR]   cannot override method in @RTainted FileManager
+[ERROR]     @RTainted InputStream loadFile(@RTainted FileManager this, @RTainted URL p0), index: 21
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/result/ServletRedirectResult.java:[187,57] error: [assignment] incompatible types in assignment.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 22
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/result/PlainResult.java:[70,64] error: [argument] incompatible argument for parameter arg1 of HttpServletResponse.addHeader.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 23
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/result/PlainResult.java:[76,75] error: [enhancedfor] incompatible types in enhanced for loop.
+[ERROR]   found   : @RUntainted HttpHeader<@RTainted Integer>
+[ERROR]   required: @RTainted HttpHeader<@RUntainted Integer>, index: 24
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/result/PlainResult.java:[83,31] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.addCookie.
+[ERROR]   found   : @RTainted Cookie
+[ERROR]   required: @RUntainted Cookie, index: 25
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/result/plain/HttpCookies.java:[37,43] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted List<@RTainted Cookie>
+[ERROR]   method return type: @RUntainted List<@RTainted Cookie>, index: 26
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/DomHelper.java:[130,25] error: [argument] incompatible argument for parameter is of SAXParser.parse.
+[ERROR]   found   : @RTainted InputSource
+[ERROR]   required: @RUntainted InputSource, index: 27
+[ERROR]  assignment, exception:java.lang.RuntimeException: Not a declared type
+[ERROR] java.lang.RuntimeException: Not a declared type
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.CollectionVisitor.buildFixForElement(CollectionVisitor.java:38)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.ReceiverTypeArgumentFixVisitor.visitMethodInvocation(ReceiverTypeArgumentFixVisitor.java:102)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.ReceiverTypeArgumentFixVisitor.visitMethodInvocation(ReceiverTypeArgumentFixVisitor.java:32)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodInvocation.accept(JCTree.java:1650)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.ReceiverTypeArgumentFixVisitor.visitMethodInvocation(ReceiverTypeArgumentFixVisitor.java:115)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.ReceiverTypeArgumentFixVisitor.visitMethodInvocation(ReceiverTypeArgumentFixVisitor.java:32)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodInvocation.accept(JCTree.java:1650)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.FixComputer.visitMethodInvocation(FixComputer.java:116)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.FixComputer.visitMethodInvocation(FixComputer.java:27)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodInvocation.accept(JCTree.java:1650)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.SerializationService.generateFixesForError(SerializationService.java:121)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.SerializationService.serializeError(SerializationService.java:86)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.UCRTaintingChecker.detailedReportError(UCRTaintingChecker.java:90)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.UCRTaintingVisitor.commonAssignmentCheck(UCRTaintingVisitor.java:52)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.commonAssignmentCheck(BaseTypeVisitor.java:3037)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.commonAssignmentCheck(BaseTypeVisitor.java:2956)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.visitAssignment(BaseTypeVisitor.java:1735)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.visitAssignment(BaseTypeVisitor.java:187)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCAssign.accept(JCTree.java:1888)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:82)
+[ERROR] 	at org.checkerframework.framework.source.SourceVisitor.scan(SourceVisitor.java:92)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:410)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:187)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.visitExpressionStatement(TreeScanner.java:433)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCExpressionStatement.accept(JCTree.java:1460)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:82)
+[ERROR] 	at org.checkerframework.framework.source.SourceVisitor.scan(SourceVisitor.java:92)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:410)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:187)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scan(TreeScanner.java:105)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.visitBlock(TreeScanner.java:248)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCBlock.accept(JCTree.java:1032)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:82)
+[ERROR] 	at org.checkerframework.framework.source.SourceVisitor.scan(SourceVisitor.java:92)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:410)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:187)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:90)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.visitTry(TreeScanner.java:374)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCTry.accept(JCTree.java:1328)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:82)
+[ERROR] 	at org.checkerframework.framework.source.SourceVisitor.scan(SourceVisitor.java:92)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:410)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:187)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scan(TreeScanner.java:105)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.visitBlock(TreeScanner.java:248)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCBlock.accept(JCTree.java:1032)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:82)
+[ERROR] 	at org.checkerframework.framework.source.SourceVisitor.scan(SourceVisitor.java:92)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:410)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:187)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:90)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.visitIf(TreeScanner.java:420)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCIf.accept(JCTree.java:1433)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:82)
+[ERROR] 	at org.checkerframework.framework.source.SourceVisitor.scan(SourceVisitor.java:92)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:410)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:187)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:90)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scan(TreeScanner.java:105)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.visitBlock(TreeScanner.java:248)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCBlock.accept(JCTree.java:1032)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:82)
+[ERROR] 	at org.checkerframework.framework.source.SourceVisitor.scan(SourceVisitor.java:92)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:410)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:187)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:90)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.visitMethod(TreeScanner.java:206)
+[ERROR] 	at org.checkerframework.framework.source.SourceVisitor.visitMethod(SourceVisitor.java:110)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.visitMethod(BaseTypeVisitor.java:1048)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.visitMethod(BaseTypeVisitor.java:187)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodDecl.accept(JCTree.java:898)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:82)
+[ERROR] 	at org.checkerframework.framework.source.SourceVisitor.scan(SourceVisitor.java:92)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:410)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:187)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:90)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scan(TreeScanner.java:105)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:113)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.visitClass(TreeScanner.java:187)
+[ERROR] 	at org.checkerframework.framework.source.SourceVisitor.visitClass(SourceVisitor.java:98)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.processClassTree(BaseTypeVisitor.java:617)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.visitClass(BaseTypeVisitor.java:563)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.visitClass(BaseTypeVisitor.java:187)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCClassDecl.accept(JCTree.java:808)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:56)
+[ERROR] 	at org.checkerframework.framework.source.SourceVisitor.visit(SourceVisitor.java:86)
+[ERROR] 	at org.checkerframework.framework.source.SourceChecker.typeProcess(SourceChecker.java:1050)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:558)
+[ERROR] 	at org.checkerframework.javacutil.AbstractTypeProcessor$AttributionTaskListener.finished(AbstractTypeProcessor.java:188)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:828)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:132)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1418)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1365)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:960)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:311)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:170)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.Main.compile(Main.java:57)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:43)
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassPathFinder.java:[186,72] error: [assignment] incompatible types in assignment.
+[ERROR]   found   : @RTainted URL @RUntainted []
+[ERROR]   required: @RUntainted URL @RUntainted [], index: 28
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/DebuggingInterceptor.java:[362,25] error: [argument] incompatible argument for parameter name of PrettyPrintWriter.startNode.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 29
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[178,51] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted Object
+[ERROR]   method return type: @RUntainted Object, index: 30
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[178,52] error: [argument] incompatible argument for parameter object of MethodUtils.invokeMethod.
+[ERROR]   found   : @RTainted Object
+[ERROR]   required: @RUntainted Object, index: 31
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[216,57] error: [argument] incompatible argument for parameter cls of MethodUtils.getMatchingMethod.
+[ERROR]   found   : @RTainted Class<capture#01[ extends @RTainted Object super @RUntainted Void]>
+[ERROR]   required: @RUntainted Class<?[ extends @RTainted Object super @RUntainted Void]>, index: 32
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/components/Text.java:[190,40] error: [argument] incompatible argument for parameter str of Writer.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 33
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/StrutsJarURLConnection.java:[89,33] error: [argument] incompatible argument for parameter spec of URL constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 34
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/StrutsJarURLConnection.java:[96,49] error: [argument] incompatible argument for parameter spec of URL constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 35
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/OgnlTextParser.java:[100,15] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted Object
+[ERROR]   method return type: @RUntainted Object, index: 36
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/ognl/OgnlValueStack.java:[248,11] error: [override.return] Incompatible return type.
+[ERROR]   found   : @RTainted Object
+[ERROR]   required: @RUntainted Object
+[ERROR]   Consequence: method in @RTainted OgnlValueStack
+[ERROR]     @RTainted Object findValue(@RTainted OgnlValueStack this, @RTainted String p0, @RTainted boolean p1)
+[ERROR]   cannot override method in @RTainted ValueStack
+[ERROR]     @RUntainted Object findValue(@RTainted ValueStack this, @RTainted String p0, @RTainted boolean p1), index: 37
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/ognl/OgnlValueStack.java:[319,11] error: [override.return] Incompatible return type.
+[ERROR]   found   : @RTainted Object
+[ERROR]   required: @RUntainted Object
+[ERROR]   Consequence: method in @RTainted OgnlValueStack
+[ERROR]     @RTainted Object findValue(@RTainted OgnlValueStack this, @RTainted String p0, @RTainted Class</*RAW*/> p1, @RTainted boolean p2)
+[ERROR]   cannot override method in @RTainted ValueStack
+[ERROR]     @RUntainted Object findValue(@RTainted ValueStack this, @RTainted String p0, @RTainted Class</*RAW*/> p1, @RTainted boolean p2), index: 38
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/interceptor/CookieProviderInterceptor.java:[89,35] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.addCookie.
+[ERROR]   found   : @RTainted Cookie
+[ERROR]   required: @RUntainted Cookie, index: 39
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/multipart/StrutsUploadedFile.java:[29,20] error: [assignment] incompatible types in assignment.
+[ERROR]   found   : @RTainted File
+[ERROR]   required: @RUntainted File, index: 40
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ClassLoaderInterfaceDelegate.java:[37,49] error: [override.param] Incompatible parameter type for name.
+[ERROR]   found   : @RUntainted String
+[ERROR]   required: @RTainted String
+[ERROR]   Consequence: method in @RTainted ClassLoaderInterfaceDelegate
+[ERROR]     @RTainted Class<? extends @RTainted Object> loadClass(@RTainted ClassLoaderInterfaceDelegate this, @RUntainted String p0) throws @RTainted ClassNotFoundException
+[ERROR]   cannot override method in @RTainted ClassLoaderInterface
+[ERROR]     @RTainted Class<? extends @RTainted Object> loadClass(@RTainted ClassLoaderInterface this, @RTainted String p0) throws @RTainted ClassNotFoundException, index: 41
+[ERROR] Error in computing required fixes: objectFactory.buildBean(config.getClassName(), extraContext) return, exception:java.lang.NullPointerException
+[ERROR] java.lang.NullPointerException
+[ERROR] 	at org.checkerframework.javacutil.TreePathUtil.getAssignmentContext(TreePathUtil.java:275)
+[ERROR] 	at org.checkerframework.framework.util.typeinference.TypeArgInferenceUtil.assignedTo(TypeArgInferenceUtil.java:147)
+[ERROR] 	at org.checkerframework.framework.util.typeinference.DefaultTypeArgumentInference.inferTypeArgs(DefaultTypeArgumentInference.java:124)
+[ERROR] 	at org.checkerframework.framework.util.AnnotatedTypes.findTypeArguments(AnnotatedTypes.java:752)
+[ERROR] 	at org.checkerframework.framework.type.AnnotatedTypeFactory.methodFromUse(AnnotatedTypeFactory.java:2392)
+[ERROR] 	at org.checkerframework.framework.type.AnnotatedTypeFactory.methodFromUse(AnnotatedTypeFactory.java:2338)
+[ERROR] 	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.methodFromUse(GenericAnnotatedTypeFactory.java:2187)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.MethodTypeArgumentFixVisitor.visitMethodInvocation(MethodTypeArgumentFixVisitor.java:52)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.MethodTypeArgumentFixVisitor.visitMethodInvocation(MethodTypeArgumentFixVisitor.java:28)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodInvocation.accept(JCTree.java:1650)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.FixComputer.visitMethodInvocation(FixComputer.java:119)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.FixComputer.visitMethodInvocation(FixComputer.java:27)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodInvocation.accept(JCTree.java:1650)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.MethodReturnVisitor$ReturnStatementVisitor.visitReturn(MethodReturnVisitor.java:334)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.MethodReturnVisitor$ReturnStatementVisitor.visitReturn(MethodReturnVisitor.java:326)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCReturn.accept(JCTree.java:1554)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scan(TreeScanner.java:86)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scan(TreeScanner.java:105)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.visitBlock(TreeScanner.java:248)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCBlock.accept(JCTree.java:1032)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scan(TreeScanner.java:86)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:90)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.visitMethod(TreeScanner.java:206)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodDecl.accept(JCTree.java:898)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.MethodReturnVisitor.visitMethod(MethodReturnVisitor.java:83)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.MethodReturnVisitor.visitMethod(MethodReturnVisitor.java:35)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodDecl.accept(JCTree.java:898)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.BasicVisitor.visitMethodInvocation(BasicVisitor.java:209)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.BasicVisitor.visitMethodInvocation(BasicVisitor.java:23)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodInvocation.accept(JCTree.java:1650)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.FixComputer.defaultAction(FixComputer.java:53)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.FixComputer.visitMethodInvocation(FixComputer.java:135)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.FixComputer.visitMethodInvocation(FixComputer.java:27)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodInvocation.accept(JCTree.java:1650)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.MethodReturnVisitor$ReturnStatementVisitor.visitReturn(MethodReturnVisitor.java:334)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.MethodReturnVisitor$ReturnStatementVisitor.visitReturn(MethodReturnVisitor.java:326)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCReturn.accept(JCTree.java:1554)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scan(TreeScanner.java:86)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:90)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scan(TreeScanner.java:105)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.visitBlock(TreeScanner.java:248)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCBlock.accept(JCTree.java:1032)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scan(TreeScanner.java:86)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:90)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.visitMethod(TreeScanner.java:206)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodDecl.accept(JCTree.java:898)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.MethodReturnVisitor.visitMethod(MethodReturnVisitor.java:83)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.MethodReturnVisitor.visitMethod(MethodReturnVisitor.java:35)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodDecl.accept(JCTree.java:898)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.BasicVisitor.visitMethodInvocation(BasicVisitor.java:209)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.BasicVisitor.visitMethodInvocation(BasicVisitor.java:23)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodInvocation.accept(JCTree.java:1650)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.FixComputer.defaultAction(FixComputer.java:53)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.FixComputer.visitMethodInvocation(FixComputer.java:135)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.FixComputer.visitMethodInvocation(FixComputer.java:27)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodInvocation.accept(JCTree.java:1650)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.MethodReturnVisitor$ReturnStatementVisitor.visitReturn(MethodReturnVisitor.java:334)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.MethodReturnVisitor$ReturnStatementVisitor.visitReturn(MethodReturnVisitor.java:326)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCReturn.accept(JCTree.java:1554)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scan(TreeScanner.java:86)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scan(TreeScanner.java:105)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.visitBlock(TreeScanner.java:248)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCBlock.accept(JCTree.java:1032)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scan(TreeScanner.java:86)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:90)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.visitMethod(TreeScanner.java:206)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodDecl.accept(JCTree.java:898)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.MethodReturnVisitor.visitMethod(MethodReturnVisitor.java:83)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.MethodReturnVisitor.visitMethod(MethodReturnVisitor.java:35)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodDecl.accept(JCTree.java:898)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.BasicVisitor.visitMethodInvocation(BasicVisitor.java:209)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.BasicVisitor.visitMethodInvocation(BasicVisitor.java:23)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodInvocation.accept(JCTree.java:1650)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.FixComputer.defaultAction(FixComputer.java:53)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.FixComputer.visitMethodInvocation(FixComputer.java:135)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.FixComputer.visitMethodInvocation(FixComputer.java:27)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodInvocation.accept(JCTree.java:1650)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.SerializationService.generateFixesForError(SerializationService.java:121)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.SerializationService.serializeError(SerializationService.java:86)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.UCRTaintingChecker.detailedReportError(UCRTaintingChecker.java:90)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.UCRTaintingVisitor.commonAssignmentCheck(UCRTaintingVisitor.java:52)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.commonAssignmentCheck(BaseTypeVisitor.java:3037)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.visitReturn(BaseTypeVisitor.java:2217)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.visitReturn(BaseTypeVisitor.java:187)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCReturn.accept(JCTree.java:1554)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:82)
+[ERROR] 	at org.checkerframework.framework.source.SourceVisitor.scan(SourceVisitor.java:92)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:410)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:187)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scan(TreeScanner.java:105)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.visitBlock(TreeScanner.java:248)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCBlock.accept(JCTree.java:1032)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:82)
+[ERROR] 	at org.checkerframework.framework.source.SourceVisitor.scan(SourceVisitor.java:92)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:410)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:187)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:90)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.visitMethod(TreeScanner.java:206)
+[ERROR] 	at org.checkerframework.framework.source.SourceVisitor.visitMethod(SourceVisitor.java:110)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.visitMethod(BaseTypeVisitor.java:1048)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.visitMethod(BaseTypeVisitor.java:187)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCMethodDecl.accept(JCTree.java:898)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:82)
+[ERROR] 	at org.checkerframework.framework.source.SourceVisitor.scan(SourceVisitor.java:92)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:410)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.scan(BaseTypeVisitor.java:187)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:90)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scan(TreeScanner.java:105)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:113)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreeScanner.visitClass(TreeScanner.java:187)
+[ERROR] 	at org.checkerframework.framework.source.SourceVisitor.visitClass(SourceVisitor.java:98)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.processClassTree(BaseTypeVisitor.java:617)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.visitClass(BaseTypeVisitor.java:563)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeVisitor.visitClass(BaseTypeVisitor.java:187)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCClassDecl.accept(JCTree.java:808)
+[ERROR] 	at jdk.compiler/com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:56)
+[ERROR] 	at org.checkerframework.framework.source.SourceVisitor.visit(SourceVisitor.java:86)
+[ERROR] 	at org.checkerframework.framework.source.SourceChecker.typeProcess(SourceChecker.java:1050)
+[ERROR] 	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:558)
+[ERROR] 	at org.checkerframework.javacutil.AbstractTypeProcessor$AttributionTaskListener.finished(AbstractTypeProcessor.java:188)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:828)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:132)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1418)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1365)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:960)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:311)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:170)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.Main.compile(Main.java:57)
+[ERROR] 	at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:43)
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/factory/DefaultActionFactory.java:[41,38] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted Object
+[ERROR]   method return type: @RUntainted Object, index: 42
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/components/Date.java:[351,41] error: [argument] incompatible argument for parameter str of Writer.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 43
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/DefaultDispatcherErrorHandler.java:[127,91] error: [argument] incompatible argument for parameter arg1 of HttpServletResponse.sendError.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 44
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/validator/DefaultValidatorFactory.java:[126,42] error: [argument] incompatible argument for parameter uri of File constructor.
+[ERROR]   found   : @RTainted URI
+[ERROR]   required: @RUntainted URI, index: 45
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/validator/DefaultValidatorFactory.java:[164,75] error: [argument] incompatible argument for parameter pathname of File constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 46
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/components/ComponentUrlProvider.java:[74,60] error: [override.param] Incompatible parameter type for expr.
+[ERROR]   found   : @RUntainted String
+[ERROR]   required: @RTainted String
+[ERROR]   Consequence: method in @RTainted ComponentUrlProvider
+[ERROR]     @RUntainted String findString(@RTainted ComponentUrlProvider this, @RUntainted String p0)
+[ERROR]   cannot override method in @RTainted UrlProvider
+[ERROR]     @RUntainted String findString(@RTainted UrlProvider this, @RTainted String p0), index: 47
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/interceptor/annotations/AnnotationWorkflowInterceptor.java:[142,18] error: [assignment] incompatible types in assignment.
+[ERROR]   found   : @RUntainted ArrayList<@RTainted Method>
+[ERROR]   required: @RTainted List<@RUntainted Method>, index: 48
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ResourceFinder.java:[1214,67] error: [assignment] incompatible types in assignment.
+[ERROR]   found   : @RTainted Enumeration<@RTainted JarEntry>
+[ERROR]   required: @RTainted Enumeration<@RUntainted JarEntry>, index: 49
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ResourceFinder.java:[1309,38] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted Enumeration<@RTainted URL>
+[ERROR]   method return type: @RTainted Enumeration<@RUntainted URL>, index: 50
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -1,0 +1,390 @@
+
+/Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/components/Component.java:[201,25] error: [argument] incompatible argument for parameter str of Writer.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 1
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/mapper/ActionMapping.java:[85,15] error: [return] incompatible types in return.
+  type of expression: @RTainted String
+  method return type: @RUntainted String, index: 2
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/ActionContext.java:[408,26] error: [return] incompatible types in return.
+  type of expression: @RTainted Object
+  method return type: @RUntainted Object, index: 3
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/ObjectFactory.java:[133,33] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+  found   : @RTainted String
+  required: @RUntainted String, index: 4
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[139,38] error: [argument] incompatible argument for parameter c of PrintWriter.write.
+  found   : @RTainted char
+  required: @RUntainted int, index: 5
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassLoaderUtil.java:[178,76] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+  found   : @RTainted String
+  required: @RUntainted String, index: 6
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassLoaderUtil.java:[184,76] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+  found   : @RTainted String
+  required: @RUntainted String, index: 7
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassLoaderUtil.java:[186,67] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+  found   : @RTainted String
+  required: @RUntainted String, index: 8
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/Dispatcher.java:[1033,58] error: [argument] incompatible argument for parameter e of DispatcherErrorHandler.handleError.
+  found   : @RTainted Exception
+  required: @RUntainted Exception, index: 9
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/config/providers/XmlConfigurationProvider.java:[227,60] error: [argument] incompatible argument for parameter fileName of XmlConfigurationProvider.loadConfigurationFiles.
+  found   : @RTainted String
+  required: @RUntainted String, index: 10
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/SessionMap.java:[109,93] error: [assignment] incompatible types in assignment.
+  found   : @RTainted Enumeration<@RTainted String>
+  required: @RTainted Enumeration<@RUntainted String>, index: 11
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/location/LocationImpl.java:[69,23] error: [assignment] incompatible types in assignment.
+  found   : @RTainted String
+  required: @RUntainted String, index: 12
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/result/StrutsResultSupport.java:[207,42] error: [assignment] incompatible types in assignment.
+  found   : @RTainted String
+  required: @RUntainted String, index: 13
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/components/template/BaseTemplateEngine.java:[124,67] error: [return] incompatible types in return.
+  type of expression: @RTainted String
+  method return type: @RUntainted String, index: 14
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/listener/ListenerHostConfig.java:[43,55] error: [return] incompatible types in return.
+  type of expression: @RTainted Iterator<@RTainted String>
+  method return type: @RTainted Iterator<@RUntainted String>, index: 15
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/views/util/DefaultUrlHelper.java:[179,15] error: [return] incompatible types in return.
+  type of expression: @RTainted String
+  method return type: @RUntainted String, index: 16
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/interceptor/I18nInterceptor.java:[131,53] error: [argument] incompatible argument for parameter locale of LocaleHandler.store.
+  found   : @RTainted Locale
+  required: @RUntainted Locale, index: 17
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/util/fs/JBossFileManager.java:[155,45] error: [return] incompatible types in return.
+  type of expression: @RTainted URL
+  method return type: @RPolyTainted URL, index: 18
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/util/fs/JBossFileManager.java:[157,32] error: [return] incompatible types in return.
+  type of expression: @RTainted URL
+  method return type: @RPolyTainted URL, index: 19
+[ERROR] error: Error in AnnotatedTypeMirror.fromExpression(ReturnsReceiverAnnotatedTypeFactory, Collections.synchronizedMap(new HashMap<String, Revision>())): null
+[ERROR]   ; The Checker Framework crashed.  Please report the crash.  Version: Checker Framework 3.42.0. 
+  Compilation unit: /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/DefaultFileManager.java
+  Last visited tree at line 43 column 1:
+  public class DefaultFileManager implements FileManager {
+  Exception: java.lang.NullPointerException; java.lang.NullPointerException
+  	at org.checkerframework.javacutil.TreePathUtil.getAssignmentContext(TreePathUtil.java:275)
+  	at org.checkerframework.framework.util.typeinference.TypeArgInferenceUtil.assignedTo(TypeArgInferenceUtil.java:147)
+  	at org.checkerframework.framework.util.typeinference.DefaultTypeArgumentInference.inferTypeArgs(DefaultTypeArgumentInference.java:124)
+  	at org.checkerframework.framework.util.AnnotatedTypes.findTypeArguments(AnnotatedTypes.java:752)
+/Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/DefaultFileManager.java:[51,101] error: [assignment] incompatible types in assignment.
+  found   : @RTainted List<@RTainted URL>
+  required: @RTainted List<@RUntainted URL>, index: 20
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/DefaultFileManager.java:[86,48] error: [override.param] Incompatible parameter type for fileUrl.
+  found   : @RUntainted URL
+  required: @RTainted URL
+  Consequence: method in @RTainted DefaultFileManager
+    @RTainted InputStream loadFile(@RTainted DefaultFileManager this, @RUntainted URL p0)
+  cannot override method in @RTainted FileManager
+    @RTainted InputStream loadFile(@RTainted FileManager this, @RTainted URL p0), index: 21
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/result/ServletRedirectResult.java:[187,57] error: [assignment] incompatible types in assignment.
+  found   : @RTainted String
+  required: @RUntainted String, index: 22
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/result/PlainResult.java:[70,64] error: [argument] incompatible argument for parameter arg1 of HttpServletResponse.addHeader.
+  found   : @RTainted String
+  required: @RUntainted String, index: 23
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/result/PlainResult.java:[76,75] error: [enhancedfor] incompatible types in enhanced for loop.
+  found   : @RUntainted HttpHeader<@RTainted Integer>
+  required: @RTainted HttpHeader<@RUntainted Integer>, index: 24
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/result/PlainResult.java:[83,31] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.addCookie.
+  found   : @RTainted Cookie
+  required: @RUntainted Cookie, index: 25
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/result/plain/HttpCookies.java:[37,43] error: [return] incompatible types in return.
+  type of expression: @RTainted List<@RTainted Cookie>
+  method return type: @RUntainted List<@RTainted Cookie>, index: 26
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/DomHelper.java:[130,25] error: [argument] incompatible argument for parameter is of SAXParser.parse.
+  found   : @RTainted InputSource
+  required: @RUntainted InputSource, index: 27
+[ERROR]  assignment, exception:java.lang.RuntimeException: Not a declared type
+java.lang.RuntimeException: Not a declared type
+	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.CollectionVisitor.buildFixForElement(CollectionVisitor.java:38)
+	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.ReceiverTypeArgumentFixVisitor.visitMethodInvocation(ReceiverTypeArgumentFixVisitor.java:102)
+	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.ReceiverTypeArgumentFixVisitor.visitMethodInvocation(ReceiverTypeArgumentFixVisitor.java:32)
+/Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassPathFinder.java:[186,72] error: [assignment] incompatible types in assignment.
+  found   : @RTainted URL @RUntainted []
+  required: @RUntainted URL @RUntainted [], index: 28
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/DebuggingInterceptor.java:[362,25] error: [argument] incompatible argument for parameter name of PrettyPrintWriter.startNode.
+  found   : @RTainted String
+  required: @RUntainted String, index: 29
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[178,51] error: [return] incompatible types in return.
+  type of expression: @RTainted Object
+  method return type: @RUntainted Object, index: 30
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[178,52] error: [argument] incompatible argument for parameter object of MethodUtils.invokeMethod.
+  found   : @RTainted Object
+  required: @RUntainted Object, index: 31
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[216,57] error: [argument] incompatible argument for parameter cls of MethodUtils.getMatchingMethod.
+  found   : @RTainted Class<capture#01[ extends @RTainted Object super @RUntainted Void]>
+  required: @RUntainted Class<?[ extends @RTainted Object super @RUntainted Void]>, index: 32
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/components/Text.java:[190,40] error: [argument] incompatible argument for parameter str of Writer.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 33
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/StrutsJarURLConnection.java:[89,33] error: [argument] incompatible argument for parameter spec of URL constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 34
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/StrutsJarURLConnection.java:[96,49] error: [argument] incompatible argument for parameter spec of URL constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 35
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/OgnlTextParser.java:[100,15] error: [return] incompatible types in return.
+  type of expression: @RTainted Object
+  method return type: @RUntainted Object, index: 36
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/ognl/OgnlValueStack.java:[248,11] error: [override.return] Incompatible return type.
+  found   : @RTainted Object
+  required: @RUntainted Object
+  Consequence: method in @RTainted OgnlValueStack
+    @RTainted Object findValue(@RTainted OgnlValueStack this, @RTainted String p0, @RTainted boolean p1)
+  cannot override method in @RTainted ValueStack
+    @RUntainted Object findValue(@RTainted ValueStack this, @RTainted String p0, @RTainted boolean p1), index: 37
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/ognl/OgnlValueStack.java:[319,11] error: [override.return] Incompatible return type.
+  found   : @RTainted Object
+  required: @RUntainted Object
+  Consequence: method in @RTainted OgnlValueStack
+    @RTainted Object findValue(@RTainted OgnlValueStack this, @RTainted String p0, @RTainted Class</*RAW*/> p1, @RTainted boolean p2)
+  cannot override method in @RTainted ValueStack
+    @RUntainted Object findValue(@RTainted ValueStack this, @RTainted String p0, @RTainted Class</*RAW*/> p1, @RTainted boolean p2), index: 38
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/interceptor/CookieProviderInterceptor.java:[89,35] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.addCookie.
+  found   : @RTainted Cookie
+  required: @RUntainted Cookie, index: 39
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/multipart/StrutsUploadedFile.java:[29,20] error: [assignment] incompatible types in assignment.
+  found   : @RTainted File
+  required: @RUntainted File, index: 40
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ClassLoaderInterfaceDelegate.java:[37,49] error: [override.param] Incompatible parameter type for name.
+  found   : @RUntainted String
+  required: @RTainted String
+  Consequence: method in @RTainted ClassLoaderInterfaceDelegate
+    @RTainted Class<? extends @RTainted Object> loadClass(@RTainted ClassLoaderInterfaceDelegate this, @RUntainted String p0) throws @RTainted ClassNotFoundException
+  cannot override method in @RTainted ClassLoaderInterface
+    @RTainted Class<? extends @RTainted Object> loadClass(@RTainted ClassLoaderInterface this, @RTainted String p0) throws @RTainted ClassNotFoundException, index: 41
+[ERROR] Error in computing required fixes: objectFactory.buildBean(config.getClassName(), extraContext) return, exception:java.lang.NullPointerException
+java.lang.NullPointerException
+	at org.checkerframework.javacutil.TreePathUtil.getAssignmentContext(TreePathUtil.java:275)
+	at org.checkerframework.framework.util.typeinference.TypeArgInferenceUtil.assignedTo(TypeArgInferenceUtil.java:147)
+	at org.checkerframework.framework.util.typeinference.DefaultTypeArgumentInference.inferTypeArgs(DefaultTypeArgumentInference.java:124)
+/Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/factory/DefaultActionFactory.java:[41,38] error: [return] incompatible types in return.
+  type of expression: @RTainted Object
+  method return type: @RUntainted Object, index: 42
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/components/Date.java:[351,41] error: [argument] incompatible argument for parameter str of Writer.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 43
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/DefaultDispatcherErrorHandler.java:[127,91] error: [argument] incompatible argument for parameter arg1 of HttpServletResponse.sendError.
+  found   : @RTainted String
+  required: @RUntainted String, index: 44
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/validator/DefaultValidatorFactory.java:[126,42] error: [argument] incompatible argument for parameter uri of File constructor.
+  found   : @RTainted URI
+  required: @RUntainted URI, index: 45
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/validator/DefaultValidatorFactory.java:[164,75] error: [argument] incompatible argument for parameter pathname of File constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 46
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/components/ComponentUrlProvider.java:[74,60] error: [override.param] Incompatible parameter type for expr.
+  found   : @RUntainted String
+  required: @RTainted String
+  Consequence: method in @RTainted ComponentUrlProvider
+    @RUntainted String findString(@RTainted ComponentUrlProvider this, @RUntainted String p0)
+  cannot override method in @RTainted UrlProvider
+    @RUntainted String findString(@RTainted UrlProvider this, @RTainted String p0), index: 47
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/interceptor/annotations/AnnotationWorkflowInterceptor.java:[142,18] error: [assignment] incompatible types in assignment.
+  found   : @RUntainted ArrayList<@RTainted Method>
+  required: @RTainted List<@RUntainted Method>, index: 48
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ResourceFinder.java:[1214,67] error: [assignment] incompatible types in assignment.
+  found   : @RTainted Enumeration<@RTainted JarEntry>
+  required: @RTainted Enumeration<@RUntainted JarEntry>, index: 49
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ResourceFinder.java:[1309,38] error: [return] incompatible types in return.
+  type of expression: @RTainted Enumeration<@RTainted URL>
+  method return type: @RTainted Enumeration<@RUntainted URL>, index: 50
+[INFO] 51 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  49.779 s
+[INFO] Finished at: 2024-03-22T10:51:57-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project struts2-core: Compilation failure: Compilation failure: 
+[ERROR]  Library: true, Poly: true, Type Argument: true, Validation: false, Side Effect: false
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/components/Component.java:[201,25] error: [argument] incompatible argument for parameter str of Writer.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 1
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/mapper/ActionMapping.java:[85,15] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted String
+[ERROR]   method return type: @RUntainted String, index: 2
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/ActionContext.java:[408,26] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted Object
+[ERROR]   method return type: @RUntainted Object, index: 3
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/ObjectFactory.java:[133,33] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 4
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[139,38] error: [argument] incompatible argument for parameter c of PrintWriter.write.
+[ERROR]   found   : @RTainted char
+[ERROR]   required: @RUntainted int, index: 5
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassLoaderUtil.java:[178,76] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 6
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassLoaderUtil.java:[184,76] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 7
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassLoaderUtil.java:[186,67] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 8
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/Dispatcher.java:[1033,58] error: [argument] incompatible argument for parameter e of DispatcherErrorHandler.handleError.
+[ERROR]   found   : @RTainted Exception
+[ERROR]   required: @RUntainted Exception, index: 9
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/config/providers/XmlConfigurationProvider.java:[227,60] error: [argument] incompatible argument for parameter fileName of XmlConfigurationProvider.loadConfigurationFiles.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 10
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/SessionMap.java:[109,93] error: [assignment] incompatible types in assignment.
+[ERROR]   found   : @RTainted Enumeration<@RTainted String>
+[ERROR]   required: @RTainted Enumeration<@RUntainted String>, index: 11
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/location/LocationImpl.java:[69,23] error: [assignment] incompatible types in assignment.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 12
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/result/StrutsResultSupport.java:[207,42] error: [assignment] incompatible types in assignment.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 13
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/components/template/BaseTemplateEngine.java:[124,67] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted String
+[ERROR]   method return type: @RUntainted String, index: 14
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/listener/ListenerHostConfig.java:[43,55] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted Iterator<@RTainted String>
+[ERROR]   method return type: @RTainted Iterator<@RUntainted String>, index: 15
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/views/util/DefaultUrlHelper.java:[179,15] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted String
+[ERROR]   method return type: @RUntainted String, index: 16
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/interceptor/I18nInterceptor.java:[131,53] error: [argument] incompatible argument for parameter locale of LocaleHandler.store.
+[ERROR]   found   : @RTainted Locale
+[ERROR]   required: @RUntainted Locale, index: 17
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/util/fs/JBossFileManager.java:[155,45] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted URL
+[ERROR]   method return type: @RPolyTainted URL, index: 18
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/util/fs/JBossFileManager.java:[157,32] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted URL
+[ERROR]   method return type: @RPolyTainted URL, index: 19
+[ERROR] error: Error in AnnotatedTypeMirror.fromExpression(ReturnsReceiverAnnotatedTypeFactory, Collections.synchronizedMap(new HashMap<String, Revision>())): null
+[ERROR]   ; The Checker Framework crashed.  Please report the crash.  Version: Checker Framework 3.42.0. 
+[ERROR]   Compilation unit: /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/DefaultFileManager.java
+[ERROR]   Last visited tree at line 43 column 1:
+[ERROR]   public class DefaultFileManager implements FileManager {
+[ERROR]   Exception: java.lang.NullPointerException; java.lang.NullPointerException
+[ERROR]   	at org.checkerframework.javacutil.TreePathUtil.getAssignmentContext(TreePathUtil.java:275)
+[ERROR]   	at org.checkerframework.framework.util.typeinference.TypeArgInferenceUtil.assignedTo(TypeArgInferenceUtil.java:147)
+[ERROR]   	at org.checkerframework.framework.util.typeinference.DefaultTypeArgumentInference.inferTypeArgs(DefaultTypeArgumentInference.java:124)
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/DefaultFileManager.java:[51,101] error: [assignment] incompatible types in assignment.
+[ERROR]   found   : @RTainted List<@RTainted URL>
+[ERROR]   required: @RTainted List<@RUntainted URL>, index: 20
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/DefaultFileManager.java:[86,48] error: [override.param] Incompatible parameter type for fileUrl.
+[ERROR]   found   : @RUntainted URL
+[ERROR]   required: @RTainted URL
+[ERROR]   Consequence: method in @RTainted DefaultFileManager
+[ERROR]     @RTainted InputStream loadFile(@RTainted DefaultFileManager this, @RUntainted URL p0)
+[ERROR]   cannot override method in @RTainted FileManager
+[ERROR]     @RTainted InputStream loadFile(@RTainted FileManager this, @RTainted URL p0), index: 21
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/result/ServletRedirectResult.java:[187,57] error: [assignment] incompatible types in assignment.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 22
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/result/PlainResult.java:[70,64] error: [argument] incompatible argument for parameter arg1 of HttpServletResponse.addHeader.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 23
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/result/PlainResult.java:[76,75] error: [enhancedfor] incompatible types in enhanced for loop.
+[ERROR]   found   : @RUntainted HttpHeader<@RTainted Integer>
+[ERROR]   required: @RTainted HttpHeader<@RUntainted Integer>, index: 24
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/result/PlainResult.java:[83,31] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.addCookie.
+[ERROR]   found   : @RTainted Cookie
+[ERROR]   required: @RUntainted Cookie, index: 25
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/result/plain/HttpCookies.java:[37,43] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted List<@RTainted Cookie>
+[ERROR]   method return type: @RUntainted List<@RTainted Cookie>, index: 26
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/DomHelper.java:[130,25] error: [argument] incompatible argument for parameter is of SAXParser.parse.
+[ERROR]   found   : @RTainted InputSource
+[ERROR]   required: @RUntainted InputSource, index: 27
+[ERROR]  assignment, exception:java.lang.RuntimeException: Not a declared type
+[ERROR] java.lang.RuntimeException: Not a declared type
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.CollectionVisitor.buildFixForElement(CollectionVisitor.java:38)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.ReceiverTypeArgumentFixVisitor.visitMethodInvocation(ReceiverTypeArgumentFixVisitor.java:102)
+[ERROR] 	at edu.ucr.cs.riple.taint.ucrtainting.serialization.visitors.ReceiverTypeArgumentFixVisitor.visitMethodInvocation(ReceiverTypeArgumentFixVisitor.java:32)
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassPathFinder.java:[186,72] error: [assignment] incompatible types in assignment.
+[ERROR]   found   : @RTainted URL @RUntainted []
+[ERROR]   required: @RUntainted URL @RUntainted [], index: 28
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/DebuggingInterceptor.java:[362,25] error: [argument] incompatible argument for parameter name of PrettyPrintWriter.startNode.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 29
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[178,51] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted Object
+[ERROR]   method return type: @RUntainted Object, index: 30
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[178,52] error: [argument] incompatible argument for parameter object of MethodUtils.invokeMethod.
+[ERROR]   found   : @RTainted Object
+[ERROR]   required: @RUntainted Object, index: 31
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[216,57] error: [argument] incompatible argument for parameter cls of MethodUtils.getMatchingMethod.
+[ERROR]   found   : @RTainted Class<capture#01[ extends @RTainted Object super @RUntainted Void]>
+[ERROR]   required: @RUntainted Class<?[ extends @RTainted Object super @RUntainted Void]>, index: 32
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/components/Text.java:[190,40] error: [argument] incompatible argument for parameter str of Writer.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 33
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/StrutsJarURLConnection.java:[89,33] error: [argument] incompatible argument for parameter spec of URL constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 34
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/StrutsJarURLConnection.java:[96,49] error: [argument] incompatible argument for parameter spec of URL constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 35
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/OgnlTextParser.java:[100,15] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted Object
+[ERROR]   method return type: @RUntainted Object, index: 36
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/ognl/OgnlValueStack.java:[248,11] error: [override.return] Incompatible return type.
+[ERROR]   found   : @RTainted Object
+[ERROR]   required: @RUntainted Object
+[ERROR]   Consequence: method in @RTainted OgnlValueStack
+[ERROR]     @RTainted Object findValue(@RTainted OgnlValueStack this, @RTainted String p0, @RTainted boolean p1)
+[ERROR]   cannot override method in @RTainted ValueStack
+[ERROR]     @RUntainted Object findValue(@RTainted ValueStack this, @RTainted String p0, @RTainted boolean p1), index: 37
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/ognl/OgnlValueStack.java:[319,11] error: [override.return] Incompatible return type.
+[ERROR]   found   : @RTainted Object
+[ERROR]   required: @RUntainted Object
+[ERROR]   Consequence: method in @RTainted OgnlValueStack
+[ERROR]     @RTainted Object findValue(@RTainted OgnlValueStack this, @RTainted String p0, @RTainted Class</*RAW*/> p1, @RTainted boolean p2)
+[ERROR]   cannot override method in @RTainted ValueStack
+[ERROR]     @RUntainted Object findValue(@RTainted ValueStack this, @RTainted String p0, @RTainted Class</*RAW*/> p1, @RTainted boolean p2), index: 38
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/interceptor/CookieProviderInterceptor.java:[89,35] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.addCookie.
+[ERROR]   found   : @RTainted Cookie
+[ERROR]   required: @RUntainted Cookie, index: 39
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/multipart/StrutsUploadedFile.java:[29,20] error: [assignment] incompatible types in assignment.
+[ERROR]   found   : @RTainted File
+[ERROR]   required: @RUntainted File, index: 40
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ClassLoaderInterfaceDelegate.java:[37,49] error: [override.param] Incompatible parameter type for name.
+[ERROR]   found   : @RUntainted String
+[ERROR]   required: @RTainted String
+[ERROR]   Consequence: method in @RTainted ClassLoaderInterfaceDelegate
+[ERROR]     @RTainted Class<? extends @RTainted Object> loadClass(@RTainted ClassLoaderInterfaceDelegate this, @RUntainted String p0) throws @RTainted ClassNotFoundException
+[ERROR]   cannot override method in @RTainted ClassLoaderInterface
+[ERROR]     @RTainted Class<? extends @RTainted Object> loadClass(@RTainted ClassLoaderInterface this, @RTainted String p0) throws @RTainted ClassNotFoundException, index: 41
+[ERROR] Error in computing required fixes: objectFactory.buildBean(config.getClassName(), extraContext) return, exception:java.lang.NullPointerException
+[ERROR] java.lang.NullPointerException
+[ERROR] 	at org.checkerframework.javacutil.TreePathUtil.getAssignmentContext(TreePathUtil.java:275)
+[ERROR] 	at org.checkerframework.framework.util.typeinference.TypeArgInferenceUtil.assignedTo(TypeArgInferenceUtil.java:147)
+[ERROR] 	at org.checkerframework.framework.util.typeinference.DefaultTypeArgumentInference.inferTypeArgs(DefaultTypeArgumentInference.java:124)
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/factory/DefaultActionFactory.java:[41,38] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted Object
+[ERROR]   method return type: @RUntainted Object, index: 42
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/components/Date.java:[351,41] error: [argument] incompatible argument for parameter str of Writer.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 43
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/dispatcher/DefaultDispatcherErrorHandler.java:[127,91] error: [argument] incompatible argument for parameter arg1 of HttpServletResponse.sendError.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 44
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/validator/DefaultValidatorFactory.java:[126,42] error: [argument] incompatible argument for parameter uri of File constructor.
+[ERROR]   found   : @RTainted URI
+[ERROR]   required: @RUntainted URI, index: 45
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/validator/DefaultValidatorFactory.java:[164,75] error: [argument] incompatible argument for parameter pathname of File constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 46
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/components/ComponentUrlProvider.java:[74,60] error: [override.param] Incompatible parameter type for expr.
+[ERROR]   found   : @RUntainted String
+[ERROR]   required: @RTainted String
+[ERROR]   Consequence: method in @RTainted ComponentUrlProvider
+[ERROR]     @RUntainted String findString(@RTainted ComponentUrlProvider this, @RUntainted String p0)
+[ERROR]   cannot override method in @RTainted UrlProvider
+[ERROR]     @RUntainted String findString(@RTainted UrlProvider this, @RTainted String p0), index: 47
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/interceptor/annotations/AnnotationWorkflowInterceptor.java:[142,18] error: [assignment] incompatible types in assignment.
+[ERROR]   found   : @RUntainted ArrayList<@RTainted Method>
+[ERROR]   required: @RTainted List<@RUntainted Method>, index: 48
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ResourceFinder.java:[1214,67] error: [assignment] incompatible types in assignment.
+[ERROR]   found   : @RTainted Enumeration<@RTainted JarEntry>
+[ERROR]   required: @RTainted Enumeration<@RUntainted JarEntry>, index: 49
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ResourceFinder.java:[1309,38] error: [return] incompatible types in return.
+[ERROR]   type of expression: @RTainted Enumeration<@RTainted URL>
+[ERROR]   method return type: @RTainted Enumeration<@RUntainted URL>, index: 50

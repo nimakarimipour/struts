@@ -1,0 +1,45 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< org.apache.struts:struts2-core >-------------------
+[INFO] Building Struts 2 Core 6.3.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.4.1:enforce (enforce-maven-version) @ struts2-core ---
+[INFO] 
+[INFO] --- remote-resources:1.6.0:process (process-resource-bundles) @ struts2-core ---
+[INFO] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.1.0:resources (default-resources) @ struts2-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 148 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ struts2-core ---
+[WARNING]  Parameter 'compilerArguments' is deprecated: use compilerArgs instead.
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 734 source files with javac [forked debug target 1.8] to target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/conversion/UploadedFileConverter.java:[50,45] error: not a statement
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/conversion/UploadedFileConverter.java:[50,48] error: ';' expected
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.004 s
+[INFO] Finished at: 2024-03-22T11:10:16-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project struts2-core: Compilation failure: Compilation failure: 
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/conversion/UploadedFileConverter.java:[50,45] error: not a statement
+[ERROR] /Users/nima/Developer/struts/core/src/main/java/org/apache/struts2/conversion/UploadedFileConverter.java:[50,48] error: ';' expected
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
