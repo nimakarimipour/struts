@@ -138,7 +138,7 @@ public class AnnotationWorkflowInterceptor extends AbstractInterceptor implement
         String invocationResult = invocation.invoke();
 
         // invoke any @After methods
-        methods = new ArrayList<Method>(MethodUtils.getMethodsListWithAnnotation(action.getClass(), After.class,
+        methods = new ArrayList<>(MethodUtils.getMethodsListWithAnnotation(action.getClass(), After.class,
                 true, true));
 
         if (methods.size() > 0) {
