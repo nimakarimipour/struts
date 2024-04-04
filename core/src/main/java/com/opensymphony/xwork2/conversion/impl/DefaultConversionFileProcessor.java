@@ -31,6 +31,7 @@ import org.apache.logging.log4j.Logger;
 import java.io.InputStream;
 import java.util.Map;
 import java.util.Properties;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Default implementation of {@link ConversionFileProcessor}

@@ -20,6 +20,7 @@ package org.apache.struts2.interceptor;
 
 import javax.servlet.http.Cookie;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Action can create cookies which will be stored in response
@@ -33,6 +34,6 @@ public interface CookieProvider {
      *
      * @return set of cookies or null
      */
-    Set<Cookie> getCookies();
+    @RUntainted Set<Cookie> getCookies();
 
 }

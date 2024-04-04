@@ -21,6 +21,7 @@ package org.apache.struts2.dispatcher.mapper;
 import com.opensymphony.xwork2.config.ConfigurationManager;
 
 import javax.servlet.http.HttpServletRequest;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->

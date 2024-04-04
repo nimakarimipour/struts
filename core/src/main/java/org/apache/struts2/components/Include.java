@@ -48,6 +48,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Stack;
 import java.util.StringTokenizer;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -335,11 +336,11 @@ public class Include extends Component {
             buffer.flush();
         }
 
-        public void write(byte[] b, int o, int l) throws IOException {
+        public void write(byte[] b, int o, @RUntainted int l) throws IOException {
             buffer.write(b, o, l);
         }
 
-        public void write(int i) throws IOException {
+        public void write(@RUntainted int i) throws IOException {
             buffer.write(i);
         }
 

@@ -26,6 +26,7 @@ import org.apache.struts2.util.FastByteArrayOutputStream;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.BodyTagSupport;
 import java.io.PrintWriter;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Contains common functionalities for Struts JSP Tags.
