@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.ObjectFactory;
 import com.opensymphony.xwork2.conversion.TypeConverter;
 import com.opensymphony.xwork2.conversion.TypeConverterCreator;
 import com.opensymphony.xwork2.inject.Inject;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Default implementation of {@link TypeConverterCreator}

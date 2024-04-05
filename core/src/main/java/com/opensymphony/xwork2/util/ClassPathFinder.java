@@ -32,6 +32,7 @@ import java.util.HashMap;
 import java.util.Vector;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * This class is an utility class that will search through the classpath
@@ -78,7 +79,7 @@ public class ClassPathFinder {
      */
     public Vector<String> findMatches() {
         Vector<String> matches = new Vector<>();
-        URL[] parentUrls = getClassLoaderURLs();
+        @RUntainted URL[] parentUrls = getClassLoaderURLs();
         compiledPattern = patternMatcher.compilePattern(pattern);
         for (URL url : parentUrls) {
             if (!"file".equals(url.getProtocol())) {
@@ -118,7 +119,7 @@ public class ClassPathFinder {
         return matches;
     }
 
-    private Vector<String> checkEntries(String[] entries, File parent, String prefix) {
+    private Vector<String> checkEntries(@RUntainted String[] entries, @RUntainted File parent, @RUntainted String prefix) {
 
         if (entries == null) {
             return null;
@@ -170,8 +171,8 @@ public class ClassPathFinder {
         this.patternMatcher = patternMatcher;
     }
 
-    private URL[] getClassLoaderURLs() {
-        URL[] urls;
+    private @RUntainted URL[] getClassLoaderURLs() {
+        @RUntainted URL[] urls;
         ClassLoader loader = Thread.currentThread().getContextClassLoader();
 
         if (!(loader instanceof URLClassLoader)) {

@@ -30,13 +30,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Generic test setup methods to be used with any unit testing framework. 
  */
 public class StrutsTestCaseHelper {
     
-    public static Dispatcher initDispatcher(ServletContext ctx, Map<String,String> params) {
+    public static Dispatcher initDispatcher(@RUntainted ServletContext ctx, Map<String,String> params) {
         if (params == null) {
             params = new HashMap<>();
         }
@@ -59,7 +60,7 @@ public class StrutsTestCaseHelper {
 
     private static class DispatcherWrapper extends Dispatcher {
 
-        public DispatcherWrapper(ServletContext ctx, Map<String, String> params) {
+        public DispatcherWrapper(@RUntainted ServletContext ctx, Map<String, String> params) {
             super(ctx, params);
             super.setDispatcherErrorHandler(new MockErrorHandler());
         }

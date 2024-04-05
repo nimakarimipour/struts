@@ -34,6 +34,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 import java.util.regex.Pattern;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Prepares the request for execution by a later {@link org.apache.struts2.dispatcher.filter.StrutsExecuteFilter} filter instance.
@@ -45,7 +46,7 @@ public class StrutsPrepareFilter implements StrutsStatics, Filter {
     protected PrepareOperations prepare;
     protected List<Pattern> excludedPatterns;
 
-    public void init(FilterConfig filterConfig) throws ServletException {
+    public void init(@RUntainted FilterConfig filterConfig) throws ServletException {
         InitOperations init = createInitOperations();
         Dispatcher dispatcher = null;
         try {

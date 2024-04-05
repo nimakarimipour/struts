@@ -35,6 +35,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Default implementation of {@link FileManager}
@@ -82,7 +83,7 @@ public class DefaultFileManager implements FileManager {
         return revision.needsReloading();
     }
 
-    public InputStream loadFile(URL fileUrl) {
+    public InputStream loadFile(@RUntainted URL fileUrl) {
         if (fileUrl == null) {
             return null;
         }
@@ -103,7 +104,7 @@ public class DefaultFileManager implements FileManager {
         }
     }
 
-    public void monitorFile(URL fileUrl) {
+    public void monitorFile(@RUntainted URL fileUrl) {
         String fileName = fileUrl.toString();
         if (!reloadingConfigs) {
             //reserve file for monitoring on demand because of performance
@@ -136,7 +137,7 @@ public class DefaultFileManager implements FileManager {
         return jarMatcher.matches();
     }
 
-    public URL normalizeToFileProtocol(URL url) {
+    public @RUntainted URL normalizeToFileProtocol(URL url) {
         String fileName = url.toExternalForm();
         Matcher jarMatcher = JAR_PATTERN.matcher(fileName);
         try {

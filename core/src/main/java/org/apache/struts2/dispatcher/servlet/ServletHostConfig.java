@@ -24,14 +24,15 @@ import org.apache.struts2.util.MakeIterator;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import java.util.Iterator;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Host configuration that wraps a ServletConfig
  */
 public class ServletHostConfig implements HostConfig {
-    private ServletConfig config;
+    private @RUntainted ServletConfig config;
 
-    public ServletHostConfig(ServletConfig config) {
+    public ServletHostConfig(@RUntainted ServletConfig config) {
         this.config = config;
     }
     public String getInitParameter(String key) {
@@ -42,7 +43,7 @@ public class ServletHostConfig implements HostConfig {
         return MakeIterator.convert(config.getInitParameterNames());
     }
 
-    public ServletContext getServletContext() {
+    public @RUntainted ServletContext getServletContext() {
         return config.getServletContext();
     }
 }
