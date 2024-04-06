@@ -35,6 +35,7 @@ import java.nio.charset.CharsetDecoder;
 import java.nio.charset.CoderResult;
 import java.nio.charset.CodingErrorAction;
 import java.util.LinkedList;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A speedy implementation of ByteArrayOutputStream. It's not synchronized, and it
@@ -48,18 +49,18 @@ public class FastByteArrayOutputStream extends OutputStream {
 
     private static final int DEFAULT_BLOCK_SIZE = 8192;
 
-    private LinkedList<byte[]> buffers;
-    private byte buffer[];
-    private int index;
+    private @RUntainted LinkedList<byte[]> buffers;
+    private @RUntainted byte buffer[];
+    private @RUntainted int index;
     private int size;
-    private int blockSize;
+    private @RUntainted int blockSize;
     private boolean closed;
 
     public FastByteArrayOutputStream() {
         this(DEFAULT_BLOCK_SIZE);
     }
 
-    public FastByteArrayOutputStream(int blockSize) {
+    public FastByteArrayOutputStream(@RUntainted int blockSize) {
         buffer = new byte[this.blockSize = blockSize];
     }
 
@@ -103,7 +104,7 @@ public class FastByteArrayOutputStream extends OutputStream {
             decodeAndWriteOut(out, buffer, index, byteBuffer, charBuffer, decoder, true);
         } else {
             if (buffers != null) {
-                for (byte[] bytes : buffers) {
+                for (@RUntainted byte[] bytes : buffers) {
                     writeOut(out, bytes, bytes.length);
                 }
             }
@@ -147,11 +148,11 @@ public class FastByteArrayOutputStream extends OutputStream {
         }
     }
 
-    private void writeOut(Writer out, byte[] bytes, int length) throws IOException {
+    private void writeOut(Writer out, @RUntainted byte[] bytes, @RUntainted int length) throws IOException {
         out.write(new String(bytes, 0, length));
     }
 
-    private static void decodeAndWriteOut(Writer writer, byte[] bytes, int length, ByteBuffer in, CharBuffer out, CharsetDecoder decoder, boolean endOfInput) throws IOException {
+    private static void decodeAndWriteOut(Writer writer, byte[] bytes, int length, ByteBuffer in, @RUntainted CharBuffer out, CharsetDecoder decoder, boolean endOfInput) throws IOException {
         // Append bytes to current buffer
         // Previous data maybe partially decoded, this part will appended to previous
         in.put(bytes, 0, length);
@@ -160,7 +161,7 @@ public class FastByteArrayOutputStream extends OutputStream {
         decodeAndWriteBuffered(writer, in, out, decoder, endOfInput);
     }
 
-    private static void decodeAndWriteBuffered(Writer writer, ByteBuffer in, CharBuffer out, CharsetDecoder decoder, boolean endOfInput) throws IOException {
+    private static void decodeAndWriteBuffered(Writer writer, ByteBuffer in, @RUntainted CharBuffer out, CharsetDecoder decoder, boolean endOfInput) throws IOException {
         // Decode
         CoderResult result;
         do {
@@ -189,7 +190,7 @@ public class FastByteArrayOutputStream extends OutputStream {
         }
     }
 
-    private static CoderResult decodeAndWrite(Writer writer, ByteBuffer in, CharBuffer out, CharsetDecoder decoder, boolean endOfInput) throws IOException {
+    private static CoderResult decodeAndWrite(Writer writer, ByteBuffer in, @RUntainted CharBuffer out, CharsetDecoder decoder, boolean endOfInput) throws IOException {
         CoderResult result = decoder.decode(in, out, endOfInput);
         // To begin processing of decoded data
         out.flip();
@@ -231,7 +232,7 @@ public class FastByteArrayOutputStream extends OutputStream {
         index = 0;
     }
 
-    public void write(int datum) throws IOException {
+    public void write(@RUntainted int datum) throws IOException {
         if (closed) {
             throw new IOException("Stream closed");
         }
@@ -241,7 +242,7 @@ public class FastByteArrayOutputStream extends OutputStream {
         buffer[index++] = (byte) datum;
     }
 
-    public void write(byte data[], int offset, int length) throws IOException {
+    public void write(byte data[], int offset, @RUntainted int length) throws IOException {
         if (data == null) {
             throw new NullPointerException();
         }

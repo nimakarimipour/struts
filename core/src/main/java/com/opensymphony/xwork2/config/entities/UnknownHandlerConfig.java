@@ -20,6 +20,7 @@ package com.opensymphony.xwork2.config.entities;
 
 import com.opensymphony.xwork2.util.location.Located;
 import com.opensymphony.xwork2.util.location.Location;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class UnknownHandlerConfig extends Located {
 

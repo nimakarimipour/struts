@@ -25,6 +25,7 @@ import org.apache.struts2.views.jsp.ContextBeanTag;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Append a list of iterators. The values of the iterators will be merged

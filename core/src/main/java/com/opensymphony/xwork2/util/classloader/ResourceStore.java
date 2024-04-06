@@ -17,6 +17,7 @@
  * under the License.
  */
 package com.opensymphony.xwork2.util.classloader;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * *interface taken from Apache JCI
@@ -25,6 +26,6 @@ public interface ResourceStore {
 
     void write(final String pResourceName, final byte[] pResourceData);
 
-    byte[] read(final String pResourceName);
+    byte[] read(final @RUntainted String pResourceName);
 }
 

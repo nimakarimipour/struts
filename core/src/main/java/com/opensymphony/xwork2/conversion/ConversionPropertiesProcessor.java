@@ -17,6 +17,7 @@
  * under the License.
  */
 package com.opensymphony.xwork2.conversion;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Used to read converters from Properties file

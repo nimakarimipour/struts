@@ -43,6 +43,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Multipart form data request adapter for Jakarta Commons Fileupload package.
@@ -52,7 +53,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
     static final Logger LOG = LogManager.getLogger(JakartaMultiPartRequest.class);
 
     // maps parameter name -> List of FileItem objects
-    protected Map<String, List<FileItem>> files = new HashMap<>();
+    protected Map<String, List<@RUntainted FileItem>> files = new HashMap<>();
 
     // maps parameter name -> List of param values
     protected Map<String, List<String>> params = new HashMap<>();
@@ -65,7 +66,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
      * @param request the request containing the multipart
      * @throws java.io.IOException is thrown if encoding fails.
      */
-    public void parse(HttpServletRequest request, String saveDir) throws IOException {
+    public void parse(HttpServletRequest request, @RUntainted String saveDir) throws IOException {
         try {
             setLocale(request);
             processUpload(request, saveDir);
@@ -97,7 +98,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
         }
     }
 
-    protected void processUpload(HttpServletRequest request, String saveDir) throws FileUploadException, UnsupportedEncodingException {
+    protected void processUpload(HttpServletRequest request, @RUntainted String saveDir) throws FileUploadException, UnsupportedEncodingException {
         if (ServletFileUpload.isMultipartContent(request)) {
             for (FileItem item : parseRequest(request, saveDir)) {
                 LOG.debug("Found file item: [{}]", item.getFieldName());
@@ -110,7 +111,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
         }
     }
 
-    protected void processFileField(FileItem item) {
+    protected void processFileField(@RUntainted FileItem item) {
         LOG.debug("Item is a file upload");
 
         // Skip file uploads that don't have a file name - meaning that no file was selected.
@@ -119,7 +120,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
             return;
         }
 
-        List<FileItem> values;
+        List<@RUntainted FileItem> values;
         if (files.get(item.getFieldName()) != null) {
             values = files.get(item.getFieldName());
         } else {
@@ -166,13 +167,13 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
         item.delete();
     }
 
-    protected List<FileItem> parseRequest(HttpServletRequest servletRequest, String saveDir) throws FileUploadException {
+    protected List<@RUntainted FileItem> parseRequest(HttpServletRequest servletRequest, @RUntainted String saveDir) throws FileUploadException {
         DiskFileItemFactory fac = createDiskFileItemFactory(saveDir);
         ServletFileUpload upload = createServletFileUpload(fac);
         return upload.parseRequest(createRequestContext(servletRequest));
     }
 
-    protected ServletFileUpload createServletFileUpload(DiskFileItemFactory fac) {
+    protected @RUntainted ServletFileUpload createServletFileUpload(@RUntainted DiskFileItemFactory fac) {
         ServletFileUpload upload = new ServletFileUpload(fac);
         if (maxSize != null) {
             upload.setSizeMax(maxSize);
@@ -186,7 +187,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
         return upload;
     }
 
-    protected DiskFileItemFactory createDiskFileItemFactory(String saveDir) {
+    protected @RUntainted DiskFileItemFactory createDiskFileItemFactory(@RUntainted String saveDir) {
         DiskFileItemFactory fac = new DiskFileItemFactory();
         // Make sure that the data is written to file, even if the file is empty.
         fac.setSizeThreshold(-1);
@@ -207,7 +208,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
      * @see org.apache.struts2.dispatcher.multipart.MultiPartRequest#getContentType(java.lang.String)
      */
     public String[] getContentType(String fieldName) {
-        List<FileItem> items = files.get(fieldName);
+        List<@RUntainted FileItem> items = files.get(fieldName);
 
         if (items == null) {
             return null;
@@ -225,7 +226,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
      * @see org.apache.struts2.dispatcher.multipart.MultiPartRequest#getFile(java.lang.String)
      */
     public UploadedFile[] getFile(String fieldName) {
-        List<FileItem> items = files.get(fieldName);
+        List<@RUntainted FileItem> items = files.get(fieldName);
 
         if (items == null) {
             return null;
@@ -254,7 +255,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
      * @see org.apache.struts2.dispatcher.multipart.MultiPartRequest#getFileNames(java.lang.String)
      */
     public String[] getFileNames(String fieldName) {
-        List<FileItem> items = files.get(fieldName);
+        List<@RUntainted FileItem> items = files.get(fieldName);
 
         if (items == null) {
             return null;
@@ -272,7 +273,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
      * @see org.apache.struts2.dispatcher.multipart.MultiPartRequest#getFilesystemName(java.lang.String)
      */
     public String[] getFilesystemName(String fieldName) {
-        List<FileItem> items = files.get(fieldName);
+        List<@RUntainted FileItem> items = files.get(fieldName);
 
         if (items == null) {
             return null;
@@ -323,7 +324,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
      * @param req the request.
      * @return a new request context.
      */
-    protected RequestContext createRequestContext(final HttpServletRequest req) {
+    protected @RUntainted RequestContext createRequestContext(final HttpServletRequest req) {
         return new RequestContext() {
             public String getCharacterEncoding() {
                 return req.getCharacterEncoding();
@@ -353,7 +354,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
     public void cleanUp() {
         Set<String> names = files.keySet();
         for (String name : names) {
-            List<FileItem> items = files.get(name);
+            List<@RUntainted FileItem> items = files.get(name);
             for (FileItem item : items) {
                 LOG.debug("Removing file {} {}", name, item);
                 if (!item.isInMemory()) {

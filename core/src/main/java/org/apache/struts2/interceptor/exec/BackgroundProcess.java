@@ -20,6 +20,7 @@ package org.apache.struts2.interceptor.exec;
 
 import com.opensymphony.xwork2.ActionInvocation;
 import org.apache.struts2.interceptor.ExecuteAndWaitInterceptor;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Interface used to create a background process which will be executed by

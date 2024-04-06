@@ -28,6 +28,7 @@ import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.result.Redirectable;
 
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * This listener is used by {@link MessageStoreInterceptor} to store messages in HttpSession

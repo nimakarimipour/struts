@@ -19,6 +19,7 @@
 package org.apache.struts2.action;
 
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Actions that want access to the user's HTTP session attributes should implement this interface.

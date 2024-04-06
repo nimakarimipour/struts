@@ -24,13 +24,14 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.Enumeration;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>Abstract wrapper class HTTP requests to handle multi-part data. </p>
  */
 public interface MultiPartRequest {
 
-    void parse(HttpServletRequest request, String saveDir) throws IOException;
+    void parse(@RUntainted HttpServletRequest request, @RUntainted String saveDir) throws IOException;
     
     /**
      * Returns an enumeration of the parameter names for uploaded files

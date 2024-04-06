@@ -23,6 +23,7 @@ import com.opensymphony.xwork2.Action;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A bean that takes several iterators and outputs them in sequence

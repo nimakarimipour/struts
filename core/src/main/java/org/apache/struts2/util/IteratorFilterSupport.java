@@ -20,6 +20,7 @@ package org.apache.struts2.util;
 
 import java.util.Enumeration;
 import java.util.Iterator;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A base class for iterator filters

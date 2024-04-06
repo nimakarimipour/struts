@@ -17,6 +17,7 @@
  * under the License.
  */
 package com.opensymphony.xwork2.validator;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * ValidatorFactory
