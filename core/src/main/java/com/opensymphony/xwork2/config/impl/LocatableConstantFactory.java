@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.inject.Context;
 import com.opensymphony.xwork2.inject.Factory;
 import com.opensymphony.xwork2.util.location.Located;
 import com.opensymphony.xwork2.util.location.LocationUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Factory that remembers where a constant came from

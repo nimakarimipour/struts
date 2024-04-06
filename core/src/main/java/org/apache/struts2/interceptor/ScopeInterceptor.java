@@ -35,6 +35,8 @@ import org.apache.struts2.dispatcher.SessionMap;
 import java.io.Serializable;
 import java.util.IdentityHashMap;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * <!-- START SNIPPET: description -->

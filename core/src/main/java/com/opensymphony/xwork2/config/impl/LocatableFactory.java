@@ -25,6 +25,7 @@ import com.opensymphony.xwork2.util.location.Located;
 import com.opensymphony.xwork2.util.location.LocationUtils;
 
 import java.util.LinkedHashMap;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Attaches location information to the factory.

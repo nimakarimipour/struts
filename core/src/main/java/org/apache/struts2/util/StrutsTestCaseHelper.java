@@ -30,6 +30,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Generic test setup methods to be used with any unit testing framework. 

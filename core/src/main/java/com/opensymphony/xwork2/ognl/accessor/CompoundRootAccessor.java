@@ -48,6 +48,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import static java.lang.String.format;
 import static org.apache.commons.lang3.BooleanUtils.toBoolean;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A stack that is able to call methods on objects in the stack.
@@ -274,7 +275,7 @@ public class CompoundRootAccessor implements PropertyAccessor, MethodAccessor, C
         return null;
     }
 
-    public Class classForName(String className, Map context) throws ClassNotFoundException {
+    public Class classForName(@RUntainted String className, Map context) throws ClassNotFoundException {
         Object root = Ognl.getRoot(context);
 
         try {

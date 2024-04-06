@@ -21,6 +21,7 @@ package org.apache.struts2.factory;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.ActionProxy;
 import com.opensymphony.xwork2.DefaultActionProxyFactory;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class StrutsActionProxyFactory extends DefaultActionProxyFactory {
 

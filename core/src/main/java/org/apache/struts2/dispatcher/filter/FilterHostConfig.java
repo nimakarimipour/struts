@@ -24,6 +24,7 @@ import org.apache.struts2.util.MakeIterator;
 import javax.servlet.FilterConfig;
 import javax.servlet.ServletContext;
 import java.util.Iterator;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Host configuration that wraps FilterConfig

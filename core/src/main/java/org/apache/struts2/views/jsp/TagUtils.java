@@ -28,6 +28,7 @@ import org.apache.struts2.util.AttributeMap;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.jsp.PageContext;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class TagUtils {
 

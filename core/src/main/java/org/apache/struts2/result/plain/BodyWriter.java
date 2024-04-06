@@ -19,23 +19,24 @@
 package org.apache.struts2.result.plain;
 
 import java.io.StringWriter;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 class BodyWriter {
 
     private final StringWriter body = new StringWriter();
 
-    public BodyWriter write(String out) {
+    public BodyWriter write(@RUntainted String out) {
         body.write(out);
         return this;
     }
 
-    public BodyWriter writeLine(String out) {
+    public BodyWriter writeLine(@RUntainted String out) {
         body.write(out);
         body.write("\n");
         return this;
     }
 
-    public String getBody() {
+    public @RUntainted String getBody() {
         return body.toString();
     }
 }

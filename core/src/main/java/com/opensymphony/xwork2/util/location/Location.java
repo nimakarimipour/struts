@@ -19,6 +19,7 @@
 package com.opensymphony.xwork2.util.location;
 
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 
 /**

@@ -39,6 +39,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 import java.util.regex.Pattern;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Handles both the preparation and execution phases of the Struts dispatching process.  This filter is better to use

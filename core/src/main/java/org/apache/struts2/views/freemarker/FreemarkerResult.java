@@ -44,6 +44,7 @@ import java.io.CharArrayWriter;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.Locale;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Renders a view using the Freemarker template engine.
@@ -67,7 +68,7 @@ public class FreemarkerResult extends StrutsResultSupport {
      * the current context is available to subclasses via these protected fields
      */
     protected String location;
-    private String pContentType = "text/html";
+    private @RUntainted String pContentType = "text/html";
     private static final String PARENT_TEMPLATE_WRITER = FreemarkerResult.class.getName() + ".parentWriter";
 
     public FreemarkerResult() {
@@ -83,7 +84,7 @@ public class FreemarkerResult extends StrutsResultSupport {
         this.freemarkerManager = mgr;
     }
 
-    public void setContentType(String aContentType) {
+    public void setContentType(@RUntainted String aContentType) {
         pContentType = aContentType;
     }
 
@@ -93,7 +94,7 @@ public class FreemarkerResult extends StrutsResultSupport {
      *
      * @return the content type
      */
-    public String getContentType() {
+    public @RUntainted String getContentType() {
         return pContentType;
     }
 

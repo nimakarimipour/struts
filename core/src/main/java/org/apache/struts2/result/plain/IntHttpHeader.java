@@ -17,18 +17,19 @@
  * under the License.
  */
 package org.apache.struts2.result.plain;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 class IntHttpHeader implements HttpHeader<Integer> {
 
-    private final String name;
+    private final @RUntainted String name;
     private final Integer value;
 
-    public IntHttpHeader(String name, Integer value) {
+    public IntHttpHeader(@RUntainted String name, Integer value) {
         this.name = name;
         this.value = value;
     }
 
-    public String getName() {
+    public @RUntainted String getName() {
         return name;
     }
 

@@ -49,6 +49,7 @@ import java.util.Vector;
 
 import static java.lang.String.format;
 import static java.util.Collections.emptyList;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 
 /**
@@ -149,7 +150,7 @@ public abstract class XmlConfigurationProvider extends XmlDocConfigurationProvid
         return finalDocs;
     }
 
-    protected Iterator<URL> getURLs(String fileName) {
+    protected Iterator<URL> getURLs(@RUntainted String fileName) {
         Iterator<URL> urls = null;
         try {
             urls = getConfigurationUrls(fileName);
@@ -163,7 +164,7 @@ public abstract class XmlConfigurationProvider extends XmlDocConfigurationProvid
         return urls;
     }
 
-    protected Iterator<URL> getConfigurationUrls(String fileName) throws IOException {
+    protected Iterator<URL> getConfigurationUrls(@RUntainted String fileName) throws IOException {
         return ClassLoaderUtil.getResources(fileName, XmlConfigurationProvider.class, false);
     }
 
