@@ -17,6 +17,7 @@
  * under the License.
  */
 package com.opensymphony.xwork2;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class DefaultLocaleProviderFactory implements LocaleProviderFactory {
 

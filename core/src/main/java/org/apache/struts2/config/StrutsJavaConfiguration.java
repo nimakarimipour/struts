@@ -24,6 +24,7 @@ import org.apache.struts2.config.entities.ConstantConfig;
 
 import java.util.List;
 import java.util.Optional;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public interface StrutsJavaConfiguration {
     List<BeanConfig> beans();

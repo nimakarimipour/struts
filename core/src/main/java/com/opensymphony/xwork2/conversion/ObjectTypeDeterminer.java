@@ -17,6 +17,7 @@
  * under the License.
  */
 package com.opensymphony.xwork2.conversion;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Determines what the key and and element class of a Map or Collection should be. For Maps, the elements are the

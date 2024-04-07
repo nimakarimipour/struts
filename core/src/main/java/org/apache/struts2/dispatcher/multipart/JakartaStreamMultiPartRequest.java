@@ -43,6 +43,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Multi-part form data request adapter for Jakarta Commons FileUpload package that
@@ -189,7 +190,7 @@ public class JakartaStreamMultiPartRequest extends AbstractMultiPartRequest {
     /* (non-Javadoc)
      * @see org.apache.struts2.dispatcher.multipart.MultiPartRequest#parse(javax.servlet.http.HttpServletRequest, java.lang.String)
      */
-    public void parse(HttpServletRequest request, String saveDir) throws IOException {
+    public void parse(@RUntainted HttpServletRequest request, @RUntainted String saveDir) throws IOException {
         try {
             setLocale(request);
             processUpload(request, saveDir);
@@ -209,7 +210,7 @@ public class JakartaStreamMultiPartRequest extends AbstractMultiPartRequest {
      * @param saveDir location of the save dir
      * @throws Exception
      */
-    protected void processUpload(HttpServletRequest request, String saveDir) throws Exception {
+    protected void processUpload(@RUntainted HttpServletRequest request, @RUntainted String saveDir) throws Exception {
 
         // Sanity check that the request is a multi-part/form-data request.
         if (ServletFileUpload.isMultipartContent(request)) {
@@ -332,7 +333,7 @@ public class JakartaStreamMultiPartRequest extends AbstractMultiPartRequest {
      * @param itemStream file item stream
      * @param location location
      */
-    protected void processFileItemStreamAsFileField(FileItemStream itemStream, String location) {
+    protected void processFileItemStreamAsFileField(@RUntainted FileItemStream itemStream, @RUntainted String location) {
         // Skip file uploads that don't have a file name - meaning that no file was selected.
         if (itemStream.getName() == null || itemStream.getName().trim().length() < 1) {
             LOG.debug("No file has been uploaded for the field: {}", itemStream.getFieldName());
@@ -366,7 +367,7 @@ public class JakartaStreamMultiPartRequest extends AbstractMultiPartRequest {
      * @return temporary file based on the given filename and location
      * @throws IOException in case of IO errors
      */
-    protected File createTemporaryFile(String fileName, String location) throws IOException {
+    protected @RUntainted File createTemporaryFile(@RUntainted String fileName, @RUntainted String location) throws IOException {
         String name = fileName
                 .substring(fileName.lastIndexOf('/') + 1)
                 .substring(fileName.lastIndexOf('\\') + 1);
@@ -418,7 +419,7 @@ public class JakartaStreamMultiPartRequest extends AbstractMultiPartRequest {
      * @param itemStream file item stream
      * @param file the file
      */
-    protected void createFileInfoFromItemStream(FileItemStream itemStream, File file) {
+    protected void createFileInfoFromItemStream(FileItemStream itemStream, @RUntainted File file) {
         // gather attributes from file upload stream.
         String fileName = itemStream.getName();
         String fieldName = itemStream.getFieldName();
@@ -444,7 +445,7 @@ public class JakartaStreamMultiPartRequest extends AbstractMultiPartRequest {
 
         private static final long serialVersionUID = 1083158552766906037L;
 
-        private final File file;
+        private final @RUntainted File file;
         private final String contentType;
         private final String originalName;
 
@@ -455,7 +456,7 @@ public class JakartaStreamMultiPartRequest extends AbstractMultiPartRequest {
          * @param contentType content type
          * @param originalName original file name
          */
-        public FileInfo(File file, String contentType, String originalName) {
+        public FileInfo(@RUntainted File file, String contentType, String originalName) {
             this.file = file;
             this.contentType = contentType;
             this.originalName = originalName;
@@ -464,7 +465,7 @@ public class JakartaStreamMultiPartRequest extends AbstractMultiPartRequest {
         /**
          * @return the file
          */
-        public File getFile() {
+        public @RUntainted File getFile() {
             return file;
         }
 

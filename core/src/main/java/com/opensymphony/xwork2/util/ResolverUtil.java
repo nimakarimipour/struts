@@ -32,6 +32,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.jar.JarEntry;
 import java.util.jar.JarInputStream;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>ResolverUtil is used to locate classes that are available in the/a class path and meet
@@ -398,8 +399,8 @@ public class ResolverUtil<T> {
      *        the values of <i>parent</i> would be <i>org/apache</i>
      * @param location a File object representing a directory
      */
-    private void loadImplementationsInDirectory(Test test, String parent, File location) {
-        File[] files = location.listFiles();
+    private void loadImplementationsInDirectory(Test test, String parent, @RUntainted File location) {
+        @RUntainted File[] files = location.listFiles();
         StringBuilder builder = null;
 
         for (File file : files) {
@@ -429,7 +430,7 @@ public class ResolverUtil<T> {
      * @param parent the parent package under which classes must be in order to be considered
      * @param jarfile the jar file to be examined for classes
      */
-    private void loadImplementationsInJar(Test test, String parent, File jarfile) {
+    private void loadImplementationsInJar(Test test, String parent, @RUntainted File jarfile) {
         try(JarInputStream jarStream = new JarInputStream(new FileInputStream(jarfile))) {
             JarEntry entry;
             while ((entry = jarStream.getNextJarEntry() ) != null) {
@@ -451,7 +452,7 @@ public class ResolverUtil<T> {
      * @param test the test used to determine if the class matches
      * @param fqn the fully qualified name of a class
      */
-    protected void addIfMatching(Test test, String fqn) {
+    protected void addIfMatching(Test test, @RUntainted String fqn) {
         try {
             ClassLoader loader = getClassLoader();
             if (test.doesMatchClass()) {
