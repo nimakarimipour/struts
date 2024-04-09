@@ -21,7 +21,6 @@ package com.opensymphony.xwork2.validator.validators;
 import com.opensymphony.xwork2.validator.ValidationException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -34,7 +33,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  * </ul>
  * <!-- END SNIPPET: parameters -->
  *
- * 
+ *
  * <pre>
  * <!-- START SNIPPET: example -->
  *     &lt;validators&gt;

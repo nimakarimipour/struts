@@ -27,14 +27,13 @@ import java.util.Collection;
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
  * Validates a string field using a regular expression.
  * <!-- END SNIPPET: javadoc -->
  *
- * 
+ *
  * <!-- START SNIPPET: parameters -->
  * <ul>
  * 	  <li>fieldName - The field name this validator is validating. Required if using Plain-Validator Syntax otherwise not required</li>

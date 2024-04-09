@@ -19,7 +19,6 @@
 package com.opensymphony.xwork2.config.impl;
 
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Represents a match from a namespace pattern matching.

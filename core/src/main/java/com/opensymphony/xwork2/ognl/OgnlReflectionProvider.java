@@ -31,12 +31,11 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Collection;
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class OgnlReflectionProvider implements ReflectionProvider {
-    
+
     private OgnlUtil ognlUtil;
-    
+
     @Inject
     public void setOgnlUtil(OgnlUtil ognlUtil) {
         this.ognlUtil = ognlUtil;
@@ -70,7 +69,7 @@ public class OgnlReflectionProvider implements ReflectionProvider {
 
     public void setProperties(Map<String, ?> props, Object o, Map<String, Object> context, boolean throwPropertyExceptions) throws ReflectionException{
         ognlUtil.setProperties(props, o, context, throwPropertyExceptions);
-        
+
     }
 
     public void setProperties(Map<String, ?> properties, Object o) {

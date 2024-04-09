@@ -30,21 +30,19 @@ import java.lang.ref.WeakReference;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * Location-related utility methods.
  */
 public class LocationUtils {
-    
+
     /**
      * The string representation of an unknown location: "<code>[unknown location]</code>".
      */
     public static final String UNKNOWN_STRING = "[unknown location]";
 
     private static List<WeakReference<LocationFinder>> finders = new ArrayList<>();
-    
+
     /**
      * An finder or object locations
      */
@@ -62,7 +60,7 @@ public class LocationUtils {
     private LocationUtils() {
         // Forbid instanciation
     }
-    
+
     /**
      * Builds a string representation of a location, in the
      * "<code><em>descripton</em> - <em>uri</em>:<em>line</em>:<em>column</em></code>"
@@ -87,7 +85,7 @@ public class LocationUtils {
         } else {
             result.append(UNKNOWN_STRING);
         }
-        
+
         return result.toString();
     }
 
@@ -95,7 +93,7 @@ public class LocationUtils {
      * Parse a location string of the form "<code><em>uri</em>:<em>line</em>:<em>column</em></code>" (e.g.
      * "<code>path/to/file.xml:3:40</code>") to a Location object. Additionally, a description may
      * also optionally be present, separated with an hyphen (e.g. "<code>foo - path/to/file.xml:3.40</code>").
-     * 
+     *
      * @param text the text to parse
      * @return the location (possibly <code>null</code> if text was null or in an incorrect format)
      */
@@ -114,12 +112,12 @@ public class LocationUtils {
             description = null;
             uriStart = 0;
         }
-        
+
         try {
             int colSep = text.lastIndexOf(':');
             if (colSep > -1) {
                 int column = Integer.parseInt(text.substring(colSep + 1));
-                
+
                 int lineSep = text.lastIndexOf(':', colSep - 1);
                 if (lineSep > -1) {
                     int line = Integer.parseInt(text.substring(lineSep + 1, colSep));
@@ -134,13 +132,13 @@ public class LocationUtils {
         } catch(Exception e) {
             // Ignore: handled below
         }
-        
+
         return LocationImpl.UNKNOWN;
     }
 
     /**
      * Checks if a location is known, i.e. it is not null nor equal to {@link Location#UNKNOWN}.
-     * 
+     *
      * @param location the location to check
      * @return <code>true</code> if the location is known
      */
@@ -150,7 +148,7 @@ public class LocationUtils {
 
     /**
      * Checks if a location is unknown, i.e. it is either null or equal to {@link Location#UNKNOWN}.
-     * 
+     *
      * @param location the location to check
      * @return <code>true</code> if the location is unknown
      */
@@ -179,7 +177,7 @@ public class LocationUtils {
      *       LocationUtils.addFinder(myFinder);
      *   }
      * </pre>
-     * 
+     *
      * @param finder the location finder to add
      */
     public static void addFinder(LocationFinder finder) {
@@ -195,22 +193,22 @@ public class LocationUtils {
             finders = newFinders;
         }
     }
-    
+
     /**
      * Get the location of an object. Some well-known located classes built in the JDK are handled
      * by this method. Handling of other located classes can be handled by adding new location finders.
-     * 
+     *
      * @param obj the object of which to get the location
      * @return the object's location, or {@link Location#UNKNOWN} if no location could be found
      */
     public static Location getLocation(Object obj) {
         return getLocation(obj, null);
     }
-    
+
     /**
      * Get the location of an object. Some well-known located classes built in the JDK are handled
      * by this method. Handling of other located classes can be handled by adding new location finders.
-     * 
+     *
      * @param obj the object of which to get the location
      * @param description an optional description of the object's location, used if a Location object
      *        has to be created.
@@ -220,11 +218,11 @@ public class LocationUtils {
         if (obj instanceof Location) {
             return (Location) obj;
         }
-        
+
         if (obj instanceof Locatable) {
             return ((Locatable)obj).getLocation();
         }
-        
+
         // Check some well-known locatable exceptions
         if (obj instanceof SAXParseException) {
             SAXParseException spe = (SAXParseException)obj;
@@ -234,7 +232,7 @@ public class LocationUtils {
                 return Location.UNKNOWN;
             }
         }
-        
+
         if (obj instanceof TransformerException) {
             TransformerException ex = (TransformerException)obj;
             SourceLocator locator = ex.getLocator();
@@ -244,7 +242,7 @@ public class LocationUtils {
                 return Location.UNKNOWN;
             }
         }
-        
+
         if (obj instanceof Locator) {
             Locator locator = (Locator)obj;
             if (locator.getSystemId() != null) {
@@ -253,7 +251,7 @@ public class LocationUtils {
                 return Location.UNKNOWN;
             }
         }
-        
+
         if (obj instanceof Element) {
             return LocationAttributes.getLocation((Element)obj);
         }

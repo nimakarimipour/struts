@@ -29,10 +29,9 @@ import com.opensymphony.xwork2.config.providers.XmlConfigurationProvider;
 import com.opensymphony.xwork2.inject.Container;
 import com.opensymphony.xwork2.inject.ContainerBuilder;
 import com.opensymphony.xwork2.util.location.LocatableProperties;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
- * Generic test setup methods to be used with any unit testing framework. 
+ * Generic test setup methods to be used with any unit testing framework.
  */
 public class XWorkTestCaseHelper {
 
@@ -41,7 +40,7 @@ public class XWorkTestCaseHelper {
         configurationManager.addContainerProvider(new StrutsDefaultConfigurationProvider());
         Configuration config = configurationManager.getConfiguration();
         Container container = config.getContainer();
-        
+
         // Reset the value stack
         ValueStack stack = container.getInstance(ValueStackFactory.class).createValueStack();
         stack.getActionContext().withContainer(container).withValueStack(stack).bind();
@@ -65,7 +64,7 @@ public class XWorkTestCaseHelper {
             public void register(ContainerBuilder builder, LocatableProperties props) throws ConfigurationException {
                 builder.setAllowDuplicates(true);
             }
-            
+
         });
         configurationManager.addContainerProvider(new StrutsDefaultConfigurationProvider());
         for (ConfigurationProvider prov : providers) {
@@ -75,7 +74,7 @@ public class XWorkTestCaseHelper {
             configurationManager.addContainerProvider(prov);
         }
         Container container = configurationManager.getConfiguration().getContainer();
-        
+
         // Reset the value stack
         ValueStack stack = container.getInstance(ValueStackFactory.class).createValueStack();
         stack.getActionContext().withContainer(container).withValueStack(stack).bind();

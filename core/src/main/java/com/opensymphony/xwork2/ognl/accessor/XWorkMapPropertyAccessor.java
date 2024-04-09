@@ -29,7 +29,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Implementation of PropertyAccessor that sets and gets properties by storing and looking
@@ -42,21 +41,21 @@ public class XWorkMapPropertyAccessor extends MapPropertyAccessor {
     private static final Logger LOG = LogManager.getLogger(XWorkMapPropertyAccessor.class);
 
     private static final String[] INDEX_ACCESS_PROPS = new String[]{"size", "isEmpty", "keys", "values"};
-    
+
     private XWorkConverter xworkConverter;
     private ObjectFactory objectFactory;
     private ObjectTypeDeterminer objectTypeDeterminer;
-    
+
     @Inject
     public void setXWorkConverter(XWorkConverter conv) {
         this.xworkConverter = conv;
     }
-    
+
     @Inject
     public void setObjectFactory(ObjectFactory fac) {
         this.objectFactory = fac;
     }
-    
+
     @Inject
     public void setObjectTypeDeterminer(ObjectTypeDeterminer ot) {
         this.objectTypeDeterminer = ot;

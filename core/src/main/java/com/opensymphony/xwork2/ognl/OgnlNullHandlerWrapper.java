@@ -21,16 +21,15 @@ package com.opensymphony.xwork2.ognl;
 import com.opensymphony.xwork2.conversion.NullHandler;
 
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class OgnlNullHandlerWrapper implements ognl.NullHandler {
 
     private final NullHandler wrapped;
-    
+
     public OgnlNullHandlerWrapper(NullHandler target) {
         this.wrapped = target;
     }
-    
+
     public Object nullMethodResult(Map context, Object target,
             String methodName, Object[] args) {
         return wrapped.nullMethodResult(context, target, methodName, args);

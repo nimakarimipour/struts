@@ -22,8 +22,6 @@ import com.opensymphony.xwork2.conversion.impl.XWorkConverter;
 
 import java.util.HashMap;
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * Manages variables in the reflection context and returns values
@@ -54,19 +52,19 @@ public class ReflectionContextState {
 	public static boolean isGettingByKeyProperty(Map<String, Object> context) {
 		return getBooleanProperty(GETTING_BY_KEY_PROPERTY, context);
 	}
-	
+
 	public static void setDenyMethodExecution(Map<String, Object> context, boolean denyMethodExecution) {
 		setBooleanValue(ReflectionContextState.DENY_METHOD_EXECUTION, context, denyMethodExecution);
 	}
-	
+
 	public static boolean isDenyMethodExecution(Map<String, Object> context) {
 		return getBooleanProperty(ReflectionContextState.DENY_METHOD_EXECUTION, context);
 	}
 
 	public static void setGettingByKeyProperty(Map<String, Object> context, boolean gettingByKeyProperty) {
 		setBooleanValue(GETTING_BY_KEY_PROPERTY, context, gettingByKeyProperty);
-	}	
-	
+	}
+
 	public static boolean isReportingConversionErrors(Map<String, Object> context) {
 		return getBooleanProperty(XWorkConverter.REPORT_CONVERSION_ERRORS, context);
 	}
@@ -172,7 +170,7 @@ public class ReflectionContextState {
         if (context != null) {
             context.put(XWorkConverter.LAST_BEAN_CLASS_ACCESSED,null);
             context.put(XWorkConverter.LAST_BEAN_PROPERTY_ACCESSED,null);
-    
+
             context.put(CURRENT_PROPERTY_PATH,null);
             context.put(FULL_PROPERTY_PATH,null);
         }

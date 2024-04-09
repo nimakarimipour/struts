@@ -21,7 +21,6 @@ package com.opensymphony.xwork2.validator.validators;
 import com.opensymphony.xwork2.validator.ValidationException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -34,7 +33,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  *    <li>expression - The Ognl expression (must evaluate to a boolean) which is to be evalidated the stack</li>
  * </ul>
  * <!-- END SNIPPET: parameters -->
- * 
+ *
  * <pre>
  * <!-- START SNIPPET: example -->
  *    &lt;!-- Plain Validator Syntax --&gt;
@@ -45,7 +44,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  *           &lt;param name="expression"&gt;&lt;![CDATA[#myCreditLimit &gt; #myGirfriendCreditLimit]]&gt;&lt;/param&gt;
  *           &lt;message&gt;My credit limit should be MORE than my girlfriend&lt;/message&gt;
  *        &lt;validator&gt;
- *        
+ *
  *        &lt;!-- Field Validator Syntax --&gt;
  *        &lt;field name="myField"&gt;
  *            &lt;field-validator type="fieldexpression"&gt;
@@ -53,7 +52,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  *                &lt;message&gt;My credit limit should be MORE than my girlfriend&lt;/message&gt;
  *            &lt;/field-validator&gt;
  *        &lt;/field&gt;
- *        
+ *
  *    &lt;/vaidators&gt;
  * <!-- END SNIPPET: example -->
  * </pre>

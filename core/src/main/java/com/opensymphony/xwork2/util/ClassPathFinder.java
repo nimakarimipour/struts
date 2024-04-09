@@ -18,6 +18,7 @@
  */
 package com.opensymphony.xwork2.util;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.struts2.StrutsException;
 
 import java.io.File;
@@ -32,7 +33,6 @@ import java.util.HashMap;
 import java.util.Vector;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * This class is an utility class that will search through the classpath

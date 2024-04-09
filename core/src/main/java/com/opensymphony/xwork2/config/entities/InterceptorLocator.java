@@ -17,7 +17,6 @@
  * under the License.
  */
 package com.opensymphony.xwork2.config.entities;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Defines an object that can be used to retrieve interceptor configuration

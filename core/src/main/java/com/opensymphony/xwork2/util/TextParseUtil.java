@@ -20,12 +20,12 @@ package com.opensymphony.xwork2.util;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.conversion.impl.XWorkConverter;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 
 /**
@@ -244,7 +244,7 @@ public class TextParseUtil {
     /**
      * Tests if given string is not null and not empty when excluding of empty
      * elements is requested.
-     * 
+     *
      * @param str String to check.
      * @param excludeEmptyElements Whether empty elements shall be excluded.
      * @return True if given string can be included in collection.

@@ -18,6 +18,8 @@
  */
 package com.opensymphony.xwork2.util.fs;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
@@ -34,7 +36,6 @@ import java.security.PrivilegedActionException;
 import java.security.PrivilegedExceptionAction;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * WW-4901 If was needed, decouples from underlying implementation of {@link URL#openConnection()}

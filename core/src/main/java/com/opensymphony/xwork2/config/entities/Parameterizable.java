@@ -19,7 +19,6 @@
 package com.opensymphony.xwork2.config.entities;
 
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->

@@ -23,7 +23,6 @@ import com.opensymphony.xwork2.config.entities.InterceptorConfig;
 import com.opensymphony.xwork2.interceptor.Interceptor;
 
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Dedicated interface used by {@link com.opensymphony.xwork2.ObjectFactory} to build {@link com.opensymphony.xwork2.interceptor.Interceptor}

@@ -19,9 +19,9 @@
 package com.opensymphony.xwork2.factory;
 
 import com.opensymphony.xwork2.config.entities.ActionConfig;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Used by {@link com.opensymphony.xwork2.ObjectFactory} to build actions

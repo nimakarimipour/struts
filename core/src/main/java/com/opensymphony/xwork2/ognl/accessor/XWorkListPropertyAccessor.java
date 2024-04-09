@@ -33,7 +33,6 @@ import org.apache.struts2.StrutsException;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Overrides the list property accessor so in the case of trying
@@ -45,7 +44,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 public class XWorkListPropertyAccessor extends ListPropertyAccessor {
 
     private XWorkCollectionPropertyAccessor _sAcc = new XWorkCollectionPropertyAccessor();
-    
+
     private XWorkConverter xworkConverter;
     private ObjectFactory objectFactory;
     private ObjectTypeDeterminer objectTypeDeterminer;
@@ -61,22 +60,22 @@ public class XWorkListPropertyAccessor extends ListPropertyAccessor {
     public void setXWorkCollectionPropertyAccessor(PropertyAccessor acc) {
         this._sAcc = (XWorkCollectionPropertyAccessor) acc;
     }
-    
+
     @Inject
     public void setXWorkConverter(XWorkConverter conv) {
         this.xworkConverter = conv;
     }
-    
+
     @Inject
     public void setObjectFactory(ObjectFactory fac) {
         this.objectFactory = fac;
     }
-    
+
     @Inject
     public void setObjectTypeDeterminer(ObjectTypeDeterminer ot) {
         this.objectTypeDeterminer = ot;
     }
-    
+
     @Inject
     public void setOgnlUtil(OgnlUtil util) {
         this.ognlUtil = util;
@@ -94,7 +93,7 @@ public class XWorkListPropertyAccessor extends ListPropertyAccessor {
         ReflectionContextState.updateCurrentPropertyPath(context, name);
         Class lastClass = (Class) context.get(XWorkConverter.LAST_BEAN_CLASS_ACCESSED);
         String lastProperty = (String) context.get(XWorkConverter.LAST_BEAN_PROPERTY_ACCESSED);
-        
+
         if (name instanceof Number
                 && ReflectionContextState.isCreatingNullObjects(context)
                 && objectTypeDeterminer.shouldCreateIfNew(lastClass,lastProperty,target,null,true)) {

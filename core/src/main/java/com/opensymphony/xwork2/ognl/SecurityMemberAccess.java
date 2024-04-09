@@ -19,6 +19,7 @@
 package com.opensymphony.xwork2.ognl;
 
 import com.opensymphony.xwork2.util.ProxyUtil;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import ognl.MemberAccess;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -33,7 +34,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Allows access decisions to be made on the basis of whether a member is static or not.

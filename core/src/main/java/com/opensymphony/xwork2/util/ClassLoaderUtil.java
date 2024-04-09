@@ -18,6 +18,9 @@
  */
 package com.opensymphony.xwork2.util;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
@@ -27,8 +30,6 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
 import java.util.Set;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 
 /**
@@ -46,7 +47,7 @@ public class ClassLoaderUtil {
 
     /**
      * <p>
-     * Load all resources with a given name, potentially aggregating all results 
+     * Load all resources with a given name, potentially aggregating all results
      * from the searched classloaders.  If no results are found, the resource name
      * is prepended by '/' and tried again.
      * </p>
@@ -87,7 +88,7 @@ public class ClassLoaderUtil {
              }
          }
 
-         if (!iterator.hasNext() && (resourceName != null) && ((resourceName.length() == 0) || (resourceName.charAt(0) != '/'))) { 
+         if (!iterator.hasNext() && (resourceName != null) && ((resourceName.length() == 0) || (resourceName.charAt(0) != '/'))) {
              return getResources('/' + resourceName, callingClass, aggregate);
          }
 
@@ -126,7 +127,7 @@ public class ClassLoaderUtil {
             }
         }
 
-        if ((url == null) && (resourceName != null) && ((resourceName.length() == 0) || (resourceName.charAt(0) != '/'))) { 
+        if ((url == null) && (resourceName != null) && ((resourceName.length() == 0) || (resourceName.charAt(0) != '/'))) {
             return getResource('/' + resourceName, callingClass);
         }
 

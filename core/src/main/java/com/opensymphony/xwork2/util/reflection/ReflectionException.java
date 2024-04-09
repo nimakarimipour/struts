@@ -19,7 +19,6 @@
 package com.opensymphony.xwork2.util.reflection;
 
 import org.apache.struts2.StrutsException;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class ReflectionException extends StrutsException {
 

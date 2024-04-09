@@ -17,7 +17,6 @@
  * under the License.
  */
 package com.opensymphony.xwork2.util;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Factory that creates a value stack, defaulting to the OgnlValueStackFactory
@@ -30,7 +29,7 @@ public interface ValueStackFactory {
      * @return  a new {@link com.opensymphony.xwork2.util.ValueStack}.
      */
     ValueStack createValueStack();
-    
+
     /**
      * Get a new instance of {@link com.opensymphony.xwork2.util.ValueStack}
      *
@@ -38,5 +37,5 @@ public interface ValueStackFactory {
      * @return  a new {@link com.opensymphony.xwork2.util.ValueStack}.
      */
     ValueStack createValueStack(ValueStack stack);
-    
+
 }

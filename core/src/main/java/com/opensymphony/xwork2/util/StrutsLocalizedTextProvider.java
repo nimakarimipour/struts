@@ -29,7 +29,6 @@ import org.apache.logging.log4j.Logger;
 import java.beans.PropertyDescriptor;
 import java.util.Locale;
 import java.util.ResourceBundle;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Provides support for localization in the framework, it can be used to read only default bundles,
@@ -136,7 +135,7 @@ public class StrutsLocalizedTextProvider extends AbstractLocalizedTextProvider {
      * object.  If so, repeat the entire process from the beginning with the object's class as
      * aClass and "address.state" as the message key.</li>
      * <li>If not found, look for the message in aClass' package hierarchy.</li>
-     * <li>If still not found, look for the message in the default resource bundles 
+     * <li>If still not found, look for the message in the default resource bundles
      * (Note: the lookup is not repeated again if {@link #searchDefaultBundlesFirst} was <code>true</code>).</li>
      * <li>Return defaultMessage</li>
      * </ol>
@@ -191,7 +190,7 @@ public class StrutsLocalizedTextProvider extends AbstractLocalizedTextProvider {
      * object.  If so, repeat the entire process from the beginning with the object's class as
      * aClass and "address.state" as the message key.</li>
      * <li>If not found, look for the message in aClass' package hierarchy.</li>
-     * <li>If still not found, look for the message in the default resource bundles 
+     * <li>If still not found, look for the message in the default resource bundles
      * (Note: the lookup is not repeated again if {@link #searchDefaultBundlesFirst} was <code>true</code>).</li>
      * <li>Return defaultMessage</li>
      * </ol>

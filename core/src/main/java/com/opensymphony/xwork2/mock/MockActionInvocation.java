@@ -25,10 +25,10 @@ import com.opensymphony.xwork2.ActionProxy;
 import com.opensymphony.xwork2.Result;
 import com.opensymphony.xwork2.interceptor.PreResultListener;
 import com.opensymphony.xwork2.util.ValueStack;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 import java.util.ArrayList;
 import java.util.List;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Mock for an {@link ActionInvocation}.
@@ -121,7 +121,7 @@ public class MockActionInvocation implements ActionInvocation {
     public void setActionEventListener(ActionEventListener listener) {
         this.actionEventListener = listener;
     }
-    
+
     public ActionEventListener getActionEventListener() {
         return this.actionEventListener;
     }

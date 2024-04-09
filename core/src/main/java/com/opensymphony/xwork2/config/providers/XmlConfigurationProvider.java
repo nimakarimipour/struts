@@ -28,6 +28,7 @@ import com.opensymphony.xwork2.util.ClassLoaderUtil;
 import com.opensymphony.xwork2.util.ClassPathFinder;
 import com.opensymphony.xwork2.util.DomHelper;
 import com.opensymphony.xwork2.util.location.LocatableProperties;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.struts2.StrutsException;
@@ -49,7 +50,6 @@ import java.util.Vector;
 
 import static java.lang.String.format;
 import static java.util.Collections.emptyList;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 
 /**

@@ -24,16 +24,15 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Collection;
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public interface ReflectionProvider {
-    
+
     Method getGetMethod(Class targetClass, String propertyName) throws IntrospectionException, ReflectionException;
-    
+
     Method getSetMethod(Class targetClass, String propertyName) throws IntrospectionException, ReflectionException;
-    
+
     Field getField(Class inClass, String name);
-    
+
     /**
      * Sets the object's properties using the default type converter, defaulting to not throw
      * exceptions for problems setting the properties.
@@ -54,7 +53,7 @@ public interface ReflectionProvider {
      *                                problems setting the properties
      */
     void setProperties(Map<String, ?> props, Object o, Map<String, Object> context, boolean throwPropertyExceptions) throws ReflectionException;
-    
+
     /**
      * Sets the properties on the object using the default context, defaulting to not throwing
      * exceptions for problems setting the properties.
@@ -63,7 +62,7 @@ public interface ReflectionProvider {
      * @param o object
      */
     void setProperties(Map<String, ?> properties, Object o);
-    
+
     /**
      *  This method returns a PropertyDescriptor for the given class and property name using
      * a Map lookup (using getPropertyDescriptorsMap()).
@@ -119,7 +118,7 @@ public interface ReflectionProvider {
      * @throws ReflectionException in case of reflection problems
      */
     Object getRealTarget(String property, Map<String, Object> context, Object root) throws ReflectionException;
-    
+
     /**
      * Sets the named property to the supplied value on the Object,
      *
@@ -142,7 +141,7 @@ public interface ReflectionProvider {
      * @param context the context which may include the TypeConverter
      */
     void setProperty(String name, Object value, Object o, Map<String, Object> context);
-    
+
     /**
      * Creates a Map with read properties for the given source object.
      * <p>
@@ -155,7 +154,7 @@ public interface ReflectionProvider {
      * @throws IntrospectionException is thrown if an exception occurs during introspection.
      */
     Map<String, Object> getBeanMap(Object source) throws IntrospectionException, ReflectionException;
-    
+
     /**
      * Evaluates the given OGNL expression to extract a value from the given root
      * object in a given context
@@ -166,7 +165,7 @@ public interface ReflectionProvider {
      * @return the result of evaluating the expression
      */
     Object getValue( String expression, Map<String, Object> context, Object root ) throws ReflectionException;
-    
+
     /**
      * Evaluates the given OGNL expression to insert a value into the object graph
      * rooted at the given root object given the context.
@@ -177,10 +176,10 @@ public interface ReflectionProvider {
      * @param value the value to insert into the object graph
      */
     void setValue( String expression, Map<String, Object> context, Object root, Object value ) throws ReflectionException;
-    
+
     /**
      * Get's the java beans property descriptors for the given source.
-     * 
+     *
      * @param source  the source object.
      * @return  property descriptors.
      * @throws IntrospectionException is thrown if an exception occurs during introspection.

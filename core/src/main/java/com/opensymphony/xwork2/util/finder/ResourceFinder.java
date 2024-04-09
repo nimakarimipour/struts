@@ -18,6 +18,7 @@
  */
 package com.opensymphony.xwork2.util.finder;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -43,7 +44,6 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @author David Blevins
@@ -75,11 +75,11 @@ public class ResourceFinder {
     /**
      * Create a ResourceFinder instance for looking up resources (via ClassLoader or via specific URLs
      * specifying resource locations).
-     * 
+     *
      * This class was functional in Struts 2.3.x, but broken for Struts 2.5.x (before 2.5.24), when dealing with
      * JAR resources in certain circumstances.  The current logic permits the base path to be "" (empty string),
      * which is required to also match JAR entries rooted at "" and not just file entries rooted at "/".
-     * 
+     *
      * @param path  Base path from which to look for resources (typically "xyz/abc/klm" form for file or
      *              jar contents).
      * @param classLoaderInterface  ClassLoader to perform the resource lookup.  If null, a default Thread
