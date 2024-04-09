@@ -20,7 +20,6 @@ package com.opensymphony.xwork2.config;
 
 import com.opensymphony.xwork2.inject.ContainerBuilder;
 import com.opensymphony.xwork2.util.location.LocatableProperties;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 
 /**

@@ -46,7 +46,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.regex.Pattern;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Ognl implementation of a value stack that allows for dynamic Ognl expressions to be evaluated against it. When evaluating an expression,

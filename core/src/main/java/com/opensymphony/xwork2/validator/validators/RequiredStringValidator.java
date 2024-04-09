@@ -21,7 +21,6 @@ package com.opensymphony.xwork2.validator.validators;
 import com.opensymphony.xwork2.validator.ValidationException;
 
 import java.util.Collection;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -37,7 +36,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  *      <li>trimExpression - (Optional) String. Specifies the trim param as an OGNL expression.</li>
  * </ul>
  * <!-- END SNIPPET: parameters -->
- * 
+ *
  * <!-- START SNIPPET: parameters-warning -->
  * Do not use ${trimExpression} as an expression as this will turn into infinitive loop!
  * <!-- END SNIPPET: parameters-warning -->
@@ -51,7 +50,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  *             &lt;param name="trim"&gt;true&lt;/param&gt;
  *             &lt;message&gt;username is required&lt;/message&gt;
  *         &lt;/validator&gt;
- *         
+ *
  *         &lt;!-- Field-Validator Syntax --&gt;
  *         &lt;field name="username"&gt;
  *         	  &lt;field-validator type="requiredstring"&gt;
@@ -70,7 +69,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  *     &lt;/validators&gt;
  * <!-- END SNIPPET: examples -->
  * </pre>
- * 
+ *
  * @author rainerh
  */
 public class RequiredStringValidator extends FieldValidatorSupport {

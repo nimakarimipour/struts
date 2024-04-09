@@ -19,7 +19,6 @@
 package com.opensymphony.xwork2.validator;
 
 import com.opensymphony.xwork2.util.ValueStack;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: validatorFlavours -->

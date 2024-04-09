@@ -21,9 +21,9 @@ package com.opensymphony.xwork2.factory;
 import com.opensymphony.xwork2.ObjectFactory;
 import com.opensymphony.xwork2.config.entities.ActionConfig;
 import com.opensymphony.xwork2.inject.Inject;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Default implementation

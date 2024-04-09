@@ -17,7 +17,6 @@
  * under the License.
  */
 package com.opensymphony.xwork2.util.location;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A interface that should be implemented by objects knowning their location (i.e. where they
@@ -26,7 +25,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 public interface Locatable {
     /**
      * Get the location of this object
-     * 
+     *
      * @return the location
      */
     public Location getLocation();

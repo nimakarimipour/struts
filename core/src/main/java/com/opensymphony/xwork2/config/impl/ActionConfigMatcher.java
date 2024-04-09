@@ -29,28 +29,27 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p> Matches paths against pre-compiled wildcard expressions pulled from
  * action configs. It uses the wildcard matcher from the Apache Cocoon
- * project. Patterns will be matched in the order they exist in the 
+ * project. Patterns will be matched in the order they exist in the
  * config file. The first match wins, so more specific patterns should be
  * defined before less specific patterns.
  */
 public class ActionConfigMatcher extends AbstractMatcher<ActionConfig> implements Serializable {
-   
+
     /**
      * <p> Finds and precompiles the wildcard patterns from the ActionConfig
      * "path" attributes. ActionConfig's will be evaluated in the order they
      * exist in the config file. Only paths that actually contain a
      * wildcard will be compiled. </p>
-     * 
+     *
      * <p>Patterns can optionally be matched "loosely".  When
      * the end of the pattern matches \*[^*]\*$ (wildcard, no wildcard,
-     * wildcard), if the pattern fails, it is also matched as if the 
-     * last two characters didn't exist.  The goal is to support the 
-     * legacy "*!*" syntax, where the "!*" is optional.</p> 
+     * wildcard), if the pattern fails, it is also matched as if the
+     * last two characters didn't exist.  The goal is to support the
+     * legacy "*!*" syntax, where the "!*" is optional.</p>
      *
      * @param patternMatcher pattern matcher
      * @param configs An array of ActionConfig's to process

@@ -22,7 +22,6 @@ import com.opensymphony.xwork2.inject.Context;
 import com.opensymphony.xwork2.inject.Factory;
 import com.opensymphony.xwork2.util.location.Located;
 import com.opensymphony.xwork2.util.location.LocationUtils;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Factory that remembers where a constant came from
@@ -33,7 +32,7 @@ public class LocatableConstantFactory<T> extends Located implements Factory {
         this.constant = constant;
         setLocation(LocationUtils.getLocation(location));
     }
-    
+
     public T create(Context ignored) {
         return constant;
     }

@@ -34,7 +34,6 @@ import org.apache.commons.lang3.BooleanUtils;
 import org.apache.struts2.StrutsConstants;
 
 import java.util.Set;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Creates an Ognl value stack

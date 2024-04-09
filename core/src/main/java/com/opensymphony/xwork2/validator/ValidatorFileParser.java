@@ -21,7 +21,6 @@ package com.opensymphony.xwork2.validator;
 import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * This class serves 2 purpose :

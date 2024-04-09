@@ -18,12 +18,12 @@
  */
 package com.opensymphony.xwork2.util.classloader;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.FileInputStream;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 
 /**

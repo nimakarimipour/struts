@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.inject.Inject;
 import com.opensymphony.xwork2.ognl.OgnlValueStack;
 import com.opensymphony.xwork2.util.CompoundRoot;
 import com.opensymphony.xwork2.util.ValueStack;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import ognl.ClassResolver;
 import ognl.MethodAccessor;
 import ognl.MethodFailedException;
@@ -48,7 +49,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import static java.lang.String.format;
 import static org.apache.commons.lang3.BooleanUtils.toBoolean;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A stack that is able to call methods on objects in the stack.

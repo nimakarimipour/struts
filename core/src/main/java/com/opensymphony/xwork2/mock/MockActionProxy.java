@@ -23,15 +23,14 @@ import com.opensymphony.xwork2.ActionProxy;
 import com.opensymphony.xwork2.config.Configuration;
 import com.opensymphony.xwork2.config.entities.ActionConfig;
 import org.apache.commons.lang3.StringUtils;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Mock for an {@link ActionProxy}.
- * 
+ *
  * @author Patrick Lightbody (plightbo at gmail dot com)
  */
 public class MockActionProxy implements ActionProxy {
-    
+
     Object action;
     String actionName;
     ActionConfig config;
@@ -45,7 +44,7 @@ public class MockActionProxy implements ActionProxy {
     boolean methodSpecified;
 
     public void prepare() throws Exception {}
-    
+
     public String execute() throws Exception {
         executedCalled = true;
 

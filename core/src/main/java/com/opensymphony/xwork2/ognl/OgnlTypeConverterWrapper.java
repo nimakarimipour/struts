@@ -22,7 +22,6 @@ import com.opensymphony.xwork2.conversion.TypeConverter;
 
 import java.lang.reflect.Member;
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Wraps an XWork type conversion class for as an OGNL TypeConverter
@@ -37,12 +36,12 @@ public class OgnlTypeConverterWrapper implements ognl.TypeConverter {
         }
         this.typeConverter = converter;
     }
-    
+
     public Object convertValue(Map context, Object target, Member member,
             String propertyName, Object value, Class toType) {
         return typeConverter.convertValue(context, target, member, propertyName, value, toType);
     }
-    
+
     public TypeConverter getTarget() {
         return typeConverter;
     }

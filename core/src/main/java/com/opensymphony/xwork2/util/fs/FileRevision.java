@@ -18,10 +18,11 @@
  */
 package com.opensymphony.xwork2.util.fs;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+
 import java.io.File;
 import java.net.URISyntaxException;
 import java.net.URL;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Represents file resource revision, used for file://* resources

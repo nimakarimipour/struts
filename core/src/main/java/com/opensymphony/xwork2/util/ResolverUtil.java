@@ -18,6 +18,7 @@
  */
 package com.opensymphony.xwork2.util;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -32,7 +33,6 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.jar.JarEntry;
 import java.util.jar.JarInputStream;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>ResolverUtil is used to locate classes that are available in the/a class path and meet
@@ -62,10 +62,10 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  *resolver.find(new CustomTest(), pkg1);
  *resolver.find(new CustomTest(), pkg2);
  *Collection&lt;ActionBean&gt; beans = resolver.getClasses();
- *</pre> 
+ *</pre>
  *
  * <p>This class was copied from Stripes - http://stripes.mc4j.org/confluence/display/stripes/Home</p>
- * 
+ *
  * @author Tim Fennell
  */
 public class ResolverUtil<T> {
@@ -84,13 +84,13 @@ public class ResolverUtil<T> {
          * @return True if a class is to be included in the results, false otherwise.
          */
         boolean matches(Class type);
-        
+
         boolean matches(URL resource);
 
         boolean doesMatchClass();
         boolean doesMatchResource();
     }
-    
+
     public static abstract class ClassTest implements Test {
         public boolean matches(URL resource) {
             throw new UnsupportedOperationException();
@@ -103,7 +103,7 @@ public class ResolverUtil<T> {
             return false;
         }
     }
-    
+
     public static abstract class ResourceTest implements Test {
         public boolean matches(Class cls) {
             throw new UnsupportedOperationException();
@@ -141,7 +141,7 @@ public class ResolverUtil<T> {
             return "is assignable to " + parent.getSimpleName();
         }
     }
-    
+
     /**
      * A Test that checks to see if each class name ends with the provided suffix.
      */
@@ -193,16 +193,16 @@ public class ResolverUtil<T> {
             return "annotated with @" + annotation.getSimpleName();
         }
     }
-    
+
     public static class NameIs extends ResourceTest {
         private String name;
-        
+
         public NameIs(String name) { this.name = "/" + name; }
-        
+
         public boolean matches(URL resource) {
             return (resource.getPath().endsWith(name));
         }
-        
+
         @Override public String toString() {
             return "named " + name;
         }
@@ -210,7 +210,7 @@ public class ResolverUtil<T> {
 
     /** The set of matches being accumulated. */
     private Set<Class<? extends T>> classMatches = new HashSet<Class<?extends T>>();
-    
+
     /** The set of matches being accumulated. */
     private Set<URL> resourceMatches = new HashSet<>();
 
@@ -229,11 +229,11 @@ public class ResolverUtil<T> {
     public Set<Class<? extends T>> getClasses() {
         return classMatches;
     }
-    
+
     public Set<URL> getResources() {
         return resourceMatches;
     }
-    
+
 
     /**
      * Returns the classloader that will be used for scanning for classes. If no explicit
@@ -270,7 +270,7 @@ public class ResolverUtil<T> {
             findInPackage(test, pkg);
         }
     }
-    
+
     /**
      * Attempts to discover classes who's name ends with the provided suffix. Accumulated classes can be
      * accessed by calling {@link #getClasses()}.
@@ -302,16 +302,16 @@ public class ResolverUtil<T> {
             findInPackage(test, pkg);
         }
     }
-    
+
     public void findNamedResource(String name, String... pathNames) {
         if (pathNames == null) return;
-        
+
         Test test = new NameIs(name);
         for (String pkg : pathNames) {
             findInPackage(test, pkg);
         }
     }
-    
+
     /**
      * Attempts to discover classes that pass the test. Accumulated
      * classes can be accessed by calling {@link #getClasses()}.
@@ -460,7 +460,7 @@ public class ResolverUtil<T> {
                 if (LOG.isDebugEnabled()) {
                     LOG.debug("Checking to see if class " + externalName + " matches criteria [" + test + "]");
                 }
-    
+
                 Class type = loader.loadClass(externalName);
                 if (test.matches(type) ) {
                     classMatches.add( (Class<T>) type);

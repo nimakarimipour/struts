@@ -21,7 +21,6 @@ package com.opensymphony.xwork2.validator;
 import com.opensymphony.xwork2.LocaleProvider;
 import com.opensymphony.xwork2.TextProvider;
 import com.opensymphony.xwork2.interceptor.ValidationAware;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * The context for validation. This interface extends others to provide methods for reporting
