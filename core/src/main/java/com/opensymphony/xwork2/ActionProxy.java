@@ -19,7 +19,6 @@
 package com.opensymphony.xwork2;
 
 import com.opensymphony.xwork2.config.entities.ActionConfig;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * ActionProxy is an extra layer between XWork and the action so that different proxies are possible.
@@ -27,7 +26,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  * <p>
  * An example of this would be a remote proxy, where the layer between XWork and the action might be RMI or SOAP.
  * </p>
- * 
+ *
  * @author Jason Carreira
  */
 public interface ActionProxy {
@@ -104,5 +103,5 @@ public interface ActionProxy {
      * @return true if the method returned by getMethod() is not a default initializer value.
      */
     boolean isMethodSpecified();
-    
+
 }

@@ -23,7 +23,6 @@ import com.opensymphony.xwork2.conversion.TypeConverter;
 import java.lang.reflect.Array;
 import java.lang.reflect.Member;
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class ArrayConverter extends DefaultTypeConverter {
 

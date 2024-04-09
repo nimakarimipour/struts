@@ -31,6 +31,7 @@ import com.opensymphony.xwork2.interceptor.WithLazyParams;
 import com.opensymphony.xwork2.ognl.OgnlUtil;
 import com.opensymphony.xwork2.util.ValueStack;
 import com.opensymphony.xwork2.util.ValueStackFactory;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import ognl.MethodFailedException;
 import ognl.NoSuchPropertyException;
 import org.apache.logging.log4j.LogManager;
@@ -42,7 +43,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * The Default ActionInvocation implementation

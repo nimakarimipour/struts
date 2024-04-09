@@ -20,7 +20,6 @@ package com.opensymphony.xwork2;
 
 import com.opensymphony.xwork2.config.entities.ActionConfig;
 import org.apache.struts2.StrutsException;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Handles cases when the result or action is unknown.
@@ -30,21 +29,21 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  * </p>
  */
 public interface UnknownHandler {
-    
+
     /**
      * Handles the case when an action configuration is unknown.  Implementations can return a new ActionConfig
      * to be used to process the request.
-     * 
+     *
      * @param namespace The namespace
      * @param actionName The action name
      * @return An generated ActionConfig, can return <tt>null</tt>
      * @throws StrutsException in case of errors
      */
     ActionConfig handleUnknownAction(String namespace, String actionName) throws StrutsException;
-    
+
     /**
-     * Handles the case when a result cannot be found for an action and result code. 
-     * 
+     * Handles the case when a result cannot be found for an action and result code.
+     *
      * @param actionContext The action context
      * @param actionName The action name
      * @param actionConfig The action config
@@ -53,10 +52,10 @@ public interface UnknownHandler {
      * @throws StrutsException in case of errors
      */
     Result handleUnknownResult(ActionContext actionContext, String actionName, ActionConfig actionConfig, String resultCode) throws StrutsException;
-    
+
     /**
      * Handles the case when an action method cannot be found.  This method is responsible both for finding the method and executing it.
-     * 
+     *
      * @since 2.1
      * @param action The action object
      * @param methodName The method name to call

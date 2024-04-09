@@ -19,7 +19,6 @@
 package com.opensymphony.xwork2;
 
 import java.util.ResourceBundle;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Extension Interface for TextProvider to help supporting ResourceBundles.

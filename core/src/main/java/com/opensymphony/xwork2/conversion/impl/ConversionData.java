@@ -17,7 +17,6 @@
  * under the License.
  */
 package com.opensymphony.xwork2.conversion.impl;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class ConversionData {
     private Object value;

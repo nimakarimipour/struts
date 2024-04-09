@@ -19,7 +19,6 @@
 package com.opensymphony.xwork2;
 
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * The {@link ActionProxyFactory} is used to create {@link ActionProxy}s to be executed.
@@ -82,5 +81,5 @@ public interface ActionProxyFactory {
      */
     ActionProxy createActionProxy(ActionInvocation actionInvocation, String namespace, String actionName, String methodName,
                                          boolean executeResult, boolean cleanupContext);
-    
+
 }

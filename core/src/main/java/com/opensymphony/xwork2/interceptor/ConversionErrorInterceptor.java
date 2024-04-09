@@ -27,7 +27,6 @@ import org.apache.commons.text.StringEscapeUtils;
 
 import java.util.HashMap;
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 
 /**
@@ -42,13 +41,13 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  * display the original string ("abc") again rather than the int value (likely 0, which would make very little sense to
  * the user).
  * </p>
- * 
+ *
  * <p>
  * <b>Note:</b> Since 2.5.2, this interceptor extends {@link MethodFilterInterceptor}, therefore being
  * able to deal with excludeMethods / includeMethods parameters. See [Workflow Interceptor]
  * (class {@link DefaultWorkflowInterceptor}) for documentation and examples on how to use this feature.
  * </p>
- * 
+ *
  * <!-- END SNIPPET: description -->
  *
  * <p><u>Interceptor parameters:</u></p>

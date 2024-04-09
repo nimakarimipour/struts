@@ -29,7 +29,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class CollectionConverter extends DefaultTypeConverter {
 

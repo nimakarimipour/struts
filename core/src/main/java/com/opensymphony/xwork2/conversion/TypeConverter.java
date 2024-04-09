@@ -20,7 +20,6 @@ package com.opensymphony.xwork2.conversion;
 
 import java.lang.reflect.Member;
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Interface for accessing the type conversion facilities within a context.

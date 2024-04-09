@@ -17,7 +17,6 @@
  * under the License.
  */
 package com.opensymphony.xwork2.conversion;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Determines what the key and and element class of a Map or Collection should be. For Maps, the elements are the
@@ -35,7 +34,7 @@ public interface ObjectTypeDeterminer {
     public Class getElementClass(Class parentClass, String property, Object key);
 
     public String getKeyProperty(Class parentClass, String property);
-    
+
     public boolean shouldCreateIfNew(Class parentClass,  String property,  Object target, String keyProperty, boolean isIndexAccessed);
 
 }

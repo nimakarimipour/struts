@@ -22,7 +22,6 @@ import com.opensymphony.xwork2.util.ValueStack;
 
 import java.util.List;
 import java.util.ResourceBundle;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Provides access to {@link ResourceBundle}s and their underlying text messages.

@@ -42,7 +42,6 @@ import java.util.Set;
 import java.util.TreeSet;
 
 import static java.util.Collections.synchronizedMap;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>

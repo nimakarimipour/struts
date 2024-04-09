@@ -39,7 +39,6 @@ import java.time.temporal.TemporalAccessor;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class DateConverter extends DefaultTypeConverter {
 
@@ -153,7 +152,7 @@ public class DateConverter extends DefaultTypeConverter {
      * {@link org.apache.struts2.components.Date#DATETAG_PROPERTY}
      *
      * @param context current ActionContext
-     * 
+     *
      * @return defined global date string format
      */
     protected String getGlobalDateString(ActionContext context) {
@@ -179,7 +178,7 @@ public class DateConverter extends DefaultTypeConverter {
 
     /**
      * Retrieves the list of date formats to be used when converting dates
-     * 
+     *
      * @param context the current ActionContext
      * @param locale  the current locale of the action
      * @return a list of DateFormat to be used for date conversion
@@ -215,10 +214,10 @@ public class DateConverter extends DefaultTypeConverter {
 
     /**
      * Retrieves the list of date time formats to be used when converting dates
-     * 
+     *
      * @param context the current ActionContext
      * @param locale  the current locale of the action
-     * 
+     *
      * @return a list of DateTimeFormatter to be used for date conversion
      */
     protected DateTimeFormatter[] getDateTimeFormats(ActionContext context, Locale locale) {

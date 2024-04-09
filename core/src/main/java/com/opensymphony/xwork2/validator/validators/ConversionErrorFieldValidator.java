@@ -25,7 +25,6 @@ import com.opensymphony.xwork2.validator.ValidationException;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -45,7 +44,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  *     		&lt;param name="fieldName"&gt;myField&lt;/param&gt;
  *          &lt;message&gt;Conversion Error Occurred&lt;/message&gt;
  *     &lt;/validator&gt;
- *      
+ *
  *     &lt;!-- Field Validator Syntax --&gt;
  *     &lt;field name="myField"&gt;
  *        &lt;field-validator type="conversion"&gt;
@@ -73,14 +72,14 @@ public class ConversionErrorFieldValidator extends RepopulateConversionErrorFiel
         String fullFieldName = getValidatorContext().getFullFieldName(fieldName);
         ActionContext context = ActionContext.getContext();
         Map<String, ConversionData> conversionErrors = context.getConversionErrors();
-        
+
         if (conversionErrors.containsKey(fullFieldName)) {
             if (StringUtils.isBlank(defaultMessage)) {
                 defaultMessage = XWorkConverter.getConversionErrorMessage(fullFieldName, conversionErrors.get(fullFieldName).getToClass(), context.getValueStack());
             }
-            
+
             addFieldError(fieldName, object);
         }
     }
-    
+
 }

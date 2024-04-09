@@ -19,7 +19,6 @@
 package com.opensymphony.xwork2.conversion;
 
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Used to process &lt;clazz&gt;-conversion.properties file to read defined Converters

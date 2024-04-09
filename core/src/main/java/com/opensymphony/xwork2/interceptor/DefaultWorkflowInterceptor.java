@@ -21,16 +21,16 @@ package com.opensymphony.xwork2.interceptor;
 import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.annotations.InputConfig;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.reflect.MethodUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: description -->
  * <p>
- * An interceptor that makes sure there are not validation, conversion or action errors before allowing the interceptor chain to continue. 
+ * An interceptor that makes sure there are not validation, conversion or action errors before allowing the interceptor chain to continue.
  * If a single FieldError or ActionError (including the ones replicated by the Message Store Interceptor in a redirection) is found, the INPUT result will be triggered.
  * <b>This interceptor does not perform any validation</b>.
  * </p>

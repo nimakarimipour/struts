@@ -41,7 +41,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Parse the validation file. (eg. MyAction-validation.xml, MyAction-actionAlias-validation.xml)
@@ -53,7 +52,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  * @author Rob Harrop
  * @author Rene Gielen
  * @author Martin Gilday
- * 
+ *
  * @see com.opensymphony.xwork2.validator.ValidatorConfig
  */
 public class DefaultValidatorFileParser implements ValidatorFileParser {
@@ -97,7 +96,7 @@ public class DefaultValidatorFileParser implements ValidatorFileParser {
         if (doc != null) {
             NodeList fieldNodes = doc.getElementsByTagName("field");
 
-            // BUG: xw-305: Let validator be parsed first and hence added to 
+            // BUG: xw-305: Let validator be parsed first and hence added to
             // the beginning of list and therefore evaluated first, so short-circuting
             // it will not cause field-level validator to be kicked off.
             {

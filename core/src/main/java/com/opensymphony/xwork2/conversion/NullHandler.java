@@ -19,7 +19,6 @@
 package com.opensymphony.xwork2.conversion;
 
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -43,7 +42,7 @@ public interface NullHandler
      *  @return object
      */
     Object nullMethodResult(Map<String, Object> context, Object target, String methodName, Object[] args);
-    
+
     /**
      *   Property in target evaluated to null.  Property can be a constant
      *   String property name or a DynamicSubscript.

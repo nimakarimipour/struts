@@ -35,7 +35,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.ResourceBundle;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A default implementation of the {@link ValidatorContext} interface.
@@ -136,7 +135,7 @@ public class DelegatingValidatorContext implements ValidatorContext {
     public boolean hasKey(String key) {
     	return textProvider.hasKey(key);
     }
-    
+
     public String getText(String aTextName) {
         return textProvider.getText(aTextName);
     }

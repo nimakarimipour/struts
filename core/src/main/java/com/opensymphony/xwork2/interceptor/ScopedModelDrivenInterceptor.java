@@ -27,7 +27,6 @@ import org.apache.struts2.StrutsException;
 
 import java.lang.reflect.Method;
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: description -->
@@ -36,7 +35,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  *
  * <p>This interceptor only activates on actions that implement the {@link ScopedModelDriven} interface.  If
  * detected, it will retrieve the model class from the configured scope, then provide it to the Action.</p>
- *  
+ *
  * <!-- END SNIPPET: description -->
  *
  * <p><u>Interceptor parameters:</u></p>
@@ -46,7 +45,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  * <ul>
  *
  * <li>className - The model class name.  Defaults to the class name of the object returned by the getModel() method.</li>
- *            
+ *
  * <li>name - The key to use when storing or retrieving the instance in a scope.  Defaults to the model
  *            class name.</li>
  *
@@ -67,42 +66,42 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  *
  * <pre>
  * <!-- START SNIPPET: example -->
- * 
+ *
  * &lt;-- Basic usage --&gt;
  * &lt;interceptor name="scopedModelDriven" class="com.opensymphony.interceptor.ScopedModelDrivenInterceptor" /&gt;
- * 
+ *
  * &lt;-- Using all available parameters --&gt;
  * &lt;interceptor name="gangsterForm" class="com.opensymphony.interceptor.ScopedModelDrivenInterceptor"&gt;
  *      &lt;param name="scope"&gt;session&lt;/param&gt;
  *      &lt;param name="name"&gt;gangsterForm&lt;/param&gt;
  *      &lt;param name="className"&gt;com.opensymphony.example.GangsterForm&lt;/param&gt;
  *  &lt;/interceptor&gt;
- * 
+ *
  * <!-- END SNIPPET: example -->
  * </pre>
  */
 public class ScopedModelDrivenInterceptor extends AbstractInterceptor {
 
     private static final Class[] EMPTY_CLASS_ARRAY = new Class[0];
-    
+
     private static final String GET_MODEL = "getModel";
     private String scope;
     private String name;
     private String className;
     private ObjectFactory objectFactory;
-    
+
     @Inject
     public void setObjectFactory(ObjectFactory factory) {
         this.objectFactory = factory;
     }
-    
+
     protected Object resolveModel(ObjectFactory factory, ActionContext actionContext, String modelClassName, String modelScope, String modelName) throws Exception {
         Object model;
         Map<String, Object> scopeMap = actionContext.getContextMap();
         if ("session".equals(modelScope)) {
             scopeMap = actionContext.getSession();
         }
-        
+
         model = scopeMap.get(modelName);
         if (model == null) {
             model = factory.buildBean(modelClassName, null);
@@ -120,7 +119,7 @@ public class ScopedModelDrivenInterceptor extends AbstractInterceptor {
             if (modelDriven.getModel() == null) {
                 ActionContext ctx = ActionContext.getContext();
                 ActionConfig config = invocation.getProxy().getConfig();
-                
+
                 String cName = className;
                 if (cName == null) {
                     try {
@@ -162,5 +161,5 @@ public class ScopedModelDrivenInterceptor extends AbstractInterceptor {
      */
     public void setScope(String scope) {
         this.scope = scope;
-    }    
+    }
 }

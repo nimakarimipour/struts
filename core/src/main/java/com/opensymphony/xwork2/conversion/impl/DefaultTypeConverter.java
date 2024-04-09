@@ -34,13 +34,11 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
- * Default type conversion. Converts among numeric types and also strings.  Contains the basic 
+ * Default type conversion. Converts among numeric types and also strings.  Contains the basic
  * type mapping code from OGNL.
- * 
+ *
  * @author Luke Blanshard (blanshlu@netscape.net)
  * @author Drew Davidson (drew@ognl.org)
  */
@@ -83,7 +81,7 @@ public abstract class DefaultTypeConverter implements TypeConverter {
             String propertyName, Object value, Class toType) {
         return convertValue(context, value, toType);
     }
-    
+
     public TypeConverter getTypeConverter( Map<String, Object> context ) {
         ognl.TypeConverter converter = null;
 
@@ -104,10 +102,10 @@ public abstract class DefaultTypeConverter implements TypeConverter {
 
     /**
      * Returns the value converted numerically to the given class type
-     * 
+     *
      * This method also detects when arrays are being converted and converts the
      * components of one array to the type of the other.
-     * 
+     *
      * @param value
      *            an object to be converted to the given type
      * @param toType
@@ -165,7 +163,7 @@ public abstract class DefaultTypeConverter implements TypeConverter {
      * Evaluates the given object as a boolean: if it is a Boolean object, it's
      * easy; if it's a Number or a Character, returns true for non-zero objects;
      * and otherwise returns true for non-null objects.
-     * 
+     *
      * @param value
      *            an object to interpret as a boolean
      * @return the boolean value implied by the given object
@@ -184,7 +182,7 @@ public abstract class DefaultTypeConverter implements TypeConverter {
             return ((Number) value).doubleValue() != 0;
         return true; // non-null
     }
-    
+
     public Enum<?> enumValue(Class toClass, Object o) {
         Enum<?> result = null;
         if (o == null) {
@@ -199,7 +197,7 @@ public abstract class DefaultTypeConverter implements TypeConverter {
 
     /**
      * Evaluates the given object as a long integer.
-     * 
+     *
      * @param value
      *            an object to interpret as a long integer
      * @return the long integer value implied by the given object
@@ -219,7 +217,7 @@ public abstract class DefaultTypeConverter implements TypeConverter {
 
     /**
      * Evaluates the given object as a double-precision floating-point number.
-     * 
+     *
      * @param value
      *            an object to interpret as a double
      * @return the double value implied by the given object
@@ -240,7 +238,7 @@ public abstract class DefaultTypeConverter implements TypeConverter {
 
     /**
      * Evaluates the given object as a BigInteger.
-     * 
+     *
      * @param value
      *            an object to interpret as a BigInteger
      * @return the BigInteger value implied by the given object
@@ -264,7 +262,7 @@ public abstract class DefaultTypeConverter implements TypeConverter {
 
     /**
      * Evaluates the given object as a BigDecimal.
-     * 
+     *
      * @param value
      *            an object to interpret as a BigDecimal
      * @return the BigDecimal value implied by the given object
@@ -289,7 +287,7 @@ public abstract class DefaultTypeConverter implements TypeConverter {
     /**
      * Evaluates the given object as a String and trims it if the trim flag is
      * true.
-     * 
+     *
      * @param value
      *            an object to interpret as a String
      * @param trim
@@ -313,7 +311,7 @@ public abstract class DefaultTypeConverter implements TypeConverter {
 
     /**
      * Evaluates the given object as a String.
-     * 
+     *
      * @param value
      *            an object to interpret as a String
      * @return the String value implied by the given object as returned by the

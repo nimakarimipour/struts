@@ -27,7 +27,6 @@ import org.apache.struts2.StrutsConstants;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class StrutsUrlDecoder implements UrlDecoder {
 

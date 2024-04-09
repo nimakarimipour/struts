@@ -21,13 +21,12 @@ package com.opensymphony.xwork2.interceptor;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * ValidationAware classes can accept Action (class level) or field level error messages. Action level messages are kept
  * in a Collection. Field level error messages are kept in a Map from String field name to a List of field error msgs.
  *
- * @author plightbo 
+ * @author plightbo
  */
 public interface ValidationAware {
 

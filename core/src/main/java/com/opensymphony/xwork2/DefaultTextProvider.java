@@ -27,7 +27,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * DefaultTextProvider gets texts from only the default resource bundles associated with the default bundles.
@@ -104,7 +103,7 @@ public class DefaultTextProvider implements TextProvider, Serializable, Unchaina
 
             return format.format(params);
         }
-        return text;        
+        return text;
     }
 
     public String getText(String key, String defaultValue, String[] args) {

@@ -37,7 +37,6 @@ import org.apache.struts2.dispatcher.HttpParameters;
 import org.apache.struts2.dispatcher.Parameter;
 
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 
 /**
@@ -109,7 +108,7 @@ public class AliasInterceptor extends AbstractInterceptor {
     @Inject(StrutsConstants.STRUTS_DEVMODE)
     public void setDevMode(String mode) {
         this.devMode = Boolean.parseBoolean(mode);
-    }   
+    }
 
     @Inject
     public void setValueStackFactory(ValueStackFactory valueStackFactory) {
@@ -226,7 +225,7 @@ public class AliasInterceptor extends AbstractInterceptor {
                 LOG.debug("invalid alias expression: {}", aliasesKey);
             }
         }
-        
+
         return invocation.invoke();
     }
 

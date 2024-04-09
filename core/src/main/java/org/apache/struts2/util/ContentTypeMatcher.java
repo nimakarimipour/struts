@@ -19,7 +19,6 @@
 package org.apache.struts2.util;
 
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Matches content type of uploaded files, similar to {@link com.opensymphony.xwork2.util.PatternMatcher}

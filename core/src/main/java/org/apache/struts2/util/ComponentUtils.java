@@ -17,7 +17,6 @@
  * under the License.
  */
 package org.apache.struts2.util;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 
 /**
  * Various static methods used with components

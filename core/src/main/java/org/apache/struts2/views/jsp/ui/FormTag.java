@@ -24,7 +24,6 @@ import org.apache.struts2.components.Form;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Form
@@ -46,7 +45,7 @@ public class FormTag extends AbstractClosingTag {
     protected String acceptcharset;
     protected String focusElement;
     protected boolean includeContext = true;
-    
+
     @Override
     public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
         return new Form(stack, req, res);

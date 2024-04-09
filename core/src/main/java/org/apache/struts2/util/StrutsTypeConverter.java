@@ -21,7 +21,6 @@ package org.apache.struts2.util;
 import com.opensymphony.xwork2.conversion.impl.DefaultTypeConverter;
 
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->

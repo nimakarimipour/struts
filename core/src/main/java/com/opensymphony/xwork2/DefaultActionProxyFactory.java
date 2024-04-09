@@ -22,7 +22,6 @@ import com.opensymphony.xwork2.inject.Container;
 import com.opensymphony.xwork2.inject.Inject;
 
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Default factory for {@link com.opensymphony.xwork2.ActionProxyFactory}.
@@ -32,16 +31,16 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 public class DefaultActionProxyFactory implements ActionProxyFactory {
 
     protected Container container;
-    
+
     public DefaultActionProxyFactory() {
         super();
     }
-    
+
     @Inject
     public void setContainer(Container container) {
         this.container = container;
     }
-    
+
     public ActionProxy createActionProxy(String namespace, String actionName, Map<String, Object> extraContext) {
         return createActionProxy(namespace, actionName, null, extraContext, true, true);
     }
@@ -55,18 +54,18 @@ public class DefaultActionProxyFactory implements ActionProxyFactory {
     }
 
     public ActionProxy createActionProxy(String namespace, String actionName, String methodName, Map<String, Object> extraContext, boolean executeResult, boolean cleanupContext) {
-        
+
         ActionInvocation inv = createActionInvocation(extraContext, true);
         container.inject(inv);
         return createActionProxy(inv, namespace, actionName, methodName, executeResult, cleanupContext);
     }
-    
+
     protected ActionInvocation createActionInvocation(Map<String, Object> extraContext, boolean pushAction) {
         return new DefaultActionInvocation(extraContext, pushAction);
     }
-    
+
     public ActionProxy createActionProxy(ActionInvocation inv, String namespace, String actionName, boolean executeResult, boolean cleanupContext) {
-        
+
         return createActionProxy(inv, namespace, actionName, null, executeResult, cleanupContext);
     }
 

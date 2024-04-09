@@ -19,7 +19,6 @@
 package org.apache.struts2.url;
 
 import java.io.Serializable;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * URL Decoder used internally by Struts

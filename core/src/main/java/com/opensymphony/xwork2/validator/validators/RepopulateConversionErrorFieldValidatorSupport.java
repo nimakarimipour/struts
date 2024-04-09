@@ -30,7 +30,6 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -181,7 +180,7 @@ public abstract class RepopulateConversionErrorFieldValidatorSupport extends Fie
                 doExprOverride = true;
                 fakeParams.put(fullFieldName, escape(tmpValue));
             } else {
-                // opps... it should be 
+                // opps... it should be
                 LOG.warn("conversion error value is not a String or array of String but instead is [{}], will not repopulate conversion error", value);
             }
 

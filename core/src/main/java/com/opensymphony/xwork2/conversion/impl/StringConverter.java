@@ -33,7 +33,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class StringConverter extends DefaultTypeConverter {
 

@@ -24,7 +24,6 @@ import com.opensymphony.xwork2.ActionInvocation;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * InvocationSessionStore

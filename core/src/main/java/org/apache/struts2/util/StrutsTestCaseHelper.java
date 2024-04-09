@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.inject.Container;
 import com.opensymphony.xwork2.util.ValueStack;
 import com.opensymphony.xwork2.util.ValueStackFactory;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.struts2.dispatcher.Dispatcher;
 import org.apache.struts2.dispatcher.DispatcherErrorHandler;
 
@@ -30,13 +31,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
- * Generic test setup methods to be used with any unit testing framework. 
+ * Generic test setup methods to be used with any unit testing framework.
  */
 public class StrutsTestCaseHelper {
-    
+
     public static Dispatcher initDispatcher(@RUntainted ServletContext ctx, Map<String,@RUntainted String> params) {
         if (params == null) {
             params = new HashMap<>();

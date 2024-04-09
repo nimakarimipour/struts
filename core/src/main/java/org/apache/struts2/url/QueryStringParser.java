@@ -20,7 +20,6 @@ package org.apache.struts2.url;
 
 import java.io.Serializable;
 import java.util.Map;
-import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Used to parse Http Query String into a map of parameters with support for fragment
