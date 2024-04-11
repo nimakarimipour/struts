@@ -7,7 +7,7 @@ VERSION = '1.3.9-TAINT-SNAPSHOT'
 # get parent absolute path current dir
 REPO = str(Path(__file__).resolve().parents[1])
 OUT_DIR = '{}/annotator-out/core'.format(REPO)
-ANNOTATOR_JAR = "var/core.jar".format(str(Path.home()), VERSION, VERSION)
+ANNOTATOR_JAR = "/var/core.jar".format(str(Path.home()), VERSION, VERSION)
 
 
 def prepare():
@@ -21,7 +21,7 @@ def run_annotator():
     commands = []
     commands += ["java", "-jar", ANNOTATOR_JAR]
     commands += ['-d', OUT_DIR]
-    commands += ['-bc', 'cd {} && ./annotator-command.sh'.format(REPO)]
+    commands += ['-bc', 'cd {} && ./build.sh'.format(REPO)]
     commands += ['-cp', '{}/paths.tsv'.format(OUT_DIR)]
     commands += ['-i', 'edu.Initializer']
     commands += ['-n', 'com.taint.tainting.qual.RUntainted']
