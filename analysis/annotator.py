@@ -4,7 +4,8 @@ import shutil
 from pathlib import Path
 
 VERSION = '1.3.9-TAINT-SNAPSHOT'
-REPO = subprocess.check_output(['git', 'rev-parse', '--show-toplevel']).strip().decode('utf-8')
+# get parent absolute path current dir
+REPO = str(Path(__file__).resolve().parents[1])
 OUT_DIR = '{}/annotator-out/core'.format(REPO)
 ANNOTATOR_JAR = "var/core.jar".format(str(Path.home()), VERSION, VERSION)
 
