@@ -21,6 +21,7 @@ package org.apache.struts2.components;
 import com.opensymphony.xwork2.util.ValueStack;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.views.annotations.StrutsTagAttribute;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Base class for control and data tags

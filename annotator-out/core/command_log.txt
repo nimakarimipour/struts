@@ -586,3 +586,1745 @@
 
 2024-02-02T18:47:55.955748:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
 
+2024-06-07T06:24:59.221534:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:25:41.676138:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:26:21.744919:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:27:02.130639:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:27:41.648459:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:28:20.455991:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:28:59.462923:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:29:39.083656:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:30:18.930365:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:30:57.910635:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:31:36.795935:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:32:16.894654:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:32:55.839963:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:33:34.986040:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:34:14.645636:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:34:54.430219:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:35:33.831129:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:36:12.935712:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:36:52.475206:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:37:32.125485:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:38:11.294733:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:38:50.293591:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:39:30.694995:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:40:09.789559:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:40:48.732309:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:41:28.082435:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:42:07.653235:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:42:46.941766:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:43:26.867127:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:44:06.223633:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:44:46.141438:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:45:25.599714:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:46:04.822506:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:46:43.762164:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:47:22.979170:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:48:01.746239:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:48:41.609818:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:49:21.257405:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:50:00.861607:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:50:40.451744:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:51:19.967314:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:51:59.333524:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:52:38.861090:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:53:18.242396:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:53:58.559656:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:54:37.542555:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:55:18.262861:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:55:57.865151:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:56:38.110435:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:57:17.482992:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:57:56.835962:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:58:36.791065:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:59:16.728999:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T06:59:57.154816:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:00:36.802003:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:01:16.427385:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:01:56.046660:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:02:35.711053:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:03:16.116282:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:03:56.300267:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:04:36.908755:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:05:16.430991:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:05:57.617741:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:06:37.823973:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:07:17.875916:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:07:58.003688:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:08:37.729464:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:09:17.521396:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:09:58.080209:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:10:38.808051:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:11:18.893842:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:11:58.452133:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:12:39.224716:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:13:20.195108:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:14:01.275262:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:14:42.355595:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:15:23.707683:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:16:04.495016:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:16:44.582155:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:17:25.217379:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:18:05.685510:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:18:46.879735:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:19:27.955579:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:20:09.233867:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:20:50.847918:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:21:31.181097:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:22:11.601394:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:22:53.199540:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:23:34.521085:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:24:15.674435:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:24:58.241142:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:25:39.454449:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:26:20.662739:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:27:00.853555:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:27:41.965869:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:28:23.861610:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:29:05.844454:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:29:48.177327:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:30:30.157602:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:31:11.351428:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:31:52.095273:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:32:34.561413:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:33:15.712358:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:33:56.833406:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:34:39.022549:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:35:21.314551:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:36:02.467864:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:36:43.452170:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:37:25.900198:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:38:07.865701:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:38:49.283066:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:39:32.498022:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:40:14.604260:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:40:56.734491:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:41:37.380200:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:42:19.624956:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:43:02.309689:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:43:44.558762:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:44:27.298918:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:45:09.844805:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:45:51.157084:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:46:31.850449:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:47:14.717601:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:47:58.149279:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:48:40.838007:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:49:23.488554:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:50:06.378793:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:50:48.029623:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:51:28.930706:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:52:11.497704:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:52:54.310017:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:53:37.074473:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:54:19.704384:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:55:02.692812:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:55:44.216727:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:56:25.130992:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:57:08.195282:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:57:51.583138:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:58:34.258982:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T07:59:16.925115:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:00:00.752888:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:00:42.325986:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:01:23.093059:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:02:05.758621:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:02:48.023112:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:03:30.688575:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:04:14.521509:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:04:58.030277:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:05:41.135957:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:06:24.489929:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:07:07.550882:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:07:50.701789:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:08:34.580257:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:09:17.072467:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:10:00.706966:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:10:43.805708:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:11:27.209583:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:12:10.080444:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:12:54.547337:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:13:37.514154:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:14:20.578545:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:15:03.783543:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:15:46.861022:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:16:30.740994:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:17:14.551592:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:17:57.656416:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:18:41.348005:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:19:24.745247:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:20:08.460640:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:20:51.769291:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:21:34.027665:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:22:14.213304:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:22:54.003720:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:23:33.526712:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:24:12.921532:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:24:52.703228:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:25:31.826210:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:26:10.834858:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:26:50.386331:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:27:29.544530:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:28:08.821301:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:28:48.079399:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:29:27.787072:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:30:06.850238:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:30:46.836828:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:31:26.279869:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:32:05.155005:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:32:44.425344:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:33:24.015053:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:34:03.393273:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:34:42.892567:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:35:22.854444:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:36:02.814209:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:36:43.252827:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:37:23.457705:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:38:02.525358:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:38:42.845558:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:39:22.596191:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:40:01.955547:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:40:41.449914:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:41:21.519446:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:42:01.053959:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:42:41.041972:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:43:20.484862:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:44:00.381891:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:44:40.233285:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:45:20.268093:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:46:00.766147:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:46:41.198215:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:47:20.780400:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:48:00.861255:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:48:40.461145:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:49:20.793136:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:50:01.322861:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:50:41.868536:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:51:21.626593:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:52:01.747929:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:52:42.484922:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:53:22.462021:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:54:03.891721:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:54:44.779607:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:55:25.257198:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:56:06.791060:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:56:47.021078:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:57:28.716422:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:58:09.086485:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:58:50.090514:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T08:59:31.648687:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:00:13.793040:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:00:55.475029:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:01:36.340831:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:02:17.059900:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:02:59.807021:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:03:41.395779:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:04:23.148901:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:05:05.238008:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:05:46.705970:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:06:29.508953:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:07:11.806547:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:07:54.055477:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:08:36.656508:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:09:17.803648:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:10:00.042220:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:10:42.272423:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:11:24.806464:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:12:06.586557:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:12:48.657021:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:13:31.381580:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:14:13.977921:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:14:56.524188:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:15:38.981338:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:16:21.792242:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:17:05.563420:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:17:48.156918:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:18:30.515035:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:19:13.488929:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:19:55.963353:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:20:39.336938:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:21:22.739842:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:22:05.685456:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:22:48.290809:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:23:31.140893:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:24:13.587951:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:24:56.552552:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:25:38.996037:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:26:21.858621:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:27:04.728862:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:27:48.325504:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:28:31.414151:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:29:14.082535:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:29:57.356314:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:30:40.750092:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:31:23.633647:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:32:07.584613:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:32:50.515579:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:33:32.830291:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:34:15.683373:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:34:59.274208:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:35:42.660962:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:36:25.558501:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:37:08.605379:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:37:52.127553:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:38:36.136381:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:39:18.963054:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:40:01.496096:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:40:45.113305:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:41:28.469140:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:42:10.633353:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:42:49.971521:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:43:29.744818:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:44:08.389909:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:44:47.241108:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:45:26.964174:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:46:06.803541:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:46:46.522644:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:47:26.194412:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:48:05.955244:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:48:45.503452:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:49:24.982276:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:50:04.219256:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:50:44.231504:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:51:24.423091:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:52:04.637920:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:52:44.455748:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:53:24.221212:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:54:04.101140:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:54:44.159260:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:55:24.653241:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:56:04.783651:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:56:45.495777:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:57:25.608668:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:58:05.482520:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:58:45.562706:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T09:59:26.040900:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:00:06.767743:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:00:46.181585:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:01:26.364580:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:02:06.966954:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:02:47.175592:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:03:26.679801:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:04:07.365396:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:04:47.930062:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:05:28.900684:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:06:08.873117:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:06:49.372289:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:07:29.601008:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:08:10.610314:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:08:50.846748:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:09:31.530042:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:10:11.905744:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:10:53.137028:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:11:34.204883:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:12:15.425849:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:12:56.056612:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:13:38.020808:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:14:18.756651:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:15:01.381006:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:15:41.880065:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:16:23.949057:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:17:05.224677:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:17:47.218103:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:18:27.958688:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:19:10.653283:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:19:52.542481:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:20:34.151206:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:21:14.943917:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:21:56.965405:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:22:38.597983:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:23:20.089485:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:24:01.204236:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:24:44.018121:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:25:25.287196:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:26:07.233453:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:26:48.314564:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:27:30.682884:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:28:11.734392:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:28:54.200433:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:29:34.876284:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:30:17.701306:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:31:00.019754:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:31:41.935115:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:32:22.883394:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:33:05.369390:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:33:48.232344:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:34:31.587427:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:35:14.695231:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:35:56.932293:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:36:40.630066:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:37:24.007642:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:38:05.929541:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:38:48.676745:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:39:31.600578:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:40:13.811996:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:40:57.481492:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:41:41.221647:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:42:22.431045:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:43:01.415370:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:43:40.839663:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:44:20.733922:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:45:00.297586:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:45:39.922749:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:46:19.632351:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:46:58.787151:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:47:38.725443:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:48:18.989855:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:48:57.969257:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:49:37.307387:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:50:17.687316:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:50:56.671768:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:51:36.669648:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:52:17.155698:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:52:57.423990:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:53:37.569285:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:54:17.466260:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:54:58.454819:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:55:38.782520:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:56:20.000253:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:57:01.406119:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:57:42.468251:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:58:24.371615:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:59:05.361191:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T10:59:47.103653:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:00:29.193053:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:01:11.182764:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:01:53.360818:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:02:35.925919:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:03:18.876193:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:04:02.166024:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:04:44.318027:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:05:26.954657:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:06:09.686678:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:06:52.641827:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:07:36.102294:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:08:19.163801:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:09:02.000427:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:09:45.327930:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:10:28.466565:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:11:11.877531:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:11:55.401839:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:12:38.579883:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:13:21.405847:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:14:04.986438:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:14:48.270933:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:15:31.601746:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:16:15.192956:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:16:58.515163:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:17:41.788323:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:18:24.951234:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:19:07.681813:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:19:46.576469:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:20:26.006090:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:21:05.293311:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:21:44.619701:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:22:24.530103:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:23:03.805423:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:23:43.025321:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:24:22.628347:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:25:02.443788:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:25:42.297732:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:26:22.682341:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:27:03.917741:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:27:44.276954:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:28:24.838765:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:29:05.773846:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:29:47.734412:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:30:30.138998:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:31:12.955713:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:31:55.265716:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:32:37.598466:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:33:20.199618:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:34:02.788065:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:34:46.528821:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:35:30.291083:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:36:14.039217:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:36:56.091217:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:37:35.282294:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:38:14.570351:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:38:54.244596:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:39:33.938759:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:40:12.689619:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:40:51.520679:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:41:30.425317:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:42:10.792442:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:42:50.585034:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:43:30.311176:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:44:10.512852:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:44:50.459508:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:45:29.856831:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:46:09.625529:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:46:49.386418:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:47:28.305978:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:48:07.564832:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:48:47.062709:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:49:26.885736:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:50:06.861878:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:50:46.849591:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:51:27.046215:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:52:06.881215:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:52:46.301065:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:53:26.723485:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:54:06.509595:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:54:45.920862:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:55:25.509716:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:56:04.395403:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:56:43.552930:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:57:23.050734:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:58:02.500551:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:58:42.493309:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T11:59:21.844153:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:00:01.370168:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:00:41.738625:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:01:21.880353:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:02:01.234638:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:02:41.230291:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:03:20.510312:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:04:00.527477:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:04:39.709622:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:05:18.937238:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:05:58.942820:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:06:38.036872:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:07:17.839871:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:07:57.819522:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:08:37.252107:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:09:16.567688:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:09:56.385564:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:10:36.143301:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:11:14.869123:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:11:54.554972:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:12:34.207708:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:13:14.126010:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:13:53.959143:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:14:34.446764:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:15:14.367406:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:15:53.636604:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:16:33.073654:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:17:12.998696:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:17:52.831156:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:18:31.892258:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:19:11.266331:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:19:51.150533:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:20:30.460072:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:21:10.131816:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:21:49.413553:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:22:29.356430:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:23:08.916040:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:23:48.759475:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:24:28.568879:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:25:08.709476:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:25:48.969808:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:26:29.004532:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:27:08.145042:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:27:47.723223:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:28:27.159056:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:29:07.273538:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:29:46.956296:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:30:26.648330:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:31:06.181650:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:31:45.475376:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:32:25.868139:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:33:05.541318:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:33:44.966639:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:34:24.828369:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:35:05.392276:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:35:45.653954:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:36:24.659943:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:37:03.984423:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:37:44.214413:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:38:25.060461:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:39:04.557346:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:39:44.875410:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:40:25.397176:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:41:05.233940:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:41:45.039025:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:42:25.095750:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:43:05.096356:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:43:44.886003:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:44:24.294674:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:45:03.799126:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:45:44.064058:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:46:24.034685:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:47:03.907802:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:47:43.898042:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:48:24.225357:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:49:04.769496:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:49:45.183028:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:50:24.542717:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:51:04.566890:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:51:44.878803:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:52:26.159583:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:53:05.519239:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:53:44.421993:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:54:24.213742:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:55:04.178174:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:55:43.503280:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:56:24.435162:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:57:05.269112:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:57:45.914981:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:58:26.489558:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:59:06.308895:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T12:59:46.175520:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:00:26.360115:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:01:07.025729:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:01:47.014603:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:02:27.156655:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:03:07.829650:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:03:48.808968:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:04:29.490381:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:05:09.229310:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:05:49.442822:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:06:28.847989:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:07:09.146038:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:07:49.616420:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:08:30.649806:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:09:12.301993:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:09:52.900074:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:10:32.690012:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:11:12.740676:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:11:53.416797:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:12:33.701044:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:13:13.878137:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:13:54.428532:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:14:34.990407:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:15:16.169912:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:15:56.985987:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:16:36.477664:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:17:17.260719:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:17:57.115567:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:18:36.667226:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:19:17.311100:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:19:58.436312:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:20:40.127590:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:21:21.525523:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:22:02.161005:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:22:42.783659:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:23:23.585073:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:24:04.787129:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:24:44.557211:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:25:25.298512:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:26:07.170252:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:26:49.035908:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:27:29.084737:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:28:09.695476:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:28:49.080160:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:29:28.725838:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:30:08.610560:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:30:49.873446:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:31:31.893016:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:32:13.440563:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:32:54.934936:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:33:36.023707:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:34:15.540213:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:34:56.475205:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:35:37.785610:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:36:18.371432:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:36:58.906804:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:37:40.443668:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:38:22.651299:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:39:03.302084:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:39:44.504668:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:40:25.659542:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:41:04.879345:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:41:45.355509:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:42:26.614756:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:43:07.948923:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:43:50.316583:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:44:31.565921:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:45:12.051555:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:45:52.301723:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:46:33.667708:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:47:14.403158:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:47:54.915477:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:48:36.762317:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:49:17.684835:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:50:00.293704:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:50:41.123661:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:51:21.250583:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:52:01.945135:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:52:42.083977:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:53:22.157380:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:54:04.217026:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:54:46.080726:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:55:28.341125:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:56:10.677660:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:56:52.082635:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:57:32.907068:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:58:14.617909:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:58:55.532309:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T13:59:36.449995:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:00:18.264877:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:01:00.610805:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:01:43.150611:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:02:24.824542:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:03:05.638941:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:03:46.475979:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:04:26.514540:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:05:06.736349:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:05:48.391968:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:06:30.735507:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:07:13.130357:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:07:55.050113:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:08:36.611532:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:09:17.729341:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:10:00.533874:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:10:42.379281:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:11:23.635396:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:12:05.830238:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:12:47.868171:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:13:30.787795:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:14:13.103742:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:14:53.043390:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:15:34.204039:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:16:14.595477:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:16:55.373640:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:17:37.763376:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:18:19.843726:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:19:02.742171:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:19:45.312507:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:20:27.095493:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:21:08.183813:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:21:50.940607:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:22:33.278417:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:23:14.585672:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:23:56.681928:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:24:38.918416:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:25:22.248827:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:26:04.405672:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:26:44.993348:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:27:26.408415:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:28:06.760149:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:28:47.882879:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:29:31.338590:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:30:14.382951:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:30:57.394698:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:31:39.873890:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:32:22.200165:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:33:03.130411:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:33:46.313768:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:34:28.522090:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:35:10.554227:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:35:52.857842:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:36:35.594502:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:37:18.416442:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:38:00.992514:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:38:41.980800:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:39:23.574317:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:40:04.715587:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:40:45.746101:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:41:28.177118:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:42:11.022787:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:42:53.625537:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:43:36.082203:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:44:18.830774:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:45:00.729833:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:45:43.792442:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:46:26.194599:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:47:08.123950:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:47:50.341573:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:48:33.090085:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:49:15.974138:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:49:58.236257:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:50:39.067627:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:51:21.885885:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:52:03.096292:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:52:43.491856:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:53:26.736646:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:54:09.473599:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:54:52.664569:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:55:35.350869:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:56:17.563199:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:56:58.933970:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:57:41.989808:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:58:24.632740:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:59:06.541060:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T14:59:49.442875:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:00:33.437024:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:01:16.430846:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:01:58.419195:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:02:38.994892:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:03:21.321510:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:04:02.580985:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:04:43.014652:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:05:25.519095:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:06:08.755918:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:06:51.415176:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:07:34.338737:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:08:17.179501:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:08:58.621452:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:09:41.939027:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:10:24.500901:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:11:07.096280:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:11:50.714339:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:12:33.764735:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:13:17.264195:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:14:00.055012:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:14:40.789273:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:15:23.579358:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:16:05.175546:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:16:46.007625:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:17:28.953402:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:18:11.614639:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:18:54.379315:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:19:37.383478:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:20:20.345585:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:21:02.412162:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:21:45.927664:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:22:28.226981:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:23:10.470438:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:23:54.120637:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:24:37.383632:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:25:20.706257:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:26:03.784216:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:26:45.877128:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:27:28.377235:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:28:11.302959:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:28:54.914480:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:29:37.984387:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:30:22.264733:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:31:05.016355:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:31:47.849397:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:32:31.546174:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:33:14.695540:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:33:57.577631:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:34:40.733221:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:35:23.590872:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:36:06.821729:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:36:50.689752:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:37:33.148230:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:38:15.175338:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:38:58.682133:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:39:41.807768:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:40:24.668204:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:41:07.540574:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:41:50.706268:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:42:32.631946:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:43:15.943184:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:43:58.557975:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:44:41.875155:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:45:24.835473:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:46:07.816036:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:46:51.332510:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:47:35.241084:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:48:18.749149:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:49:01.962876:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:49:45.502788:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:50:28.931995:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:51:12.078425:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:51:54.959653:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:52:37.379925:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:53:19.139378:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:54:01.961449:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:54:45.089214:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:55:27.991209:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:56:11.828500:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:56:54.647684:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:57:38.330256:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:58:21.439221:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:59:04.246575:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T15:59:46.995892:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:00:29.888899:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:01:13.186581:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:01:57.197731:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:02:40.997727:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:03:24.223833:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:04:04.663076:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:04:44.192208:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:05:23.651654:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:06:02.859719:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:06:42.054222:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:07:21.434154:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:08:01.326377:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:08:40.430712:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:09:20.280819:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:10:00.615775:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:10:40.621077:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:11:20.848121:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:12:01.694925:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:12:42.854314:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:13:24.055010:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:14:05.437951:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:14:47.632851:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:15:30.075207:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:16:13.320731:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:16:56.862140:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:17:39.713521:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:18:22.972444:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:19:05.751653:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:19:49.060556:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:20:32.470833:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:21:15.948861:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:21:59.076984:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+
+2024-06-07T16:22:43.500421:cd /home/kdas006/annotation_dataset/struts && ./annotator-command.sh
+

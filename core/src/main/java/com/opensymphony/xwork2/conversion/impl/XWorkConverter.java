@@ -50,6 +50,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 
 /**
@@ -360,7 +361,7 @@ public class XWorkConverter extends DefaultTypeConverter {
      * @param isPrimitive is primitive?
      * @return a TypeConverter to handle the specified class or null if none can be found
      */
-    public TypeConverter lookup(String className, boolean isPrimitive) {
+    public TypeConverter lookup(@RUntainted String className, boolean isPrimitive) {
         if (converterHolder.containsUnknownMapping(className) && !converterHolder.containsDefaultMapping(className)) {
             return null;
         }

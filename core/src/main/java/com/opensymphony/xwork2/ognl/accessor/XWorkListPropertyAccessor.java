@@ -33,6 +33,7 @@ import org.apache.struts2.StrutsException;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Overrides the list property accessor so in the case of trying

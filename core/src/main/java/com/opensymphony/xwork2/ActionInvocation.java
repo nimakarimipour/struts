@@ -20,6 +20,7 @@ package com.opensymphony.xwork2;
 
 import com.opensymphony.xwork2.interceptor.PreResultListener;
 import com.opensymphony.xwork2.util.ValueStack;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * An {@link ActionInvocation} represents the execution state of an {@link Action}. It holds the Interceptors and the Action instance.
@@ -36,7 +37,7 @@ public interface ActionInvocation {
      *
      * @return the Action
      */
-    Object getAction();
+    @RUntainted Object getAction();
 
     /**
      * Gets whether this ActionInvocation has executed before.

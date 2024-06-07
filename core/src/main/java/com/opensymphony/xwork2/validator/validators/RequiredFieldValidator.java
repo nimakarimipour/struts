@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.validator.ValidationException;
 
 import java.lang.reflect.Array;
 import java.util.Collection;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->

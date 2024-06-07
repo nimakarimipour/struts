@@ -34,6 +34,7 @@ import java.net.URL;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Properties;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class StrutsConversionPropertiesProcessor implements ConversionPropertiesProcessor, EarlyInitializable {
 

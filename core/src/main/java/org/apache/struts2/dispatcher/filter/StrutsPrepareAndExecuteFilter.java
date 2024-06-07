@@ -39,6 +39,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 import java.util.regex.Pattern;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Handles both the preparation and execution phases of the Struts dispatching process.  This filter is better to use
@@ -52,7 +53,7 @@ public class StrutsPrepareAndExecuteFilter implements StrutsStatics, Filter {
     protected ExecuteOperations execute;
     protected List<Pattern> excludedPatterns;
 
-    public void init(FilterConfig filterConfig) throws ServletException {
+    public void init(@RUntainted FilterConfig filterConfig) throws ServletException {
         InitOperations init = createInitOperations();
         Dispatcher dispatcher = null;
         try {
