@@ -23,6 +23,7 @@ import ognl.OgnlException;
 import ognl.OgnlRuntime;
 
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Mocks the function of an ObjectTypeDeterminer for testing purposes.

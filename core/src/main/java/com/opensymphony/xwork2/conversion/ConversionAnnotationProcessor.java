@@ -21,6 +21,7 @@ package com.opensymphony.xwork2.conversion;
 import com.opensymphony.xwork2.conversion.annotations.TypeConversion;
 
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Used to process {@link com.opensymphony.xwork2.conversion.annotations.TypeConversion}

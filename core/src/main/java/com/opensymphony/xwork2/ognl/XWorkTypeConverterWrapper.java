@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.conversion.TypeConverter;
 
 import java.lang.reflect.Member;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Wraps an OGNL TypeConverter as an XWork TypeConverter

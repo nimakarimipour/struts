@@ -23,6 +23,7 @@ import ognl.OgnlException;
 import org.apache.struts2.dispatcher.HttpParameters;
 
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class HttpParametersPropertyAccessor extends ObjectPropertyAccessor {
 

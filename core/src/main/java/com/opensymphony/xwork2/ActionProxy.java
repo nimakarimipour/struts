@@ -19,6 +19,7 @@
 package com.opensymphony.xwork2;
 
 import com.opensymphony.xwork2.config.entities.ActionConfig;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * ActionProxy is an extra layer between XWork and the action so that different proxies are possible.

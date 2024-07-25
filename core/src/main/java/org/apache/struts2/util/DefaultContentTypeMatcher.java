@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.util.PatternMatcher;
 import com.opensymphony.xwork2.util.WildcardHelper;
 
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class DefaultContentTypeMatcher implements ContentTypeMatcher<int[]> {
 
