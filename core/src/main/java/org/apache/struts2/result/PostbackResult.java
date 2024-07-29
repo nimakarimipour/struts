@@ -30,6 +30,7 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: description -->
@@ -84,7 +85,7 @@ public class PostbackResult extends StrutsResultSupport {
     protected ActionMapper actionMapper;
 
     @Override
-    protected void doExecute(String finalLocation, ActionInvocation invocation) throws Exception {
+    protected void doExecute(@RUntainted String finalLocation, ActionInvocation invocation) throws Exception {
         ActionContext ctx = invocation.getInvocationContext();
         HttpServletRequest request = ctx.getServletRequest();
         HttpServletResponse response = ctx.getServletResponse();

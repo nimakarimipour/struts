@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.util.ValueStack;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Provides Freemarker implementation classes for a tag library

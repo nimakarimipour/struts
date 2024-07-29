@@ -28,6 +28,7 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: description -->
@@ -86,7 +87,7 @@ public class HttpHeaderResult implements Result {
     private Map<String, String> headers;
     private int status = -1;
     private String error = null;
-    private String errorMessage;
+    private @RUntainted String errorMessage;
 
     public HttpHeaderResult() {
         super();
@@ -115,7 +116,7 @@ public class HttpHeaderResult implements Result {
      * @param errorMessage error message send to the client
      * @see javax.servlet.http.HttpServletResponse#sendError(int, String)
      */
-    public void setErrorMessage(String errorMessage) {
+    public void setErrorMessage(@RUntainted String errorMessage) {
         this.errorMessage = errorMessage;
     }
 

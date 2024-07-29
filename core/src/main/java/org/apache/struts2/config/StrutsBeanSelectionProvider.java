@@ -74,6 +74,7 @@ import org.apache.struts2.url.UrlEncoder;
 import org.apache.struts2.util.ContentTypeMatcher;
 import org.apache.struts2.views.freemarker.FreemarkerManager;
 import org.apache.struts2.views.util.UrlHelper;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Selects the implementations of key framework extension points, using the loaded

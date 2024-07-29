@@ -21,6 +21,7 @@ package com.opensymphony.xwork2;
 import com.opensymphony.xwork2.inject.Inject;
 
 import java.util.ResourceBundle;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * This factory enables users to provide and correctly initialize a custom TextProvider.

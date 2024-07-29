@@ -17,6 +17,7 @@
  * under the License.
  */
 package org.apache.struts2.dispatcher.multipart;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Virtual representation of a uploaded file used by {@link MultiPartRequest}
@@ -31,7 +32,7 @@ public interface UploadedFile {
 
     boolean delete();
 
-    String getAbsolutePath();
+    @RUntainted String getAbsolutePath();
 
     Object getContent();
 

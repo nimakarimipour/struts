@@ -27,6 +27,7 @@ import org.apache.struts2.components.template.TemplateEngine;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * When loading a template, if sees theme token in path, does a template search through
