@@ -19,6 +19,7 @@
 package com.opensymphony.xwork2.validator;
 
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * ActionValidatorManager is the main interface for validation managers (regular and annotation based).

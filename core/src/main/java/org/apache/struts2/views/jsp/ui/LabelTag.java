@@ -24,6 +24,7 @@ import org.apache.struts2.components.Label;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Label
@@ -35,7 +36,7 @@ public class LabelTag extends AbstractUITag {
     protected String forAttr;
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new Label(stack, req, res);
     }
 

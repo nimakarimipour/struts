@@ -24,6 +24,7 @@ import org.apache.struts2.views.annotations.StrutsTag;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -46,7 +47,7 @@ public class DoubleSelect extends DoubleListUIBean {
     final public static String TEMPLATE = "doubleselect";
 
 
-    public DoubleSelect(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    public DoubleSelect(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack, request, response);
     }
 

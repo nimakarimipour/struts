@@ -41,6 +41,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.regex.Pattern;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -525,7 +526,7 @@ public class DefaultActionMapper implements ActionMapper {
      *
      * @see org.apache.struts2.dispatcher.mapper.ActionMapper#getUriFromActionMapping(org.apache.struts2.dispatcher.mapper.ActionMapping)
      */
-    public String getUriFromActionMapping(ActionMapping mapping) {
+    public @RUntainted String getUriFromActionMapping(ActionMapping mapping) {
         StringBuilder uri = new StringBuilder();
 
         handleNamespace(mapping, uri);

@@ -44,6 +44,7 @@ import java.util.List;
 import java.util.Map;
 
 import static javax.servlet.http.HttpServletResponse.SC_FOUND;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Calls the {@link HttpServletResponse#sendRedirect(String) sendRedirect}
@@ -92,7 +93,7 @@ public class ServletRedirectResult extends StrutsResultSupport implements Reflec
     protected int statusCode = SC_FOUND;
     protected boolean suppressEmptyParameters = false;
     protected Map<String, Object> requestParameters = new LinkedHashMap<>();
-    protected String anchor;
+    protected @RUntainted String anchor;
 
     private QueryStringBuilder queryStringBuilder;
 
@@ -100,11 +101,11 @@ public class ServletRedirectResult extends StrutsResultSupport implements Reflec
         super();
     }
 
-    public ServletRedirectResult(String location) {
+    public ServletRedirectResult(@RUntainted String location) {
         this(location, null);
     }
 
-    public ServletRedirectResult(String location, String anchor) {
+    public ServletRedirectResult(@RUntainted String location, @RUntainted String anchor) {
         super(location);
         this.anchor = anchor;
     }
@@ -128,7 +129,7 @@ public class ServletRedirectResult extends StrutsResultSupport implements Reflec
      *
      * @param anchor the anchor value
      */
-    public void setAnchor(String anchor) {
+    public void setAnchor(@RUntainted String anchor) {
         this.anchor = anchor;
     }
 
@@ -161,7 +162,7 @@ public class ServletRedirectResult extends StrutsResultSupport implements Reflec
      * @param invocation    an encapsulation of the action execution state.
      * @throws Exception if an error occurs when redirecting.
      */
-    protected void doExecute(String finalLocation, ActionInvocation invocation) throws Exception {
+    protected void doExecute(@RUntainted String finalLocation, ActionInvocation invocation) throws Exception {
         ActionContext ctx = invocation.getInvocationContext();
         HttpServletRequest request = ctx.getServletRequest();
         HttpServletResponse response = ctx.getServletResponse();
@@ -239,7 +240,7 @@ public class ServletRedirectResult extends StrutsResultSupport implements Reflec
      * @param finalLocation The location URI
      * @throws IOException in case of IO errors
      */
-    protected void sendRedirect(HttpServletResponse response, String finalLocation) throws IOException {
+    protected void sendRedirect(HttpServletResponse response, @RUntainted String finalLocation) throws IOException {
         try {
             if (SC_FOUND == statusCode) {
                 response.sendRedirect(finalLocation);

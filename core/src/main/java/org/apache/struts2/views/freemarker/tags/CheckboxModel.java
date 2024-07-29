@@ -24,12 +24,13 @@ import org.apache.struts2.components.Component;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Checkbox
  */
 public class CheckboxModel extends TagModel {
-    public CheckboxModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public CheckboxModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

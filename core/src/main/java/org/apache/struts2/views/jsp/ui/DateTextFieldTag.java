@@ -24,6 +24,7 @@ import org.apache.struts2.components.DateTextField;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see DateTextField
@@ -35,7 +36,7 @@ public class DateTextFieldTag extends AbstractUITag {
     protected String format;
     
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new DateTextField(stack, req, res);
     }
 

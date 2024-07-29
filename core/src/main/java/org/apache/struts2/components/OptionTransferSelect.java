@@ -29,6 +29,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -125,7 +126,7 @@ public class OptionTransferSelect extends DoubleListUIBean {
     protected String upDownOnRightOnclick;
 
 
-    public OptionTransferSelect(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    public OptionTransferSelect(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack, request, response);
     }
 

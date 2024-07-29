@@ -31,6 +31,7 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -131,7 +132,7 @@ public class AppendIterator extends ContextBean implements UnnamedParametric {
         return super.start(writer);
     }
 
-    public boolean end(Writer writer, String body) {
+    public boolean end(Writer writer, @RUntainted String body) {
 
         for (Iterator paramEntries = _parameters.iterator(); paramEntries.hasNext(); ) {
 

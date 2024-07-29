@@ -24,6 +24,7 @@ import org.apache.struts2.views.annotations.StrutsTagAttribute;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -54,7 +55,7 @@ public class TextArea extends UIBean {
     protected String maxlength;
     protected String minlength;
 
-    public TextArea(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    public TextArea(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack, request, response);
     }
 

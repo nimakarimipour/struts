@@ -28,6 +28,7 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: description -->
@@ -78,7 +79,7 @@ public class CookieProviderInterceptor extends AbstractInterceptor implements Pr
      * @param response current {@link HttpServletResponse}
      */
     protected void addCookiesToResponse(CookieProvider action, HttpServletResponse response) {
-        Set<Cookie> cookies = action.getCookies();
+        Set<@RUntainted Cookie> cookies = action.getCookies();
         if (cookies != null) {
             for (Cookie cookie : cookies) {
                 if (LOG.isDebugEnabled()) {

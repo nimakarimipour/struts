@@ -21,6 +21,7 @@ package org.apache.struts2.dispatcher.mapper;
 import com.opensymphony.xwork2.config.ConfigurationManager;
 
 import javax.servlet.http.HttpServletRequest;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -73,5 +74,5 @@ public interface ActionMapper {
      * @param mapping The action mapping
      * @return The URI string that represents this mapping
      */
-    String getUriFromActionMapping(ActionMapping mapping);
+    @RUntainted String getUriFromActionMapping(ActionMapping mapping);
 }

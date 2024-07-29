@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.util.ValueStack;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Provides @s.tag access for various tags.
@@ -30,7 +31,7 @@ import javax.servlet.http.HttpServletResponse;
 public class StrutsModels {
     protected ValueStack stack;
     protected HttpServletRequest req;
-    protected HttpServletResponse res;
+    protected @RUntainted HttpServletResponse res;
 
     protected ActionModel action;
     protected BeanModel bean;
@@ -77,7 +78,7 @@ public class StrutsModels {
     protected LinkModel link;
 
 
-    public StrutsModels(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public StrutsModels(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         this.stack = stack;
         this.req = req;
         this.res = res;

@@ -30,6 +30,7 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: description -->
@@ -75,16 +76,16 @@ public class PostbackResult extends StrutsResultSupport {
 
     private static final long serialVersionUID = -2283504349296877429L;
 
-    private String actionName;
-    private String namespace;
-    private String method;
+    private @RUntainted String actionName;
+    private @RUntainted String namespace;
+    private @RUntainted String method;
     private boolean prependServletContext = true;
     private boolean cache = true;
 
     protected ActionMapper actionMapper;
 
     @Override
-    protected void doExecute(String finalLocation, ActionInvocation invocation) throws Exception {
+    protected void doExecute(@RUntainted String finalLocation, ActionInvocation invocation) throws Exception {
         ActionContext ctx = invocation.getInvocationContext();
         HttpServletRequest request = ctx.getServletRequest();
         HttpServletResponse response = ctx.getServletResponse();
@@ -130,7 +131,7 @@ public class PostbackResult extends StrutsResultSupport {
         return !name.startsWith("action:");
     }
 
-    protected String makePostbackUri(ActionInvocation invocation) {
+    protected @RUntainted String makePostbackUri(ActionInvocation invocation) {
         ActionContext ctx = invocation.getInvocationContext();
         HttpServletRequest request = ctx.getServletRequest();
         String postbackUri;
@@ -174,7 +175,7 @@ public class PostbackResult extends StrutsResultSupport {
      *
      * @param actionName the action name
      */
-    public final void setActionName(String actionName) {
+    public final void setActionName(@RUntainted String actionName) {
         this.actionName = actionName;
     }
 
@@ -193,7 +194,7 @@ public class PostbackResult extends StrutsResultSupport {
      *
      * @param method the method
      */
-    public final void setMethod(String method) {
+    public final void setMethod(@RUntainted String method) {
         this.method = method;
     }
 
@@ -202,7 +203,7 @@ public class PostbackResult extends StrutsResultSupport {
      *
      * @param namespace the namespace
      */
-    public final void setNamespace(String namespace) {
+    public final void setNamespace(@RUntainted String namespace) {
         this.namespace = namespace;
     }
 

@@ -24,6 +24,7 @@ import org.apache.struts2.views.annotations.StrutsTagAttribute;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -88,7 +89,7 @@ public class Select extends ListUIBean {
     protected String multiple;
     protected String size;
 
-    public Select(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    public Select(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack, request, response);
     }
 

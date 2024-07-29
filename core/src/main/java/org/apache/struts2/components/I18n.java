@@ -33,6 +33,7 @@ import org.apache.struts2.views.annotations.StrutsTagAttribute;
 
 import java.io.Writer;
 import java.util.ResourceBundle;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -140,7 +141,7 @@ public class I18n extends Component {
         return result;
     }
 
-    public boolean end(Writer writer, String body) throws StrutsException {
+    public boolean end(Writer writer, @RUntainted String body) throws StrutsException {
         if (pushed) {
             Object o = getStack().pop();
             if ((o == null) || (!o.equals(textProvider))) {

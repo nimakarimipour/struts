@@ -27,6 +27,7 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletResponse;
 import java.io.InputStream;
 import java.io.OutputStream;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A custom Result type for sending raw data (via an InputStream) directly to the
@@ -78,11 +79,11 @@ public class StreamResult extends StrutsResultSupport {
 
     public static final String DEFAULT_PARAM = "inputName";
 
-    protected String contentType = "text/plain";
-    protected String contentLength;
-    protected String contentDisposition = "inline";
-    protected String contentCharSet;
-    protected String inputName = "inputStream";
+    protected @RUntainted String contentType = "text/plain";
+    protected @RUntainted String contentLength;
+    protected @RUntainted String contentDisposition = "inline";
+    protected @RUntainted String contentCharSet;
+    protected @RUntainted String inputName = "inputStream";
     protected InputStream inputStream;
     protected int bufferSize = 1024;
     protected boolean allowCaching = true;
@@ -144,7 +145,7 @@ public class StreamResult extends StrutsResultSupport {
     /**
      * @param contentType The contentType to set.
      */
-    public void setContentType(String contentType) {
+    public void setContentType(@RUntainted String contentType) {
         this.contentType = contentType;
     }
 
@@ -158,7 +159,7 @@ public class StreamResult extends StrutsResultSupport {
     /**
      * @param contentLength The contentLength to set.
      */
-    public void setContentLength(String contentLength) {
+    public void setContentLength(@RUntainted String contentLength) {
         this.contentLength = contentLength;
     }
 
@@ -172,7 +173,7 @@ public class StreamResult extends StrutsResultSupport {
     /**
      * @param contentDisposition the Content-disposition header value to use.
      */
-    public void setContentDisposition(String contentDisposition) {
+    public void setContentDisposition(@RUntainted String contentDisposition) {
         this.contentDisposition = contentDisposition;
     }
 
@@ -186,7 +187,7 @@ public class StreamResult extends StrutsResultSupport {
     /**
      * @param contentCharSet the charset to use on the header when sending the stream
      */
-    public void setContentCharSet(String contentCharSet) {
+    public void setContentCharSet(@RUntainted String contentCharSet) {
         this.contentCharSet = contentCharSet;
     }
 
@@ -200,7 +201,7 @@ public class StreamResult extends StrutsResultSupport {
     /**
      * @param inputName The inputName to set.
      */
-    public void setInputName(String inputName) {
+    public void setInputName(@RUntainted String inputName) {
         this.inputName = inputName;
     }
 

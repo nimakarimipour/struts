@@ -24,6 +24,7 @@ import org.apache.struts2.views.annotations.StrutsTagAttribute;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -86,7 +87,7 @@ public abstract class DoubleListUIBean extends ListUIBean {
     protected String doubleAccesskey;
 
 
-    public DoubleListUIBean(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    public DoubleListUIBean(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack, request, response);
     }
 

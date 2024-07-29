@@ -24,12 +24,13 @@ import org.apache.struts2.components.Push;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Push
  */
 public class PushModel extends TagModel {
-    public PushModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public PushModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

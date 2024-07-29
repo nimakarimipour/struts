@@ -24,12 +24,13 @@ import org.apache.struts2.components.URL;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see URL
  */
 public class URLModel extends TagModel {
-    public URLModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public URLModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

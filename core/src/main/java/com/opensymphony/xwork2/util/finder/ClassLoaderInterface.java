@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.Enumeration;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Classes implementing this interface can find resources and load classes, usually delegating to a class
@@ -32,11 +33,11 @@ public interface ClassLoaderInterface {
     //key used to add the current ClassLoaderInterface to ActionContext
     public final String CLASS_LOADER_INTERFACE = "__current_class_loader_interface";
 
-    Class<?> loadClass(String name) throws ClassNotFoundException;
+    Class<?> loadClass(@RUntainted String name) throws ClassNotFoundException;
 
     URL getResource(String name);
 
-    public Enumeration<URL> getResources(String name) throws IOException;
+    public Enumeration<@RUntainted URL> getResources(@RUntainted String name) throws IOException;
 
     public InputStream getResourceAsStream(String name) throws IOException;
 

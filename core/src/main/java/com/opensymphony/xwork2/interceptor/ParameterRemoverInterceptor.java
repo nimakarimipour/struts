@@ -29,6 +29,7 @@ import org.apache.struts2.dispatcher.Parameter;
 
 import java.util.Collections;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * This is a simple XWork interceptor that allows parameters (matching

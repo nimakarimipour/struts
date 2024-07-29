@@ -24,6 +24,7 @@ import org.apache.struts2.components.URL;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see URL
@@ -48,7 +49,7 @@ public class URLTag extends ContextBeanTag {
     protected String forceAddSchemeHostAndPort;
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new URL(stack, req, res);
     }
 

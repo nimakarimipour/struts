@@ -33,6 +33,7 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.jsp.PageContext;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: description -->
@@ -104,7 +105,7 @@ public class ServletDispatcherResult extends StrutsResultSupport {
         super();
     }
 
-    public ServletDispatcherResult(String location) {
+    public ServletDispatcherResult(@RUntainted String location) {
         super(location);
     }
 
@@ -122,7 +123,7 @@ public class ServletDispatcherResult extends StrutsResultSupport {
      * @throws Exception if an error occurs. If the dispatch fails the error will go back via the
      *                   HTTP request.
      */
-    public void doExecute(String finalLocation, ActionInvocation invocation) throws Exception {
+    public void doExecute(@RUntainted String finalLocation, ActionInvocation invocation) throws Exception {
         LOG.debug("Forwarding to location: {}", finalLocation);
 
         PageContext pageContext = ServletActionContext.getPageContext();

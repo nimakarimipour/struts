@@ -30,6 +30,7 @@ import java.lang.reflect.Array;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -58,7 +59,7 @@ public abstract class ListUIBean extends UIBean {
     // indicate if an exception is to be thrown when value attribute is null
     protected boolean throwExceptionOnNullValueAttribute = false;
 
-    protected ListUIBean(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    protected ListUIBean(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack, request, response);
     }
 

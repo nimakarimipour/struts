@@ -24,6 +24,7 @@ import org.apache.struts2.components.Date;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <code>DateModel</code>
@@ -31,7 +32,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class DateModel extends TagModel {
 
-    public DateModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public DateModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

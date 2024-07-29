@@ -24,6 +24,7 @@ import org.apache.struts2.components.Head;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Head
@@ -33,7 +34,7 @@ public class HeadTag extends AbstractUITag {
     private static final long serialVersionUID = 6876765769175246030L;
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new Head(stack, req, res);
     }
 

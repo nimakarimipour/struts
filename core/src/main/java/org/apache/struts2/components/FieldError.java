@@ -27,6 +27,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -90,7 +91,7 @@ public class FieldError extends UIBean implements UnnamedParametric {
     private List<String> errorFieldNames = new ArrayList<>();
     private boolean escape = true;
 
-    public FieldError(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    public FieldError(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack, request, response);
     }
 

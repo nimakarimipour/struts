@@ -27,6 +27,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Collection;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -57,7 +58,7 @@ public class ActionError extends UIBean {
     public static final String TEMPLATE = "actionerror";
     private boolean escape = true;
 
-    public ActionError(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    public ActionError(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack, request, response);
     }
 

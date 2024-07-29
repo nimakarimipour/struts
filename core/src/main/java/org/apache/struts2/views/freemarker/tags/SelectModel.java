@@ -24,12 +24,13 @@ import org.apache.struts2.components.Select;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Select
  */
 public class SelectModel extends TagModel {
-    public SelectModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public SelectModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

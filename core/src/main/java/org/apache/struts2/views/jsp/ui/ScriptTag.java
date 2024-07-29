@@ -24,6 +24,7 @@ import org.apache.struts2.components.Script;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Script
@@ -41,7 +42,7 @@ public class ScriptTag extends AbstractUITag {
     protected String crossorigin;
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new Script(stack, req, res);
     }
 

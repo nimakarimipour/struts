@@ -24,6 +24,7 @@ import org.apache.struts2.components.Radio;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Radio
@@ -33,7 +34,7 @@ public class RadioTag extends AbstractRequiredListTag {
     private static final long serialVersionUID = -6497403399521333624L;
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new Radio(stack, req, res);
     }
 

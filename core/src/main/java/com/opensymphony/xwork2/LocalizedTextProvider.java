@@ -23,6 +23,7 @@ import com.opensymphony.xwork2.util.ValueStack;
 import java.io.Serializable;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public interface LocalizedTextProvider extends Serializable {
 

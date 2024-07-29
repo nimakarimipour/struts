@@ -24,6 +24,7 @@ import org.apache.struts2.components.Component;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see CheckboxList
@@ -33,7 +34,7 @@ public class CheckboxListTag extends AbstractRequiredListTag {
     private static final long serialVersionUID = 4023034029558150010L;
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new CheckboxList(stack, req, res);
     }
 

@@ -24,6 +24,7 @@ import org.apache.struts2.components.Component;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * ActionMessage Tag.
@@ -36,7 +37,7 @@ public class ActionMessageTag extends AbstractUITag {
     private boolean escape = true;
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new ActionMessage(stack, req, res);
     }
 

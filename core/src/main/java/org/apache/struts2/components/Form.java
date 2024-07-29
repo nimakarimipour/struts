@@ -45,6 +45,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -119,7 +120,7 @@ public class Form extends ClosingUIBean {
     protected UrlRenderer urlRenderer;
     protected ActionValidatorManager actionValidatorManager;
 
-    public Form(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    public Form(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack, request, response);
     }
 

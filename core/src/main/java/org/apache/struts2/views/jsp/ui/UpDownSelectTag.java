@@ -24,6 +24,7 @@ import org.apache.struts2.components.UpDownSelect;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see UpDownSelect
@@ -42,7 +43,7 @@ public class UpDownSelectTag extends SelectTag {
 
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new UpDownSelect(stack, req, res);
     }
 

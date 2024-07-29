@@ -24,13 +24,14 @@ import org.apache.struts2.components.ElseIf;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @version $Date$ $Id$
  */
 public class ElseIfModel extends TagModel {
 
-    public ElseIfModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public ElseIfModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

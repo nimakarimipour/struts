@@ -24,6 +24,7 @@ import org.apache.struts2.components.If;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @version $Date$ $Id$
@@ -31,7 +32,7 @@ import javax.servlet.http.HttpServletResponse;
 public class IfModel extends TagModel {
 
 
-    public IfModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public IfModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

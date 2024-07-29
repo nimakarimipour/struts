@@ -24,6 +24,7 @@ import org.apache.struts2.components.Set;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Set
@@ -67,7 +68,7 @@ public class SetTag extends ContextBeanTag {
 }
 
     @Override
-    protected String getBody() {
+    protected @RUntainted String getBody() {
         if (trimBody) {
             if (bodyContent == null) {
                 return null;

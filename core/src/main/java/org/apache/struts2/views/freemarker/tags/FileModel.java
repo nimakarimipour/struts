@@ -24,12 +24,13 @@ import org.apache.struts2.components.File;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see File
  */
 public class FileModel extends TagModel {
-    public FileModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public FileModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

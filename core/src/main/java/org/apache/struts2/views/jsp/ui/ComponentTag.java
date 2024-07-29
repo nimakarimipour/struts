@@ -24,6 +24,7 @@ import org.apache.struts2.components.GenericUIBean;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see GenericUIBean
@@ -33,7 +34,7 @@ public class ComponentTag extends AbstractUITag {
     private static final long serialVersionUID = 5448365363044104731L;
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new GenericUIBean(stack, req, res);
     }
 

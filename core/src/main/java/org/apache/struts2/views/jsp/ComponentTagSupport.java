@@ -25,13 +25,14 @@ import org.apache.struts2.components.Component;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.jsp.JspException;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  */
 public abstract class ComponentTagSupport extends StrutsBodyTagSupport {
     protected Component component;
 
-    public abstract Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res);
+    public abstract Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res);
 
     @Override
     public int doEndTag() throws JspException {

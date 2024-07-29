@@ -27,6 +27,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Collection;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -55,7 +56,7 @@ public class ActionMessage extends UIBean {
     private static final String TEMPLATE = "actionmessage";
     protected boolean escape = true;
 
-    public ActionMessage(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    public ActionMessage(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack, request, response);
     }
 

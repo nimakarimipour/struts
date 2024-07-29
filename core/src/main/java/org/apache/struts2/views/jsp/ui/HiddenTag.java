@@ -24,6 +24,7 @@ import org.apache.struts2.components.Hidden;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Hidden
@@ -33,7 +34,7 @@ public class HiddenTag extends AbstractUITag {
     private static final long serialVersionUID = -1124367972048371675L;
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new Hidden(stack, req, res);
     }
 

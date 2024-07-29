@@ -25,13 +25,14 @@ import org.apache.struts2.components.Component;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  */
 public class CallbackWriter extends Writer implements TransformControl {
     private Component bean;
     private Writer writer;
-    private StringWriter body;
+    private @RUntainted StringWriter body;
     private boolean afterBody = false;
 
     public CallbackWriter(Component bean, Writer writer) {
@@ -57,7 +58,7 @@ public class CallbackWriter extends Writer implements TransformControl {
         }
     }
 
-    public void write(char cbuf[], int off, int len) throws IOException {
+    public void write(@RUntainted char cbuf[], int off, int len) throws IOException {
         if (bean.usesBody() && !afterBody) {
             body.write(cbuf, off, len);
         } else {

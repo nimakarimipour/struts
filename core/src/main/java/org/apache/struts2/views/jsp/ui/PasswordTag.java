@@ -24,6 +24,7 @@ import org.apache.struts2.components.Password;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Password
@@ -35,7 +36,7 @@ public class PasswordTag extends TextFieldTag {
     protected String showPassword;
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new Password(stack, req, res);
     }
 

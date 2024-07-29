@@ -24,6 +24,7 @@ import org.apache.struts2.components.OptionTransferSelect;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * OptionTransferSelect jsp tag.
@@ -66,7 +67,7 @@ public class OptionTransferSelectTag extends AbstractDoubleListTag {
 
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new OptionTransferSelect(stack, req, res);
     }
 

@@ -46,6 +46,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -444,9 +445,9 @@ public abstract class UIBean extends Component {
     protected static final String ATTR_VALUE = "value";
 
     protected HttpServletRequest request;
-    protected HttpServletResponse response;
+    protected @RUntainted HttpServletResponse response;
 
-    public UIBean(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    public UIBean(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack);
         this.request = request;
         this.response = response;
@@ -546,7 +547,7 @@ public abstract class UIBean extends Component {
     }
 
     @Override
-    public boolean end(Writer writer, String body) {
+    public boolean end(Writer writer, @RUntainted String body) {
         evaluateParams();
         try {
             super.end(writer, body, false);

@@ -24,6 +24,7 @@ import org.apache.struts2.components.File;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see File
@@ -36,7 +37,7 @@ public class FileTag extends AbstractUITag {
     protected String size;
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new File(stack, req, res);
     }
 

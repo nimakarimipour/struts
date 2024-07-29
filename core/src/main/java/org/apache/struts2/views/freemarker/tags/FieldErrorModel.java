@@ -24,12 +24,13 @@ import org.apache.struts2.components.FieldError;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see FieldError
  */
 public class FieldErrorModel extends TagModel {
-    public FieldErrorModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public FieldErrorModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

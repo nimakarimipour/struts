@@ -66,6 +66,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -168,10 +169,10 @@ public class FreemarkerManager {
 
 
 
-    protected String templatePath;
+    protected @RUntainted String templatePath;
     protected boolean nocache;
     protected boolean debug;
-    protected Configuration config;
+    protected @RUntainted Configuration config;
     protected ObjectWrapper wrapper;
     protected String contentType = null;
     protected boolean noCharsetInContentType = true;
@@ -259,7 +260,7 @@ public class FreemarkerManager {
         return contentType;
     }
 
-    public synchronized Configuration getConfiguration(ServletContext servletContext) {
+    public synchronized @RUntainted Configuration getConfiguration(@RUntainted ServletContext servletContext) {
         if (config == null) {
             try {
                 init(servletContext);
@@ -272,7 +273,7 @@ public class FreemarkerManager {
         return config;
     }
 
-    public void init(ServletContext servletContext) throws TemplateException {
+    public void init(@RUntainted ServletContext servletContext) throws TemplateException {
         config = createConfiguration(servletContext);
 
         // Set defaults:
@@ -325,7 +326,7 @@ public class FreemarkerManager {
      * @return a instance of the freemarker configuration object
      * @throws TemplateException in case of errors during creating the configuration
      */
-    protected Configuration createConfiguration(ServletContext servletContext) throws TemplateException {
+    protected @RUntainted Configuration createConfiguration(@RUntainted ServletContext servletContext) throws TemplateException {
         Version incompatibleImprovements = getFreemarkerVersion(servletContext);
 
         Configuration configuration = new Configuration(incompatibleImprovements);
@@ -357,7 +358,7 @@ public class FreemarkerManager {
         return configuration;
     }
 
-    protected Version getFreemarkerVersion(ServletContext servletContext) {
+    protected @RUntainted Version getFreemarkerVersion(@RUntainted ServletContext servletContext) {
         Version incompatibleImprovements = Configuration.VERSION_2_3_28;
 
         String incompatibleImprovementsParam = servletContext.getInitParameter("freemarker." + Configuration.INCOMPATIBLE_IMPROVEMENTS_KEY_SNAKE_CASE);
@@ -423,7 +424,7 @@ public class FreemarkerManager {
         return model;
     }
 
-    protected ObjectWrapper createObjectWrapper(ServletContext servletContext) {
+    protected ObjectWrapper createObjectWrapper(@RUntainted ServletContext servletContext) {
         Version incompatibleImprovements = getFreemarkerVersion(servletContext);
         StrutsBeanWrapper wrapper = new StrutsBeanWrapper(altMapWrapper, incompatibleImprovements);
         wrapper.setUseCache(cacheBeanWrapper);
@@ -441,7 +442,7 @@ public class FreemarkerManager {
      * @param templatePath the template path to create a loader for
      * @return a newly created template loader
      */
-    protected TemplateLoader createTemplateLoader(ServletContext servletContext, String templatePath) {
+    protected TemplateLoader createTemplateLoader(ServletContext servletContext, @RUntainted String templatePath) {
         TemplateLoader templatePathLoader = null;
 
          try {
@@ -539,7 +540,7 @@ public class FreemarkerManager {
 
 
 
-    public ScopesHashModel buildTemplateModel(ValueStack stack, Object action, ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, ObjectWrapper wrapper) {
+    public ScopesHashModel buildTemplateModel(ValueStack stack, Object action, ServletContext servletContext, HttpServletRequest request, @RUntainted HttpServletResponse response, ObjectWrapper wrapper) {
         ScopesHashModel model = buildScopesHashModel(servletContext, request, response, wrapper, stack);
         populateContext(model, stack, action, request, response);
         if (tagLibraries != null) {
@@ -555,7 +556,7 @@ public class FreemarkerManager {
     }
 
 
-    protected void populateContext(ScopesHashModel model, ValueStack stack, Object action, HttpServletRequest request, HttpServletResponse response) {
+    protected void populateContext(ScopesHashModel model, ValueStack stack, Object action, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         // put the same objects into the context that the velocity result uses
         Map standard = ContextUtil.getStandardContext(stack, request, response);
         model.putAll(standard);

@@ -29,6 +29,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Simple Restfull Action Mapper to support REST application
@@ -99,7 +100,7 @@ public class RestfulActionMapper implements ActionMapper {
     /* (non-Javadoc)
      * @see org.apache.struts2.dispatcher.mapper.ActionMapper#getUriFromActionMapping(org.apache.struts2.dispatcher.mapper.ActionMapping)
      */
-    public String getUriFromActionMapping(ActionMapping mapping) {
+    public @RUntainted String getUriFromActionMapping(ActionMapping mapping) {
         StringBuilder retVal = new StringBuilder();
         retVal.append(mapping.getNamespace());
         retVal.append(mapping.getName());

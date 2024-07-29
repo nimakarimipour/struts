@@ -25,6 +25,7 @@ import org.apache.struts2.views.annotations.StrutsTag;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -53,7 +54,7 @@ public class Token extends UIBean {
 
     public static final String TEMPLATE = "token";
 
-    public Token(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    public Token(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack, request, response);
     }
 

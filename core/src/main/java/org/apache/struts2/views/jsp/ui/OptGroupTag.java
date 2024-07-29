@@ -25,6 +25,7 @@ import org.apache.struts2.views.jsp.ComponentTagSupport;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class OptGroupTag extends ComponentTagSupport {
 
@@ -40,7 +41,7 @@ public class OptGroupTag extends ComponentTagSupport {
     protected String listTitle;
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new OptGroup(stack, req, res);
     }
 

@@ -19,6 +19,7 @@
 package org.apache.struts2.components;
 
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public interface ExtraParameterProvider {
 

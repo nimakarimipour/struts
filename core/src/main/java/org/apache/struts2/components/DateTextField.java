@@ -24,6 +24,7 @@ import org.apache.struts2.views.annotations.StrutsTagAttribute;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 @StrutsTag(
     name="datetextfield",
@@ -38,7 +39,7 @@ public class DateTextField extends UIBean {
     
     protected String format;
 
-    public DateTextField(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    public DateTextField(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack, request, response);
     }
 
