@@ -17,6 +17,7 @@
  * under the License.
  */
 package com.opensymphony.xwork2.util.location;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Base class for location aware objects

@@ -66,6 +66,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -168,7 +169,7 @@ public class FreemarkerManager {
 
 
 
-    protected String templatePath;
+    protected @RUntainted String templatePath;
     protected boolean nocache;
     protected boolean debug;
     protected Configuration config;
@@ -259,7 +260,7 @@ public class FreemarkerManager {
         return contentType;
     }
 
-    public synchronized Configuration getConfiguration(ServletContext servletContext) {
+    public synchronized Configuration getConfiguration(@RUntainted ServletContext servletContext) {
         if (config == null) {
             try {
                 init(servletContext);
@@ -272,7 +273,7 @@ public class FreemarkerManager {
         return config;
     }
 
-    public void init(ServletContext servletContext) throws TemplateException {
+    public void init(@RUntainted ServletContext servletContext) throws TemplateException {
         config = createConfiguration(servletContext);
 
         // Set defaults:
@@ -441,7 +442,7 @@ public class FreemarkerManager {
      * @param templatePath the template path to create a loader for
      * @return a newly created template loader
      */
-    protected TemplateLoader createTemplateLoader(ServletContext servletContext, String templatePath) {
+    protected TemplateLoader createTemplateLoader(ServletContext servletContext, @RUntainted String templatePath) {
         TemplateLoader templatePathLoader = null;
 
          try {

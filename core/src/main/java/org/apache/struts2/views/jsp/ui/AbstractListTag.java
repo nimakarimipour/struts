@@ -19,6 +19,7 @@
 package org.apache.struts2.views.jsp.ui;
 
 import org.apache.struts2.components.ListUIBean;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public abstract class AbstractListTag extends AbstractUITag {
     protected String list;

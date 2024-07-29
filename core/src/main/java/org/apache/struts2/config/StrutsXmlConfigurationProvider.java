@@ -40,6 +40,7 @@ import java.util.List;
 import java.util.Map;
 
 import static java.util.Collections.unmodifiableMap;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Override Xwork class so we can use an arbitrary config file
@@ -55,7 +56,7 @@ public class StrutsXmlConfigurationProvider extends XmlConfigurationProvider {
         put("-//Apache Software Foundation//DTD Struts Configuration 2.5//EN", "struts-2.5.dtd");
         put("-//Apache Software Foundation//DTD Struts Configuration 6.0//EN", "struts-6.0.dtd");
     }});
-    private File baseDir = null;
+    private @RUntainted File baseDir = null;
     private final String filename;
     private final String reloadKey;
     private final ServletContext servletContext;
@@ -82,7 +83,7 @@ public class StrutsXmlConfigurationProvider extends XmlConfigurationProvider {
      *
      * @param filename file with Struts configuration
      */
-    public StrutsXmlConfigurationProvider(String filename) {
+    public StrutsXmlConfigurationProvider(@RUntainted String filename) {
         this(filename, null);
     }
 
@@ -92,7 +93,7 @@ public class StrutsXmlConfigurationProvider extends XmlConfigurationProvider {
      * @param filename The filename to look for
      * @param ctx Our ServletContext
      */
-    public StrutsXmlConfigurationProvider(String filename, ServletContext ctx) {
+    public StrutsXmlConfigurationProvider(@RUntainted String filename, ServletContext ctx) {
         super(filename);
         this.servletContext = ctx;
         this.filename = filename;
@@ -108,7 +109,7 @@ public class StrutsXmlConfigurationProvider extends XmlConfigurationProvider {
      * @deprecated since 6.2.0, use {@link #StrutsXmlConfigurationProvider(String, ServletContext)}
      */
     @Deprecated
-    public StrutsXmlConfigurationProvider(String filename, @Deprecated boolean errorIfMissing, ServletContext ctx) {
+    public StrutsXmlConfigurationProvider(@RUntainted String filename, @Deprecated boolean errorIfMissing, ServletContext ctx) {
         this(filename, ctx);
     }
 
@@ -147,7 +148,7 @@ public class StrutsXmlConfigurationProvider extends XmlConfigurationProvider {
      * @see com.opensymphony.xwork2.config.providers.XmlConfigurationProvider#getConfigurationUrls
      */
     @Override
-    protected Iterator<URL> getConfigurationUrls(String fileName) throws IOException {
+    protected Iterator<URL> getConfigurationUrls(@RUntainted String fileName) throws IOException {
         URL url = null;
         if (baseDir != null) {
             url = findInFileSystem(fileName);
@@ -164,7 +165,7 @@ public class StrutsXmlConfigurationProvider extends XmlConfigurationProvider {
         }
     }
 
-    protected URL findInFileSystem(String fileName) throws IOException {
+    protected URL findInFileSystem(@RUntainted String fileName) throws IOException {
         URL url = null;
         File file = new File(fileName);
         LOG.debug("Trying to load file: {}", file);

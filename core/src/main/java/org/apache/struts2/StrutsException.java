@@ -21,6 +21,7 @@ package org.apache.struts2;
 import com.opensymphony.xwork2.util.location.Locatable;
 import com.opensymphony.xwork2.util.location.Location;
 import com.opensymphony.xwork2.util.location.LocationUtils;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A generic runtime exception that optionally contains Location information

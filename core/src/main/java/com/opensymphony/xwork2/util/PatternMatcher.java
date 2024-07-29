@@ -19,6 +19,7 @@
 package com.opensymphony.xwork2.util;
 
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Compiles and matches a pattern against a value

@@ -24,6 +24,7 @@ import com.opensymphony.xwork2.ognl.OgnlUtil;
 import ognl.OgnlException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * FIXME: remove?

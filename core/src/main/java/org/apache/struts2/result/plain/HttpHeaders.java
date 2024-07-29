@@ -21,6 +21,7 @@ package org.apache.struts2.result.plain;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 class HttpHeaders {
 
@@ -28,17 +29,17 @@ class HttpHeaders {
     private final List<HttpHeader<Long>> dateHeaders = new ArrayList<>();
     private final List<HttpHeader<Integer>> intHeaders = new ArrayList<>();
 
-    public HttpHeaders add(String name, String value) {
+    public HttpHeaders add(@RUntainted String name, String value) {
         stringHeaders.add(new StringHttpHeader(name, value));
         return this;
     }
 
-    public HttpHeaders add(String name, Long value) {
+    public HttpHeaders add(@RUntainted String name, Long value) {
         dateHeaders.add(new DateHttpHeader(name, value));
         return this;
     }
 
-    public HttpHeaders add(String name, Integer value) {
+    public HttpHeaders add(@RUntainted String name, Integer value) {
         intHeaders.add(new IntHttpHeader(name, value));
         return this;
     }
