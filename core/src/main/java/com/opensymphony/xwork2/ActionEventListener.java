@@ -19,6 +19,7 @@
 package com.opensymphony.xwork2;
 
 import com.opensymphony.xwork2.util.ValueStack;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Provides hooks for handling key action events
@@ -31,7 +32,7 @@ public interface ActionEventListener {
      * @param stack The current value stack
      * @return The action to use
      */
-    public Object prepare(Object action, ValueStack stack);
+    public @RUntainted Object prepare(Object action, ValueStack stack);
     
     /**
      * Called when an exception is thrown by the action

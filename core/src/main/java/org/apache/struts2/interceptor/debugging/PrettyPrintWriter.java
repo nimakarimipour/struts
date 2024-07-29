@@ -21,30 +21,31 @@ package org.apache.struts2.interceptor.debugging;
 import java.io.PrintWriter;
 import java.io.Writer;
 import java.util.Stack;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class PrettyPrintWriter {
 
     private final PrintWriter writer;
-    private final Stack<String> elementStack = new Stack<>();
-    private final char[] lineIndenter;
+    private final Stack<@RUntainted String> elementStack = new Stack<>();
+    private final @RUntainted char[] lineIndenter;
 
     private boolean tagInProgress;
     private int depth;
     private boolean readyForNewLine;
     private boolean tagIsEmpty;
-    private String newLine;
+    private @RUntainted String newLine;
     private boolean escape = true;
 
-    private static final char[] NULL = "&#x0;".toCharArray();
-    private static final char[] AMP = "&amp;".toCharArray();
-    private static final char[] LT = "&lt;".toCharArray();
-    private static final char[] GT = "&gt;".toCharArray();
-    private static final char[] SLASH_R = "&#x0D;".toCharArray();
-    private static final char[] QUOT = "&quot;".toCharArray();
-    private static final char[] APOS = "&apos;".toCharArray();
-    private static final char[] CLOSE = "</".toCharArray();
+    private static final @RUntainted char[] NULL = "&#x0;".toCharArray();
+    private static final @RUntainted char[] AMP = "&amp;".toCharArray();
+    private static final @RUntainted char[] LT = "&lt;".toCharArray();
+    private static final @RUntainted char[] GT = "&gt;".toCharArray();
+    private static final @RUntainted char[] SLASH_R = "&#x0D;".toCharArray();
+    private static final @RUntainted char[] QUOT = "&quot;".toCharArray();
+    private static final @RUntainted char[] APOS = "&apos;".toCharArray();
+    private static final @RUntainted char[] CLOSE = "</".toCharArray();
 
-    public PrettyPrintWriter(Writer writer, char[] lineIndenter, String newLine) {
+    public PrettyPrintWriter(Writer writer, char[] lineIndenter, @RUntainted String newLine) {
         this.writer = new PrintWriter(writer);
         this.lineIndenter = lineIndenter;
         this.newLine = newLine;
@@ -54,7 +55,7 @@ public class PrettyPrintWriter {
         this(writer, lineIndenter, "\n");
     }
 
-    public PrettyPrintWriter(Writer writer, String lineIndenter, String newLine) {
+    public PrettyPrintWriter(Writer writer, String lineIndenter, @RUntainted String newLine) {
         this(writer, lineIndenter.toCharArray(), newLine);
     }
 
@@ -66,7 +67,7 @@ public class PrettyPrintWriter {
         this(writer, new char[]{' ', ' '});
     }
 
-    public void startNode(String name) {
+    public void startNode(@RUntainted String name) {
         tagIsEmpty = false;
         finishTag();
         writer.write('<');
@@ -86,7 +87,7 @@ public class PrettyPrintWriter {
         writeText(writer, text);
     }
 
-    public void addAttribute(String key, String value) {
+    public void addAttribute(@RUntainted String key, String value) {
         writer.write(' ');
         writer.write(key);
         writer.write('=');

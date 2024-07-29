@@ -27,6 +27,7 @@ import org.apache.struts2.views.annotations.StrutsTagAttribute;
 
 import java.io.IOException;
 import java.io.Writer;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -161,7 +162,7 @@ public class Property extends Component {
         return result;
     }
 
-    private String prepare(String value) {
+    private @RUntainted String prepare(String value) {
         String result = value;
         if (escapeHtml) {
             result = StringEscapeUtils.escapeHtml4(result);

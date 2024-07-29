@@ -19,6 +19,7 @@
 package org.apache.struts2.interceptor;
 
 import javax.servlet.http.HttpServletRequest;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Interface for the resource isolation policies to be used for fetch metadata checks.
@@ -39,7 +40,7 @@ public interface ResourceIsolationPolicy {
     String SEC_FETCH_MODE_HEADER = "Sec-Fetch-Mode";
     String SEC_FETCH_SITE_HEADER = "Sec-Fetch-Site";
     String SEC_FETCH_USER_HEADER = "Sec-Fetch-User";
-    String VARY_HEADER = "Vary";
+    @RUntainted String VARY_HEADER = "Vary";
     // Valid values for the SEC_FETCH_DEST_HEADER.  Note: The specifications says servers should ignore the header if it contains an invalid value.
     String DEST_AUDIO = "audio";
     String DEST_AUDIOWORKLET = "audioworklet";

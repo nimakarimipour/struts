@@ -32,6 +32,7 @@ import java.util.HashMap;
 import java.util.Vector;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * This class is an utility class that will search through the classpath
@@ -118,7 +119,7 @@ public class ClassPathFinder {
         return matches;
     }
 
-    private Vector<String> checkEntries(String[] entries, File parent, String prefix) {
+    private Vector<String> checkEntries(String[] entries, @RUntainted File parent, String prefix) {
 
         if (entries == null) {
             return null;

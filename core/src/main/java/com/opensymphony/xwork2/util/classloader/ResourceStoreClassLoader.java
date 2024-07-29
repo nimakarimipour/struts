@@ -17,6 +17,7 @@
  * under the License.
  */
 package com.opensymphony.xwork2.util.classloader;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * class taken from Apache JCI
@@ -48,7 +49,7 @@ public final class ResourceStoreClassLoader extends ClassLoader {
         return null;
     }
 
-    protected synchronized Class loadClass(String name, boolean resolve) throws ClassNotFoundException {
+    protected synchronized Class loadClass(@RUntainted String name, boolean resolve) throws ClassNotFoundException {
         Class clazz = findLoadedClass(name);
 
         if (clazz == null) {

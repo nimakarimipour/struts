@@ -42,6 +42,7 @@ import java.util.TreeSet;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.CopyOnWriteArrayList;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 abstract class AbstractLocalizedTextProvider implements LocalizedTextProvider {
 

@@ -23,6 +23,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.FileInputStream;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 
 /**
@@ -32,7 +33,7 @@ import java.io.FileInputStream;
 public final class FileResourceStore extends AbstractResourceStore {
     private static final Logger LOG = LogManager.getLogger(FileResourceStore.class);
 
-    public FileResourceStore(final File file) {
+    public FileResourceStore(final @RUntainted File file) {
         super(file);
     }
 

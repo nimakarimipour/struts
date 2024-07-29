@@ -20,6 +20,7 @@ package org.apache.struts2.interceptor.csp;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * CspSettings interface used by the {@link CspInterceptor} to add the CSP header to the response.
@@ -31,8 +32,8 @@ public interface CspSettings {
 
     int NONCE_RANDOM_LENGTH = 18;
 
-    String CSP_ENFORCE_HEADER = "Content-Security-Policy";
-    String CSP_REPORT_HEADER = "Content-Security-Policy-Report-Only";
+    @RUntainted String CSP_ENFORCE_HEADER = "Content-Security-Policy";
+    @RUntainted String CSP_REPORT_HEADER = "Content-Security-Policy-Report-Only";
     String OBJECT_SRC = "object-src";
     String SCRIPT_SRC = "script-src";
     String BASE_URI = "base-uri";

@@ -586,3 +586,295 @@
 
 2024-02-02T18:47:55.955748:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
 
+2024-07-29T10:46:49.305710:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:47:11.839866:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:47:33.022612:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:47:54.025951:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:48:15.015743:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:48:36.908602:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:48:58.414814:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:49:19.997202:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:49:41.520541:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:50:03.411408:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:50:24.764147:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:50:46.267667:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:51:08.100055:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:51:29.688814:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:51:51.044241:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:52:12.669801:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:52:34.300025:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:52:55.820697:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:53:17.213113:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:53:39.035418:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:54:00.928242:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:54:22.741038:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:54:44.455639:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:55:05.937829:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:55:27.301615:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:55:48.886867:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:56:10.163789:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:56:31.817351:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:56:53.115841:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:57:14.855728:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:57:36.302673:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:57:58.162029:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:58:19.883703:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:58:41.428517:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:59:03.310452:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:59:24.898442:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T10:59:46.621536:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:00:08.309661:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:00:29.822986:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:00:51.514868:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:01:13.279532:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:01:34.875228:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:01:56.636296:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:02:17.952618:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:02:39.521610:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:03:00.840802:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:03:22.561880:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:03:43.924682:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:04:05.242477:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:04:26.603944:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:04:47.964161:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:05:09.713765:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:05:31.544507:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:05:52.959344:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:06:14.748220:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:06:36.155092:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:06:57.586575:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:07:18.725662:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:07:40.100593:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:08:01.529700:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:08:23.472597:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:08:45.068732:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:09:06.312327:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:09:27.499633:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:09:49.156414:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:10:10.997029:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:10:33.107057:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:10:54.769812:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:11:16.631003:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:11:38.148451:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:11:59.190974:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:12:20.826219:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:12:42.251114:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:13:03.894030:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:13:25.503481:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:13:46.916394:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:14:08.078905:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:14:29.434331:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:14:50.474097:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:15:12.088292:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:15:33.524856:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:15:55.077615:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:16:16.485491:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:16:37.815489:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:16:59.429713:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:17:20.704326:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:17:42.000081:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:18:03.550284:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:18:24.962824:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:18:46.805970:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:19:08.295970:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:19:30.326681:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:19:51.996569:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:20:13.600917:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:20:35.510776:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:20:56.871799:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:21:18.723391:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:21:40.203174:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:22:01.879269:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:22:23.162021:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:22:44.593058:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:23:06.062482:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:23:27.449201:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:23:48.673977:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:24:09.847329:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:24:31.188226:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:24:52.508534:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:25:14.255141:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:25:35.773466:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:25:57.304733:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:26:18.998308:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:26:40.403236:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:27:01.781725:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:27:22.922789:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:27:44.464564:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:28:05.941825:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:28:27.179272:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:28:48.656595:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:29:10.192920:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:29:32.083280:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:29:53.790501:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:30:15.392107:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:30:36.773441:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:30:58.145204:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:31:19.818229:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:31:41.257825:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:32:02.818836:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:32:24.174298:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:32:45.847014:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:33:07.123104:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:33:28.518814:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:33:49.946720:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:34:11.454014:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:34:33.192127:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:34:54.327827:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:35:15.945907:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:35:37.061301:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:35:58.491545:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:36:20.180265:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:36:41.337048:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:37:03.010113:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:37:24.236957:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:37:45.943887:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:38:07.487812:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:38:29.249039:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
+2024-07-29T11:38:50.810523:cd /home/nima/Developer/taint-benchmarks/struts && ./annotator-command.sh
+
