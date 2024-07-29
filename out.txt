@@ -1,0 +1,861 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< org.apache.struts:struts2-core >-------------------
+[INFO] Building Struts 2 Core 6.3.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.4.1:enforce (enforce-maven-version) @ struts2-core ---
+[INFO] 
+[INFO] --- remote-resources:1.6.0:process (process-resource-bundles) @ struts2-core ---
+[WARNING] Parameter 'localRepository' is deprecated core expression; Avoid use of ArtifactRepository type. If you need access to local repository, switch to '${repositorySystemSession}' expression and get LRM from it instead.
+[INFO] Preparing remote bundle org.apache:apache-jar-resource-bundle:1.4
+[INFO] Copying 3 resources from 1 bundle.
+[INFO] 
+[INFO] --- resources:3.1.0:resources (default-resources) @ struts2-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 148 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ struts2-core ---
+[WARNING] Parameter 'compilerArguments' is deprecated: use compilerArgs instead.
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 734 source files with javac [forked debug target 1.8] to target/classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/Parameter.java:[71,34] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/ActionSupport.java:[158,28] [cast.unsafe] cast from "@RTainted Object" to "@RTainted String @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/validator/validators/VisitorFieldValidator.java:[149,29] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/ognl/ErrorMessageBuilder.java:[38,31] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/validator/validators/RangeValidatorSupport.java:[59,30] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/conversion/impl/CollectionConverter.java:[58,32] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/conversion/impl/DefaultTypeConverter.java:[191,44] [cast.unsafe] cast from "@RTainted Object" to "@RTainted String @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/conversion/impl/XWorkBasicConverter.java:[121,33] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/validator/validators/RegexFieldValidator.java:[114,30] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/validator/validators/RequiredStringValidator.java:[100,30] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/validator/validators/URLValidator.java:[81,30] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/util/SubsetIteratorFilter.java:[99,44] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/util/SubsetIteratorFilter.java:[100,31] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/components/IteratorComponent.java:[280,38] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/util/StrutsTypeConverter.java:[52,46] [cast.unsafe] cast from "@RTainted Object" to "@RTainted String @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/conversion/impl/NumberConverter.java:[80,32] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/validator/validators/StringLengthFieldValidator.java:[156,30] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/validator/validators/DoubleRangeFieldValidator.java:[122,30] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/ognl/accessor/XWorkListPropertyAccessor.java:[153,30] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/ognl/accessor/XWorkCollectionPropertyAccessor.java:[237,30] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/util/StrutsUtil.java:[173,46] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/url/StrutsQueryStringParser.java:[129,50] [cast.unsafe] cast from "@RTainted Object" to "@RTainted String @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/mapper/PrefixBasedActionMapper.java:[109,118] [cast.unsafe] cast from "@RTainted Object" to "@RTainted String @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/validator/validators/RepopulateConversionErrorFieldValidatorSupport.java:[171,36] [cast.unsafe] cast from "@RTainted Object" to "@RTainted String @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/ObjectToHTMLWriter.java:[79,31] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/ObjectToHTMLWriter.java:[116,97] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/url/StrutsQueryStringBuilder.java:[58,33] [cast.unsafe] cast from "@RTainted Object" to "@RTainted Object @RUntainted []" cannot be statically verified
+[WARNING] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/StrutsConversionErrorInterceptor.java:[101,29] [cast.unsafe] cast from "@RTainted Object" to "@RTainted String @RUntainted []" cannot be statically verified
+[INFO] 28 warnings 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR]  Unannotated Code Handling: false, Poly: true, Type Argument: true, Validation: false, Side Effect: false
+Local Variable Optimization: true
+/home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/components/Component.java:[199,25] error: [argument] incompatible argument for parameter str of Writer.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 1
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassPathFinder.java:[99,34] error: [argument] incompatible argument for parameter uri of File constructor.
+  found   : @RTainted URI
+  required: @RUntainted URI, index: 2
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassPathFinder.java:[131,36] error: [argument] incompatible argument for parameter parent of File constructor.
+  found   : @RTainted File
+  required: @RUntainted File, index: 3
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassPathFinder.java:[131,57] error: [argument] incompatible argument for parameter child of File constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 4
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassPathFinder.java:[133,36] error: [argument] incompatible argument for parameter parent of File constructor.
+  found   : @RTainted File
+  required: @RUntainted File, index: 5
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassPathFinder.java:[133,44] error: [argument] incompatible argument for parameter child of File constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 6
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/classloader/FileResourceStore.java:[58,24] error: [argument] incompatible argument for parameter parent of File constructor.
+  found   : @RTainted File
+  required: @RUntainted File, index: 7
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/classloader/FileResourceStore.java:[58,30] error: [argument] incompatible argument for parameter child of File constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 8
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/plain/BodyWriter.java:[28,19] error: [argument] incompatible argument for parameter str of StringWriter.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 9
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/plain/BodyWriter.java:[33,19] error: [argument] incompatible argument for parameter str of StringWriter.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 10
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/HttpHeaderResult.java:[188,47] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.addHeader.
+  found   : @RTainted String
+  required: @RUntainted String, index: 11
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/HttpHeaderResult.java:[188,51] error: [argument] incompatible argument for parameter arg1 of HttpServletResponse.addHeader.
+  found   : @RTainted String
+  required: @RUntainted String, index: 12
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/HttpHeaderResult.java:[202,50] error: [argument] incompatible argument for parameter arg1 of HttpServletResponse.sendError.
+  found   : @RTainted String
+  required: @RUntainted String, index: 13
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/ObjectFactory.java:[132,33] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+  found   : @RTainted String
+  required: @RUntainted String, index: 14
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/I18nInterceptor.java:[399,31] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.addCookie.
+  found   : @RTainted Cookie
+  required: @RUntainted Cookie, index: 15
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/components/template/BaseTemplateEngine.java:[130,33] error: [argument] incompatible argument for parameter pathname of File constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 16
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/Dispatcher.java:[838,45] error: [argument] incompatible argument for parameter pathname of File constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 17
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/Dispatcher.java:[909,46] error: [argument] incompatible argument for parameter arg0 of ServletResponse.setCharacterEncoding.
+  found   : @RTainted String
+  required: @RUntainted String, index: 18
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/location/LocationImpl.java:[157,48] error: [argument] incompatible argument for parameter spec of URL constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 19
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[73,21] error: [argument] incompatible argument for parameter s of PrintWriter.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 20
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[91,21] error: [argument] incompatible argument for parameter s of PrintWriter.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 21
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[112,38] error: [argument] incompatible argument for parameter buf of PrintWriter.write.
+  found   : @RTainted char @RUntainted []
+  required: @RUntainted char @RUntainted [], index: 22
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[115,38] error: [argument] incompatible argument for parameter buf of PrintWriter.write.
+  found   : @RTainted char @RUntainted []
+  required: @RUntainted char @RUntainted [], index: 23
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[118,38] error: [argument] incompatible argument for parameter buf of PrintWriter.write.
+  found   : @RTainted char @RUntainted []
+  required: @RUntainted char @RUntainted [], index: 24
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[121,38] error: [argument] incompatible argument for parameter buf of PrintWriter.write.
+  found   : @RTainted char @RUntainted []
+  required: @RUntainted char @RUntainted [], index: 25
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[124,38] error: [argument] incompatible argument for parameter buf of PrintWriter.write.
+  found   : @RTainted char @RUntainted []
+  required: @RUntainted char @RUntainted [], index: 26
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[130,42] error: [argument] incompatible argument for parameter buf of PrintWriter.write.
+  found   : @RTainted char @RUntainted []
+  required: @RUntainted char @RUntainted [], index: 27
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[135,38] error: [argument] incompatible argument for parameter buf of PrintWriter.write.
+  found   : @RTainted char @RUntainted []
+  required: @RUntainted char @RUntainted [], index: 28
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[138,38] error: [argument] incompatible argument for parameter c of PrintWriter.write.
+  found   : @RTainted char
+  required: @RUntainted int, index: 29
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[152,25] error: [argument] incompatible argument for parameter buf of PrintWriter.write.
+  found   : @RTainted char @RUntainted []
+  required: @RUntainted char @RUntainted [], index: 30
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[153,41] error: [argument] incompatible argument for parameter s of PrintWriter.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 31
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[175,21] error: [argument] incompatible argument for parameter s of PrintWriter.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 32
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[177,25] error: [argument] incompatible argument for parameter buf of PrintWriter.write.
+  found   : @RTainted char @RUntainted []
+  required: @RUntainted char @RUntainted [], index: 33
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/StrutsJarURLConnection.java:[88,33] error: [argument] incompatible argument for parameter spec of URL constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 34
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/StrutsJarURLConnection.java:[95,49] error: [argument] incompatible argument for parameter spec of URL constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 35
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/conversion/impl/XWorkConverter.java:[375,81] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+  found   : @RTainted String
+  required: @RUntainted String, index: 36
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/ServletRedirectResult.java:[245,38] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.sendRedirect.
+  found   : @RTainted String
+  required: @RUntainted String, index: 37
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/ServletRedirectResult.java:[250,47] error: [argument] incompatible argument for parameter s of PrintWriter.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 38
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/FileRevision.java:[37,45] error: [argument] incompatible argument for parameter uri of File constructor.
+  found   : @RTainted URI
+  required: @RUntainted URI, index: 39
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/FileRevision.java:[42,43] error: [argument] incompatible argument for parameter pathname of File constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 40
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassLoaderUtil.java:[176,76] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+  found   : @RTainted String
+  required: @RUntainted String, index: 41
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassLoaderUtil.java:[182,76] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+  found   : @RTainted String
+  required: @RUntainted String, index: 42
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassLoaderUtil.java:[184,67] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+  found   : @RTainted String
+  required: @RUntainted String, index: 43
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/components/Date.java:[350,41] error: [argument] incompatible argument for parameter str of Writer.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 44
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/views/freemarker/FreemarkerManager.java:[453,96] error: [argument] incompatible argument for parameter pathname of File constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 45
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/PlainTextResult.java:[129,25] error: [argument] incompatible argument for parameter buf of PrintWriter.write.
+  found   : @RTainted char @RUntainted []
+  required: @RUntainted char @RUntainted [], index: 46
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/PlainTextResult.java:[146,59] error: [argument] incompatible argument for parameter arg0 of ServletResponse.setContentType.
+  found   : @RTainted String
+  required: @RUntainted String, index: 47
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ResourceFinder.java:[104,26] error: [assignment] incompatible types in assignment.
+  found   : @RTainted URL
+  required: @RUntainted URL, index: 48
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ResourceFinder.java:[1107,62] error: [argument] incompatible argument for parameter uri of File constructor.
+  found   : @RTainted URI
+  required: @RUntainted URI, index: 49
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ResourceFinder.java:[1157,62] error: [argument] incompatible argument for parameter uri of File constructor.
+  found   : @RTainted URI
+  required: @RUntainted URI, index: 50
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ResourceFinder.java:[1228,45] error: [argument] incompatible argument for parameter spec of URL constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 51
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ResourceFinder.java:[1380,41] error: [argument] incompatible argument for parameter pathname of File constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 52
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ResourceFinder.java:[1418,55] error: [argument] incompatible argument for parameter host of URL constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 53
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/UrlSet.java:[165,33] error: [argument] incompatible argument for parameter pathname of File constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 54
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/UrlSet.java:[180,37] error: [argument] incompatible argument for parameter pathname of File constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 55
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/UrlSet.java:[215,37] error: [argument] incompatible argument for parameter spec of URL constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 56
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/UrlSet.java:[256,57] error: [argument] incompatible argument for parameter spec of URL constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 57
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/UrlSet.java:[283,57] error: [argument] incompatible argument for parameter spec of URL constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 58
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/components/Property.java:[153,36] error: [argument] incompatible argument for parameter str of Writer.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 59
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/components/Property.java:[155,36] error: [argument] incompatible argument for parameter str of Writer.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 60
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/config/StrutsXmlConfigurationProvider.java:[101,29] error: [argument] incompatible argument for parameter pathname of File constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 61
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/config/StrutsXmlConfigurationProvider.java:[169,29] error: [argument] incompatible argument for parameter pathname of File constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 62
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/config/StrutsXmlConfigurationProvider.java:[174,28] error: [argument] incompatible argument for parameter parent of File constructor.
+  found   : @RTainted File
+  required: @RUntainted File, index: 63
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/config/StrutsXmlConfigurationProvider.java:[174,37] error: [argument] incompatible argument for parameter child of File constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 64
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/SessionMap.java:[116,49] error: [argument] incompatible argument for parameter arg0 of HttpSession.setAttribute.
+  found   : @RTainted String
+  required: @RUntainted String, index: 65
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/SessionMap.java:[116,54] error: [argument] incompatible argument for parameter arg1 of HttpSession.setAttribute.
+  found   : @RTainted Object
+  required: @RUntainted Object, index: 66
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/SessionMap.java:[165,33] error: [argument] incompatible argument for parameter arg0 of HttpSession.setAttribute.
+  found   : @RTainted String
+  required: @RUntainted String, index: 67
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/SessionMap.java:[165,38] error: [argument] incompatible argument for parameter arg1 of HttpSession.setAttribute.
+  found   : @RTainted Object
+  required: @RUntainted Object, index: 68
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/csp/DefaultCspSettings.java:[58,31] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.setHeader.
+  found   : @RTainted String
+  required: @RUntainted String, index: 69
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/csp/DefaultCspSettings.java:[70,51] error: [argument] incompatible argument for parameter arg1 of HttpSession.setAttribute.
+  found   : @RTainted String
+  required: @RUntainted Object, index: 70
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/ExecuteAndWaitInterceptor.java:[354,25] error: [argument] incompatible argument for parameter arg0 of Thread.sleep.
+  found   : @RTainted int
+  required: @RUntainted long, index: 71
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/components/template/FreemarkerTemplateEngine.java:[137,30] error: [argument] incompatible argument for parameter arg0 of Writer.write.
+  found   : @RTainted char @RUntainted []
+  required: @RUntainted char @RUntainted [], index: 72
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/components/Text.java:[188,40] error: [argument] incompatible argument for parameter str of Writer.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 73
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/components/Number.java:[154,33] error: [argument] incompatible argument for parameter str of Writer.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 74
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/views/freemarker/tags/CallbackWriter.java:[62,23] error: [argument] incompatible argument for parameter cbuf of StringWriter.write.
+  found   : @RTainted char @RUntainted []
+  required: @RUntainted char @RUntainted [], index: 75
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/views/freemarker/tags/CallbackWriter.java:[64,25] error: [argument] incompatible argument for parameter arg0 of Writer.write.
+  found   : @RTainted char @RUntainted []
+  required: @RUntainted char @RUntainted [], index: 76
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/views/freemarker/FreemarkerResult.java:[327,64] error: [argument] incompatible argument for parameter arg0 of ServletResponse.setContentType.
+  found   : @RTainted String
+  required: @RUntainted String, index: 77
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/views/freemarker/FreemarkerResult.java:[341,40] error: [argument] incompatible argument for parameter arg0 of ServletResponse.setContentType.
+  found   : @RTainted String
+  required: @RUntainted String, index: 78
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/views/freemarker/FreemarkerResult.java:[345,59] error: [argument] incompatible argument for parameter arg0 of ServletResponse.setContentType.
+  found   : @RTainted String
+  required: @RUntainted String, index: 79
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/CoepInterceptor.java:[69,31] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.setHeader.
+  found   : @RTainted String
+  required: @RUntainted String, index: 80
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/util/StrutsUtil.java:[286,25] error: [argument] incompatible argument for parameter c of StringWriter.write.
+  found   : @RTainted int
+  required: @RUntainted int, index: 81
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/DomHelper.java:[128,25] error: [argument] incompatible argument for parameter is of SAXParser.parse.
+  found   : @RTainted InputSource
+  required: @RUntainted InputSource, index: 82
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/PostbackResult.java:[104,78] error: [argument] incompatible argument for parameter s of PrintWriter.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 83
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/ognl/accessor/CompoundRootAccessor.java:[298,72] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+  found   : @RTainted String
+  required: @RUntainted String, index: 84
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/conversion/UploadedFileConverter.java:[53,52] error: [argument] incompatible argument for parameter pathname of File constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 85
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/classloader/ResourceStoreClassLoader.java:[60,45] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+  found   : @RTainted String
+  required: @RUntainted String, index: 86
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/interceptor/DefaultWorkflowInterceptor.java:[216,63] error: [argument] incompatible argument for parameter object of MethodUtils.invokeMethod.
+  found   : @RTainted Object
+  required: @RUntainted Object, index: 87
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/interceptor/annotations/AnnotationWorkflowInterceptor.java:[130,76] error: [argument] incompatible argument for parameter object of MethodUtils.invokeMethod.
+  found   : @RTainted Object
+  required: @RUntainted Object, index: 88
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/interceptor/annotations/AnnotationWorkflowInterceptor.java:[130,99] error: [argument] incompatible argument for parameter methodName of MethodUtils.invokeMethod.
+  found   : @RTainted String
+  required: @RUntainted String, index: 89
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/interceptor/annotations/AnnotationWorkflowInterceptor.java:[154,41] error: [argument] incompatible argument for parameter object of MethodUtils.invokeMethod.
+  found   : @RTainted Object
+  required: @RUntainted Object, index: 90
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/interceptor/annotations/AnnotationWorkflowInterceptor.java:[154,64] error: [argument] incompatible argument for parameter methodName of MethodUtils.invokeMethod.
+  found   : @RTainted String
+  required: @RUntainted String, index: 91
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/interceptor/annotations/AnnotationWorkflowInterceptor.java:[192,45] error: [argument] incompatible argument for parameter object of MethodUtils.invokeMethod.
+  found   : @RTainted Object
+  required: @RUntainted Object, index: 92
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/interceptor/annotations/AnnotationWorkflowInterceptor.java:[192,68] error: [argument] incompatible argument for parameter methodName of MethodUtils.invokeMethod.
+  found   : @RTainted String
+  required: @RUntainted String, index: 93
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/StreamResult.java:[236,97] error: [argument] incompatible argument for parameter arg0 of ServletResponse.setContentType.
+  found   : @RTainted String
+  required: @RUntainted String, index: 94
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/StreamResult.java:[238,57] error: [argument] incompatible argument for parameter arg0 of ServletResponse.setContentType.
+  found   : @RTainted String
+  required: @RUntainted String, index: 95
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/StreamResult.java:[258,75] error: [argument] incompatible argument for parameter arg1 of HttpServletResponse.addHeader.
+  found   : @RTainted String
+  required: @RUntainted String, index: 96
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[123,61] error: [argument] incompatible argument for parameter object of MethodUtils.invokeMethod.
+  found   : @RTainted Object
+  required: @RUntainted Object, index: 97
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[175,63] error: [argument] incompatible argument for parameter object of MethodUtils.invokeMethod.
+  found   : @RTainted Object
+  required: @RUntainted Object, index: 98
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[215,57] error: [argument] incompatible argument for parameter cls of MethodUtils.getMatchingMethod.
+  found   : @RTainted Class<capture#01[ extends @RTainted Object super @RUntainted Void]>
+  required: @RUntainted Class<?[ extends @RTainted Object super @RUntainted Void]>, index: 99
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[215,78] error: [argument] incompatible argument for parameter methodName of MethodUtils.getMatchingMethod.
+  found   : @RTainted String
+  required: @RUntainted String, index: 100
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[215,117] error: [argument] incompatible argument for parameter parameterTypes of MethodUtils.getMatchingMethod.
+  found   : @RTainted Class<?[ extends @RTainted Object super @RUntainted Void]> @RUntainted []
+  required: @RUntainted Class<?[ extends @RTainted Object super @RUntainted Void]> @RUntainted [], index: 101
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/DefaultStaticContentLoader.java:[273,40] error: [argument] incompatible argument for parameter arg0 of ServletResponse.setContentType.
+  found   : @RTainted String
+  required: @RUntainted String, index: 102
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/multipart/JakartaStreamMultiPartRequest.java:[386,71] error: [argument] incompatible argument for parameter pathname of File constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 103
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/PlainResult.java:[69,45] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.addHeader.
+  found   : @RTainted String
+  required: @RUntainted String, index: 104
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/PlainResult.java:[69,64] error: [argument] incompatible argument for parameter arg1 of HttpServletResponse.addHeader.
+  found   : @RTainted String
+  required: @RUntainted String, index: 105
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/PlainResult.java:[73,49] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.addDateHeader.
+  found   : @RTainted String
+  required: @RUntainted String, index: 106
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/PlainResult.java:[77,48] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.addIntHeader.
+  found   : @RTainted String
+  required: @RUntainted String, index: 107
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/PlainResult.java:[82,31] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.addCookie.
+  found   : @RTainted Cookie
+  required: @RUntainted Cookie, index: 108
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/PlainResult.java:[85,50] error: [argument] incompatible argument for parameter s of PrintWriter.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 109
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/PropertiesReader.java:[496,34] error: [argument] incompatible argument for parameter c of Writer.write.
+  found   : @RTainted char
+  required: @RUntainted int, index: 110
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/PropertiesReader.java:[540,34] error: [argument] incompatible argument for parameter c of Writer.write.
+  found   : @RTainted char
+  required: @RUntainted int, index: 111
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/PropertiesReader.java:[548,22] error: [argument] incompatible argument for parameter c of Writer.write.
+  found   : @RTainted char
+  required: @RUntainted int, index: 112
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ResolverUtil.java:[372,37] error: [argument] incompatible argument for parameter pathname of File constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 113
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ResolverUtil.java:[463,46] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+  found   : @RTainted String
+  required: @RUntainted String, index: 114
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/validator/DefaultValidatorFactory.java:[163,75] error: [argument] incompatible argument for parameter pathname of File constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 115
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/classloader/ReloadingClassLoader.java:[67,86] error: [argument] incompatible argument for parameter uri of File constructor.
+  found   : @RTainted URI
+  required: @RUntainted URI, index: 116
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/classloader/ReloadingClassLoader.java:[151,11] error: [override.return] Incompatible return type.
+  found   : @RTainted Class</*RAW*/>
+  required: @RUntainted Class<? extends @RTainted Object>
+  Consequence: method in @RTainted ReloadingClassLoader
+    @RTainted Class</*RAW*/> loadClass(@RTainted ReloadingClassLoader this, @RTainted String p0) throws @RTainted ClassNotFoundException
+  cannot override method in @RTainted ClassLoader
+    @RUntainted Class<? extends @RTainted Object> loadClass(@RTainted ClassLoader this, @RUntainted String p0) throws @RTainted ClassNotFoundException, index: 117
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/classloader/ReloadingClassLoader.java:[152,53] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+  found   : @RTainted String
+  required: @RUntainted String, index: 118
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/classloader/ReloadingClassLoader.java:[152,78] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+  found   : @RTainted String
+  required: @RUntainted String, index: 119
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/util/FastByteArrayOutputStream.java:[151,18] error: [argument] incompatible argument for parameter str of Writer.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 120
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/util/FastByteArrayOutputStream.java:[197,33] error: [argument] incompatible argument for parameter str of Writer.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 121
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/DefaultDispatcherErrorHandler.java:[97,49] error: [argument] incompatible argument for parameter arg1 of HttpServletResponse.sendError.
+  found   : @RTainted String
+  required: @RUntainted String, index: 122
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/DefaultDispatcherErrorHandler.java:[126,91] error: [argument] incompatible argument for parameter arg1 of HttpServletResponse.sendError.
+  found   : @RTainted String
+  required: @RUntainted String, index: 123
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/ServletDispatcherResult.java:[154,67] error: [argument] incompatible argument for parameter arg1 of HttpServletResponse.sendError.
+  found   : @RTainted String
+  required: @RUntainted String, index: 124
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/components/ServletUrlRenderer.java:[121,33] error: [argument] incompatible argument for parameter str of Writer.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 125
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/components/ServletUrlRenderer.java:[128,29] error: [argument] incompatible argument for parameter str of Writer.write.
+  found   : @RTainted String
+  required: @RUntainted String, index: 126
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/CookieProviderInterceptor.java:[88,35] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.addCookie.
+  found   : @RTainted Cookie
+  required: @RUntainted Cookie, index: 127
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/multipart/JakartaMultiPartRequest.java:[194,39] error: [argument] incompatible argument for parameter pathname of File constructor.
+  found   : @RTainted String
+  required: @RUntainted String, index: 128
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ClassLoaderInterfaceDelegate.java:[37,37] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+  found   : @RTainted String
+  required: @RUntainted String, index: 129
+[INFO] 129 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  20.689 s
+[INFO] Finished at: 2024-07-29T07:29:14-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project struts2-core: Compilation failure: Compilation failure: 
+[ERROR]  Unannotated Code Handling: false, Poly: true, Type Argument: true, Validation: false, Side Effect: false
+[ERROR] Local Variable Optimization: true
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/components/Component.java:[199,25] error: [argument] incompatible argument for parameter str of Writer.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 1
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassPathFinder.java:[99,34] error: [argument] incompatible argument for parameter uri of File constructor.
+[ERROR]   found   : @RTainted URI
+[ERROR]   required: @RUntainted URI, index: 2
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassPathFinder.java:[131,36] error: [argument] incompatible argument for parameter parent of File constructor.
+[ERROR]   found   : @RTainted File
+[ERROR]   required: @RUntainted File, index: 3
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassPathFinder.java:[131,57] error: [argument] incompatible argument for parameter child of File constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 4
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassPathFinder.java:[133,36] error: [argument] incompatible argument for parameter parent of File constructor.
+[ERROR]   found   : @RTainted File
+[ERROR]   required: @RUntainted File, index: 5
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassPathFinder.java:[133,44] error: [argument] incompatible argument for parameter child of File constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 6
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/classloader/FileResourceStore.java:[58,24] error: [argument] incompatible argument for parameter parent of File constructor.
+[ERROR]   found   : @RTainted File
+[ERROR]   required: @RUntainted File, index: 7
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/classloader/FileResourceStore.java:[58,30] error: [argument] incompatible argument for parameter child of File constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 8
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/plain/BodyWriter.java:[28,19] error: [argument] incompatible argument for parameter str of StringWriter.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 9
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/plain/BodyWriter.java:[33,19] error: [argument] incompatible argument for parameter str of StringWriter.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 10
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/HttpHeaderResult.java:[188,47] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.addHeader.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 11
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/HttpHeaderResult.java:[188,51] error: [argument] incompatible argument for parameter arg1 of HttpServletResponse.addHeader.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 12
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/HttpHeaderResult.java:[202,50] error: [argument] incompatible argument for parameter arg1 of HttpServletResponse.sendError.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 13
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/ObjectFactory.java:[132,33] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 14
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/I18nInterceptor.java:[399,31] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.addCookie.
+[ERROR]   found   : @RTainted Cookie
+[ERROR]   required: @RUntainted Cookie, index: 15
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/components/template/BaseTemplateEngine.java:[130,33] error: [argument] incompatible argument for parameter pathname of File constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 16
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/Dispatcher.java:[838,45] error: [argument] incompatible argument for parameter pathname of File constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 17
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/Dispatcher.java:[909,46] error: [argument] incompatible argument for parameter arg0 of ServletResponse.setCharacterEncoding.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 18
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/location/LocationImpl.java:[157,48] error: [argument] incompatible argument for parameter spec of URL constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 19
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[73,21] error: [argument] incompatible argument for parameter s of PrintWriter.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 20
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[91,21] error: [argument] incompatible argument for parameter s of PrintWriter.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 21
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[112,38] error: [argument] incompatible argument for parameter buf of PrintWriter.write.
+[ERROR]   found   : @RTainted char @RUntainted []
+[ERROR]   required: @RUntainted char @RUntainted [], index: 22
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[115,38] error: [argument] incompatible argument for parameter buf of PrintWriter.write.
+[ERROR]   found   : @RTainted char @RUntainted []
+[ERROR]   required: @RUntainted char @RUntainted [], index: 23
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[118,38] error: [argument] incompatible argument for parameter buf of PrintWriter.write.
+[ERROR]   found   : @RTainted char @RUntainted []
+[ERROR]   required: @RUntainted char @RUntainted [], index: 24
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[121,38] error: [argument] incompatible argument for parameter buf of PrintWriter.write.
+[ERROR]   found   : @RTainted char @RUntainted []
+[ERROR]   required: @RUntainted char @RUntainted [], index: 25
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[124,38] error: [argument] incompatible argument for parameter buf of PrintWriter.write.
+[ERROR]   found   : @RTainted char @RUntainted []
+[ERROR]   required: @RUntainted char @RUntainted [], index: 26
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[130,42] error: [argument] incompatible argument for parameter buf of PrintWriter.write.
+[ERROR]   found   : @RTainted char @RUntainted []
+[ERROR]   required: @RUntainted char @RUntainted [], index: 27
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[135,38] error: [argument] incompatible argument for parameter buf of PrintWriter.write.
+[ERROR]   found   : @RTainted char @RUntainted []
+[ERROR]   required: @RUntainted char @RUntainted [], index: 28
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[138,38] error: [argument] incompatible argument for parameter c of PrintWriter.write.
+[ERROR]   found   : @RTainted char
+[ERROR]   required: @RUntainted int, index: 29
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[152,25] error: [argument] incompatible argument for parameter buf of PrintWriter.write.
+[ERROR]   found   : @RTainted char @RUntainted []
+[ERROR]   required: @RUntainted char @RUntainted [], index: 30
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[153,41] error: [argument] incompatible argument for parameter s of PrintWriter.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 31
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[175,21] error: [argument] incompatible argument for parameter s of PrintWriter.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 32
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/debugging/PrettyPrintWriter.java:[177,25] error: [argument] incompatible argument for parameter buf of PrintWriter.write.
+[ERROR]   found   : @RTainted char @RUntainted []
+[ERROR]   required: @RUntainted char @RUntainted [], index: 33
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/StrutsJarURLConnection.java:[88,33] error: [argument] incompatible argument for parameter spec of URL constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 34
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/StrutsJarURLConnection.java:[95,49] error: [argument] incompatible argument for parameter spec of URL constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 35
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/conversion/impl/XWorkConverter.java:[375,81] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 36
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/ServletRedirectResult.java:[245,38] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.sendRedirect.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 37
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/ServletRedirectResult.java:[250,47] error: [argument] incompatible argument for parameter s of PrintWriter.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 38
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/FileRevision.java:[37,45] error: [argument] incompatible argument for parameter uri of File constructor.
+[ERROR]   found   : @RTainted URI
+[ERROR]   required: @RUntainted URI, index: 39
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/fs/FileRevision.java:[42,43] error: [argument] incompatible argument for parameter pathname of File constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 40
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassLoaderUtil.java:[176,76] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 41
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassLoaderUtil.java:[182,76] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 42
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ClassLoaderUtil.java:[184,67] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 43
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/components/Date.java:[350,41] error: [argument] incompatible argument for parameter str of Writer.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 44
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/views/freemarker/FreemarkerManager.java:[453,96] error: [argument] incompatible argument for parameter pathname of File constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 45
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/PlainTextResult.java:[129,25] error: [argument] incompatible argument for parameter buf of PrintWriter.write.
+[ERROR]   found   : @RTainted char @RUntainted []
+[ERROR]   required: @RUntainted char @RUntainted [], index: 46
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/PlainTextResult.java:[146,59] error: [argument] incompatible argument for parameter arg0 of ServletResponse.setContentType.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 47
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ResourceFinder.java:[104,26] error: [assignment] incompatible types in assignment.
+[ERROR]   found   : @RTainted URL
+[ERROR]   required: @RUntainted URL, index: 48
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ResourceFinder.java:[1107,62] error: [argument] incompatible argument for parameter uri of File constructor.
+[ERROR]   found   : @RTainted URI
+[ERROR]   required: @RUntainted URI, index: 49
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ResourceFinder.java:[1157,62] error: [argument] incompatible argument for parameter uri of File constructor.
+[ERROR]   found   : @RTainted URI
+[ERROR]   required: @RUntainted URI, index: 50
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ResourceFinder.java:[1228,45] error: [argument] incompatible argument for parameter spec of URL constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 51
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ResourceFinder.java:[1380,41] error: [argument] incompatible argument for parameter pathname of File constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 52
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ResourceFinder.java:[1418,55] error: [argument] incompatible argument for parameter host of URL constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 53
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/UrlSet.java:[165,33] error: [argument] incompatible argument for parameter pathname of File constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 54
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/UrlSet.java:[180,37] error: [argument] incompatible argument for parameter pathname of File constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 55
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/UrlSet.java:[215,37] error: [argument] incompatible argument for parameter spec of URL constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 56
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/UrlSet.java:[256,57] error: [argument] incompatible argument for parameter spec of URL constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 57
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/UrlSet.java:[283,57] error: [argument] incompatible argument for parameter spec of URL constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 58
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/components/Property.java:[153,36] error: [argument] incompatible argument for parameter str of Writer.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 59
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/components/Property.java:[155,36] error: [argument] incompatible argument for parameter str of Writer.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 60
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/config/StrutsXmlConfigurationProvider.java:[101,29] error: [argument] incompatible argument for parameter pathname of File constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 61
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/config/StrutsXmlConfigurationProvider.java:[169,29] error: [argument] incompatible argument for parameter pathname of File constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 62
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/config/StrutsXmlConfigurationProvider.java:[174,28] error: [argument] incompatible argument for parameter parent of File constructor.
+[ERROR]   found   : @RTainted File
+[ERROR]   required: @RUntainted File, index: 63
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/config/StrutsXmlConfigurationProvider.java:[174,37] error: [argument] incompatible argument for parameter child of File constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 64
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/SessionMap.java:[116,49] error: [argument] incompatible argument for parameter arg0 of HttpSession.setAttribute.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 65
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/SessionMap.java:[116,54] error: [argument] incompatible argument for parameter arg1 of HttpSession.setAttribute.
+[ERROR]   found   : @RTainted Object
+[ERROR]   required: @RUntainted Object, index: 66
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/SessionMap.java:[165,33] error: [argument] incompatible argument for parameter arg0 of HttpSession.setAttribute.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 67
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/SessionMap.java:[165,38] error: [argument] incompatible argument for parameter arg1 of HttpSession.setAttribute.
+[ERROR]   found   : @RTainted Object
+[ERROR]   required: @RUntainted Object, index: 68
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/csp/DefaultCspSettings.java:[58,31] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.setHeader.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 69
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/csp/DefaultCspSettings.java:[70,51] error: [argument] incompatible argument for parameter arg1 of HttpSession.setAttribute.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted Object, index: 70
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/ExecuteAndWaitInterceptor.java:[354,25] error: [argument] incompatible argument for parameter arg0 of Thread.sleep.
+[ERROR]   found   : @RTainted int
+[ERROR]   required: @RUntainted long, index: 71
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/components/template/FreemarkerTemplateEngine.java:[137,30] error: [argument] incompatible argument for parameter arg0 of Writer.write.
+[ERROR]   found   : @RTainted char @RUntainted []
+[ERROR]   required: @RUntainted char @RUntainted [], index: 72
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/components/Text.java:[188,40] error: [argument] incompatible argument for parameter str of Writer.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 73
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/components/Number.java:[154,33] error: [argument] incompatible argument for parameter str of Writer.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 74
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/views/freemarker/tags/CallbackWriter.java:[62,23] error: [argument] incompatible argument for parameter cbuf of StringWriter.write.
+[ERROR]   found   : @RTainted char @RUntainted []
+[ERROR]   required: @RUntainted char @RUntainted [], index: 75
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/views/freemarker/tags/CallbackWriter.java:[64,25] error: [argument] incompatible argument for parameter arg0 of Writer.write.
+[ERROR]   found   : @RTainted char @RUntainted []
+[ERROR]   required: @RUntainted char @RUntainted [], index: 76
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/views/freemarker/FreemarkerResult.java:[327,64] error: [argument] incompatible argument for parameter arg0 of ServletResponse.setContentType.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 77
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/views/freemarker/FreemarkerResult.java:[341,40] error: [argument] incompatible argument for parameter arg0 of ServletResponse.setContentType.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 78
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/views/freemarker/FreemarkerResult.java:[345,59] error: [argument] incompatible argument for parameter arg0 of ServletResponse.setContentType.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 79
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/CoepInterceptor.java:[69,31] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.setHeader.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 80
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/util/StrutsUtil.java:[286,25] error: [argument] incompatible argument for parameter c of StringWriter.write.
+[ERROR]   found   : @RTainted int
+[ERROR]   required: @RUntainted int, index: 81
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/DomHelper.java:[128,25] error: [argument] incompatible argument for parameter is of SAXParser.parse.
+[ERROR]   found   : @RTainted InputSource
+[ERROR]   required: @RUntainted InputSource, index: 82
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/PostbackResult.java:[104,78] error: [argument] incompatible argument for parameter s of PrintWriter.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 83
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/ognl/accessor/CompoundRootAccessor.java:[298,72] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 84
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/conversion/UploadedFileConverter.java:[53,52] error: [argument] incompatible argument for parameter pathname of File constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 85
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/classloader/ResourceStoreClassLoader.java:[60,45] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 86
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/interceptor/DefaultWorkflowInterceptor.java:[216,63] error: [argument] incompatible argument for parameter object of MethodUtils.invokeMethod.
+[ERROR]   found   : @RTainted Object
+[ERROR]   required: @RUntainted Object, index: 87
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/interceptor/annotations/AnnotationWorkflowInterceptor.java:[130,76] error: [argument] incompatible argument for parameter object of MethodUtils.invokeMethod.
+[ERROR]   found   : @RTainted Object
+[ERROR]   required: @RUntainted Object, index: 88
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/interceptor/annotations/AnnotationWorkflowInterceptor.java:[130,99] error: [argument] incompatible argument for parameter methodName of MethodUtils.invokeMethod.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 89
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/interceptor/annotations/AnnotationWorkflowInterceptor.java:[154,41] error: [argument] incompatible argument for parameter object of MethodUtils.invokeMethod.
+[ERROR]   found   : @RTainted Object
+[ERROR]   required: @RUntainted Object, index: 90
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/interceptor/annotations/AnnotationWorkflowInterceptor.java:[154,64] error: [argument] incompatible argument for parameter methodName of MethodUtils.invokeMethod.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 91
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/interceptor/annotations/AnnotationWorkflowInterceptor.java:[192,45] error: [argument] incompatible argument for parameter object of MethodUtils.invokeMethod.
+[ERROR]   found   : @RTainted Object
+[ERROR]   required: @RUntainted Object, index: 92
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/interceptor/annotations/AnnotationWorkflowInterceptor.java:[192,68] error: [argument] incompatible argument for parameter methodName of MethodUtils.invokeMethod.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 93
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/StreamResult.java:[236,97] error: [argument] incompatible argument for parameter arg0 of ServletResponse.setContentType.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 94
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/StreamResult.java:[238,57] error: [argument] incompatible argument for parameter arg0 of ServletResponse.setContentType.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 95
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/StreamResult.java:[258,75] error: [argument] incompatible argument for parameter arg1 of HttpServletResponse.addHeader.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 96
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[123,61] error: [argument] incompatible argument for parameter object of MethodUtils.invokeMethod.
+[ERROR]   found   : @RTainted Object
+[ERROR]   required: @RUntainted Object, index: 97
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[175,63] error: [argument] incompatible argument for parameter object of MethodUtils.invokeMethod.
+[ERROR]   found   : @RTainted Object
+[ERROR]   required: @RUntainted Object, index: 98
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[215,57] error: [argument] incompatible argument for parameter cls of MethodUtils.getMatchingMethod.
+[ERROR]   found   : @RTainted Class<capture#01[ extends @RTainted Object super @RUntainted Void]>
+[ERROR]   required: @RUntainted Class<?[ extends @RTainted Object super @RUntainted Void]>, index: 99
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[215,78] error: [argument] incompatible argument for parameter methodName of MethodUtils.getMatchingMethod.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 100
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ProxyUtil.java:[215,117] error: [argument] incompatible argument for parameter parameterTypes of MethodUtils.getMatchingMethod.
+[ERROR]   found   : @RTainted Class<?[ extends @RTainted Object super @RUntainted Void]> @RUntainted []
+[ERROR]   required: @RUntainted Class<?[ extends @RTainted Object super @RUntainted Void]> @RUntainted [], index: 101
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/DefaultStaticContentLoader.java:[273,40] error: [argument] incompatible argument for parameter arg0 of ServletResponse.setContentType.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 102
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/multipart/JakartaStreamMultiPartRequest.java:[386,71] error: [argument] incompatible argument for parameter pathname of File constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 103
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/PlainResult.java:[69,45] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.addHeader.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 104
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/PlainResult.java:[69,64] error: [argument] incompatible argument for parameter arg1 of HttpServletResponse.addHeader.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 105
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/PlainResult.java:[73,49] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.addDateHeader.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 106
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/PlainResult.java:[77,48] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.addIntHeader.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 107
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/PlainResult.java:[82,31] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.addCookie.
+[ERROR]   found   : @RTainted Cookie
+[ERROR]   required: @RUntainted Cookie, index: 108
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/PlainResult.java:[85,50] error: [argument] incompatible argument for parameter s of PrintWriter.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 109
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/PropertiesReader.java:[496,34] error: [argument] incompatible argument for parameter c of Writer.write.
+[ERROR]   found   : @RTainted char
+[ERROR]   required: @RUntainted int, index: 110
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/PropertiesReader.java:[540,34] error: [argument] incompatible argument for parameter c of Writer.write.
+[ERROR]   found   : @RTainted char
+[ERROR]   required: @RUntainted int, index: 111
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/PropertiesReader.java:[548,22] error: [argument] incompatible argument for parameter c of Writer.write.
+[ERROR]   found   : @RTainted char
+[ERROR]   required: @RUntainted int, index: 112
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ResolverUtil.java:[372,37] error: [argument] incompatible argument for parameter pathname of File constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 113
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/ResolverUtil.java:[463,46] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 114
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/validator/DefaultValidatorFactory.java:[163,75] error: [argument] incompatible argument for parameter pathname of File constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 115
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/classloader/ReloadingClassLoader.java:[67,86] error: [argument] incompatible argument for parameter uri of File constructor.
+[ERROR]   found   : @RTainted URI
+[ERROR]   required: @RUntainted URI, index: 116
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/classloader/ReloadingClassLoader.java:[151,11] error: [override.return] Incompatible return type.
+[ERROR]   found   : @RTainted Class</*RAW*/>
+[ERROR]   required: @RUntainted Class<? extends @RTainted Object>
+[ERROR]   Consequence: method in @RTainted ReloadingClassLoader
+[ERROR]     @RTainted Class</*RAW*/> loadClass(@RTainted ReloadingClassLoader this, @RTainted String p0) throws @RTainted ClassNotFoundException
+[ERROR]   cannot override method in @RTainted ClassLoader
+[ERROR]     @RUntainted Class<? extends @RTainted Object> loadClass(@RTainted ClassLoader this, @RUntainted String p0) throws @RTainted ClassNotFoundException, index: 117
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/classloader/ReloadingClassLoader.java:[152,53] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 118
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/classloader/ReloadingClassLoader.java:[152,78] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 119
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/util/FastByteArrayOutputStream.java:[151,18] error: [argument] incompatible argument for parameter str of Writer.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 120
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/util/FastByteArrayOutputStream.java:[197,33] error: [argument] incompatible argument for parameter str of Writer.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 121
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/DefaultDispatcherErrorHandler.java:[97,49] error: [argument] incompatible argument for parameter arg1 of HttpServletResponse.sendError.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 122
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/DefaultDispatcherErrorHandler.java:[126,91] error: [argument] incompatible argument for parameter arg1 of HttpServletResponse.sendError.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 123
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/result/ServletDispatcherResult.java:[154,67] error: [argument] incompatible argument for parameter arg1 of HttpServletResponse.sendError.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 124
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/components/ServletUrlRenderer.java:[121,33] error: [argument] incompatible argument for parameter str of Writer.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 125
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/components/ServletUrlRenderer.java:[128,29] error: [argument] incompatible argument for parameter str of Writer.write.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 126
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/interceptor/CookieProviderInterceptor.java:[88,35] error: [argument] incompatible argument for parameter arg0 of HttpServletResponse.addCookie.
+[ERROR]   found   : @RTainted Cookie
+[ERROR]   required: @RUntainted Cookie, index: 127
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/org/apache/struts2/dispatcher/multipart/JakartaMultiPartRequest.java:[194,39] error: [argument] incompatible argument for parameter pathname of File constructor.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 128
+[ERROR] /home/nima/Developer/taint-benchmarks/struts/core/src/main/java/com/opensymphony/xwork2/util/finder/ClassLoaderInterfaceDelegate.java:[37,37] error: [argument] incompatible argument for parameter name of ClassLoader.loadClass.
+[ERROR]   found   : @RTainted String
+[ERROR]   required: @RUntainted String, index: 129
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

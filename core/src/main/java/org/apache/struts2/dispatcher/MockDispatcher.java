@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.config.ConfigurationManager;
 
 import javax.servlet.ServletContext;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class MockDispatcher extends Dispatcher {
 

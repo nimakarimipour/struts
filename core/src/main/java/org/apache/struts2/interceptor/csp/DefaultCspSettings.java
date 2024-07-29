@@ -28,6 +28,7 @@ import java.util.Base64;
 import java.util.Objects;
 
 import static java.lang.String.format;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Default implementation of {@link CspSettings}.
@@ -44,7 +45,7 @@ public class DefaultCspSettings implements CspSettings {
 
     private String reportUri;
     // default to reporting mode
-    private String cspHeader = CSP_REPORT_HEADER;
+    private @RUntainted String cspHeader = CSP_REPORT_HEADER;
 
     @Override
     public void addCspHeaders(HttpServletResponse response) {

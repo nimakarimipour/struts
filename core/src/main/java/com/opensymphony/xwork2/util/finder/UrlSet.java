@@ -36,6 +36,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -173,7 +174,7 @@ public class UrlSet {
     }
 
     public UrlSet excludePaths(String pathString) throws MalformedURLException {
-        String[] paths = pathString.split(File.pathSeparator);
+        @RUntainted String[] paths = pathString.split(File.pathSeparator);
         UrlSet urlSet = this;
         for (String path : paths) {
             if (StringUtils.isNotEmpty(path)) {

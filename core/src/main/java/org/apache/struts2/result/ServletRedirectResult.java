@@ -44,6 +44,7 @@ import java.util.List;
 import java.util.Map;
 
 import static javax.servlet.http.HttpServletResponse.SC_FOUND;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Calls the {@link HttpServletResponse#sendRedirect(String) sendRedirect}
@@ -239,7 +240,7 @@ public class ServletRedirectResult extends StrutsResultSupport implements Reflec
      * @param finalLocation The location URI
      * @throws IOException in case of IO errors
      */
-    protected void sendRedirect(HttpServletResponse response, String finalLocation) throws IOException {
+    protected void sendRedirect(HttpServletResponse response, @RUntainted String finalLocation) throws IOException {
         try {
             if (SC_FOUND == statusCode) {
                 response.sendRedirect(finalLocation);
