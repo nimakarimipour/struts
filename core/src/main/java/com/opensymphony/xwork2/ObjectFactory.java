@@ -40,6 +40,7 @@ import org.apache.struts2.StrutsConstants;
 
 import java.io.Serializable;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * ObjectFactory is responsible for building the core framework objects. Users may register their 
@@ -144,7 +145,7 @@ public class ObjectFactory implements Serializable {
      * @return instance of the action class to handle a web request
      * @throws Exception in case of any error
      */
-    public Object buildAction(String actionName, String namespace, ActionConfig config, Map<String, Object> extraContext) throws Exception {
+    public @RUntainted Object buildAction(String actionName, String namespace, ActionConfig config, Map<String, Object> extraContext) throws Exception {
         return actionFactory.buildAction(actionName, namespace, config, extraContext);
     }
 
@@ -156,7 +157,7 @@ public class ObjectFactory implements Serializable {
      * @return object for the given type
      * @throws Exception in case of any error
      */
-    public Object buildBean(Class clazz, Map<String, Object> extraContext) throws Exception {
+    public @RUntainted Object buildBean(Class clazz, Map<String, Object> extraContext) throws Exception {
         return container.inject(clazz);
     }
 
@@ -180,7 +181,7 @@ public class ObjectFactory implements Serializable {
      * @return object for the given type
      * @throws Exception in case of any error
      */
-    public Object buildBean(String className, Map<String, Object> extraContext) throws Exception {
+    public @RUntainted Object buildBean(String className, Map<String, Object> extraContext) throws Exception {
         return buildBean(className, extraContext, true);
     }
     
@@ -193,7 +194,7 @@ public class ObjectFactory implements Serializable {
      * @return object for the given type
      * @throws Exception in case of any error
      */
-    public Object buildBean(String className, Map<String, Object> extraContext, boolean injectInternal) throws Exception {
+    public @RUntainted Object buildBean(String className, Map<String, Object> extraContext, boolean injectInternal) throws Exception {
         Class clazz = getClassInstance(className);
         return buildBean(clazz, extraContext);
     }

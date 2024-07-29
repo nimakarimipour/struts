@@ -21,6 +21,7 @@ package com.opensymphony.xwork2.util.fs;
 import java.io.File;
 import java.net.URISyntaxException;
 import java.net.URL;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Represents file resource revision, used for file://* resources
@@ -30,7 +31,7 @@ public class FileRevision extends Revision {
     private File file;
     private long lastModified;
 
-    public static Revision build(URL fileUrl) {
+    public static Revision build(@RUntainted URL fileUrl) {
         File file;
         try {
             if (fileUrl != null) {

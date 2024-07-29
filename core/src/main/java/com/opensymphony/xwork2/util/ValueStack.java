@@ -21,6 +21,7 @@ package com.opensymphony.xwork2.util;
 import com.opensymphony.xwork2.ActionContext;
 
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * ValueStack allows multiple beans to be pushed in and dynamic EL expressions to be evaluated against it. When
@@ -111,7 +112,7 @@ public interface ValueStack {
      */
     Object findValue(String expr);
 
-    Object findValue(String expr, boolean throwExceptionOnFailure);
+    @RUntainted Object findValue(String expr, boolean throwExceptionOnFailure);
 
     /**
      * Find a value by evaluating the given expression against the stack in the default search order.

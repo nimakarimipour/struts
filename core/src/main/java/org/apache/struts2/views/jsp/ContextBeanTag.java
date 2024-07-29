@@ -19,6 +19,7 @@
 package org.apache.struts2.views.jsp;
 
 import org.apache.struts2.components.ContextBean;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 
 public abstract class ContextBeanTag extends ComponentTagSupport {

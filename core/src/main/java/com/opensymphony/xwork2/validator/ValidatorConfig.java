@@ -24,6 +24,7 @@ import com.opensymphony.xwork2.util.location.Location;
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Holds the necessary information for configuring an instance of a Validator.

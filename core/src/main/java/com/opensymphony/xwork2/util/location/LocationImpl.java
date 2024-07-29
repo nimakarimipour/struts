@@ -27,13 +27,14 @@ import java.io.Serializable;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A simple immutable and serializable implementation of {@link Location}.
  */
 public class LocationImpl implements Location, Serializable {
 
-    private final String uri;
+    private final @RUntainted String uri;
     private final int line;
     private final int column;
     private final String description;
@@ -125,7 +126,7 @@ public class LocationImpl implements Location, Serializable {
      * 
      * @return the URI (<code>null</code> if unknown).
      */
-    public String getURI() {
+    public @RUntainted String getURI() {
         return this.uri;
     }
 

@@ -24,13 +24,14 @@ import org.apache.logging.log4j.Logger;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 
 public abstract class AbstractResourceStore implements ResourceStore {
     private static final Logger log = LogManager.getLogger(JarResourceStore.class);
-    protected final File file;
+    protected final @RUntainted File file;
 
-    public AbstractResourceStore(final File file) {
+    public AbstractResourceStore(final @RUntainted File file) {
         this.file = file;
     }
 
