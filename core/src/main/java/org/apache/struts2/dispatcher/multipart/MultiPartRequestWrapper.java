@@ -33,6 +33,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Vector;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -75,7 +76,7 @@ public class MultiPartRequestWrapper extends StrutsRequestWrapper {
      * @param disableRequestAttributeValueStackLookup disable the request attribute value stack lookup
      */
     public MultiPartRequestWrapper(MultiPartRequest multiPartRequest, HttpServletRequest request,
-                                   String saveDir, LocaleProvider provider,
+                                   @RUntainted String saveDir, LocaleProvider provider,
                                    boolean disableRequestAttributeValueStackLookup) {
         super(request, disableRequestAttributeValueStackLookup);
         errors = new ArrayList<>();
@@ -93,7 +94,7 @@ public class MultiPartRequestWrapper extends StrutsRequestWrapper {
         } 
     }
 
-    public MultiPartRequestWrapper(MultiPartRequest multiPartRequest, HttpServletRequest request, String saveDir, LocaleProvider provider) {
+    public MultiPartRequestWrapper(MultiPartRequest multiPartRequest, HttpServletRequest request, @RUntainted String saveDir, LocaleProvider provider) {
         this(multiPartRequest, request, saveDir, provider, false);
     }
 

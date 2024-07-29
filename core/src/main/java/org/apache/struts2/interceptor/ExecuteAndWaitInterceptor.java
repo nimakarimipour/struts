@@ -38,6 +38,7 @@ import org.apache.struts2.views.freemarker.FreemarkerResult;
 
 import javax.servlet.http.HttpSession;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: description -->
@@ -184,7 +185,7 @@ public class ExecuteAndWaitInterceptor extends MethodFilterInterceptor {
     public static final String KEY = "__execWait";
     public static final String WAIT = "wait";
     protected int delay;
-    protected int delaySleepInterval = 100; // default sleep 100 millis before checking if background process is done
+    protected @RUntainted int delaySleepInterval = 100; // default sleep 100 millis before checking if background process is done
     protected boolean executeAfterValidationPass = false;
 
     private int threadPriority = Thread.NORM_PRIORITY;
@@ -379,7 +380,7 @@ public class ExecuteAndWaitInterceptor extends MethodFilterInterceptor {
      *
      * @param delaySleepInterval in millis (0 for not used)
      */
-    public void setDelaySleepInterval(int delaySleepInterval) {
+    public void setDelaySleepInterval(@RUntainted int delaySleepInterval) {
         this.delaySleepInterval = delaySleepInterval;
     }
 

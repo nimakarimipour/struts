@@ -51,6 +51,7 @@ import java.util.Map;
 import java.util.Stack;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Base class to extend for UI components.
@@ -292,7 +293,7 @@ public class Component {
      * @param expression the expression. Returns <tt>null</tt> if expr is null.
      * @return the value, <tt>null</tt> if not found.
      */
-    protected Object findValue(String expression) {
+    protected @RUntainted Object findValue(String expression) {
         if (expression == null) {
             return null;
         }

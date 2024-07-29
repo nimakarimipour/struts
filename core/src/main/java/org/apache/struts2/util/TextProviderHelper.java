@@ -26,6 +26,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.Collections;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Helper methods to access text from TextProviders
@@ -45,7 +46,7 @@ public class TextProviderHelper {
      *
      * @return the message if found, otherwise the defaultMessage
      */
-    public static String getText(String key, String defaultMessage, List<Object> args, ValueStack stack) {
+    public static @RUntainted String getText(String key, String defaultMessage, List<Object> args, ValueStack stack) {
         String msg = null;
         TextProvider tp = null;
 

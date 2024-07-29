@@ -27,6 +27,7 @@ import org.apache.struts2.config.StrutsBeanSelectionProvider;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Interface for loading static resources, based on a path. After implementing your own static content loader

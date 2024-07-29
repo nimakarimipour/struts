@@ -19,6 +19,7 @@
 package org.apache.struts2.result.plain;
 
 import javax.servlet.http.Cookie;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class ResponseBuilder {
 
@@ -38,27 +39,27 @@ public class ResponseBuilder {
         this.cookies = new HttpCookies();
     }
 
-    public ResponseBuilder write(String out) {
+    public ResponseBuilder write(@RUntainted String out) {
         body.write(out);
         return this;
     }
 
-    public ResponseBuilder writeLine(String out) {
+    public ResponseBuilder writeLine(@RUntainted String out) {
         body.writeLine(out);
         return this;
     }
 
-    public ResponseBuilder withHeader(String name, String value) {
+    public ResponseBuilder withHeader(@RUntainted String name, String value) {
         headers.add(name, value);
         return this;
     }
 
-    public ResponseBuilder withHeader(String name, Long value) {
+    public ResponseBuilder withHeader(@RUntainted String name, Long value) {
         headers.add(name, value);
         return this;
     }
 
-    public ResponseBuilder withHeader(String name, Integer value) {
+    public ResponseBuilder withHeader(@RUntainted String name, Integer value) {
         headers.add(name, value);
         return this;
     }
@@ -100,11 +101,11 @@ public class ResponseBuilder {
         return headers.getIntHeaders();
     }
 
-    public Iterable<Cookie> getCookies() {
+    public @RUntainted Iterable<Cookie> getCookies() {
         return cookies.getCookies();
     }
 
-    public String getBody() {
+    public @RUntainted String getBody() {
         return body.getBody();
     }
 

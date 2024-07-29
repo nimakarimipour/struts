@@ -23,6 +23,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.net.URL;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Represents jar resource revision, used for jar://* resource
@@ -31,10 +32,10 @@ public class JarEntryRevision extends Revision {
 
     private static Logger LOG = LogManager.getLogger(JarEntryRevision.class);
 
-    private URL jarFileURL;
+    private @RUntainted URL jarFileURL;
     private long lastModified;
 
-    public static Revision build(URL fileUrl, FileManager fileManager) {
+    public static Revision build(@RUntainted URL fileUrl, FileManager fileManager) {
         try (StrutsJarURLConnection conn = StrutsJarURLConnection.openConnection(fileUrl)) {
             conn.setUseCaches(false);
             URL url = fileManager.normalizeToFileProtocol(fileUrl);
@@ -49,7 +50,7 @@ public class JarEntryRevision extends Revision {
         }
     }
 
-    private JarEntryRevision(URL jarFileURL, long lastModified) {
+    private JarEntryRevision(@RUntainted URL jarFileURL, long lastModified) {
         if (jarFileURL == null) {
             throw new IllegalArgumentException("jarFileURL cannot be null");
         }

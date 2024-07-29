@@ -29,6 +29,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -115,7 +116,7 @@ public class AnnotationWorkflowInterceptor extends AbstractInterceptor implement
     public String intercept(ActionInvocation invocation) throws Exception {
         final Object action = invocation.getAction();
         invocation.addPreResultListener(this);
-        List<Method> methods = new ArrayList<>(MethodUtils.getMethodsListWithAnnotation(action.getClass(), Before.class,
+        List<@RUntainted Method> methods = new ArrayList<>(MethodUtils.getMethodsListWithAnnotation(action.getClass(), Before.class,
                 true, true));
         if (methods.size() > 0) {
             // methods are only sorted by priority
@@ -175,7 +176,7 @@ public class AnnotationWorkflowInterceptor extends AbstractInterceptor implement
      */
     public void beforeResult(ActionInvocation invocation, String resultCode) {
         Object action = invocation.getAction();
-        List<Method> methods = new ArrayList<Method>(MethodUtils.getMethodsListWithAnnotation(action.getClass(),
+        List<@RUntainted Method> methods = new ArrayList<@RUntainted Method>(MethodUtils.getMethodsListWithAnnotation(action.getClass(),
                 BeforeResult.class, true, true));
 
         if (methods.size() > 0) {
