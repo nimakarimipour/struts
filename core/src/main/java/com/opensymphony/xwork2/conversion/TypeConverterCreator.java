@@ -17,6 +17,7 @@
  * under the License.
  */
 package com.opensymphony.xwork2.conversion;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Instantiate converter classes, if cannot create TypeConverter throws exception

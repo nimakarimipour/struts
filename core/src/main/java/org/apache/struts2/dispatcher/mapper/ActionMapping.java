@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.Result;
 
 import java.util.HashMap;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Simple class that holds the action mapping information used to invoke a
@@ -80,7 +81,7 @@ public class ActionMapping {
     /**
      * @return The action namespace
      */
-    public String getNamespace() {
+    public @RUntainted String getNamespace() {
         return namespace;
     }
 

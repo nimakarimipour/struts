@@ -22,12 +22,13 @@ import com.opensymphony.xwork2.config.ConfigurationManager;
 
 import javax.servlet.ServletContext;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class MockDispatcher extends Dispatcher {
 
     private final ConfigurationManager copyConfigurationManager;
 
-    public MockDispatcher(ServletContext servletContext, Map<String, String> context, ConfigurationManager configurationManager) {
+    public MockDispatcher(@RUntainted ServletContext servletContext, Map<String, @RUntainted String> context, ConfigurationManager configurationManager) {
         super(servletContext, context);
         this.copyConfigurationManager = configurationManager;
     }

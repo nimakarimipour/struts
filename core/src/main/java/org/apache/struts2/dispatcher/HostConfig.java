@@ -20,6 +20,7 @@ package org.apache.struts2.dispatcher;
 
 import javax.servlet.ServletContext;
 import java.util.Iterator;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Abstraction for host configuration information such as init params or the servlet context.
@@ -30,15 +31,15 @@ public interface HostConfig {
      * @param key The parameter key
      * @return The parameter value
      */
-    String getInitParameter(String key);
+    @RUntainted String getInitParameter(@RUntainted String key);
 
     /**
      * @return A list of parameter names
      */
-    Iterator<String> getInitParameterNames();
+    Iterator<@RUntainted String> getInitParameterNames();
 
     /**
      * @return The servlet context
      */
-    ServletContext getServletContext();
+    @RUntainted ServletContext getServletContext();
 }

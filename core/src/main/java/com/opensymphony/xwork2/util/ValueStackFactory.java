@@ -17,6 +17,7 @@
  * under the License.
  */
 package com.opensymphony.xwork2.util;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Factory that creates a value stack, defaulting to the OgnlValueStackFactory

@@ -42,6 +42,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * The Default ActionInvocation implementation
@@ -55,7 +56,7 @@ public class DefaultActionInvocation implements ActionInvocation {
 
     private static final Logger LOG = LogManager.getLogger(DefaultActionInvocation.class);
 
-    protected Object action;
+    protected @RUntainted Object action;
     protected ActionProxy proxy;
     protected List<PreResultListener> preResultListeners;
     protected Map<String, Object> extraContext;
@@ -117,7 +118,7 @@ public class DefaultActionInvocation implements ActionInvocation {
         this.asyncManager = asyncManager;
     }
 
-    public Object getAction() {
+    public @RUntainted Object getAction() {
         return action;
     }
 
