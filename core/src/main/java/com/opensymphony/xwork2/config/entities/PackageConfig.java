@@ -30,6 +30,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Configuration for Package.
@@ -52,7 +53,7 @@ public class PackageConfig extends Located implements Comparable<PackageConfig>,
     protected String defaultResultType;
     protected String defaultClassRef;
     protected String name;
-    protected String namespace = "";
+    protected @RUntainted String namespace = "";
     protected boolean isAbstract = false;
     protected boolean needsRefresh;
     protected boolean strictMethodInvocation = true;
@@ -316,7 +317,7 @@ public class PackageConfig extends Located implements Comparable<PackageConfig>,
         return name;
     }
 
-    public String getNamespace() {
+    public @RUntainted String getNamespace() {
         return namespace;
     }
 
@@ -487,7 +488,7 @@ public class PackageConfig extends Located implements Comparable<PackageConfig>,
             return this;
         }
 
-        public Builder namespace(String namespace) {
+        public Builder namespace(@RUntainted String namespace) {
             if (namespace == null) {
                 target.namespace = "";
             } else {

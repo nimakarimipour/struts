@@ -24,13 +24,14 @@ import org.apache.struts2.components.Debug;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class DebugTag extends AbstractUITag {
 
     private static final long serialVersionUID = 3487684841317160628L;
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new Debug(stack, req, res);
     }
 

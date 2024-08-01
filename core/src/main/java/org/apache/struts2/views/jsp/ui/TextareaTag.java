@@ -24,6 +24,7 @@ import org.apache.struts2.components.TextArea;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see TextArea
@@ -40,7 +41,7 @@ public class TextareaTag extends AbstractUITag {
     protected String minlength;
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new TextArea(stack, req, res);
     }
 

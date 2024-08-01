@@ -27,6 +27,7 @@ import org.apache.struts2.views.annotations.StrutsTagAttribute;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.Writer;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -109,7 +110,7 @@ public class URL extends ContextBean {
     private UrlProvider urlProvider;
     private UrlRenderer urlRenderer;
 
-    public URL(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public URL(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack);
         urlProvider = new ComponentUrlProvider(this, this.parameters);
         urlProvider.setHttpServletRequest(req);
@@ -138,12 +139,12 @@ public class URL extends ContextBean {
         return result;
     }
 
-    public boolean end(Writer writer, String body) {
+    public boolean end(Writer writer, @RUntainted String body) {
     	urlRenderer.renderUrl(writer, urlProvider);
         return super.end(writer, body);
     }
 
-    public String findString(String expr) {
+    public @RUntainted String findString(String expr) {
         return super.findString(expr);
     }
 

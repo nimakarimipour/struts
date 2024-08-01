@@ -46,6 +46,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -444,9 +445,9 @@ public abstract class UIBean extends Component {
     protected static final String ATTR_VALUE = "value";
 
     protected HttpServletRequest request;
-    protected HttpServletResponse response;
+    protected @RUntainted HttpServletResponse response;
 
-    public UIBean(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    public UIBean(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack);
         this.request = request;
         this.response = response;
@@ -513,20 +514,20 @@ public abstract class UIBean extends Component {
     // dynamic attributes
     protected Map<String, Object> dynamicAttributes = new HashMap<>();
 
-    protected String defaultTemplateDir;
-    protected String defaultUITheme;
+    protected @RUntainted String defaultTemplateDir;
+    protected @RUntainted String defaultUITheme;
     protected String uiThemeExpansionToken;
     protected String uiStaticContentPath;
 
     protected TemplateEngineManager templateEngineManager;
 
     @Inject(StrutsConstants.STRUTS_UI_TEMPLATEDIR)
-    public void setDefaultTemplateDir(String dir) {
+    public void setDefaultTemplateDir(@RUntainted String dir) {
         this.defaultTemplateDir = dir;
     }
 
     @Inject(StrutsConstants.STRUTS_UI_THEME)
-    public void setDefaultUITheme(String theme) {
+    public void setDefaultUITheme(@RUntainted String theme) {
         this.defaultUITheme = theme;
     }
 
@@ -546,7 +547,7 @@ public abstract class UIBean extends Component {
     }
 
     @Override
-    public boolean end(Writer writer, String body) {
+    public boolean end(Writer writer, @RUntainted String body) {
         evaluateParams();
         try {
             super.end(writer, body, false);
@@ -569,9 +570,9 @@ public abstract class UIBean extends Component {
      *
      * @return The name of the template to be used as the default.
      */
-    protected abstract String getDefaultTemplate();
+    protected abstract @RUntainted String getDefaultTemplate();
 
-    protected Template buildTemplateName(String myTemplate, String myDefaultTemplate) {
+    protected Template buildTemplateName(String myTemplate, @RUntainted String myDefaultTemplate) {
         String templateName = myDefaultTemplate;
 
         if (myTemplate != null) {
@@ -594,7 +595,7 @@ public abstract class UIBean extends Component {
         engine.renderTemplate(context);
     }
 
-    public String getTemplateDir() {
+    public @RUntainted String getTemplateDir() {
         String result = null;
 
         if (this.templateDir != null) {
@@ -620,7 +621,7 @@ public abstract class UIBean extends Component {
         return result;
     }
 
-    public String getTheme() {
+    public @RUntainted String getTheme() {
         String result = null;
 
         if (this.theme != null) {

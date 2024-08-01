@@ -24,12 +24,13 @@ import org.apache.struts2.components.GenericUIBean;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see ComponentModel
  */
 public class ComponentModel extends TagModel {
-    public ComponentModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public ComponentModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

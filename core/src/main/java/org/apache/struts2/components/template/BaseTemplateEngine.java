@@ -32,6 +32,7 @@ import java.io.InputStream;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Base class for template engines.
@@ -47,7 +48,7 @@ public abstract class BaseTemplateEngine implements TemplateEngine {
 
     private final Map<String, Properties> themeProps = new ConcurrentHashMap<>();
 
-    public Map getThemeProps(Template template) {
+    public @RUntainted Map getThemeProps(Template template) {
         Properties props = themeProps.get(template.getTheme());
         if (props == null) {
             synchronized (themeProps) {
@@ -63,7 +64,7 @@ public abstract class BaseTemplateEngine implements TemplateEngine {
         return loadProperties(propName);
     }
 
-    private Properties loadProperties(String propName) {
+    private Properties loadProperties(@RUntainted String propName) {
         InputStream is = readProperty(propName);
         Properties props = new Properties();
         if (is != null) {
@@ -72,7 +73,7 @@ public abstract class BaseTemplateEngine implements TemplateEngine {
         return props;
     }
 
-    private InputStream readProperty(String propName) {
+    private InputStream readProperty(@RUntainted String propName) {
         InputStream is = tryReadingPropertyFileFromFileSystem(propName);
         if (is == null) {
             is = readPropertyFromClasspath(propName);
@@ -119,14 +120,14 @@ public abstract class BaseTemplateEngine implements TemplateEngine {
         }
     }
 
-    private String buildPropertyFilename(Template template) {
+    private @RUntainted String buildPropertyFilename(Template template) {
         return template.getDir() + "/" + template.getTheme() + "/" + getThemePropertiesFileName();
     }
 
     /**
      * WW-1292 let's try getting it from the filesystem
      */
-    private InputStream tryReadingPropertyFileFromFileSystem(String propName) {
+    private InputStream tryReadingPropertyFileFromFileSystem(@RUntainted String propName) {
         File propFile = new File(propName);
         try {
             return createFileInputStream(propFile);
@@ -152,7 +153,7 @@ public abstract class BaseTemplateEngine implements TemplateEngine {
         return t;
     }
 
-    protected String getThemePropertiesFileName() {
+    protected @RUntainted String getThemePropertiesFileName() {
         return DEFAULT_THEME_PROPERTIES_FILE_NAME;
     }
 

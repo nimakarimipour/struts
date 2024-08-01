@@ -23,6 +23,7 @@ import org.apache.struts2.views.annotations.StrutsTag;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -54,11 +55,11 @@ import javax.servlet.http.HttpServletResponse;
 public class Hidden extends UIBean {
     final public static String TEMPLATE = "hidden";
 
-    public Hidden(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    public Hidden(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack, request, response);
     }
 
-    protected String getDefaultTemplate() {
+    protected @RUntainted String getDefaultTemplate() {
         return TEMPLATE;
     }
 

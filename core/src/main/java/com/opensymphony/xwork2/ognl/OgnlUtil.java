@@ -51,6 +51,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.regex.Pattern;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 
 /**
@@ -585,7 +586,7 @@ public class OgnlUtil {
         return false;
     }
 
-    public Object getValue(final String name, final Map<String, Object> context, final Object root) throws OgnlException {
+    public @RUntainted Object getValue(final String name, final Map<String, Object> context, final Object root) throws OgnlException {
         return compileAndExecute(name, context, tree -> Ognl.getValue(tree, context, root));
     }
 
@@ -593,7 +594,7 @@ public class OgnlUtil {
         return compileAndExecuteMethod(name, context, tree -> Ognl.getValue(tree, context, root));
     }
 
-    public Object getValue(final String name, final Map<String, Object> context, final Object root, final Class<?> resultType) throws OgnlException {
+    public @RUntainted Object getValue(final String name, final Map<String, Object> context, final Object root, final Class<?> resultType) throws OgnlException {
         return compileAndExecute(name, context, tree -> Ognl.getValue(tree, context, root, resultType));
     }
 
@@ -602,7 +603,7 @@ public class OgnlUtil {
         return compile(expression, null);
     }
 
-    private <T> Object compileAndExecute(String expression, Map<String, Object> context, OgnlTask<T> task) throws OgnlException {
+    private <T> @RUntainted Object compileAndExecute(String expression, Map<String, Object> context, OgnlTask<T> task) throws OgnlException {
         Object tree;
         if (enableExpressionCache) {
             tree = expressionCache.get(expression);

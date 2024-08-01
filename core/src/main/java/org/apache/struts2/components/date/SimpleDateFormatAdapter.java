@@ -26,11 +26,12 @@ import java.time.Instant;
 import java.time.temporal.TemporalAccessor;
 import java.util.Date;
 import java.util.Locale;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class SimpleDateFormatAdapter implements DateFormatter {
 
     @Override
-    public String format(TemporalAccessor temporal, String format) {
+    public @RUntainted String format(@RUntainted TemporalAccessor temporal, @RUntainted String format) {
         DateFormat df;
         Locale locale = ActionContext.getContext().getLocale();
         if (format == null) {

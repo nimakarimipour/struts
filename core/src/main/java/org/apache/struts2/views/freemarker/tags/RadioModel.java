@@ -24,12 +24,13 @@ import org.apache.struts2.components.Radio;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Radio
  */
 public class RadioModel extends TagModel {
-    public RadioModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public RadioModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

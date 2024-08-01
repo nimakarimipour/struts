@@ -29,6 +29,7 @@ import org.apache.struts2.url.UrlDecoder;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.StringTokenizer;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Extended version of {@link RestfulActionMapper}, see documentation for more details

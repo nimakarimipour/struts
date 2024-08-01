@@ -29,6 +29,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Collection;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -126,18 +127,18 @@ public abstract class StrutsResultSupport implements Result, StrutsStatics {
 
     private boolean parse;
     private boolean encode;
-    private String location;
-    private String lastFinalLocation;
+    private @RUntainted String location;
+    private @RUntainted String lastFinalLocation;
 
     public StrutsResultSupport() {
         this(null, true, false);
     }
 
-    public StrutsResultSupport(String location) {
+    public StrutsResultSupport(@RUntainted String location) {
         this(location, true, false);
     }
 
-    public StrutsResultSupport(String location, boolean parse, boolean encode) {
+    public StrutsResultSupport(@RUntainted String location, boolean parse, boolean encode) {
         this.location = location;
         this.parse = parse;
         this.encode = encode;
@@ -151,7 +152,7 @@ public abstract class StrutsResultSupport implements Result, StrutsStatics {
      * @param location the location to go to after action execution.
      * @see #setParse(boolean)
      */
-    public void setLocation(String location) {
+    public void setLocation(@RUntainted String location) {
         this.location = location;
     }
     
@@ -160,7 +161,7 @@ public abstract class StrutsResultSupport implements Result, StrutsStatics {
      *
      * @return the location
      */
-    public String getLocation() {
+    public @RUntainted String getLocation() {
         return location;
     }
 
@@ -213,7 +214,7 @@ public abstract class StrutsResultSupport implements Result, StrutsStatics {
      * @param invocation The action invocation instance
      * @return the resulting string
      */
-    protected String conditionalParse(String param, ActionInvocation invocation) {
+    protected @RUntainted String conditionalParse(@RUntainted String param, ActionInvocation invocation) {
         if (parse && param != null && invocation != null) {
             return TextParseUtil.translateVariables(
                 param, 
@@ -278,5 +279,5 @@ public abstract class StrutsResultSupport implements Result, StrutsStatics {
      * @param invocation    the execution state of the action.
      * @throws Exception if an error occurs while executing the result.
      */
-    protected abstract void doExecute(String finalLocation, ActionInvocation invocation) throws Exception;
+    protected abstract void doExecute(@RUntainted String finalLocation, ActionInvocation invocation) throws Exception;
 }

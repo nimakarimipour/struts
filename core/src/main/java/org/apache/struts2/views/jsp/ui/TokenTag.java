@@ -24,6 +24,7 @@ import org.apache.struts2.components.Token;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Token
@@ -33,7 +34,7 @@ public class TokenTag extends AbstractUITag {
     private static final long serialVersionUID = 722480798151703457L;
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new Token(stack, req, res);
     }
 

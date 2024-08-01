@@ -24,12 +24,13 @@ import org.apache.struts2.components.IteratorComponent;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see IteratorComponent
  */
 public class IteratorModel extends TagModel {
-    public IteratorModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public IteratorModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

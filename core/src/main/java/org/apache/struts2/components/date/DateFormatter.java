@@ -19,6 +19,7 @@
 package org.apache.struts2.components.date;
 
 import java.time.temporal.TemporalAccessor;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Allows defines a wrapper around different formatting APIs, like old SimpleDateFormat
@@ -35,6 +36,6 @@ public interface DateFormatter {
      * @param format   implementation specific format
      * @return a string representation of the formatted `temporal`
      */
-    String format(TemporalAccessor temporal, String format);
+    @RUntainted String format(@RUntainted TemporalAccessor temporal, @RUntainted String format);
 
 }

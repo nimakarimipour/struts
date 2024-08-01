@@ -25,6 +25,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * ClassFinder searches the classpath of the specified ClassLoaderInterface for
@@ -146,7 +147,7 @@ public interface ClassFinder {
             this.info = null;
         }
 
-        public PackageInfo(String name, ClassFinder classFinder) {
+        public PackageInfo(@RUntainted String name, ClassFinder classFinder) {
             info = new ClassInfo(name, null, classFinder);
             this.name = name;
             this.pkg = null;
@@ -162,7 +163,7 @@ public interface ClassFinder {
     }
 
     class ClassInfo extends Annotatable implements Info {
-        private final String name;
+        private final @RUntainted String name;
         private final List<MethodInfo> methods = new ArrayList<>();
         private final List<MethodInfo> constructors = new ArrayList<>();
         private final String superType;
@@ -183,7 +184,7 @@ public interface ClassFinder {
             this.superType = superclass != null ? superclass.getName() : null;
         }
 
-        public ClassInfo(String name, String superType, ClassFinder classFinder) {
+        public ClassInfo(@RUntainted String name, String superType, ClassFinder classFinder) {
             this.name = name;
             this.superType = superType;
             this.classFinder = classFinder;

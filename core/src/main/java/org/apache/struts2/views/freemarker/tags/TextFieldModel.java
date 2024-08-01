@@ -24,12 +24,13 @@ import org.apache.struts2.components.TextField;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see TextField
  */
 public class TextFieldModel extends TagModel {
-    public TextFieldModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public TextFieldModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

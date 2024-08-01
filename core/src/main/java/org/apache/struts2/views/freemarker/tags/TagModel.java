@@ -37,15 +37,16 @@ import java.io.Writer;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public abstract class TagModel implements TemplateTransformModel {
     private static final Logger LOG = LogManager.getLogger(TagModel.class);
 
     protected ValueStack stack;
     protected HttpServletRequest req;
-    protected HttpServletResponse res;
+    protected @RUntainted HttpServletResponse res;
 
-    public TagModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public TagModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         this.stack = stack;
         this.req = req;
         this.res = res;

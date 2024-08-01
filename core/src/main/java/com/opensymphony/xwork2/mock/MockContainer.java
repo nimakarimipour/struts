@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.inject.Container;
 import com.opensymphony.xwork2.inject.Scope;
 
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Mock implementation to be used in unittests
@@ -36,11 +37,11 @@ public class MockContainer implements Container {
         return null;
     }
 
-    public <T> T getInstance(Class<T> type, String name) {
+    public <T> @RUntainted T getInstance(Class<T> type, String name) {
         return null;
     }
 
-    public <T> T getInstance(Class<T> type) {
+    public <T> @RUntainted T getInstance(Class<T> type) {
         return null;
     }
 

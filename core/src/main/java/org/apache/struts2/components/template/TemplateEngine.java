@@ -19,6 +19,7 @@
 package org.apache.struts2.components.template;
 
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Any template language which wants to support UI tag templating needs to provide an implementation of this interface
@@ -39,6 +40,6 @@ public interface TemplateEngine {
      * @param template   the template.
      * @return  the properties as key value pairs.
      */
-    Map getThemeProps(Template template);
+    @RUntainted Map getThemeProps(Template template);
 
 }

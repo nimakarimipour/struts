@@ -24,6 +24,7 @@ import org.apache.struts2.components.Reset;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see org.apache.struts2.components.Reset
@@ -38,7 +39,7 @@ public class ResetTag extends AbstractUITag {
     protected String src;
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new Reset(stack, req, res);
     }
 

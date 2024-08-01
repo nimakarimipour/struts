@@ -28,6 +28,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -102,11 +103,11 @@ public class ComboBox extends TextField {
     protected String emptyOption;
 
 
-    public ComboBox(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    public ComboBox(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack, request, response);
     }
 
-    protected String getDefaultTemplate() {
+    protected @RUntainted String getDefaultTemplate() {
         return TEMPLATE;
     }
 

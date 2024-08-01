@@ -32,6 +32,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 @StrutsTag(name="debug", tldTagClass="org.apache.struts2.views.jsp.ui.DebugTag",
         description="Prints debugging information (Only if 'struts.devMode' is enabled)")
@@ -41,7 +42,7 @@ public class Debug extends UIBean {
     protected ReflectionProvider reflectionProvider;
 
 
-    public Debug(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    public Debug(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack, request, response);
     }
 
@@ -50,7 +51,7 @@ public class Debug extends UIBean {
         this.reflectionProvider = prov;
     }
 
-    protected String getDefaultTemplate() {
+    protected @RUntainted String getDefaultTemplate() {
         return TEMPLATE;
     }
 
@@ -78,7 +79,7 @@ public class Debug extends UIBean {
     }
 
     @Override
-    public boolean end(Writer writer, String body) {
+    public boolean end(Writer writer, @RUntainted String body) {
         if (showDebug()) {
             return super.end(writer, body);
         } else {

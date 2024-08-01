@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.Result;
 import com.opensymphony.xwork2.config.entities.ResultConfig;
 
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Used by {@link com.opensymphony.xwork2.ObjectFactory} to build {@link com.opensymphony.xwork2.Result}

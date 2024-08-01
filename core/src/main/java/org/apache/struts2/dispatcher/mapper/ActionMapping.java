@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.Result;
 
 import java.util.HashMap;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Simple class that holds the action mapping information used to invoke a
@@ -33,7 +34,7 @@ import java.util.Map;
 public class ActionMapping {
 
     private String name;
-    private String namespace;
+    private @RUntainted String namespace;
     private String method;
     private String extension;
     private Map<String, Object> params;
@@ -63,7 +64,7 @@ public class ActionMapping {
      * @param method The method
      * @param params The extra parameters
      */
-    public ActionMapping(String name, String namespace, String method, Map<String, Object> params) {
+    public ActionMapping(String name, @RUntainted String namespace, String method, Map<String, Object> params) {
         this.name = name;
         this.namespace = namespace;
         this.method = method;
@@ -80,7 +81,7 @@ public class ActionMapping {
     /**
      * @return The action namespace
      */
-    public String getNamespace() {
+    public @RUntainted String getNamespace() {
         return namespace;
     }
 
@@ -133,7 +134,7 @@ public class ActionMapping {
     /**
      * @param namespace The action namespace
      */
-    public void setNamespace(String namespace) {
+    public void setNamespace(@RUntainted String namespace) {
         this.namespace = namespace;
     }
 

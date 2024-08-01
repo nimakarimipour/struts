@@ -26,6 +26,7 @@ import org.apache.struts2.views.annotations.StrutsTagAttribute;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.Writer;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * ClosingUIBean is the standard superclass for UI components such as div etc.
@@ -33,13 +34,13 @@ import java.io.Writer;
 public abstract class ClosingUIBean extends UIBean {
     private static final Logger LOG = LogManager.getLogger(ClosingUIBean.class);
 
-    protected ClosingUIBean(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    protected ClosingUIBean(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack, request, response);
     }
 
     String openTemplate;
 
-    public abstract String getDefaultOpenTemplate();
+    public abstract @RUntainted String getDefaultOpenTemplate();
 
     @StrutsTagAttribute(description="Set template to use for opening the rendered html.")
     public void setOpenTemplate(String openTemplate) {

@@ -27,6 +27,7 @@ import org.apache.struts2.views.annotations.StrutsTagAttribute;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.Writer;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -53,15 +54,15 @@ public class Submit extends FormButton {
     final public static String TEMPLATE = "submit-close";
     protected String src;
 
-    public Submit(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    public Submit(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack, request, response);
     }
 
-    public String getDefaultOpenTemplate() {
+    public @RUntainted String getDefaultOpenTemplate() {
         return OPEN_TEMPLATE;
     }
 
-    protected String getDefaultTemplate() {
+    protected @RUntainted String getDefaultTemplate() {
         return TEMPLATE;
     }
 

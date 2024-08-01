@@ -21,6 +21,7 @@ package com.opensymphony.xwork2.util;
 import com.opensymphony.xwork2.ActionContext;
 
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * ValueStack allows multiple beans to be pushed in and dynamic EL expressions to be evaluated against it. When
@@ -72,7 +73,7 @@ public interface ValueStack {
      *
      * @return the root
      */
-    CompoundRoot getRoot();
+    @RUntainted CompoundRoot getRoot();
 
     /**
      * Attempts to set a property on a bean in the stack with the given expression using the default search order.
@@ -100,7 +101,7 @@ public interface ValueStack {
      */
     void setValue(String expr, Object value, boolean throwExceptionOnFailure);
 
-    String findString(String expr);
+    @RUntainted String findString(String expr);
     String findString(String expr, boolean throwExceptionOnFailure);
 
     /**
@@ -111,7 +112,7 @@ public interface ValueStack {
      */
     Object findValue(String expr);
 
-    Object findValue(String expr, boolean throwExceptionOnFailure);
+    @RUntainted Object findValue(String expr, boolean throwExceptionOnFailure);
 
     /**
      * Find a value by evaluating the given expression against the stack in the default search order.
@@ -121,7 +122,7 @@ public interface ValueStack {
      * @return the result of evaluating the expression
      */
     Object findValue(String expr, Class asType);
-    Object findValue(String expr, Class asType, boolean throwExceptionOnFailure);
+    @RUntainted Object findValue(String expr, Class asType, boolean throwExceptionOnFailure);
 
     /**
      * Get the object on the top of the stack <b>without</b> changing the stack.

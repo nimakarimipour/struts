@@ -33,6 +33,7 @@ import java.io.StringWriter;
 import java.io.Writer;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -73,7 +74,7 @@ public class Anchor extends ClosingUIBean {
     //these params are passed by the Param tag
     protected Map urlParameters = new LinkedHashMap();
 
-    public Anchor(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    public Anchor(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack, request, response);
         urlProvider = new ComponentUrlProvider(this, this.urlParameters);
         urlProvider.setHttpServletRequest(request);
@@ -81,12 +82,12 @@ public class Anchor extends ClosingUIBean {
     }
 
     @Override
-    public String getDefaultOpenTemplate() {
+    public @RUntainted String getDefaultOpenTemplate() {
         return OPEN_TEMPLATE;
     }
 
     @Override
-    protected String getDefaultTemplate() {
+    protected @RUntainted String getDefaultTemplate() {
         return TEMPLATE;
     }
 

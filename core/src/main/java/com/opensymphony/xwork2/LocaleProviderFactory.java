@@ -17,6 +17,7 @@
  * under the License.
  */
 package com.opensymphony.xwork2;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Allows delegate creation of {@link LocaleProvider} to another implementation provided
@@ -30,6 +31,6 @@ public interface LocaleProviderFactory {
      *
      * @return the localeProvider.
      */
-    LocaleProvider createLocaleProvider();
+    @RUntainted LocaleProvider createLocaleProvider();
 
 }

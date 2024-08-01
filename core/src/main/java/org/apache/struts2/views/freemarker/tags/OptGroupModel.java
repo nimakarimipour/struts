@@ -24,13 +24,14 @@ import org.apache.struts2.components.OptGroup;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Freemarker's TransformModel for OptGroup component.
  *
  */
 public class OptGroupModel extends TagModel {
-    public OptGroupModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public OptGroupModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

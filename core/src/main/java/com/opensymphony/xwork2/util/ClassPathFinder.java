@@ -32,6 +32,7 @@ import java.util.HashMap;
 import java.util.Vector;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * This class is an utility class that will search through the classpath
@@ -76,9 +77,9 @@ public class ClassPathFinder {
      *
      * @return Vector&lt;String&gt; containing matching filenames
      */
-    public Vector<String> findMatches() {
-        Vector<String> matches = new Vector<>();
-        URL[] parentUrls = getClassLoaderURLs();
+    public Vector<@RUntainted String> findMatches() {
+        Vector<@RUntainted String> matches = new Vector<>();
+        @RUntainted URL[] parentUrls = getClassLoaderURLs();
         compiledPattern = patternMatcher.compilePattern(pattern);
         for (URL url : parentUrls) {
             if (!"file".equals(url.getProtocol())) {
@@ -109,7 +110,7 @@ public class ClassPathFinder {
                     e.printStackTrace();
                 }
             } else {
-                Vector<String> results = checkEntries(entry.list(), entry, "");
+                Vector<@RUntainted String> results = checkEntries(entry.list(), entry, "");
                 if (results != null) {
                     matches.addAll(results);
                 }
@@ -118,13 +119,13 @@ public class ClassPathFinder {
         return matches;
     }
 
-    private Vector<String> checkEntries(String[] entries, File parent, String prefix) {
+    private Vector<@RUntainted String> checkEntries(@RUntainted String[] entries, @RUntainted File parent, @RUntainted String prefix) {
 
         if (entries == null) {
             return null;
         }
 
-        Vector<String> matches = new Vector<>();
+        Vector<@RUntainted String> matches = new Vector<>();
         for (String listEntry : entries) {
             File tempFile;
             if (!"".equals(prefix)) {
@@ -170,8 +171,8 @@ public class ClassPathFinder {
         this.patternMatcher = patternMatcher;
     }
 
-    private URL[] getClassLoaderURLs() {
-        URL[] urls;
+    private @RUntainted URL[] getClassLoaderURLs() {
+        @RUntainted URL[] urls;
         ClassLoader loader = Thread.currentThread().getContextClassLoader();
 
         if (!(loader instanceof URLClassLoader)) {

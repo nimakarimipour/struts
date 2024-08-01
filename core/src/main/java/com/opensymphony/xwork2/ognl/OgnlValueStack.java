@@ -46,6 +46,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.regex.Pattern;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Ognl implementation of a value stack that allows for dynamic Ognl expressions to be evaluated against it. When evaluating an expression,
@@ -66,7 +67,7 @@ public class OgnlValueStack implements Serializable, ValueStack, ClearableValueS
 
     private static final String MAP_IDENTIFIER_KEY = "com.opensymphony.xwork2.util.OgnlValueStack.MAP_IDENTIFIER_KEY";
 
-    protected CompoundRoot root;
+    protected @RUntainted CompoundRoot root;
     protected transient Map<String, Object> context;
     protected Class defaultType;
     protected Map<Object, Object> overrides;
@@ -96,7 +97,7 @@ public class OgnlValueStack implements Serializable, ValueStack, ClearableValueS
         securityMemberAccess.setDisallowProxyMemberAccess(ognlUtil.isDisallowProxyMemberAccess());
     }
 
-    protected void setRoot(XWorkConverter xworkConverter, CompoundRootAccessor accessor, CompoundRoot compoundRoot, boolean allowStaticFieldAccess) {
+    protected void setRoot(XWorkConverter xworkConverter, CompoundRootAccessor accessor, @RUntainted CompoundRoot compoundRoot, boolean allowStaticFieldAccess) {
         this.root = compoundRoot;
         this.securityMemberAccess = new SecurityMemberAccess(allowStaticFieldAccess);
         this.context = Ognl.createDefaultContext(this.root, securityMemberAccess, accessor, new OgnlTypeConverterWrapper(xworkConverter));
@@ -155,7 +156,7 @@ public class OgnlValueStack implements Serializable, ValueStack, ClearableValueS
     /**
      * @see com.opensymphony.xwork2.util.ValueStack#getRoot()
      */
-    public CompoundRoot getRoot() {
+    public @RUntainted CompoundRoot getRoot() {
         return root;
     }
 
@@ -233,7 +234,7 @@ public class OgnlValueStack implements Serializable, ValueStack, ClearableValueS
     /**
      * @see com.opensymphony.xwork2.util.ValueStack#findString(java.lang.String)
      */
-    public String findString(String expr) {
+    public @RUntainted String findString(String expr) {
         return (String) findValue(expr, String.class);
     }
 
@@ -244,7 +245,7 @@ public class OgnlValueStack implements Serializable, ValueStack, ClearableValueS
     /**
      * @see com.opensymphony.xwork2.util.ValueStack#findValue(java.lang.String)
      */
-    public Object findValue(String expr, boolean throwExceptionOnFailure) {
+    public @RUntainted Object findValue(String expr, boolean throwExceptionOnFailure) {
         try {
             setupExceptionOnFailure(throwExceptionOnFailure);
             return tryFindValueWhenExpressionIsNotNull(expr);
@@ -263,14 +264,14 @@ public class OgnlValueStack implements Serializable, ValueStack, ClearableValueS
         }
     }
 
-    private Object tryFindValueWhenExpressionIsNotNull(String expr) throws OgnlException {
+    private @RUntainted Object tryFindValueWhenExpressionIsNotNull(String expr) throws OgnlException {
         if (expr == null) {
             return null;
         }
         return tryFindValue(expr);
     }
 
-    protected Object handleOtherException(String expr, boolean throwExceptionOnFailure, Exception e) {
+    protected @RUntainted Object handleOtherException(String expr, boolean throwExceptionOnFailure, Exception e) {
         logLookupFailure(expr, e);
 
         if (throwExceptionOnFailure)
@@ -279,7 +280,7 @@ public class OgnlValueStack implements Serializable, ValueStack, ClearableValueS
         return findInContext(expr);
     }
 
-    private Object tryFindValue(String expr) throws OgnlException {
+    private @RUntainted Object tryFindValue(String expr) throws OgnlException {
         Object value;
         expr = lookupForOverrides(expr);
         if (defaultType != null) {
@@ -300,7 +301,7 @@ public class OgnlValueStack implements Serializable, ValueStack, ClearableValueS
         return expr;
     }
 
-    private Object getValueUsingOgnl(String expr) throws OgnlException {
+    private @RUntainted Object getValueUsingOgnl(String expr) throws OgnlException {
         try {
             return ognlUtil.getValue(expr, context, root);
         } finally {
@@ -315,7 +316,7 @@ public class OgnlValueStack implements Serializable, ValueStack, ClearableValueS
     /**
      * @see com.opensymphony.xwork2.util.ValueStack#findValue(java.lang.String, java.lang.Class)
      */
-    public Object findValue(String expr, Class asType, boolean throwExceptionOnFailure) {
+    public @RUntainted Object findValue(String expr, Class asType, boolean throwExceptionOnFailure) {
         try {
             setupExceptionOnFailure(throwExceptionOnFailure);
             return tryFindValueWhenExpressionIsNotNull(expr, asType);
@@ -330,14 +331,14 @@ public class OgnlValueStack implements Serializable, ValueStack, ClearableValueS
         }
     }
 
-    private Object tryFindValueWhenExpressionIsNotNull(String expr, Class asType) throws OgnlException {
+    private @RUntainted Object tryFindValueWhenExpressionIsNotNull(String expr, Class asType) throws OgnlException {
         if (expr == null) {
             return null;
         }
         return tryFindValue(expr, asType);
     }
 
-    protected Object handleOgnlException(String expr, boolean throwExceptionOnFailure, OgnlException e) {
+    protected @RUntainted Object handleOgnlException(String expr, boolean throwExceptionOnFailure, OgnlException e) {
         Object ret = null;
         if (e != null && e.getReason() instanceof SecurityException) {
             LOG.error("Could not evaluate this expression due to security constraints: [{}]", expr, e);
@@ -361,7 +362,7 @@ public class OgnlValueStack implements Serializable, ValueStack, ClearableValueS
         		&& logMissingProperties;
     }
 
-    private Object tryFindValue(String expr, Class asType) throws OgnlException {
+    private @RUntainted Object tryFindValue(String expr, Class asType) throws OgnlException {
         Object value = null;
         try {
             expr = lookupForOverrides(expr);
@@ -376,15 +377,15 @@ public class OgnlValueStack implements Serializable, ValueStack, ClearableValueS
         return value;
     }
 
-    private Object getValue(String expr, Class asType) throws OgnlException {
+    private @RUntainted Object getValue(String expr, Class asType) throws OgnlException {
         return ognlUtil.getValue(expr, context, root, asType);
     }
 
-    protected Object findInContext(String name) {
+    protected @RUntainted Object findInContext(String name) {
         return getContext().get(name);
     }
 
-    public Object findValue(String expr, Class asType) {
+    public @RUntainted Object findValue(String expr, Class asType) {
         return findValue(expr, asType, false);
     }
 

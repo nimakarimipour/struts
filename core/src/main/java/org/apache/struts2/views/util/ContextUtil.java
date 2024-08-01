@@ -27,6 +27,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Value Stack's Context related Utilities.
@@ -41,7 +42,7 @@ public class ContextUtil {
     public static final String STRUTS = "struts";
     public static final String ACTION = "action";
 
-    public static Map<String, Object> getStandardContext(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public static Map<String, Object> getStandardContext(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         HashMap<String, Object> map = new HashMap<>();
         map.put(REQUEST, req);
         map.put(RESPONSE, res);

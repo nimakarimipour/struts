@@ -26,6 +26,7 @@ import org.apache.struts2.views.annotations.StrutsTagAttribute;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * FormButton.
@@ -40,7 +41,7 @@ public abstract class FormButton extends ClosingUIBean {
     protected String method;
     protected String type;
 
-    public FormButton(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    public FormButton(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack, request, response);
     }
 

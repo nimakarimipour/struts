@@ -24,12 +24,13 @@ import org.apache.struts2.components.DoubleSelect;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see DoubleSelect
  */
 public class DoubleSelectModel extends TagModel {
-    public DoubleSelectModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public DoubleSelectModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

@@ -31,6 +31,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -78,12 +79,12 @@ public class OptGroup extends Component {
 
     protected ListUIBean internalUiBean;
 
-    public OptGroup(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public OptGroup(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack);
         this.req = req;
         this.res = res;
         internalUiBean = new ListUIBean(stack, req, res) {
-            protected String getDefaultTemplate() {
+            protected @RUntainted String getDefaultTemplate() {
                 return "empty";
             }
         };
@@ -94,7 +95,7 @@ public class OptGroup extends Component {
         container.inject(internalUiBean);
     }
 
-    public boolean end(Writer writer, String body) {
+    public boolean end(Writer writer, @RUntainted String body) {
         Select select = (Select) findAncestor(Select.class);
         if (select == null) {
             LOG.error("incorrect use of OptGroup component, this component must be used within a Select component",

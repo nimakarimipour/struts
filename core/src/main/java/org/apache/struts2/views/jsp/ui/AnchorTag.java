@@ -25,6 +25,7 @@ import org.apache.struts2.components.Component;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Anchor
@@ -50,7 +51,7 @@ public class AnchorTag extends AbstractClosingTag {
     protected String escapeHtmlBody;
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new Anchor(stack, req, res);
     }
 

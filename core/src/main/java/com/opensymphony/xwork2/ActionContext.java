@@ -34,6 +34,7 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -279,7 +280,7 @@ public class ActionContext implements Serializable {
      *
      * @return the Locale of the current action.
      */
-    public Locale getLocale() {
+    public @RUntainted Locale getLocale() {
         Locale locale = (Locale) get(LOCALE);
 
         if (locale == null) {
@@ -326,7 +327,7 @@ public class ActionContext implements Serializable {
      * @return a Map of HttpServletRequest parameters or a multipart map when in a servlet environment, or a
      * generic Map of parameters otherwise.
      */
-    public HttpParameters getParameters() {
+    public @RUntainted HttpParameters getParameters() {
         return (HttpParameters) get(PARAMETERS);
     }
 
@@ -346,7 +347,7 @@ public class ActionContext implements Serializable {
      * @return the Map of HttpSession values when in a servlet environment or a generic session map otherwise.
      */
     @SuppressWarnings("unchecked")
-    public Map<String, Object> getSession() {
+    public @RUntainted Map<String, Object> getSession() {
         return (Map<String, Object>) get(SESSION);
     }
 
@@ -403,7 +404,7 @@ public class ActionContext implements Serializable {
      * @param key the key used to find the value.
      * @return the value that was found using the key or <tt>null</tt> if the key was not found.
      */
-    public Object get(String key) {
+    public @RUntainted Object get(String key) {
         return context.get(key);
     }
 
@@ -422,7 +423,7 @@ public class ActionContext implements Serializable {
      *
      * @return current ServletContext
      */
-    public ServletContext getServletContext() {
+    public @RUntainted ServletContext getServletContext() {
         return (ServletContext) get(StrutsStatics.SERVLET_CONTEXT);
     }
 
@@ -462,7 +463,7 @@ public class ActionContext implements Serializable {
      *
      * @return current ServletResponse
      */
-    public HttpServletResponse getServletResponse() {
+    public @RUntainted HttpServletResponse getServletResponse() {
         return (HttpServletResponse) get(StrutsStatics.HTTP_RESPONSE);
     }
 

@@ -24,6 +24,7 @@ import org.apache.struts2.components.TextField;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see TextField
@@ -38,7 +39,7 @@ public class TextFieldTag extends AbstractUITag {
     protected String type;
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new TextField(stack, req, res);
     }
 

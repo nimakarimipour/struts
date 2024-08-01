@@ -39,6 +39,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Default {@link Container} implementation.
@@ -527,12 +528,12 @@ class ContainerImpl implements Container {
     }
 
     @Override
-    public <T> T getInstance(final Class<T> type, final String name) {
+    public <T> @RUntainted T getInstance(final Class<T> type, final String name) {
         return callInContext(context -> getInstance(type, name, context));
     }
 
     @Override
-    public <T> T getInstance(final Class<T> type) {
+    public <T> @RUntainted T getInstance(final Class<T> type) {
         return callInContext(context -> getInstance(type, context));
     }
 
@@ -550,7 +551,7 @@ class ContainerImpl implements Container {
     /**
      * Looks up thread local context. Creates (and removes) a new context if necessary.
      */
-    <T> T callInContext(ContextualCallable<T> callable) {
+    <T> @RUntainted T callInContext(ContextualCallable<T> callable) {
         final Object[] reference = localContext.get();
         if (reference[0] == null) {
             reference[0] = new InternalContext(this);

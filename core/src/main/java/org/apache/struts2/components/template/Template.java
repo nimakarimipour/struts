@@ -20,6 +20,7 @@ package org.apache.struts2.components.template;
 
 import java.util.ArrayList;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -28,9 +29,9 @@ import java.util.List;
  * </p>
  */
 public class Template implements Cloneable {
-    String dir;
-    String theme;
-    String name;
+    @RUntainted String dir;
+    @RUntainted String theme;
+    @RUntainted String name;
 
     /**
      * Constructor.
@@ -39,21 +40,21 @@ public class Template implements Cloneable {
      * @param theme  the theme of the template
      * @param name   the name of the template.
      */
-    public Template(String dir, String theme, String name) {
+    public Template(@RUntainted String dir, @RUntainted String theme, @RUntainted String name) {
         this.dir = dir;
         this.theme = theme;
         this.name = name;
     }
 
-    public String getDir() {
+    public @RUntainted String getDir() {
         return dir;
     }
 
-    public String getTheme() {
+    public @RUntainted String getTheme() {
         return theme;
     }
 
-    public String getName() {
+    public @RUntainted String getName() {
         return name;
     }
 

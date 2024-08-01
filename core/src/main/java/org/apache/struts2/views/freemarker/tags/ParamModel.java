@@ -24,12 +24,13 @@ import org.apache.struts2.components.Param;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Param
  */
 public class ParamModel extends TagModel {
-    public ParamModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public ParamModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

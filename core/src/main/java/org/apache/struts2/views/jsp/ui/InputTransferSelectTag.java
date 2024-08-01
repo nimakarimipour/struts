@@ -24,6 +24,7 @@ import org.apache.struts2.components.InputTransferSelect;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * InputTransferSelect jsp tag.
@@ -54,7 +55,7 @@ public class InputTransferSelectTag extends AbstractListTag {
     protected String headerValue;
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new InputTransferSelect(stack, req, res);
     }
 

@@ -24,6 +24,7 @@ import org.apache.struts2.components.Link;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Link
@@ -41,7 +42,7 @@ public class LinkTag extends AbstractUITag {
     protected String as;
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new Link(stack, req, res);
     }
 

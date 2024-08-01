@@ -24,12 +24,13 @@ import org.apache.struts2.components.Include;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Include
  */
 public class IncludeModel extends TagModel {
-    public IncludeModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public IncludeModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

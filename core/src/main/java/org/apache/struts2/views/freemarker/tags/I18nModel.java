@@ -24,12 +24,13 @@ import org.apache.struts2.components.I18n;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see I18n
  */
 public class I18nModel extends TagModel {
-    public I18nModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public I18nModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

@@ -18,6 +18,7 @@ package com.opensymphony.xwork2.inject;
 
 import java.io.Serializable;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -100,7 +101,7 @@ public interface Container extends Serializable {
    * @param name of dependency
    * @return instance
    */
-  <T> T getInstance(Class<T> type, String name);
+  <T> @RUntainted T getInstance(Class<T> type, String name);
 
   /**
    * Convenience method.&nbsp;Equivalent to {@code getInstance(type,
@@ -110,7 +111,7 @@ public interface Container extends Serializable {
    * @param type of dependency
    * @return instance
    */
-  <T> T getInstance(Class<T> type);
+  <T> @RUntainted T getInstance(Class<T> type);
   
   /**
    * Gets a set of all registered names for the given type

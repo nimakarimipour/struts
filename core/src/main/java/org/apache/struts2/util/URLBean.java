@@ -26,6 +26,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * A bean that can generate a URL.
@@ -36,7 +37,7 @@ public class URLBean {
 
     HashMap<String, String> params;
     HttpServletRequest request;
-    HttpServletResponse response;
+    @RUntainted HttpServletResponse response;
     String page;
 
     private UrlHelper urlHelper;
@@ -51,7 +52,7 @@ public class URLBean {
         urlHelper = ActionContext.getContext().getInstance(DefaultUrlHelper.class);
     }
 
-    public void setResponse(HttpServletResponse response) {
+    public void setResponse(@RUntainted HttpServletResponse response) {
         this.response = response;
     }
 

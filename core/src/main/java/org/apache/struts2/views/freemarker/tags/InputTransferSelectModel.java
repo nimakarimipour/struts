@@ -24,13 +24,14 @@ import org.apache.struts2.components.InputTransferSelect;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see org.apache.struts2.components.InputTransferSelect
  */
 public class InputTransferSelectModel extends TagModel {
 
-    public InputTransferSelectModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public InputTransferSelectModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

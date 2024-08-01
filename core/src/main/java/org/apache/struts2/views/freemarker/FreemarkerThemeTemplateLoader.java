@@ -27,6 +27,7 @@ import org.apache.struts2.components.template.TemplateEngine;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * When loading a template, if sees theme token in path, does a template search through
@@ -36,7 +37,7 @@ public class FreemarkerThemeTemplateLoader implements TemplateLoader{
     private TemplateLoader parentTemplateLoader;
 
     // Injected
-    private String themeExpansionToken;
+    private @RUntainted String themeExpansionToken;
     private TemplateEngine templateEngine;
 
     /**
@@ -49,7 +50,7 @@ public class FreemarkerThemeTemplateLoader implements TemplateLoader{
     }
 
     /** {@inheritDoc} */
-    public Object findTemplateSource(String name) throws IOException {
+    public Object findTemplateSource(@RUntainted String name) throws IOException {
         int tokenIndex = (name == null) ? -1 : name.indexOf(themeExpansionToken);
         if (tokenIndex < 0) {
             return parentTemplateLoader.findTemplateSource(name);
@@ -98,7 +99,7 @@ public class FreemarkerThemeTemplateLoader implements TemplateLoader{
     }
 
     @Inject(StrutsConstants.STRUTS_UI_THEME_EXPANSION_TOKEN)
-    public void setUIThemeExpansionToken(String token) {
+    public void setUIThemeExpansionToken(@RUntainted String token) {
         themeExpansionToken = token;
     }
 

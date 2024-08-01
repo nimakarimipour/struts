@@ -33,6 +33,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Allows access decisions to be made on the basis of whether a member is static or not.
@@ -63,7 +64,7 @@ public class SecurityMemberAccess implements MemberAccess {
     }
 
     @Override
-    public Object setup(Map context, Object target, Member member, String propertyName) {
+    public Object setup(Map context, Object target, @RUntainted Member member, String propertyName) {
         Object result = null;
 
         if (isAccessible(context, target, member, propertyName)) {
@@ -92,7 +93,7 @@ public class SecurityMemberAccess implements MemberAccess {
     }
 
     @Override
-    public boolean isAccessible(Map context, Object target, Member member, String propertyName) {
+    public boolean isAccessible(Map context, Object target, @RUntainted Member member, String propertyName) {
         LOG.debug("Checking access for [target: {}, member: {}, property: {}]", target, member, propertyName);
 
         final int memberModifiers = member.getModifiers();

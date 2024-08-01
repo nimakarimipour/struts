@@ -49,6 +49,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: description -->
@@ -304,7 +305,7 @@ public class DebuggingInterceptor extends AbstractInterceptor {
         writer.startNode(DEBUG_PARAM);
         serializeIt(ctx.getParameters(), "parameters", writer, new ArrayList<>());
         writer.startNode("context");
-        Map<String, Object> ctxMap = ctx.getContextMap();
+        Map<@RUntainted String, @RUntainted Object> ctxMap = ctx.getContextMap();
         for (String key : ctxMap.keySet()) {
             boolean print = !ignoreKeys.contains(key);
 
@@ -341,7 +342,7 @@ public class DebuggingInterceptor extends AbstractInterceptor {
      * @param stack  List of objects we're serializing since the first calling
      *               of this function (to prevent looping on circular references).
      */
-    protected void serializeIt(Object bean, String name,
+    protected void serializeIt(@RUntainted Object bean, @RUntainted String name,
                                PrettyPrintWriter writer, List<Object> stack) {
         writer.flush();
         // Check stack for this object
@@ -371,10 +372,10 @@ public class DebuggingInterceptor extends AbstractInterceptor {
             }
         } else if (bean instanceof Map) {
 
-            Map<Object, Object> map = (Map) bean;
+            Map<@RUntainted Object, @RUntainted Object> map = (Map) bean;
 
             // Loop through keys and call ourselves
-            for (Map.Entry<Object, Object> entry : map.entrySet()) {
+            for (Map.Entry<@RUntainted Object, @RUntainted Object> entry : map.entrySet()) {
                 Object objValue = entry.getValue();
                 serializeIt(objValue, entry.getKey().toString(), writer, stack);
             }
@@ -391,7 +392,7 @@ public class DebuggingInterceptor extends AbstractInterceptor {
                 // values
                 try {
                     BeanInfo info = Introspector.getBeanInfo(bean.getClass());
-                    PropertyDescriptor[] props = info.getPropertyDescriptors();
+                    @RUntainted PropertyDescriptor[] props = info.getPropertyDescriptors();
 
                     for (PropertyDescriptor prop : props) {
                         String n = prop.getName();

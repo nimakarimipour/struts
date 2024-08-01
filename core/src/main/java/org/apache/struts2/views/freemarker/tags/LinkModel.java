@@ -24,12 +24,13 @@ import org.apache.struts2.components.Link;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Link
  */
 public class LinkModel extends TagModel {
-    public LinkModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public LinkModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

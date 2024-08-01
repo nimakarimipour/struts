@@ -24,12 +24,13 @@ import org.apache.struts2.components.Token;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Token
  */
 public class TokenModel extends TagModel {
-    public TokenModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public TokenModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

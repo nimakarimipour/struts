@@ -29,6 +29,7 @@ import org.apache.struts2.url.QueryStringBuilder;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Default implementation of UrlHelper
@@ -60,21 +61,21 @@ public class DefaultUrlHelper implements UrlHelper {
         this.queryStringBuilder = builder;
     }
 
-    public String buildUrl(String action, HttpServletRequest request, HttpServletResponse response, Map<String, Object> params) {
+    public String buildUrl(String action, HttpServletRequest request, @RUntainted HttpServletResponse response, Map<String, Object> params) {
         return buildUrl(action, request, response, params, null, true, true);
     }
 
-    public String buildUrl(String action, HttpServletRequest request, HttpServletResponse response, Map<String, Object> params, String scheme,
+    public String buildUrl(String action, HttpServletRequest request, @RUntainted HttpServletResponse response, Map<String, Object> params, String scheme,
                            boolean includeContext, boolean encodeResult) {
         return buildUrl(action, request, response, params, scheme, includeContext, encodeResult, false);
     }
 
-    public String buildUrl(String action, HttpServletRequest request, HttpServletResponse response, Map<String, Object> params, String scheme,
+    public String buildUrl(String action, HttpServletRequest request, @RUntainted HttpServletResponse response, Map<String, Object> params, String scheme,
                            boolean includeContext, boolean encodeResult, boolean forceAddSchemeHostAndPort) {
         return buildUrl(action, request, response, params, scheme, includeContext, encodeResult, forceAddSchemeHostAndPort, true);
     }
 
-    public String buildUrl(String action, HttpServletRequest request, HttpServletResponse response, Map<String, Object> params, String urlScheme,
+    public @RUntainted String buildUrl(String action, HttpServletRequest request, @RUntainted HttpServletResponse response, Map<String, Object> params, String urlScheme,
                            boolean includeContext, boolean encodeResult, boolean forceAddSchemeHostAndPort, boolean escapeAmp) {
 
         StringBuilder link = new StringBuilder();

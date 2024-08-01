@@ -25,6 +25,7 @@ import org.apache.struts2.dispatcher.mapper.ActionMapping;
 
 import java.util.Arrays;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: description -->
@@ -127,27 +128,27 @@ public class ServletActionRedirectResult extends ServletRedirectResult implement
     /* The default parameter */
     public static final String DEFAULT_PARAM = "actionName";
 
-    protected String actionName;
-    protected String namespace;
-    protected String method;
+    protected @RUntainted String actionName;
+    protected @RUntainted String namespace;
+    protected @RUntainted String method;
 
     public ServletActionRedirectResult() {
         super();
     }
 
-    public ServletActionRedirectResult(String actionName) {
+    public ServletActionRedirectResult(@RUntainted String actionName) {
         this(null, actionName, null, null);
     }
 
-    public ServletActionRedirectResult(String actionName, String method) {
+    public ServletActionRedirectResult(@RUntainted String actionName, @RUntainted String method) {
         this(null, actionName, method, null);
     }
 
-    public ServletActionRedirectResult(String namespace, String actionName, String method) {
+    public ServletActionRedirectResult(@RUntainted String namespace, @RUntainted String actionName, @RUntainted String method) {
         this(namespace, actionName, method, null);
     }
 
-    public ServletActionRedirectResult(String namespace, String actionName, String method, String anchor) {
+    public ServletActionRedirectResult(@RUntainted String namespace, @RUntainted String actionName, @RUntainted String method, @RUntainted String anchor) {
         super(null, anchor);
         this.namespace = namespace;
         this.actionName = actionName;
@@ -187,7 +188,7 @@ public class ServletActionRedirectResult extends ServletRedirectResult implement
      *
      * @param actionName The name
      */
-    public void setActionName(String actionName) {
+    public void setActionName(@RUntainted String actionName) {
         this.actionName = actionName;
     }
 
@@ -196,7 +197,7 @@ public class ServletActionRedirectResult extends ServletRedirectResult implement
      *
      * @param namespace The namespace
      */
-    public void setNamespace(String namespace) {
+    public void setNamespace(@RUntainted String namespace) {
         this.namespace = namespace;
     }
 
@@ -205,7 +206,7 @@ public class ServletActionRedirectResult extends ServletRedirectResult implement
      *
      * @param method The method
      */
-    public void setMethod(String method) {
+    public void setMethod(@RUntainted String method) {
         this.method = method;
     }
 

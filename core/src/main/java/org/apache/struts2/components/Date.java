@@ -38,6 +38,7 @@ import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -231,7 +232,7 @@ public class Date extends ContextBean {
      * @param date the date
      * @return the date nicely
      */
-    public String formatTime(TextProvider tp, ZonedDateTime date) {
+    public @RUntainted String formatTime(TextProvider tp, ZonedDateTime date) {
         ZonedDateTime now = ZonedDateTime.now();
         StringBuilder sb = new StringBuilder();
         List<Object> args = new ArrayList<>();
@@ -360,7 +361,7 @@ public class Date extends ContextBean {
         return super.end(writer, "");
     }
 
-    private String formatDate(TextProvider textProvider, ZonedDateTime date) {
+    private @RUntainted String formatDate(TextProvider textProvider, @RUntainted ZonedDateTime date) {
         String useFormat = format;
         if (useFormat == null) {
             // if the format is not specified, fall back using the defined property DATETAG_PROPERTY
@@ -374,7 +375,7 @@ public class Date extends ContextBean {
         return dateFormatter.format(date, useFormat);
     }
 
-    private ZoneId getTimeZone() {
+    private @RUntainted ZoneId getTimeZone() {
         ZoneId tz = ZoneId.systemDefault();
         if (timezone != null) {
             timezone = stripExpression(timezone);

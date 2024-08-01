@@ -24,12 +24,13 @@ import org.apache.struts2.components.Form;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Form
  */
 public class FormModel extends TagModel {
-    public FormModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public FormModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

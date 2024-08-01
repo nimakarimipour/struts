@@ -41,6 +41,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.regex.Pattern;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -123,7 +124,7 @@ public class DefaultActionMapper implements ActionMapper {
     protected PrefixTrie prefixTrie;
 
     protected Pattern allowedNamespaceNames = Pattern.compile("[a-zA-Z0-9._/\\-]*");
-    protected String defaultNamespaceName = "/";
+    protected @RUntainted String defaultNamespaceName = "/";
 
     protected Pattern allowedActionNames = Pattern.compile("[a-zA-Z0-9._!/\\-]*");
     protected String defaultActionName = "index";
@@ -211,7 +212,7 @@ public class DefaultActionMapper implements ActionMapper {
     }
 
     @Inject(value = StrutsConstants.STRUTS_DEFAULT_NAMESPACE_NAME, required = false)
-    public void setDefaultNamespaceName(String defaultNamespaceName) {
+    public void setDefaultNamespaceName(@RUntainted String defaultNamespaceName) {
         this.defaultNamespaceName = defaultNamespaceName;
     }
 
@@ -347,7 +348,7 @@ public class DefaultActionMapper implements ActionMapper {
      * @param mapping       The action mapping to populate
      * @param configManager configuration manager
      */
-    protected void parseNameAndNamespace(String uri, ActionMapping mapping, ConfigurationManager configManager) {
+    protected void parseNameAndNamespace(@RUntainted String uri, ActionMapping mapping, ConfigurationManager configManager) {
         String actionNamespace, actionName;
         int lastSlash = uri.lastIndexOf('/');
         if (lastSlash == -1) {
@@ -407,7 +408,7 @@ public class DefaultActionMapper implements ActionMapper {
      * @param rawNamespace name extracted from URI
      * @return safe namespace name
      */
-    protected String cleanupNamespaceName(final String rawNamespace) {
+    protected @RUntainted String cleanupNamespaceName(final @RUntainted String rawNamespace) {
         if (allowedNamespaceNames.matcher(rawNamespace).matches()) {
             return rawNamespace;
         } else {
@@ -525,7 +526,7 @@ public class DefaultActionMapper implements ActionMapper {
      *
      * @see org.apache.struts2.dispatcher.mapper.ActionMapper#getUriFromActionMapping(org.apache.struts2.dispatcher.mapper.ActionMapping)
      */
-    public String getUriFromActionMapping(ActionMapping mapping) {
+    public @RUntainted String getUriFromActionMapping(ActionMapping mapping) {
         StringBuilder uri = new StringBuilder();
 
         handleNamespace(mapping, uri);

@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.util.ValueStack;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Provides Freemarker implementation classes for a tag library
@@ -37,6 +38,6 @@ public interface TagLibraryModelProvider {
      * @param res The HTTP response
      * @return The Java object containing the Freemarker model getter methods
      */
-    Object getModels(ValueStack stack, HttpServletRequest req, HttpServletResponse res);
+    Object getModels(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res);
 
 }

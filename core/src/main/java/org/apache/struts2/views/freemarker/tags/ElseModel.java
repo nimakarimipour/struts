@@ -24,6 +24,7 @@ import org.apache.struts2.components.Else;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  *
@@ -31,7 +32,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class ElseModel extends TagModel {
 
-    public ElseModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public ElseModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

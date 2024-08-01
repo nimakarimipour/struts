@@ -31,6 +31,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: description -->
@@ -125,7 +126,7 @@ public class PrefixBasedActionMapper extends DefaultActionMapper implements Acti
         return null;
     }
 
-    public String getUriFromActionMapping(ActionMapping mapping) {
+    public @RUntainted String getUriFromActionMapping(ActionMapping mapping) {
         String namespace = mapping.getNamespace();
         for (int lastIndex = namespace.length(); lastIndex > (-1); lastIndex = namespace.lastIndexOf('/', lastIndex - 1)) {
             ActionMapper actionMapper = actionMappers.get(namespace.substring(0, lastIndex));

@@ -27,6 +27,7 @@ import org.apache.struts2.views.annotations.StrutsTagAttribute;
 
 import java.io.IOException;
 import java.io.Writer;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -90,7 +91,7 @@ public class Property extends Component {
         super(stack);
     }
 
-    private String defaultValue;
+    private @RUntainted String defaultValue;
     private String value;
     private boolean escapeHtml = true;
     private boolean escapeJavaScript = false;
@@ -98,7 +99,7 @@ public class Property extends Component {
     private boolean escapeCsv = false;
 
     @StrutsTagAttribute(description="The default value to be used if <u>value</u> attribute is null")
-    public void setDefault(String defaultValue) {
+    public void setDefault(@RUntainted String defaultValue) {
         this.defaultValue = defaultValue;
     }
 
@@ -117,7 +118,7 @@ public class Property extends Component {
         this.value = value;
     }
 
-    public void setDefaultValue(String defaultValue) {
+    public void setDefaultValue(@RUntainted String defaultValue) {
         this.defaultValue = defaultValue;
     }
 
@@ -161,7 +162,7 @@ public class Property extends Component {
         return result;
     }
 
-    private String prepare(String value) {
+    private @RUntainted String prepare(@RUntainted String value) {
         String result = value;
         if (escapeHtml) {
             result = StringEscapeUtils.escapeHtml4(result);

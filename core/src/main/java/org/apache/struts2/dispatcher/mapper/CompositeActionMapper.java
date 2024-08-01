@@ -29,6 +29,7 @@ import org.apache.struts2.StrutsConstants;
 import javax.servlet.http.HttpServletRequest;
 import java.util.LinkedList;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: description -->
@@ -93,7 +94,7 @@ public class CompositeActionMapper implements ActionMapper {
         return null;
     }
 
-    public String getUriFromActionMapping(ActionMapping mapping) {
+    public @RUntainted String getUriFromActionMapping(ActionMapping mapping) {
 
         for (ActionMapper actionMapper : actionMappers) {
             String uri = actionMapper.getUriFromActionMapping(mapping);

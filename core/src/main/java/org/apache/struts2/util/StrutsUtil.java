@@ -45,6 +45,7 @@ import java.util.Collection;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Struts base utility class, for use in Velocity and Freemarker templates
@@ -54,7 +55,7 @@ public class StrutsUtil {
     protected static final Logger LOG = LogManager.getLogger(StrutsUtil.class);
 
     protected HttpServletRequest request;
-    protected HttpServletResponse response;
+    protected @RUntainted HttpServletResponse response;
     protected Map<String, Class> classes = new Hashtable<>();
     protected OgnlTool ognl;
     protected ValueStack stack;
@@ -62,7 +63,7 @@ public class StrutsUtil {
     private UrlHelper urlHelper;
     private ObjectFactory objectFactory;
 
-    public StrutsUtil(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    public StrutsUtil(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         this.stack = stack;
         this.request = request;
         this.response = response;
@@ -282,7 +283,7 @@ public class StrutsUtil {
             writer = aWriter;
         }
 
-        public void write(int aByte) {
+        public void write(@RUntainted int aByte) {
             writer.write(aByte);
         }
 

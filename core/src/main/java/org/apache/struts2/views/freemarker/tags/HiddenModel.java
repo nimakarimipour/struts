@@ -24,12 +24,13 @@ import org.apache.struts2.components.Hidden;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see Hidden
  */
 public class HiddenModel extends TagModel {
-    public HiddenModel(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public HiddenModel(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         super(stack, req, res);
     }
 

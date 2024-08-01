@@ -36,6 +36,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Pattern;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Contains preparation operations for a request before execution
@@ -135,7 +136,7 @@ public class PrepareOperations {
      * @return The new request, if there is one
      * @throws ServletException on any servlet related error
      */
-    public HttpServletRequest wrapRequest(HttpServletRequest request) throws ServletException {
+    public @RUntainted HttpServletRequest wrapRequest(@RUntainted HttpServletRequest request) throws ServletException {
         incrementRecursionCounter(request, WRAP_COUNTER);
         try {
             // Wrap request first, just in case it is multipart/form-data

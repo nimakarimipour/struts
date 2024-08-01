@@ -51,6 +51,7 @@ import java.util.Map;
 import java.util.Stack;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Base class to extend for UI components.
@@ -177,7 +178,7 @@ public class Component {
      * @param body   the rendered body.
      * @return true if the body should be evaluated again
      */
-    public boolean end(Writer writer, String body) {
+    public boolean end(Writer writer, @RUntainted String body) {
         return end(writer, body, true);
     }
 
@@ -192,7 +193,7 @@ public class Component {
      * @param popComponentStack should the component stack be popped?
      * @return true if the body should be evaluated again
      */
-    protected boolean end(Writer writer, String body, boolean popComponentStack) {
+    protected boolean end(Writer writer, @RUntainted String body, boolean popComponentStack) {
         assert (body != null);
 
         try {
@@ -242,7 +243,7 @@ public class Component {
      * @param expr OGNL expression.
      * @return the String value found.
      */
-    protected String findString(String expr) {
+    protected @RUntainted String findString(String expr) {
         return (String) findValue(expr, String.class);
     }
 
@@ -292,7 +293,7 @@ public class Component {
      * @param expression the expression. Returns <tt>null</tt> if expr is null.
      * @return the value, <tt>null</tt> if not found.
      */
-    protected Object findValue(String expression) {
+    protected @RUntainted Object findValue(String expression) {
         if (expression == null) {
             return null;
         }
@@ -406,8 +407,8 @@ public class Component {
      * @param escapeAmp                 should ampersand (&amp;) be escaped to &amp;amp;
      * @return the action url.
      */
-    protected String determineActionURL(String action, String namespace, String method,
-                                        HttpServletRequest req, HttpServletResponse res, Map<String, Object> parameters, String scheme,
+    protected @RUntainted String determineActionURL(String action, String namespace, String method,
+                                        HttpServletRequest req, @RUntainted HttpServletResponse res, Map<String, Object> parameters, String scheme,
                                         boolean includeContext, boolean encodeResult, boolean forceAddSchemeHostAndPort,
                                         boolean escapeAmp) {
         String finalAction = findString(action);
@@ -426,7 +427,7 @@ public class Component {
      * @param req       HTTP request
      * @return the namepsace of the current page being rendered, is never <tt>null</tt>.
      */
-    protected String determineNamespace(String namespace, ValueStack stack, HttpServletRequest req) {
+    protected @RUntainted String determineNamespace(String namespace, ValueStack stack, HttpServletRequest req) {
         String result;
 
         if (namespace == null) {
@@ -442,7 +443,7 @@ public class Component {
         return result;
     }
 
-    protected String getNamespace(ValueStack stack) {
+    protected @RUntainted String getNamespace(ValueStack stack) {
         ActionContext context = ActionContext.of(stack.getContext());
         ActionInvocation invocation = context.getActionInvocation();
         return invocation.getProxy().getNamespace();

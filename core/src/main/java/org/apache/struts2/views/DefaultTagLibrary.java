@@ -23,6 +23,7 @@ import org.apache.struts2.views.freemarker.tags.StrutsModels;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * The default Struts tag library
@@ -30,12 +31,12 @@ import javax.servlet.http.HttpServletResponse;
 public class DefaultTagLibrary implements TagLibraryModelProvider {
 
     public Object getModels(ValueStack stack, HttpServletRequest req,
-                            HttpServletResponse res) {
+                            @RUntainted HttpServletResponse res) {
         
         return new StrutsModels(stack, req, res);
     }
 
-    public Object getFreemarkerModels(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Object getFreemarkerModels(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return getModels(stack, req, res);
     }
 

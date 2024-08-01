@@ -19,6 +19,7 @@
 package com.opensymphony.xwork2;
 
 import java.util.Locale;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 
 /**
@@ -40,7 +41,7 @@ public interface LocaleProvider {
      *
      * @return  the locale.
      */
-    Locale getLocale();
+    @RUntainted Locale getLocale();
 
     /**
      * Validates if provided string is a valid {@link Locale}

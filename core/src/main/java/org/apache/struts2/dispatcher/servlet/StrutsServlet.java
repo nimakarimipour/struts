@@ -30,6 +30,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Servlet dispatcher for Struts.  The preferred way to use Struts is as a filter via the
@@ -43,7 +44,7 @@ public class StrutsServlet extends HttpServlet {
     private ExecuteOperations execute;
 
     @Override
-    public void init(ServletConfig filterConfig) throws ServletException {
+    public void init(@RUntainted ServletConfig filterConfig) throws ServletException {
         InitOperations init = new InitOperations();
         Dispatcher dispatcher = null;
         try {
@@ -62,7 +63,7 @@ public class StrutsServlet extends HttpServlet {
     }
 
     @Override
-    public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    public void service(@RUntainted HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
         try {
             prepare.createActionContext(request, response);

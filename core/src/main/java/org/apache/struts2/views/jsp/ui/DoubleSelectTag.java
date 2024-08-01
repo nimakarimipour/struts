@@ -24,6 +24,7 @@ import org.apache.struts2.components.DoubleSelect;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * @see DoubleSelect
@@ -33,7 +34,7 @@ public class DoubleSelectTag extends AbstractDoubleListTag {
     private static final long serialVersionUID = 7426011596359509386L;
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new DoubleSelect(stack, req, res);
     }
 

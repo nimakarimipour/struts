@@ -73,6 +73,7 @@ import static java.lang.String.format;
 import static org.apache.commons.lang3.StringUtils.defaultString;
 import static org.apache.commons.lang3.StringUtils.isNotEmpty;
 import static org.apache.commons.lang3.StringUtils.trimToNull;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * This is a base XWork2 {@link ConfigurationProvider} for loading configuration from a parsed
@@ -87,7 +88,7 @@ public abstract class XmlDocConfigurationProvider implements ConfigurationProvid
 
     private static final Logger LOG = LogManager.getLogger(XmlConfigurationProvider.class);
 
-    protected final Map<String, Element> declaredPackages = new HashMap<>();
+    protected final Map<String, @RUntainted Element> declaredPackages = new HashMap<>();
     protected List<Document> documents;
     protected ObjectFactory objectFactory;
     protected Map<String, String> dtdMappings = new HashMap<>();
@@ -288,7 +289,7 @@ public abstract class XmlDocConfigurationProvider implements ConfigurationProvid
 
     @Override
     public void loadPackages() throws ConfigurationException {
-        List<Element> reloads = new ArrayList<>();
+        List<@RUntainted Element> reloads = new ArrayList<>();
         verifyPackageStructure();
 
         for (Document doc : documents) {
@@ -356,12 +357,12 @@ public abstract class XmlDocConfigurationProvider implements ConfigurationProvid
         // no op
     }
 
-    private void reloadRequiredPackages(List<Element> reloads) {
+    private void reloadRequiredPackages(List<@RUntainted Element> reloads) {
         if (reloads.isEmpty()) {
             return;
         }
 
-        List<Element> result = new ArrayList<>();
+        List<@RUntainted Element> result = new ArrayList<>();
         for (Element pkg : reloads) {
             PackageConfig cfg = addPackage(pkg);
             if (cfg.isNeedsRefresh()) {
@@ -389,7 +390,7 @@ public abstract class XmlDocConfigurationProvider implements ConfigurationProvid
      * @return the package config
      * @throws ConfigurationException in case of configuration errors
      */
-    protected PackageConfig addPackage(Element packageElement) throws ConfigurationException {
+    protected PackageConfig addPackage(@RUntainted Element packageElement) throws ConfigurationException {
         String packageName = packageElement.getAttribute("name");
         PackageConfig packageConfig = configuration.getPackageConfig(packageName);
         if (packageConfig != null) {
@@ -586,7 +587,7 @@ public abstract class XmlDocConfigurationProvider implements ConfigurationProvid
      * @param packageElement the package element
      * @return the package config builder
      */
-    protected PackageConfig.Builder buildPackageContext(Element packageElement) {
+    protected PackageConfig.Builder buildPackageContext(@RUntainted Element packageElement) {
         String parent = packageElement.getAttribute("extends");
         String abstractVal = packageElement.getAttribute("abstract");
         boolean isAbstract = parseBoolean(abstractVal);

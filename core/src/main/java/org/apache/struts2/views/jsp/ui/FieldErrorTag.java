@@ -24,6 +24,7 @@ import org.apache.struts2.components.FieldError;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * FieldError Tag.
@@ -37,7 +38,7 @@ public class FieldErrorTag extends AbstractUITag {
 
 
     @Override
-    public Component getBean(ValueStack stack, HttpServletRequest req, HttpServletResponse res) {
+    public Component getBean(ValueStack stack, HttpServletRequest req, @RUntainted HttpServletResponse res) {
         return new FieldError(stack, req, res);
     }
 

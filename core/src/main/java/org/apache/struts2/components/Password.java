@@ -24,6 +24,7 @@ import org.apache.struts2.views.annotations.StrutsTagAttribute;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -55,11 +56,11 @@ public class Password extends TextField {
 
     protected String showPassword;
 
-    public Password(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
+    public Password(ValueStack stack, HttpServletRequest request, @RUntainted HttpServletResponse response) {
         super(stack, request, response);
     }
 
-    protected String getDefaultTemplate() {
+    protected @RUntainted String getDefaultTemplate() {
         return TEMPLATE;
     }
 
