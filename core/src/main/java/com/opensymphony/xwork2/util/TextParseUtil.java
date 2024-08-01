@@ -20,6 +20,8 @@ package com.opensymphony.xwork2.util;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.conversion.impl.XWorkConverter;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -46,7 +48,7 @@ public class TextParseUtil {
      * @param stack value stack
      * @return the parsed expression
      */
-    public static String translateVariables(String expression, ValueStack stack) {
+    public static @RUntainted String translateVariables(String expression, ValueStack stack) {
         return translateVariables(new char[]{'$', '%'}, expression, stack, String.class, null).toString();
     }
 
@@ -124,7 +126,7 @@ public class TextParseUtil {
      * @param evaluator value evaluator
      * @return Converted object from variable translation.
      */
-    public static Object translateVariables(char[] openChars, String expression, ValueStack stack, Class asType, ParsedValueEvaluator evaluator) {
+    public static @RUntainted Object translateVariables(char[] openChars, String expression, ValueStack stack, Class asType, ParsedValueEvaluator evaluator) {
         return translateVariables(openChars, expression, stack, asType, evaluator, TextParser.DEFAULT_LOOP_COUNT);
     }
 
@@ -154,7 +156,7 @@ public class TextParseUtil {
      * @param maxLoopCount max loop count
      * @return Converted object from variable translation.
      */
-    public static Object translateVariables(char[] openChars, String expression, final ValueStack stack, final Class asType, final ParsedValueEvaluator evaluator, int maxLoopCount) {
+    public static @RUntainted Object translateVariables(char[] openChars, String expression, final ValueStack stack, final Class asType, final ParsedValueEvaluator evaluator, int maxLoopCount) {
 
         ParsedValueEvaluator ognlEval = new ParsedValueEvaluator() {
             public Object evaluate(String parsedValue) {
