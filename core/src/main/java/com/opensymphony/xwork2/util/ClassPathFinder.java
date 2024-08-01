@@ -20,6 +20,7 @@ package com.opensymphony.xwork2.util;
 
 import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.struts2.StrutsException;
+import org.apache.struts2.TaintUtils;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -183,7 +184,7 @@ public class ClassPathFinder {
             urls = ((URLClassLoader) loader).getURLs();
         } else {    //jdk9 or later
             try {
-                urls = Collections.list(loader.getResources("")).toArray(new URL[0]);
+                urls = TaintUtils.castToUntainted(Collections.list(loader.getResources("")).toArray(new URL[0]));
             } catch (IOException e) {
                 throw new StrutsException("unable to get ClassLoader URLs", e);
             }

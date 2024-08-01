@@ -21,6 +21,7 @@ package org.apache.struts2.views.jsp;
 import com.opensymphony.xwork2.util.TextParseUtil;
 import com.opensymphony.xwork2.util.ValueStack;
 import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import org.apache.struts2.TaintUtils;
 import org.apache.struts2.util.ComponentUtils;
 import org.apache.struts2.util.FastByteArrayOutputStream;
 
@@ -74,7 +75,7 @@ public class StrutsBodyTagSupport extends BodyTagSupport {
         if (bodyContent == null) {
             return "";
         } else {
-            return bodyContent.getString().trim();
+            return TaintUtils.castToUntainted(bodyContent.getString().trim());
         }
     }
 

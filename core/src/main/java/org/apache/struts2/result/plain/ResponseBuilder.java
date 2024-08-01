@@ -18,6 +18,8 @@
  */
 package org.apache.struts2.result.plain;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+
 import javax.servlet.http.Cookie;
 
 public class ResponseBuilder {
@@ -38,12 +40,12 @@ public class ResponseBuilder {
         this.cookies = new HttpCookies();
     }
 
-    public ResponseBuilder write(String out) {
+    public ResponseBuilder write(@RUntainted String out) {
         body.write(out);
         return this;
     }
 
-    public ResponseBuilder writeLine(String out) {
+    public ResponseBuilder writeLine(@RUntainted String out) {
         body.writeLine(out);
         return this;
     }
