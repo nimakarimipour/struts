@@ -40,6 +40,7 @@ import org.apache.struts2.StrutsConstants;
 
 import java.io.Serializable;
 import java.util.Map;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * ObjectFactory is responsible for building the core framework objects. Users may register their 

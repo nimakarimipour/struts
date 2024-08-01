@@ -43,6 +43,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Multi-part form data request adapter for Jakarta Commons FileUpload package that
@@ -366,7 +367,7 @@ public class JakartaStreamMultiPartRequest extends AbstractMultiPartRequest {
      * @return temporary file based on the given filename and location
      * @throws IOException in case of IO errors
      */
-    protected File createTemporaryFile(String fileName, String location) throws IOException {
+    protected File createTemporaryFile(String fileName, @RUntainted String location) throws IOException {
         String name = fileName
                 .substring(fileName.lastIndexOf('/') + 1)
                 .substring(fileName.lastIndexOf('\\') + 1);

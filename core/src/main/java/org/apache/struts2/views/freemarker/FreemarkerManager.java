@@ -66,6 +66,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -441,7 +442,7 @@ public class FreemarkerManager {
      * @param templatePath the template path to create a loader for
      * @return a newly created template loader
      */
-    protected TemplateLoader createTemplateLoader(ServletContext servletContext, String templatePath) {
+    protected TemplateLoader createTemplateLoader(ServletContext servletContext, @RUntainted String templatePath) {
         TemplateLoader templatePathLoader = null;
 
          try {

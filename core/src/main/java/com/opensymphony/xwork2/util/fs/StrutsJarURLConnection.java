@@ -34,6 +34,7 @@ import java.security.PrivilegedActionException;
 import java.security.PrivilegedExceptionAction;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * WW-4901 If was needed, decouples from underlying implementation of {@link URL#openConnection()}
@@ -71,7 +72,7 @@ class StrutsJarURLConnection extends URLConnection implements AutoCloseable {
     /**
     * A fixed copy of {@link JarURLConnection#parseSpecs(URL)}
     */
-    private void parseSpecs(URL url) throws MalformedURLException, UnsupportedEncodingException {
+    private void parseSpecs(@RUntainted URL url) throws MalformedURLException, UnsupportedEncodingException {
         String spec = url.getFile();
 
         int separator = spec.indexOf("!/");

@@ -58,7 +58,7 @@ public class CallbackWriter extends Writer implements TransformControl {
         }
     }
 
-    public void write(char cbuf[], int off, int len) throws IOException {
+    public void write(@RUntainted char cbuf[], int off, int len) throws IOException {
         if (bean.usesBody() && !afterBody) {
             body.write(cbuf, off, len);
         } else {

@@ -29,6 +29,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Collection;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <!-- START SNIPPET: javadoc -->
@@ -213,7 +214,7 @@ public abstract class StrutsResultSupport implements Result, StrutsStatics {
      * @param invocation The action invocation instance
      * @return the resulting string
      */
-    protected String conditionalParse(String param, ActionInvocation invocation) {
+    protected @RUntainted String conditionalParse(String param, ActionInvocation invocation) {
         if (parse && param != null && invocation != null) {
             return TextParseUtil.translateVariables(
                 param, 

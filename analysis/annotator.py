@@ -25,7 +25,7 @@ def run_annotator():
     commands += ['-i', 'edu.ucr.Initializer']
     commands += ['-n', 'edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted']
     commands += ['-cn', 'UCRTaint']
-    commands += ["--depth", "15"]
+    commands += ["--depth", "5"]
     # Uncomment to see build output
     # commands += ['-rboserr']
     # Comment to inject root at a time
@@ -33,11 +33,11 @@ def run_annotator():
     # Uncomment to disable cache
     # commands += ['-dc']
     # Uncomment to disable outer loop
-    # commands += ['-dol']
+    commands += ['-dol']
     # Uncomment to disable parallel processing
     # commands += ['--disable-parallel-processing']
 
-    # subprocess.call(commands)
+    subprocess.call(commands)
 
 
 run_annotator()

@@ -43,6 +43,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Multipart form data request adapter for Jakarta Commons Fileupload package.
@@ -186,7 +187,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
         return upload;
     }
 
-    protected DiskFileItemFactory createDiskFileItemFactory(String saveDir) {
+    protected DiskFileItemFactory createDiskFileItemFactory(@RUntainted String saveDir) {
         DiskFileItemFactory fac = new DiskFileItemFactory();
         // Make sure that the data is written to file, even if the file is empty.
         fac.setSizeThreshold(-1);

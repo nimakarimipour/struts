@@ -22,18 +22,19 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.Enumeration;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Default implementation of ClassLoaderInterface, which delegates to an actual ClassLoader
  */
 public class ClassLoaderInterfaceDelegate implements ClassLoaderInterface {
-    private ClassLoader classLoader;
+    private @RUntainted ClassLoader classLoader;
 
     public ClassLoaderInterfaceDelegate(ClassLoader classLoader) {
         this.classLoader = classLoader;
     }
 
-    public Class<?> loadClass(String name) throws ClassNotFoundException {
+    public Class<?> loadClass(@RUntainted String name) throws ClassNotFoundException {
         return classLoader.loadClass(name);
     }
 
@@ -41,7 +42,7 @@ public class ClassLoaderInterfaceDelegate implements ClassLoaderInterface {
         return classLoader.getResource(className);
     }
 
-    public Enumeration<URL> getResources(String name) throws IOException {
+    public Enumeration<@RUntainted URL> getResources(@RUntainted String name) throws IOException {
         return classLoader.getResources(name);
     }
 

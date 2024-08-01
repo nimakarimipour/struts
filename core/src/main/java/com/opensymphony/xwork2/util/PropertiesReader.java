@@ -25,6 +25,7 @@ import java.io.StringWriter;
 import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -471,7 +472,7 @@ public class PropertiesReader extends LineNumberReader {
      * @throws IllegalArgumentException if the Writer is <code>null</code>
      * @throws IOException              if error occurs on underlying Writer
      */
-    public static void unescapeJava(Writer out, String str) throws IOException {
+    public static void unescapeJava(Writer out, @RUntainted String str) throws IOException {
         if (out == null) {
             throw new IllegalArgumentException("The Writer must not be null");
         }

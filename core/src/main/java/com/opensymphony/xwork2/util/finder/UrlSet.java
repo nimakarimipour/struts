@@ -36,6 +36,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * <p>
@@ -172,8 +173,8 @@ public class UrlSet {
         }
     }
 
-    public UrlSet excludePaths(String pathString) throws MalformedURLException {
-        String[] paths = pathString.split(File.pathSeparator);
+    public UrlSet excludePaths(@RUntainted String pathString) throws MalformedURLException {
+        @RUntainted String[] paths = pathString.split(File.pathSeparator);
         UrlSet urlSet = this;
         for (String path : paths) {
             if (StringUtils.isNotEmpty(path)) {
@@ -205,7 +206,7 @@ public class UrlSet {
      * @throws IOException in case of IO errors
      */
     public UrlSet includeClassesUrl(ClassLoaderInterface classLoaderInterface, FileProtocolNormalizer normalizer) throws IOException {
-        Enumeration<URL> rootUrlEnumeration = classLoaderInterface.getResources("");
+        Enumeration<@RUntainted URL> rootUrlEnumeration = classLoaderInterface.getResources("");
         while (rootUrlEnumeration.hasMoreElements()) {
             URL url = rootUrlEnumeration.nextElement();
             String externalForm = StringUtils.removeEnd(url.toExternalForm(), "/");
@@ -247,7 +248,7 @@ public class UrlSet {
         List<URL> list = new ArrayList<>();
 
         //find jars
-        ArrayList<URL> urls = Collections.list(classLoader.getResources("META-INF"));
+        ArrayList<@RUntainted URL> urls = Collections.list(classLoader.getResources("META-INF"));
 
         for (URL url : urls) {
             if ("jar".equalsIgnoreCase(url.getProtocol())) {
@@ -274,7 +275,7 @@ public class UrlSet {
         List<URL> list = new ArrayList<>();
 
         //find jars
-        ArrayList<URL> urls = Collections.list(classLoader.getResources("META-INF"));
+        ArrayList<@RUntainted URL> urls = Collections.list(classLoader.getResources("META-INF"));
 
         for (URL url : urls) {
             if (protocols.contains(url.getProtocol())) {

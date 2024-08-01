@@ -102,11 +102,11 @@ public class ResponseBuilder {
         return headers.getIntHeaders();
     }
 
-    public Iterable<Cookie> getCookies() {
+    public @RUntainted Iterable<Cookie> getCookies() {
         return cookies.getCookies();
     }
 
-    public String getBody() {
+    public @RUntainted String getBody() {
         return body.getBody();
     }
 

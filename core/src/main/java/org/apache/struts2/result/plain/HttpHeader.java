@@ -17,10 +17,11 @@
  * under the License.
  */
 package org.apache.struts2.result.plain;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public interface HttpHeader<T> {
 
-    String getName();
+    @RUntainted String getName();
 
     T getValue();
 

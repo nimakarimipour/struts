@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.Collection;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * Basic interface to access file on the File System and to monitor changes
@@ -72,7 +73,7 @@ public interface FileManager {
      * @param url URL to convert to a jar url
      * @return a URL to a file, or null if the URL external form cannot be parsed
      */
-    URL normalizeToFileProtocol(URL url);
+    @RUntainted URL normalizeToFileProtocol(URL url);
 
     /**
      * Indicate if given implementation supports current OS File System

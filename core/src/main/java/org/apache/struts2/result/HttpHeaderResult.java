@@ -87,7 +87,7 @@ public class HttpHeaderResult implements Result {
     private Map<@RUntainted String, @RUntainted String> headers;
     private int status = -1;
     private String error = null;
-    private String errorMessage;
+    private @RUntainted String errorMessage;
 
     public HttpHeaderResult() {
         super();

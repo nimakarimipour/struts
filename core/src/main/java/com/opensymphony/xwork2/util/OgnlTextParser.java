@@ -27,7 +27,7 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class OgnlTextParser implements TextParser {
 
-    public Object evaluate(char[] openChars, String expression, TextParseUtil.ParsedValueEvaluator evaluator, int maxLoopCount) {
+    public @RUntainted Object evaluate(char[] openChars, String expression, TextParseUtil.ParsedValueEvaluator evaluator, int maxLoopCount) {
         // deal with the "pure" expressions first!
         //expression = expression.trim();
         Object result = expression = (expression == null) ? "" : expression;

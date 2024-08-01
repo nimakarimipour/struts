@@ -336,11 +336,11 @@ public class Include extends Component {
             buffer.flush();
         }
 
-        public void write(byte[] b, int o, int l) throws IOException {
+        public void write(byte[] b, int o, @RUntainted int l) throws IOException {
             buffer.write(b, o, l);
         }
 
-        public void write(int i) throws IOException {
+        public void write(@RUntainted int i) throws IOException {
             buffer.write(i);
         }
 
