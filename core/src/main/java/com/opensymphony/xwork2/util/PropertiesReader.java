@@ -442,7 +442,7 @@ public class PropertiesReader extends LineNumberReader {
      * @param str the <code>String</code> to unescape, may be null
      * @return a new unescaped <code>String</code>, <code>null</code> if null string input
      */
-    public static String unescapeJava(String str) {
+    public static String unescapeJava(@RUntainted String str) {
         if (str == null) {
             return null;
         }

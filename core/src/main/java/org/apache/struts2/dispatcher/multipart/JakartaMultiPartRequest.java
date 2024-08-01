@@ -167,7 +167,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
         item.delete();
     }
 
-    protected List<FileItem> parseRequest(HttpServletRequest servletRequest, String saveDir) throws FileUploadException {
+    protected List<FileItem> parseRequest(HttpServletRequest servletRequest, @RUntainted String saveDir) throws FileUploadException {
         DiskFileItemFactory fac = createDiskFileItemFactory(saveDir);
         ServletFileUpload upload = createServletFileUpload(fac);
         return upload.parseRequest(createRequestContext(servletRequest));

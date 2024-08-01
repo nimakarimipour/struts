@@ -19,6 +19,7 @@
 package org.apache.struts2.dispatcher.multipart;
 
 import java.io.File;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class StrutsUploadedFile implements UploadedFile {
 
@@ -49,7 +50,7 @@ public class StrutsUploadedFile implements UploadedFile {
     }
 
     @Override
-    public String getAbsolutePath() {
+    public @RUntainted String getAbsolutePath() {
         return file.getAbsolutePath();
     }
 

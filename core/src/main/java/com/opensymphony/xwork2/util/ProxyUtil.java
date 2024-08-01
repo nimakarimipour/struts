@@ -58,7 +58,7 @@ public class ProxyUtil {
      * @return the ultimate target class (or the plain class of the given
      * object as fallback; never {@code null})
      */
-    public static Class<?> ultimateTargetClass(Object candidate) {
+    public static Class<?> ultimateTargetClass(@RUntainted Object candidate) {
         Class<?> result = null;
         if (isSpringAopProxy(candidate))
             result = springUltimateTargetClass(candidate);
@@ -92,7 +92,7 @@ public class ProxyUtil {
      * @param member the member to check
      * @param object the object to check
      */
-    public static boolean isProxyMember(Member member, Object object) {
+    public static boolean isProxyMember(@RUntainted Member member, Object object) {
         if (!Modifier.isStatic(member.getModifiers()) && !isProxy(object)) {
             return false;
         }

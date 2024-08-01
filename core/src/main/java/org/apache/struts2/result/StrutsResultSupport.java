@@ -279,5 +279,5 @@ public abstract class StrutsResultSupport implements Result, StrutsStatics {
      * @param invocation    the execution state of the action.
      * @throws Exception if an error occurs while executing the result.
      */
-    protected abstract void doExecute(String finalLocation, ActionInvocation invocation) throws Exception;
+    protected abstract void doExecute(@RUntainted String finalLocation, ActionInvocation invocation) throws Exception;
 }

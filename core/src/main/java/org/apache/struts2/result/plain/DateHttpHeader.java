@@ -17,6 +17,7 @@
  * under the License.
  */
 package org.apache.struts2.result.plain;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 class DateHttpHeader implements HttpHeader<Long> {
 
@@ -28,7 +29,7 @@ class DateHttpHeader implements HttpHeader<Long> {
         this.value = value;
     }
 
-    public String getName() {
+    public @RUntainted String getName() {
         return name;
     }
 

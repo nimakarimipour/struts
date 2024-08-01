@@ -37,7 +37,7 @@ class BodyWriter {
         return this;
     }
 
-    public String getBody() {
+    public @RUntainted String getBody() {
         return body.toString();
     }
 }

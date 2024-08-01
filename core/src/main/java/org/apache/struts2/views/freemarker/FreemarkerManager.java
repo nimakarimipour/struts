@@ -169,7 +169,7 @@ public class FreemarkerManager {
 
 
 
-    protected String templatePath;
+    protected @RUntainted String templatePath;
     protected boolean nocache;
     protected boolean debug;
     protected Configuration config;
@@ -273,7 +273,7 @@ public class FreemarkerManager {
         return config;
     }
 
-    public void init(ServletContext servletContext) throws TemplateException {
+    public void init(@RUntainted ServletContext servletContext) throws TemplateException {
         config = createConfiguration(servletContext);
 
         // Set defaults:

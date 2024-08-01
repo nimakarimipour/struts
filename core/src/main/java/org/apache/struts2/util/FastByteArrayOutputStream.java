@@ -161,7 +161,7 @@ public class FastByteArrayOutputStream extends OutputStream {
         decodeAndWriteBuffered(writer, in, out, decoder, endOfInput);
     }
 
-    private static void decodeAndWriteBuffered(Writer writer, ByteBuffer in, CharBuffer out, CharsetDecoder decoder, boolean endOfInput) throws IOException {
+    private static void decodeAndWriteBuffered(Writer writer, ByteBuffer in, @RUntainted CharBuffer out, CharsetDecoder decoder, boolean endOfInput) throws IOException {
         // Decode
         CoderResult result;
         do {

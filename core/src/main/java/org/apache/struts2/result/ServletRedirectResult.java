@@ -162,7 +162,7 @@ public class ServletRedirectResult extends StrutsResultSupport implements Reflec
      * @param invocation    an encapsulation of the action execution state.
      * @throws Exception if an error occurs when redirecting.
      */
-    protected void doExecute(String finalLocation, ActionInvocation invocation) throws Exception {
+    protected void doExecute(@RUntainted String finalLocation, ActionInvocation invocation) throws Exception {
         ActionContext ctx = invocation.getInvocationContext();
         HttpServletRequest request = ctx.getServletRequest();
         HttpServletResponse response = ctx.getServletResponse();

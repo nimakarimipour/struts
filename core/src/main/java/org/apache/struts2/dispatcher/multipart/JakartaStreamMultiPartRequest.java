@@ -333,7 +333,7 @@ public class JakartaStreamMultiPartRequest extends AbstractMultiPartRequest {
      * @param itemStream file item stream
      * @param location location
      */
-    protected void processFileItemStreamAsFileField(FileItemStream itemStream, String location) {
+    protected void processFileItemStreamAsFileField(FileItemStream itemStream, @RUntainted String location) {
         // Skip file uploads that don't have a file name - meaning that no file was selected.
         if (itemStream.getName() == null || itemStream.getName().trim().length() < 1) {
             LOG.debug("No file has been uploaded for the field: {}", itemStream.getFieldName());

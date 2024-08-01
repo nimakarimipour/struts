@@ -54,7 +54,7 @@ class StrutsJarURLConnection extends URLConnection implements AutoCloseable {
     private String entryName;
     private URL jarFileURL;
 
-    private StrutsJarURLConnection(URL url) throws IOException {
+    private StrutsJarURLConnection(@RUntainted URL url) throws IOException {
         super(url);
 
         URLConnection conn = this.url.openConnection();

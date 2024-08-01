@@ -173,7 +173,7 @@ public class ClassLoaderUtil {
      * @return class with for the given name
      * @throws ClassNotFoundException If the class cannot be found anywhere.
      */
-    public static @RPolyTainted Class loadClass(@RPolyTainted String className, Class callingClass) throws ClassNotFoundException {
+    public static @RPolyTainted Class loadClass(@RPolyTainted @RUntainted String className, Class callingClass) throws ClassNotFoundException {
         try {
             return Thread.currentThread().getContextClassLoader().loadClass(className);
         } catch (ClassNotFoundException e) {

@@ -34,6 +34,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
  * FileManager implementation used with JBoss AS
@@ -80,7 +81,7 @@ public class JBossFileManager extends DefaultFileManager {
     }
 
     @Override
-    public void monitorFile(URL fileUrl) {
+    public void monitorFile(@RUntainted URL fileUrl) {
         if (reloadingConfigs && isJBossUrl(fileUrl)) {
             String fileName = fileUrl.toString();
             LOG.debug("Creating revision for URL: {}", fileName);
@@ -101,7 +102,7 @@ public class JBossFileManager extends DefaultFileManager {
     }
 
     @Override
-    public URL normalizeToFileProtocol(URL url) {
+    public @RUntainted URL normalizeToFileProtocol(URL url) {
         if (isJBossUrl(url))                {
             try {
                 return getJBossPhysicalUrl(url);

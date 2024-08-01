@@ -68,7 +68,7 @@ public class FreemarkerResult extends StrutsResultSupport {
      * the current context is available to subclasses via these protected fields
      */
     protected String location;
-    private String pContentType = "text/html";
+    private @RUntainted String pContentType = "text/html";
     private static final String PARENT_TEMPLATE_WRITER = FreemarkerResult.class.getName() + ".parentWriter";
 
     public FreemarkerResult() {

@@ -73,7 +73,7 @@ public abstract class BaseTemplateEngine implements TemplateEngine {
         return props;
     }
 
-    private InputStream readProperty(String propName) {
+    private InputStream readProperty(@RUntainted String propName) {
         InputStream is = tryReadingPropertyFileFromFileSystem(propName);
         if (is == null) {
             is = readPropertyFromClasspath(propName);

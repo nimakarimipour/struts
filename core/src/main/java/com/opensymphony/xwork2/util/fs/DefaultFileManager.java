@@ -48,7 +48,7 @@ public class DefaultFileManager implements FileManager {
     private static final int JAR_FILE_PATH = 3;
 
     protected static final Map<String, Revision> files = Collections.synchronizedMap(new HashMap<String, Revision>());
-    private static final List<URL> lazyMonitoredFilesCache = Collections.synchronizedList(new ArrayList<URL>());
+    private static final List<@RUntainted URL> lazyMonitoredFilesCache = Collections.synchronizedList(new ArrayList<URL>());
 
     protected boolean reloadingConfigs = false;
 
@@ -83,7 +83,7 @@ public class DefaultFileManager implements FileManager {
         return revision.needsReloading();
     }
 
-    public InputStream loadFile(URL fileUrl) {
+    public InputStream loadFile(@RUntainted URL fileUrl) {
         if (fileUrl == null) {
             return null;
         }
@@ -104,7 +104,7 @@ public class DefaultFileManager implements FileManager {
         }
     }
 
-    public void monitorFile(URL fileUrl) {
+    public void monitorFile(@RUntainted URL fileUrl) {
         String fileName = fileUrl.toString();
         if (!reloadingConfigs) {
             //reserve file for monitoring on demand because of performance
@@ -137,7 +137,7 @@ public class DefaultFileManager implements FileManager {
         return jarMatcher.matches();
     }
 
-    public URL normalizeToFileProtocol(URL url) {
+    public @RUntainted URL normalizeToFileProtocol(@RUntainted URL url) {
         String fileName = url.toExternalForm();
         Matcher jarMatcher = JAR_PATTERN.matcher(fileName);
         try {

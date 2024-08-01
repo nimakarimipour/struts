@@ -66,7 +66,7 @@ public interface FileManager {
      *
      * @param fileUrl {@link URL} to file to be monitored
      */
-    void monitorFile(URL fileUrl);
+    void monitorFile(@RUntainted URL fileUrl);
 
     /**
      * Convert URLs to URLs with "file" protocol

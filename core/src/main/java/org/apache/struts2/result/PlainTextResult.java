@@ -87,7 +87,7 @@ public class PlainTextResult extends StrutsResultSupport {
      *
      * @param charSet The character set
      */
-    public void setCharSet(String charSet) {
+    public void setCharSet(@RUntainted String charSet) {
         this.charSet = charSet;
     }
 

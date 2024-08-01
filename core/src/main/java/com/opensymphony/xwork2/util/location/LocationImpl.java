@@ -34,7 +34,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  */
 public class LocationImpl implements Location, Serializable {
 
-    private final String uri;
+    private final @RUntainted String uri;
     private final int line;
     private final int column;
     private final String description;

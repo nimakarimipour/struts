@@ -45,17 +45,17 @@ public class PrettyPrintWriter {
     private static final char[] APOS = "&apos;".toCharArray();
     private static final char[] CLOSE = "</".toCharArray();
 
-    public PrettyPrintWriter(Writer writer, char[] lineIndenter, String newLine) {
+    public PrettyPrintWriter(Writer writer, @RUntainted char[] lineIndenter, @RUntainted String newLine) {
         this.writer = new PrintWriter(writer);
         this.lineIndenter = lineIndenter;
         this.newLine = newLine;
     }
 
-    public PrettyPrintWriter(Writer writer, char[] lineIndenter) {
+    public PrettyPrintWriter(Writer writer, @RUntainted char[] lineIndenter) {
         this(writer, lineIndenter, "\n");
     }
 
-    public PrettyPrintWriter(Writer writer, String lineIndenter, String newLine) {
+    public PrettyPrintWriter(Writer writer, @RUntainted String lineIndenter, String newLine) {
         this(writer, lineIndenter.toCharArray(), newLine);
     }
 

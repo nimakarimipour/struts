@@ -30,7 +30,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 public class ClassLoaderInterfaceDelegate implements ClassLoaderInterface {
     private @RUntainted ClassLoader classLoader;
 
-    public ClassLoaderInterfaceDelegate(ClassLoader classLoader) {
+    public ClassLoaderInterfaceDelegate(@RUntainted ClassLoader classLoader) {
         this.classLoader = classLoader;
     }
 

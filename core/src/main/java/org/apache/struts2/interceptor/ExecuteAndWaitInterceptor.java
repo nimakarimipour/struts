@@ -380,7 +380,7 @@ public class ExecuteAndWaitInterceptor extends MethodFilterInterceptor {
      *
      * @param delaySleepInterval in millis (0 for not used)
      */
-    public void setDelaySleepInterval(int delaySleepInterval) {
+    public void setDelaySleepInterval(@RUntainted int delaySleepInterval) {
         this.delaySleepInterval = delaySleepInterval;
     }
 

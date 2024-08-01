@@ -116,7 +116,7 @@ public class HttpHeaderResult implements Result {
      * @param errorMessage error message send to the client
      * @see javax.servlet.http.HttpServletResponse#sendError(int, String)
      */
-    public void setErrorMessage(String errorMessage) {
+    public void setErrorMessage(@RUntainted String errorMessage) {
         this.errorMessage = errorMessage;
     }
 

@@ -71,7 +71,7 @@ public class TextParseUtil {
      * @param evaluator The parsed Value evaluator (could be null).
      * @return the parsed (and possibly evaluated) variable String.
      */
-    public static String translateVariables(String expression, ValueStack stack, ParsedValueEvaluator evaluator) {
+    public static @RUntainted String translateVariables(String expression, ValueStack stack, ParsedValueEvaluator evaluator) {
     	return translateVariables(new char[]{'$', '%'}, expression, stack, String.class, evaluator).toString();
     }
 

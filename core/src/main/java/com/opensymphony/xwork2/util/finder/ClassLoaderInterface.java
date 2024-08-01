@@ -37,7 +37,7 @@ public interface ClassLoaderInterface {
 
     URL getResource(String name);
 
-    public Enumeration<@RUntainted URL> getResources(String name) throws IOException;
+    public Enumeration<@RUntainted URL> getResources(@RUntainted String name) throws IOException;
 
     public InputStream getResourceAsStream(String name) throws IOException;
 

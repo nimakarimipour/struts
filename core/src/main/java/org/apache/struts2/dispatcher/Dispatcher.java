@@ -134,7 +134,7 @@ public class Dispatcher {
     /**
      * Store state of StrutsConstants.STRUTS_I18N_ENCODING setting.
      */
-    private String defaultEncoding;
+    private @RUntainted String defaultEncoding;
 
     /**
      * Store state of StrutsConstants.STRUTS_LOCALE setting.
@@ -237,7 +237,7 @@ public class Dispatcher {
      * Keeps current reference to external world and must be protected to support class inheritance
      */
     protected ServletContext servletContext;
-    protected Map<String, String> initParams;
+    protected Map<String, @RUntainted String> initParams;
 
     /**
      * Create the Dispatcher instance for a given ServletContext and set of initialization parameters.

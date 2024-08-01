@@ -463,7 +463,7 @@ public class ActionContext implements Serializable {
      *
      * @return current ServletResponse
      */
-    public HttpServletResponse getServletResponse() {
+    public @RUntainted HttpServletResponse getServletResponse() {
         return (HttpServletResponse) get(StrutsStatics.HTTP_RESPONSE);
     }
 

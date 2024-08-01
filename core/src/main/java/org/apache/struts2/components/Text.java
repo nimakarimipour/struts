@@ -212,7 +212,7 @@ public class Text extends ContextBean implements Param.UnnamedParametric {
         values.add(value);
     }
 
-    private @RUntainted String prepare(String value) {
+    private @RUntainted String prepare(@RUntainted String value) {
         String result = value;
         if (escapeHtml) {
             result = StringEscapeUtils.escapeHtml4(result);

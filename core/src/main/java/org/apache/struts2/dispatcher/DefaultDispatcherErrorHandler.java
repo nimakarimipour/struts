@@ -71,7 +71,7 @@ public class DefaultDispatcherErrorHandler implements DispatcherErrorHandler {
         }
     }
 
-    public void handleError(HttpServletRequest request, HttpServletResponse response, int code, Exception e) {
+    public void handleError(HttpServletRequest request, HttpServletResponse response, int code, @RUntainted Exception e) {
         Boolean devModeOverride = PrepareOperations.getDevModeOverride();
         if (devModeOverride != null ? devModeOverride : devMode) {
             handleErrorInDevMode(response, code, e);

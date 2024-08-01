@@ -148,7 +148,7 @@ public class StrutsXmlConfigurationProvider extends XmlConfigurationProvider {
      * @see com.opensymphony.xwork2.config.providers.XmlConfigurationProvider#getConfigurationUrls
      */
     @Override
-    protected Iterator<URL> getConfigurationUrls(String fileName) throws IOException {
+    protected Iterator<URL> getConfigurationUrls(@RUntainted String fileName) throws IOException {
         URL url = null;
         if (baseDir != null) {
             url = findInFileSystem(fileName);
