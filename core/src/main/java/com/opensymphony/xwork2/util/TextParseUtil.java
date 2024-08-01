@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.conversion.impl.XWorkConverter;
 import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import org.apache.struts2.TaintUtils;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -170,7 +171,7 @@ public class TextParseUtil {
 
         TextParser parser = stack.getActionContext().getContainer().getInstance(TextParser.class);
 
-        return parser.evaluate(openChars, expression, ognlEval, maxLoopCount);
+        return TaintUtils.castToUntainted(parser.evaluate(openChars, expression, ognlEval, maxLoopCount));
     }
 
     /**
