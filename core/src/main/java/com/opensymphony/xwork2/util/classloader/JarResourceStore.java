@@ -18,6 +18,7 @@
  */
 package com.opensymphony.xwork2.util.classloader;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -35,7 +36,7 @@ import java.util.zip.ZipFile;
 public class JarResourceStore extends AbstractResourceStore {
     private static final Logger LOG = LogManager.getLogger(JarResourceStore.class);
 
-    public JarResourceStore(File file) {
+    public JarResourceStore(@RUntainted File file) {
         super(file);
     }
 

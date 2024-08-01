@@ -20,6 +20,7 @@ package org.apache.struts2.components;
 
 import com.opensymphony.xwork2.inject.Inject;
 import com.opensymphony.xwork2.util.ValueStack;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.struts2.StrutsConstants;
 import org.apache.struts2.views.annotations.StrutsTag;
 import org.apache.struts2.views.annotations.StrutsTagAttribute;
@@ -138,7 +139,7 @@ public class URL extends ContextBean {
         return result;
     }
 
-    public boolean end(Writer writer, String body) {
+    public boolean end(Writer writer, @RUntainted String body) {
     	urlRenderer.renderUrl(writer, urlProvider);
         return super.end(writer, body);
     }

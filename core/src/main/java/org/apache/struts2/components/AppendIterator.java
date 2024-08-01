@@ -19,6 +19,7 @@
 package org.apache.struts2.components;
 
 import com.opensymphony.xwork2.util.ValueStack;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.struts2.components.Param.UnnamedParametric;
@@ -131,7 +132,7 @@ public class AppendIterator extends ContextBean implements UnnamedParametric {
         return super.start(writer);
     }
 
-    public boolean end(Writer writer, String body) {
+    public boolean end(Writer writer, @RUntainted String body) {
 
         for (Iterator paramEntries = _parameters.iterator(); paramEntries.hasNext(); ) {
 

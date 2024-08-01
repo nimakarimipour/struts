@@ -25,6 +25,7 @@ import com.opensymphony.xwork2.TextProvider;
 import com.opensymphony.xwork2.TextProviderFactory;
 import com.opensymphony.xwork2.inject.Inject;
 import com.opensymphony.xwork2.util.ValueStack;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.struts2.StrutsException;
@@ -140,7 +141,7 @@ public class I18n extends Component {
         return result;
     }
 
-    public boolean end(Writer writer, String body) throws StrutsException {
+    public boolean end(Writer writer, @RUntainted String body) throws StrutsException {
         if (pushed) {
             Object o = getStack().pop();
             if ((o == null) || (!o.equals(textProvider))) {

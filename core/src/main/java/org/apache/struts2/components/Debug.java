@@ -21,6 +21,7 @@ package org.apache.struts2.components;
 import com.opensymphony.xwork2.inject.Inject;
 import com.opensymphony.xwork2.util.ValueStack;
 import com.opensymphony.xwork2.util.reflection.ReflectionProvider;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.struts2.StrutsException;
 import org.apache.struts2.dispatcher.PrepareOperations;
 import org.apache.struts2.views.annotations.StrutsTag;
@@ -78,7 +79,7 @@ public class Debug extends UIBean {
     }
 
     @Override
-    public boolean end(Writer writer, String body) {
+    public boolean end(Writer writer, @RUntainted String body) {
         if (showDebug()) {
             return super.end(writer, body);
         } else {

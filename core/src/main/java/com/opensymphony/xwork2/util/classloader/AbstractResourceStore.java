@@ -18,6 +18,7 @@
  */
 package com.opensymphony.xwork2.util.classloader;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -28,9 +29,9 @@ import java.io.InputStream;
 
 public abstract class AbstractResourceStore implements ResourceStore {
     private static final Logger log = LogManager.getLogger(JarResourceStore.class);
-    protected final File file;
+    protected final @RUntainted File file;
 
-    public AbstractResourceStore(final File file) {
+    public AbstractResourceStore(final @RUntainted File file) {
         this.file = file;
     }
 

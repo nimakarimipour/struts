@@ -21,6 +21,7 @@ package org.apache.struts2.spring;
 import com.opensymphony.xwork2.inject.Container;
 import com.opensymphony.xwork2.inject.Inject;
 import com.opensymphony.xwork2.spring.SpringObjectFactory;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
@@ -67,7 +68,7 @@ public class StrutsSpringObjectFactory extends SpringObjectFactory {
             @Inject(value=StrutsConstants.STRUTS_OBJECTFACTORY_SPRING_ENABLE_AOP_SUPPORT,required=false) String enableAopSupport,
             @Inject ServletContext servletContext,
             @Inject(StrutsConstants.STRUTS_DEVMODE) String devMode,
-            @Inject Container container) {
+            @RUntainted @Inject Container container) {
           
         boolean useClassCache = BooleanUtils.toBoolean(useClassCacheStr);
         LOG.info("Initializing Struts-Spring integration...");

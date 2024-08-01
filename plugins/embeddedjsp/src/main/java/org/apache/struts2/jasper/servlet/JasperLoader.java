@@ -25,6 +25,7 @@ import java.net.URLClassLoader;
 import java.security.CodeSource;
 import java.security.PermissionCollection;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.struts2.jasper.Constants;
 
 /**
@@ -62,7 +63,7 @@ public class JasperLoader extends URLClassLoader {
      *
      * @exception ClassNotFoundException if the class was not found
      */
-    public Class loadClass(String name) throws ClassNotFoundException {
+    public Class loadClass(@RUntainted String name) throws ClassNotFoundException {
 
         return (loadClass(name, false));
     }
@@ -92,7 +93,7 @@ public class JasperLoader extends URLClassLoader {
      *                                     
      * @exception ClassNotFoundException if the class was not found
      */                                    
-    public Class loadClass(final String name, boolean resolve)
+    public Class loadClass(final @RUntainted String name, boolean resolve)
         throws ClassNotFoundException {
 
         Class clazz = null;                

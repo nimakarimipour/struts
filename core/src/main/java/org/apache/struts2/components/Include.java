@@ -20,6 +20,7 @@ package org.apache.struts2.components;
 
 import com.opensymphony.xwork2.inject.Inject;
 import com.opensymphony.xwork2.util.ValueStack;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.struts2.RequestUtils;
@@ -124,7 +125,7 @@ public class Include extends Component {
         useResponseEncoding = Boolean.parseBoolean(useEncoding);
     }
 
-    public boolean end(Writer writer, String body) {
+    public boolean end(Writer writer, @RUntainted String body) {
         String page = findString(value, "value", "You must specify the URL to include. Example: /foo.jsp");
         StringBuilder urlBuf = new StringBuilder();
         String encodingForInclude;

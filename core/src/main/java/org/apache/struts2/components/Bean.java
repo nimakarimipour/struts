@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.ObjectFactory;
 import com.opensymphony.xwork2.inject.Inject;
 import com.opensymphony.xwork2.util.ValueStack;
 import com.opensymphony.xwork2.util.reflection.ReflectionProvider;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.struts2.views.annotations.StrutsTag;
@@ -135,7 +136,7 @@ public class Bean extends ContextBean {
         return result;
     }
 
-    public boolean end(Writer writer, String body) {
+    public boolean end(Writer writer, @RUntainted String body) {
         ValueStack stack = getStack();
         stack.pop();
 

@@ -18,6 +18,7 @@
  */
 package com.opensymphony.xwork2.util;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.struts2.StrutsException;
 
 import java.io.File;
@@ -78,7 +79,7 @@ public class ClassPathFinder {
      */
     public Vector<String> findMatches() {
         Vector<String> matches = new Vector<>();
-        URL[] parentUrls = getClassLoaderURLs();
+        @RUntainted URL[] parentUrls = getClassLoaderURLs();
         compiledPattern = patternMatcher.compilePattern(pattern);
         for (URL url : parentUrls) {
             if (!"file".equals(url.getProtocol())) {
@@ -118,7 +119,7 @@ public class ClassPathFinder {
         return matches;
     }
 
-    private Vector<String> checkEntries(String[] entries, File parent, String prefix) {
+    private Vector<String> checkEntries(@RUntainted String[] entries, @RUntainted File parent, @RUntainted String prefix) {
 
         if (entries == null) {
             return null;
@@ -170,9 +171,9 @@ public class ClassPathFinder {
         this.patternMatcher = patternMatcher;
     }
 
-    private URL[] getClassLoaderURLs() {
-        URL[] urls;
-        ClassLoader loader = Thread.currentThread().getContextClassLoader();
+    private @RUntainted URL[] getClassLoaderURLs() {
+        @RUntainted URL[] urls;
+        @RUntainted ClassLoader loader = Thread.currentThread().getContextClassLoader();
 
         if (!(loader instanceof URLClassLoader)) {
             loader = ClassPathFinder.class.getClassLoader();

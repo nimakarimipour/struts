@@ -21,6 +21,7 @@ package org.apache.struts2.components;
 import com.opensymphony.xwork2.inject.Container;
 import com.opensymphony.xwork2.inject.Inject;
 import com.opensymphony.xwork2.util.ValueStack;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.struts2.views.annotations.StrutsTag;
@@ -94,7 +95,7 @@ public class OptGroup extends Component {
         container.inject(internalUiBean);
     }
 
-    public boolean end(Writer writer, String body) {
+    public boolean end(Writer writer, @RUntainted String body) {
         Select select = (Select) findAncestor(Select.class);
         if (select == null) {
             LOG.error("incorrect use of OptGroup component, this component must be used within a Select component",

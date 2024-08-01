@@ -21,6 +21,7 @@ package org.apache.struts2.spring;
 import com.opensymphony.xwork2.util.classloader.FileResourceStore;
 import com.opensymphony.xwork2.util.classloader.JarResourceStore;
 import com.opensymphony.xwork2.util.classloader.ReloadingClassLoader;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import org.apache.commons.jci.monitor.FilesystemAlterationListener;
@@ -83,7 +84,7 @@ public class ClassReloadingXMLWebApplicationContext extends XmlWebApplicationCon
     //reload the runtime configuration when a change is detected
     private boolean reloadConfig;
 
-    public void setupReloading(String[] watchList, String acceptClasses, ServletContext servletContext, boolean reloadConfig) {
+    public void setupReloading(@RUntainted String[] watchList, String acceptClasses, ServletContext servletContext, boolean reloadConfig) {
         this.reloadConfig = reloadConfig;
 
         classLoader = new ReloadingClassLoader(ClassReloadingXMLWebApplicationContext.class.getClassLoader());

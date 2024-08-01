@@ -18,6 +18,8 @@
  */
 package com.opensymphony.xwork2.util.classloader;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+
 /**
  * class taken from Apache JCI
  */
@@ -32,7 +34,7 @@ public final class ResourceStoreClassLoader extends ClassLoader {
         System.arraycopy(pStores, 0, stores, 0, stores.length);
     }
 
-    private Class fastFindClass(final String name) {
+    private Class fastFindClass(final @RUntainted String name) {
 
         if (stores != null) {
             String fileName = name.replace('.', '/') + ".class";
@@ -48,7 +50,7 @@ public final class ResourceStoreClassLoader extends ClassLoader {
         return null;
     }
 
-    protected synchronized Class loadClass(String name, boolean resolve) throws ClassNotFoundException {
+    protected synchronized Class loadClass(@RUntainted String name, boolean resolve) throws ClassNotFoundException {
         Class clazz = findLoadedClass(name);
 
         if (clazz == null) {
@@ -71,7 +73,7 @@ public final class ResourceStoreClassLoader extends ClassLoader {
         return clazz;
     }
 
-    protected Class findClass(final String name) throws ClassNotFoundException {
+    protected Class findClass(final @RUntainted String name) throws ClassNotFoundException {
         final Class clazz = fastFindClass(name);
         if (clazz == null) {
             throw new ClassNotFoundException(name);

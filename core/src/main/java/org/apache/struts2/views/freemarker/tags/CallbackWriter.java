@@ -18,6 +18,7 @@
  */
 package org.apache.struts2.views.freemarker.tags;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import freemarker.template.TemplateModelException;
 import freemarker.template.TransformControl;
 import org.apache.struts2.components.Component;
@@ -31,7 +32,7 @@ import java.io.Writer;
 public class CallbackWriter extends Writer implements TransformControl {
     private Component bean;
     private Writer writer;
-    private StringWriter body;
+    private @RUntainted StringWriter body;
     private boolean afterBody = false;
 
     public CallbackWriter(Component bean, Writer writer) {

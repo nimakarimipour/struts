@@ -20,6 +20,7 @@ package org.apache.struts2.views.jsp;
 
 import com.opensymphony.xwork2.util.TextParseUtil;
 import com.opensymphony.xwork2.util.ValueStack;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.struts2.util.ComponentUtils;
 import org.apache.struts2.util.FastByteArrayOutputStream;
 
@@ -68,7 +69,8 @@ public class StrutsBodyTagSupport extends BodyTagSupport {
         }
     }
 
-    protected String getBody() {
+    @SuppressWarnings("ALL")
+    protected @RUntainted String getBody() {
         if (bodyContent == null) {
             return "";
         } else {

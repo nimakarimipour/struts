@@ -19,6 +19,7 @@
 package org.apache.struts2.components;
 
 import com.opensymphony.xwork2.util.ValueStack;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.struts2.views.annotations.StrutsTag;
 import org.apache.struts2.views.annotations.StrutsTagAttribute;
 
@@ -88,7 +89,7 @@ public class If extends Component {
         return answer.booleanValue();
     }
 
-    public boolean end(Writer writer, String body) {
+    public boolean end(Writer writer, @RUntainted String body) {
         stack.getContext().put(ANSWER, answer);
         return super.end(writer, body);
     }

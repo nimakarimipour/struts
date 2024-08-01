@@ -24,6 +24,7 @@ import com.opensymphony.xwork2.inject.Inject;
 import com.opensymphony.xwork2.security.NotExcludedAcceptedPatternsChecker;
 import com.opensymphony.xwork2.util.TextParseUtil;
 import com.opensymphony.xwork2.util.ValueStack;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.reflect.MethodUtils;
@@ -177,7 +178,7 @@ public class Component {
      * @param body   the rendered body.
      * @return true if the body should be evaluated again
      */
-    public boolean end(Writer writer, String body) {
+    public boolean end(Writer writer, @RUntainted String body) {
         return end(writer, body, true);
     }
 
@@ -192,7 +193,7 @@ public class Component {
      * @param popComponentStack should the component stack be popped?
      * @return true if the body should be evaluated again
      */
-    protected boolean end(Writer writer, String body, boolean popComponentStack) {
+    protected boolean end(Writer writer, @RUntainted String body, boolean popComponentStack) {
         assert (body != null);
 
         try {

@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.config.ConfigurationException;
 import com.opensymphony.xwork2.inject.Inject;
 import com.opensymphony.xwork2.util.TextParseUtil;
 import com.opensymphony.xwork2.util.ValueStack;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
@@ -546,7 +547,7 @@ public abstract class UIBean extends Component {
     }
 
     @Override
-    public boolean end(Writer writer, String body) {
+    public boolean end(Writer writer, @RUntainted String body) {
         evaluateParams();
         try {
             super.end(writer, body, false);

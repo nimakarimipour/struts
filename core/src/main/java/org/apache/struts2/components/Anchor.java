@@ -20,6 +20,7 @@ package org.apache.struts2.components;
 
 import com.opensymphony.xwork2.inject.Inject;
 import com.opensymphony.xwork2.util.ValueStack;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -142,7 +143,7 @@ public class Anchor extends ClosingUIBean {
      * Overrides to be able to render body in a template rather than always before the template
      */
     @Override
-    public boolean end(Writer writer, String body) {
+    public boolean end(Writer writer, @RUntainted String body) {
         this.processingTagBody = false;
         evaluateParams();
         try {
