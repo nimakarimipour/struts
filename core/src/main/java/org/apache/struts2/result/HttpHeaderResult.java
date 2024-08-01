@@ -22,6 +22,7 @@ import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.Result;
 import com.opensymphony.xwork2.util.TextParseUtil;
 import com.opensymphony.xwork2.util.ValueStack;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -83,7 +84,7 @@ public class HttpHeaderResult implements Result {
     public static final String DEFAULT_PARAM = null;
 
     private boolean parse = true;
-    private Map<String, String> headers;
+    private Map<@RUntainted String, @RUntainted String> headers;
     private int status = -1;
     private String error = null;
     private String errorMessage;
@@ -124,7 +125,7 @@ public class HttpHeaderResult implements Result {
      *
      * @return a Map of all HTTP headers.
      */
-    public Map<String, String> getHeaders() {
+    public Map<@RUntainted String, @RUntainted String> getHeaders() {
         return headers;
     }
 
@@ -158,7 +159,7 @@ public class HttpHeaderResult implements Result {
      * @param name  header name
      * @param value header value
      */
-    public void addHeader(String name, String value) {
+    public void addHeader(@RUntainted String name, @RUntainted String value) {
         headers.put(name, value);
     }
 
@@ -182,7 +183,7 @@ public class HttpHeaderResult implements Result {
         }
 
         if (headers != null) {
-            for (Map.Entry<String, String> entry : headers.entrySet()) {
+            for (Map.Entry<@RUntainted String, @RUntainted String> entry : headers.entrySet()) {
                 String value = entry.getValue();
                 String finalValue = parse ? TextParseUtil.translateVariables(value, stack) : value;
                 response.addHeader(entry.getKey(), finalValue);

@@ -37,7 +37,7 @@ def run_annotator():
     # Uncomment to disable parallel processing
     # commands += ['--disable-parallel-processing']
 
-    subprocess.call(commands)
+    # subprocess.call(commands)
 
 
 run_annotator()
