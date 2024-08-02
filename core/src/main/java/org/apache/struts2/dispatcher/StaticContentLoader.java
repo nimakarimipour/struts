@@ -18,6 +18,7 @@
  */
 package org.apache.struts2.dispatcher;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -54,7 +55,7 @@ public interface StaticContentLoader {
     /**
      * @param filterConfig The filter configuration
      */
-    void setHostConfig(HostConfig filterConfig);
+    void setHostConfig(@RUntainted HostConfig filterConfig);
 
     /**
      * Locate a static resource and copy directly to the response, setting the

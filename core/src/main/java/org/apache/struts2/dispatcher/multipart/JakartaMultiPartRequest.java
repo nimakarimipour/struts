@@ -53,7 +53,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
     static final Logger LOG = LogManager.getLogger(JakartaMultiPartRequest.class);
 
     // maps parameter name -> List of FileItem objects
-    protected Map<String, List<FileItem>> files = new HashMap<>();
+    protected Map<String, List<@RUntainted FileItem>> files = new HashMap<>();
 
     // maps parameter name -> List of param values
     protected Map<String, List<String>> params = new HashMap<>();
@@ -98,7 +98,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
         }
     }
 
-    protected void processUpload(HttpServletRequest request, String saveDir) throws FileUploadException, UnsupportedEncodingException {
+    protected void processUpload(HttpServletRequest request, @RUntainted String saveDir) throws FileUploadException, UnsupportedEncodingException {
         if (ServletFileUpload.isMultipartContent(request)) {
             for (FileItem item : parseRequest(request, saveDir)) {
                 LOG.debug("Found file item: [{}]", item.getFieldName());
@@ -120,7 +120,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
             return;
         }
 
-        List<FileItem> values;
+        List<@RUntainted FileItem> values;
         if (files.get(item.getFieldName()) != null) {
             values = files.get(item.getFieldName());
         } else {
@@ -208,7 +208,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
      * @see org.apache.struts2.dispatcher.multipart.MultiPartRequest#getContentType(java.lang.String)
      */
     public String[] getContentType(String fieldName) {
-        List<FileItem> items = files.get(fieldName);
+        List<@RUntainted FileItem> items = files.get(fieldName);
 
         if (items == null) {
             return null;
@@ -226,7 +226,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
      * @see org.apache.struts2.dispatcher.multipart.MultiPartRequest#getFile(java.lang.String)
      */
     public UploadedFile[] getFile(String fieldName) {
-        List<FileItem> items = files.get(fieldName);
+        List<@RUntainted FileItem> items = files.get(fieldName);
 
         if (items == null) {
             return null;
@@ -255,7 +255,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
      * @see org.apache.struts2.dispatcher.multipart.MultiPartRequest#getFileNames(java.lang.String)
      */
     public String[] getFileNames(String fieldName) {
-        List<FileItem> items = files.get(fieldName);
+        List<@RUntainted FileItem> items = files.get(fieldName);
 
         if (items == null) {
             return null;
@@ -273,7 +273,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
      * @see org.apache.struts2.dispatcher.multipart.MultiPartRequest#getFilesystemName(java.lang.String)
      */
     public String[] getFilesystemName(String fieldName) {
-        List<FileItem> items = files.get(fieldName);
+        List<@RUntainted FileItem> items = files.get(fieldName);
 
         if (items == null) {
             return null;
@@ -354,7 +354,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
     public void cleanUp() {
         Set<String> names = files.keySet();
         for (String name : names) {
-            List<FileItem> items = files.get(name);
+            List<@RUntainted FileItem> items = files.get(name);
             for (FileItem item : items) {
                 LOG.debug("Removing file {} {}", name, item);
                 if (!item.isInMemory()) {

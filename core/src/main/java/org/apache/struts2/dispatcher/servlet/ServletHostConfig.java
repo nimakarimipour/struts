@@ -35,7 +35,7 @@ public class ServletHostConfig implements HostConfig {
     public ServletHostConfig(@RUntainted ServletConfig config) {
         this.config = config;
     }
-    public @RUntainted String getInitParameter(String key) {
+    public @RUntainted String getInitParameter(@RUntainted String key) {
         return config.getInitParameter(key);
     }
 
