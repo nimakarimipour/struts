@@ -18,6 +18,8 @@
  */
 package org.apache.struts2.views;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -30,7 +32,7 @@ public class JspSupportServlet extends HttpServlet {
 
     public static JspSupportServlet jspSupportServlet;
 
-    public void init(ServletConfig servletConfig) throws ServletException {
+    public void init(@RUntainted ServletConfig servletConfig) throws ServletException {
         super.init(servletConfig);
 
         jspSupportServlet = this;

@@ -30,16 +30,16 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  * Host configuration that wraps a ServletConfig
  */
 public class ServletHostConfig implements HostConfig {
-    private ServletConfig config;
+    private @RUntainted ServletConfig config;
 
-    public ServletHostConfig(ServletConfig config) {
+    public ServletHostConfig(@RUntainted ServletConfig config) {
         this.config = config;
     }
-    public String getInitParameter(String key) {
+    public @RUntainted String getInitParameter(String key) {
         return config.getInitParameter(key);
     }
 
-    public Iterator<String> getInitParameterNames() {
+    public Iterator<@RUntainted String> getInitParameterNames() {
         return MakeIterator.convert(config.getInitParameterNames());
     }
 

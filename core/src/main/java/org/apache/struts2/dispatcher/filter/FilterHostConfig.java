@@ -31,16 +31,16 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  */
 public class FilterHostConfig implements HostConfig {
 
-    private FilterConfig config;
+    private @RUntainted FilterConfig config;
 
-    public FilterHostConfig(FilterConfig config) {
+    public FilterHostConfig(@RUntainted FilterConfig config) {
         this.config = config;
     }
-    public String getInitParameter(String key) {
+    public @RUntainted String getInitParameter(@RUntainted String key) {
         return config.getInitParameter(key);
     }
 
-    public Iterator<String> getInitParameterNames() {
+    public Iterator<@RUntainted String> getInitParameterNames() {
         return MakeIterator.convert(config.getInitParameterNames());
     }
 

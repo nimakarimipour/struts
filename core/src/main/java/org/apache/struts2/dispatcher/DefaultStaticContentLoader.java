@@ -154,7 +154,7 @@ public class DefaultStaticContentLoader implements StaticContentLoader {
      *
      * @see org.apache.struts2.dispatcher.StaticResourceLoader#setHostConfig(javax.servlet.FilterConfig)
      */
-    public void setHostConfig(HostConfig filterConfig) {
+    public void setHostConfig(@RUntainted HostConfig filterConfig) {
         String param = filterConfig.getInitParameter("packages");
         String packages = getAdditionalPackages();
         if (param != null) {

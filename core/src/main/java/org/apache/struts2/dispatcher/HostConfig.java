@@ -31,15 +31,15 @@ public interface HostConfig {
      * @param key The parameter key
      * @return The parameter value
      */
-    String getInitParameter(String key);
+    @RUntainted String getInitParameter(@RUntainted String key);
 
     /**
      * @return A list of parameter names
      */
-    Iterator<String> getInitParameterNames();
+    Iterator<@RUntainted String> getInitParameterNames();
 
     /**
      * @return The servlet context
      */
-    ServletContext getServletContext();
+    @RUntainted ServletContext getServletContext();
 }

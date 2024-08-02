@@ -19,6 +19,7 @@
 package com.opensymphony.xwork2.ognl;
 
 import com.opensymphony.xwork2.util.ProxyUtil;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import ognl.MemberAccess;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -63,7 +64,7 @@ public class SecurityMemberAccess implements MemberAccess {
     }
 
     @Override
-    public Object setup(Map context, Object target, Member member, String propertyName) {
+    public Object setup(Map context, Object target, @RUntainted Member member, String propertyName) {
         Object result = null;
 
         if (isAccessible(context, target, member, propertyName)) {
@@ -92,7 +93,7 @@ public class SecurityMemberAccess implements MemberAccess {
     }
 
     @Override
-    public boolean isAccessible(Map context, Object target, Member member, String propertyName) {
+    public boolean isAccessible(Map context, Object target, @RUntainted Member member, String propertyName) {
         LOG.debug("Checking access for [target: {}, member: {}, property: {}]", target, member, propertyName);
 
         final int memberModifiers = member.getModifiers();

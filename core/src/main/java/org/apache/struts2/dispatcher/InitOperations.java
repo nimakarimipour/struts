@@ -57,7 +57,7 @@ public class InitOperations {
      * @param dispatcher   the dispatcher
      * @return the static content loader
      */
-    public StaticContentLoader initStaticContentLoader(HostConfig filterConfig, Dispatcher dispatcher) {
+    public StaticContentLoader initStaticContentLoader(@RUntainted HostConfig filterConfig, Dispatcher dispatcher) {
         StaticContentLoader loader = dispatcher.getContainer().getInstance(StaticContentLoader.class);
         loader.setHostConfig(filterConfig);
         return loader;
@@ -83,7 +83,7 @@ public class InitOperations {
      */
     protected Dispatcher createDispatcher(HostConfig filterConfig) {
         Map<String, @RUntainted String> params = new HashMap<>();
-        for (Iterator<String> parameterNames = filterConfig.getInitParameterNames(); parameterNames.hasNext(); ) {
+        for (Iterator<@RUntainted String> parameterNames = filterConfig.getInitParameterNames(); parameterNames.hasNext(); ) {
             String name = parameterNames.next();
             String value = filterConfig.getInitParameter(name);
             params.put(name, value);

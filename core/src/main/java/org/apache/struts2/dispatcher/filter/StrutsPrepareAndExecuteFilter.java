@@ -18,6 +18,7 @@
  */
 package org.apache.struts2.dispatcher.filter;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.struts2.RequestUtils;
@@ -52,7 +53,7 @@ public class StrutsPrepareAndExecuteFilter implements StrutsStatics, Filter {
     protected ExecuteOperations execute;
     protected List<Pattern> excludedPatterns;
 
-    public void init(FilterConfig filterConfig) throws ServletException {
+    public void init(@RUntainted FilterConfig filterConfig) throws ServletException {
         InitOperations init = createInitOperations();
         Dispatcher dispatcher = null;
         try {

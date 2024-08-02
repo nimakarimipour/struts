@@ -18,6 +18,7 @@
  */
 package org.apache.struts2.dispatcher.filter;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.struts2.StrutsStatics;
 import org.apache.struts2.dispatcher.Dispatcher;
 import org.apache.struts2.dispatcher.InitOperations;
@@ -45,7 +46,7 @@ public class StrutsPrepareFilter implements StrutsStatics, Filter {
     protected PrepareOperations prepare;
     protected List<Pattern> excludedPatterns;
 
-    public void init(FilterConfig filterConfig) throws ServletException {
+    public void init(@RUntainted FilterConfig filterConfig) throws ServletException {
         InitOperations init = createInitOperations();
         Dispatcher dispatcher = null;
         try {
