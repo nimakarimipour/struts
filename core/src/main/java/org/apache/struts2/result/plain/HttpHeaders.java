@@ -29,7 +29,7 @@ class HttpHeaders {
     private final List<HttpHeader<Long>> dateHeaders = new ArrayList<>();
     private final List<HttpHeader<Integer>> intHeaders = new ArrayList<>();
 
-    public HttpHeaders add(String name, String value) {
+    public HttpHeaders add(@RUntainted String name, String value) {
         stringHeaders.add(new StringHttpHeader(name, value));
         return this;
     }
