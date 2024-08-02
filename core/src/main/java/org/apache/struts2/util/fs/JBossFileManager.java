@@ -102,7 +102,7 @@ public class JBossFileManager extends DefaultFileManager {
     }
 
     @Override
-    public @RUntainted URL normalizeToFileProtocol(URL url) {
+    public @RUntainted URL normalizeToFileProtocol(@RUntainted URL url) {
         if (isJBossUrl(url))                {
             try {
                 return getJBossPhysicalUrl(url);

@@ -73,7 +73,7 @@ public interface FileManager {
      * @param url URL to convert to a jar url
      * @return a URL to a file, or null if the URL external form cannot be parsed
      */
-    @RUntainted URL normalizeToFileProtocol(URL url);
+    @RUntainted URL normalizeToFileProtocol(@RUntainted URL url);
 
     /**
      * Indicate if given implementation supports current OS File System
