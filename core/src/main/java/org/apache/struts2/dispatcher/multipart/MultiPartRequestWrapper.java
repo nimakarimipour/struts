@@ -19,6 +19,7 @@
 package org.apache.struts2.dispatcher.multipart;
 
 import com.opensymphony.xwork2.LocaleProvider;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.struts2.dispatcher.LocalizedMessage;
@@ -75,7 +76,7 @@ public class MultiPartRequestWrapper extends StrutsRequestWrapper {
      * @param disableRequestAttributeValueStackLookup disable the request attribute value stack lookup
      */
     public MultiPartRequestWrapper(MultiPartRequest multiPartRequest, HttpServletRequest request,
-                                   String saveDir, LocaleProvider provider,
+                                   @RUntainted String saveDir, LocaleProvider provider,
                                    boolean disableRequestAttributeValueStackLookup) {
         super(request, disableRequestAttributeValueStackLookup);
         errors = new ArrayList<>();
@@ -93,7 +94,7 @@ public class MultiPartRequestWrapper extends StrutsRequestWrapper {
         } 
     }
 
-    public MultiPartRequestWrapper(MultiPartRequest multiPartRequest, HttpServletRequest request, String saveDir, LocaleProvider provider) {
+    public MultiPartRequestWrapper(MultiPartRequest multiPartRequest, HttpServletRequest request, @RUntainted String saveDir, LocaleProvider provider) {
         this(multiPartRequest, request, saveDir, provider, false);
     }
 

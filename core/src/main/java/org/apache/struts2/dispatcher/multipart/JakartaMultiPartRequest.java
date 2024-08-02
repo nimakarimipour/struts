@@ -66,7 +66,7 @@ public class JakartaMultiPartRequest extends AbstractMultiPartRequest {
      * @param request the request containing the multipart
      * @throws java.io.IOException is thrown if encoding fails.
      */
-    public void parse(HttpServletRequest request, String saveDir) throws IOException {
+    public void parse(HttpServletRequest request, @RUntainted String saveDir) throws IOException {
         try {
             setLocale(request);
             processUpload(request, saveDir);

@@ -29,6 +29,7 @@ import java.util.NoSuchElementException;
 import java.util.Set;
 import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+import org.checkerframework.checker.tainting.qual.Untainted;
 
 
 /**
@@ -173,7 +174,7 @@ public class ClassLoaderUtil {
      * @return class with for the given name
      * @throws ClassNotFoundException If the class cannot be found anywhere.
      */
-    public static @RPolyTainted Class loadClass(@RPolyTainted @RUntainted String className, Class callingClass) throws ClassNotFoundException {
+    public static Class loadClass(@Untainted String className, Class callingClass) throws ClassNotFoundException {
         try {
             return Thread.currentThread().getContextClassLoader().loadClass(className);
         } catch (ClassNotFoundException e) {

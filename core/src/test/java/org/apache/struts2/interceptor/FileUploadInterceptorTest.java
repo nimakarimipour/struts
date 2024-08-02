@@ -24,6 +24,7 @@ import com.opensymphony.xwork2.DefaultLocaleProvider;
 import com.opensymphony.xwork2.ValidationAwareSupport;
 import com.opensymphony.xwork2.mock.MockActionInvocation;
 import com.opensymphony.xwork2.util.ClassLoaderUtil;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.StrutsInternalTestCase;
@@ -86,7 +87,7 @@ public class FileUploadInterceptorTest extends StrutsInternalTestCase {
     };
 
     private FileUploadInterceptor interceptor;
-    private File tempDir;
+    private @RUntainted File tempDir;
     private TestAction action;
 
     public void testAcceptFileWithEmptyAllowedTypesAndExtensions() throws Exception {

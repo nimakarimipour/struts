@@ -23,9 +23,9 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 public class StrutsUploadedFile implements UploadedFile {
 
-    private File file;
+    private @RUntainted File file;
 
-    public StrutsUploadedFile(File file) {
+    public StrutsUploadedFile(@RUntainted File file) {
         this.file = file;
     }
 

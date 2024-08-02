@@ -211,7 +211,7 @@ public class ProxyUtil {
      * @param clazz the class to check
      * @param member the member to check
      */
-    private static boolean hasMember(@RUntainted Class<?> clazz, @RUntainted Member member) {
+    private static boolean hasMember(Class<?> clazz, @RUntainted Member member) {
         if (member instanceof Method) {
             return null != MethodUtils.getMatchingMethod(clazz, member.getName(), ((Method) member).getParameterTypes());
         }

@@ -18,6 +18,7 @@
  */
 package org.apache.struts2.dispatcher.multipart;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.struts2.dispatcher.LocalizedMessage;
 
 import javax.servlet.http.HttpServletRequest;
@@ -30,7 +31,7 @@ import java.util.List;
  */
 public interface MultiPartRequest {
 
-    void parse(HttpServletRequest request, String saveDir) throws IOException;
+    void parse(HttpServletRequest request, @RUntainted String saveDir) throws IOException;
     
     /**
      * Returns an enumeration of the parameter names for uploaded files
