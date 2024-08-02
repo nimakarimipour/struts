@@ -145,7 +145,7 @@ public class ObjectFactory implements Serializable {
      * @return instance of the action class to handle a web request
      * @throws Exception in case of any error
      */
-    public Object buildAction(String actionName, String namespace, ActionConfig config, Map<String, Object> extraContext) throws Exception {
+    public @RUntainted Object buildAction(String actionName, String namespace, ActionConfig config, Map<String, Object> extraContext) throws Exception {
         return actionFactory.buildAction(actionName, namespace, config, extraContext);
     }
 

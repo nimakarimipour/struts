@@ -56,7 +56,7 @@ public class DefaultActionInvocation implements ActionInvocation {
 
     private static final Logger LOG = LogManager.getLogger(DefaultActionInvocation.class);
 
-    protected Object action;
+    protected @RUntainted Object action;
     protected ActionProxy proxy;
     protected List<PreResultListener> preResultListeners;
     protected Map<String, Object> extraContext;
