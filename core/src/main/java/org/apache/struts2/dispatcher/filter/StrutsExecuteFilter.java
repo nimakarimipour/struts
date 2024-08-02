@@ -18,6 +18,7 @@
  */
 package org.apache.struts2.dispatcher.filter;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.struts2.StrutsStatics;
 import org.apache.struts2.dispatcher.Dispatcher;
 import org.apache.struts2.dispatcher.ExecuteOperations;
@@ -43,9 +44,9 @@ public class StrutsExecuteFilter implements StrutsStatics, Filter {
     protected PrepareOperations prepare;
     protected ExecuteOperations execute;
 
-    protected FilterConfig filterConfig;
+    protected @RUntainted FilterConfig filterConfig;
 
-    public void init(FilterConfig filterConfig) throws ServletException {
+    public void init(@RUntainted FilterConfig filterConfig) throws ServletException {
         this.filterConfig = filterConfig;
     }
 
