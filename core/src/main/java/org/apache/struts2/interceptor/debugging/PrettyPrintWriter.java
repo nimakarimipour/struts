@@ -55,11 +55,11 @@ public class PrettyPrintWriter {
         this(writer, lineIndenter, "\n");
     }
 
-    public PrettyPrintWriter(Writer writer, @RUntainted String lineIndenter, String newLine) {
+    public PrettyPrintWriter(Writer writer, @RUntainted String lineIndenter, @RUntainted String newLine) {
         this(writer, lineIndenter.toCharArray(), newLine);
     }
 
-    public PrettyPrintWriter(Writer writer, String lineIndenter) {
+    public PrettyPrintWriter(Writer writer, @RUntainted String lineIndenter) {
         this(writer, lineIndenter.toCharArray());
     }
 
