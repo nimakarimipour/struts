@@ -39,7 +39,7 @@ class HttpHeaders {
         return this;
     }
 
-    public HttpHeaders add(String name, Integer value) {
+    public HttpHeaders add(@RUntainted String name, Integer value) {
         intHeaders.add(new IntHttpHeader(name, value));
         return this;
     }

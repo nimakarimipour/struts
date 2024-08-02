@@ -21,10 +21,10 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 class IntHttpHeader implements HttpHeader<Integer> {
 
-    private final String name;
+    private final @RUntainted String name;
     private final Integer value;
 
-    public IntHttpHeader(String name, Integer value) {
+    public IntHttpHeader(@RUntainted String name, Integer value) {
         this.name = name;
         this.value = value;
     }

@@ -60,7 +60,7 @@ public class ResponseBuilder {
         return this;
     }
 
-    public ResponseBuilder withHeader(String name, Integer value) {
+    public ResponseBuilder withHeader(@RUntainted String name, Integer value) {
         headers.add(name, value);
         return this;
     }
