@@ -18,6 +18,7 @@
  */
 package org.apache.struts2.dispatcher.listener;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.struts2.dispatcher.Dispatcher;
 import org.apache.struts2.dispatcher.InitOperations;
 import org.apache.struts2.dispatcher.PrepareOperations;
@@ -34,7 +35,7 @@ import javax.servlet.ServletContextListener;
 public class StrutsListener implements ServletContextListener {
     private PrepareOperations prepare;
 
-    public void contextInitialized(ServletContextEvent sce) {
+    public void contextInitialized(@RUntainted ServletContextEvent sce) {
         InitOperations init = new InitOperations();
         Dispatcher dispatcher = null;
         try {
