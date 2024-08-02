@@ -24,7 +24,7 @@ import java.io.StringWriter;
 
 class BodyWriter {
 
-    private final StringWriter body = new StringWriter();
+    private final @RUntainted StringWriter body = new StringWriter();
 
     public BodyWriter write(@RUntainted String out) {
         body.write(out);
