@@ -84,7 +84,7 @@ public class FreemarkerResult extends StrutsResultSupport {
         this.freemarkerManager = mgr;
     }
 
-    public void setContentType(String aContentType) {
+    public void setContentType(@RUntainted String aContentType) {
         pContentType = aContentType;
     }
 
