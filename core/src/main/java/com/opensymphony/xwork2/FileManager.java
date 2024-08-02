@@ -59,7 +59,7 @@ public interface FileManager {
      * @return an InputStream of the file contents or null
      * @throws IllegalArgumentException if there is no file with the given file name
      */
-    InputStream loadFile(@RUntainted URL fileUrl);
+    InputStream loadFile(URL fileUrl);
 
     /**
      * Adds file to list of monitored files
