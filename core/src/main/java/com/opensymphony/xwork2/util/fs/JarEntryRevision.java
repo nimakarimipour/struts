@@ -35,7 +35,7 @@ public class JarEntryRevision extends Revision {
     private @RUntainted URL jarFileURL;
     private long lastModified;
 
-    public static Revision build(URL fileUrl, FileManager fileManager) {
+    public static Revision build(@RUntainted URL fileUrl, FileManager fileManager) {
         try (StrutsJarURLConnection conn = StrutsJarURLConnection.openConnection(fileUrl)) {
             conn.setUseCaches(false);
             URL url = fileManager.normalizeToFileProtocol(fileUrl);
