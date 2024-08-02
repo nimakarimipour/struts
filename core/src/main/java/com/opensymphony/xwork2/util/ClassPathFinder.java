@@ -78,8 +78,8 @@ public class ClassPathFinder {
      *
      * @return Vector&lt;String&gt; containing matching filenames
      */
-    public Vector<String> findMatches() {
-        Vector<String> matches = new Vector<>();
+    public Vector<@RUntainted String> findMatches() {
+        Vector<@RUntainted String> matches = new Vector<>();
         @RUntainted URL[] parentUrls = getClassLoaderURLs();
         compiledPattern = patternMatcher.compilePattern(pattern);
         for (URL url : parentUrls) {
@@ -111,7 +111,7 @@ public class ClassPathFinder {
                     e.printStackTrace();
                 }
             } else {
-                Vector<String> results = checkEntries(entry.list(), entry, "");
+                Vector<@RUntainted String> results = checkEntries(entry.list(), entry, "");
                 if (results != null) {
                     matches.addAll(results);
                 }
@@ -120,13 +120,13 @@ public class ClassPathFinder {
         return matches;
     }
 
-    private Vector<String> checkEntries(@RUntainted String[] entries, @RUntainted File parent, @RUntainted String prefix) {
+    private Vector<@RUntainted String> checkEntries(@RUntainted String[] entries, @RUntainted File parent, @RUntainted String prefix) {
 
         if (entries == null) {
             return null;
         }
 
-        Vector<String> matches = new Vector<>();
+        Vector<@RUntainted String> matches = new Vector<>();
         for (String listEntry : entries) {
             File tempFile;
             if (!"".equals(prefix)) {

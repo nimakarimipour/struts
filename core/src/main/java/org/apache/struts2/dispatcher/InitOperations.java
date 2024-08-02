@@ -82,7 +82,7 @@ public class InitOperations {
      * @return The dispatcher on the thread.
      */
     protected Dispatcher createDispatcher(HostConfig filterConfig) {
-        Map<String, String> params = new HashMap<>();
+        Map<String, @RUntainted String> params = new HashMap<>();
         for (Iterator<String> parameterNames = filterConfig.getInitParameterNames(); parameterNames.hasNext(); ) {
             String name = parameterNames.next();
             String value = filterConfig.getInitParameter(name);

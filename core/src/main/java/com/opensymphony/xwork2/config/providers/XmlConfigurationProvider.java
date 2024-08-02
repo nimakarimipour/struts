@@ -65,7 +65,7 @@ public abstract class XmlConfigurationProvider extends XmlDocConfigurationProvid
 
     private static final Logger LOG = LogManager.getLogger(XmlConfigurationProvider.class);
 
-    private final String configFileName;
+    private final @RUntainted String configFileName;
     private final Set<String> loadedFileUrls = new HashSet<>();
     private Set<String> includedFileNames;
     protected FileManager fileManager;
@@ -79,7 +79,7 @@ public abstract class XmlConfigurationProvider extends XmlDocConfigurationProvid
         this("struts.xml");
     }
 
-    public XmlConfigurationProvider(String filename) {
+    public XmlConfigurationProvider(@RUntainted String filename) {
         this.configFileName = filename;
     }
 
@@ -87,7 +87,7 @@ public abstract class XmlConfigurationProvider extends XmlDocConfigurationProvid
      * @deprecated since 6.2.0, use {@link #XmlConfigurationProvider(String)}
      */
     @Deprecated
-    public XmlConfigurationProvider(String filename, @Deprecated boolean notUsed) {
+    public XmlConfigurationProvider(@RUntainted String filename, @Deprecated boolean notUsed) {
         this(filename);
     }
 
@@ -121,7 +121,7 @@ public abstract class XmlConfigurationProvider extends XmlDocConfigurationProvid
         return loadedFileUrls.stream().anyMatch(url -> fileManager.fileNeedsReloading(url));
     }
 
-    protected List<Document> parseFile(String configFileName) {
+    protected List<Document> parseFile(@RUntainted String configFileName) {
         try {
             loadedFileUrls.clear();
             return loadConfigurationFiles(configFileName, null);
@@ -132,7 +132,7 @@ public abstract class XmlConfigurationProvider extends XmlDocConfigurationProvid
         }
     }
 
-    protected List<Document> loadConfigurationFiles(String fileName, Element includeElement) {
+    protected List<Document> loadConfigurationFiles(@RUntainted String fileName, Element includeElement) {
         if (includedFileNames.contains(fileName)) {
             return emptyList();
         }
@@ -150,7 +150,7 @@ public abstract class XmlConfigurationProvider extends XmlDocConfigurationProvid
         return finalDocs;
     }
 
-    protected Iterator<@RUntainted URL> getURLs(String fileName) {
+    protected Iterator<@RUntainted URL> getURLs(@RUntainted String fileName) {
         Iterator<@RUntainted URL> urls = null;
         try {
             urls = getConfigurationUrls(fileName);
@@ -222,7 +222,7 @@ public abstract class XmlConfigurationProvider extends XmlDocConfigurationProvid
                 // handleWildCardIncludes(includeFileName, docs, child);
                 ClassPathFinder wildcardFinder = new ClassPathFinder();
                 wildcardFinder.setPattern(includeFileName);
-                Vector<String> wildcardMatches = wildcardFinder.findMatches();
+                Vector<@RUntainted String> wildcardMatches = wildcardFinder.findMatches();
                 for (String match : wildcardMatches) {
                     finalDocs.addAll(loadConfigurationFiles(match, child));
                 }

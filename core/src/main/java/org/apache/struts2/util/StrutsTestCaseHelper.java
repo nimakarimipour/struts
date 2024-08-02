@@ -37,7 +37,7 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
  */
 public class StrutsTestCaseHelper {
     
-    public static Dispatcher initDispatcher(ServletContext ctx, Map<String,String> params) {
+    public static Dispatcher initDispatcher(@RUntainted ServletContext ctx, Map<String,@RUntainted String> params) {
         if (params == null) {
             params = new HashMap<>();
         }
@@ -60,7 +60,7 @@ public class StrutsTestCaseHelper {
 
     private static class DispatcherWrapper extends Dispatcher {
 
-        public DispatcherWrapper(ServletContext ctx, Map<String, String> params) {
+        public DispatcherWrapper(@RUntainted ServletContext ctx, Map<String, @RUntainted String> params) {
             super(ctx, params);
             super.setDispatcherErrorHandler(new MockErrorHandler());
         }

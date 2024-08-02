@@ -19,6 +19,7 @@
 package org.apache.struts2;
 
 import com.opensymphony.xwork2.XWorkTestCase;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.struts2.dispatcher.Dispatcher;
 import org.apache.struts2.dispatcher.PrepareOperations;
@@ -49,7 +50,7 @@ public abstract class StrutsInternalTestCase extends XWorkTestCase {
         initDispatcher(null);
     }
     
-    protected Dispatcher initDispatcher(Map<String,String> params) {
+    protected Dispatcher initDispatcher(Map<String,@RUntainted String> params) {
         servletContext = new StrutsMockServletContext();
         dispatcher = StrutsTestCaseHelper.initDispatcher(servletContext, params);
         configurationManager = dispatcher.getConfigurationManager();

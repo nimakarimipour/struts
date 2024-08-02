@@ -28,7 +28,7 @@ public class MockDispatcher extends Dispatcher {
 
     private final ConfigurationManager copyConfigurationManager;
 
-    public MockDispatcher(ServletContext servletContext, Map<String, String> context, ConfigurationManager configurationManager) {
+    public MockDispatcher(@RUntainted ServletContext servletContext, Map<String, @RUntainted String> context, ConfigurationManager configurationManager) {
         super(servletContext, context);
         this.copyConfigurationManager = configurationManager;
     }

@@ -236,7 +236,7 @@ public class Dispatcher {
     /**
      * Keeps current reference to external world and must be protected to support class inheritance
      */
-    protected ServletContext servletContext;
+    protected @RUntainted ServletContext servletContext;
     protected Map<String, @RUntainted String> initParams;
 
     /**
@@ -245,7 +245,7 @@ public class Dispatcher {
      * @param servletContext Our servlet context
      * @param initParams     The set of initialization parameters
      */
-    public Dispatcher(ServletContext servletContext, Map<String, String> initParams) {
+    public Dispatcher(@RUntainted ServletContext servletContext, Map<String, @RUntainted String> initParams) {
         this.servletContext = servletContext;
         this.initParams = initParams;
     }
