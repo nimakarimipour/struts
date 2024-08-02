@@ -18,6 +18,8 @@
  */
 package org.apache.struts2.dispatcher;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
+
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -42,6 +44,6 @@ public interface DispatcherErrorHandler {
      * @param code HTTP Error Code, see {@link javax.servlet.http.HttpServletResponse} for possible error codes
      * @param e Exception to report
      */
-    public void handleError(HttpServletRequest request, HttpServletResponse response, int code, Exception e);
+    public void handleError(HttpServletRequest request, HttpServletResponse response, int code, @RUntainted Exception e);
 
 }

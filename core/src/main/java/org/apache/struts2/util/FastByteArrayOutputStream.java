@@ -152,7 +152,7 @@ public class FastByteArrayOutputStream extends OutputStream {
         out.write(new String(bytes, 0, length));
     }
 
-    private static void decodeAndWriteOut(Writer writer, byte[] bytes, int length, ByteBuffer in, CharBuffer out, CharsetDecoder decoder, boolean endOfInput) throws IOException {
+    private static void decodeAndWriteOut(Writer writer, byte[] bytes, int length, ByteBuffer in, @RUntainted CharBuffer out, CharsetDecoder decoder, boolean endOfInput) throws IOException {
         // Append bytes to current buffer
         // Previous data maybe partially decoded, this part will appended to previous
         in.put(bytes, 0, length);

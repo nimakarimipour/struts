@@ -148,7 +148,7 @@ public class StrutsXmlConfigurationProvider extends XmlConfigurationProvider {
      * @see com.opensymphony.xwork2.config.providers.XmlConfigurationProvider#getConfigurationUrls
      */
     @Override
-    protected Iterator<URL> getConfigurationUrls(@RUntainted String fileName) throws IOException {
+    protected Iterator<@RUntainted URL> getConfigurationUrls(@RUntainted String fileName) throws IOException {
         URL url = null;
         if (baseDir != null) {
             url = findInFileSystem(fileName);
@@ -157,7 +157,7 @@ public class StrutsXmlConfigurationProvider extends XmlConfigurationProvider {
             }
         }
         if (url != null) {
-            List<URL> list = new ArrayList<>();
+            List<@RUntainted URL> list = new ArrayList<>();
             list.add(url);
             return list.iterator();
         } else {
@@ -165,7 +165,7 @@ public class StrutsXmlConfigurationProvider extends XmlConfigurationProvider {
         }
     }
 
-    protected URL findInFileSystem(@RUntainted String fileName) throws IOException {
+    protected @RUntainted URL findInFileSystem(@RUntainted String fileName) throws IOException {
         URL url = null;
         File file = new File(fileName);
         LOG.debug("Trying to load file: {}", file);

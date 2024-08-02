@@ -280,7 +280,7 @@ public class ActionContext implements Serializable {
      *
      * @return the Locale of the current action.
      */
-    public Locale getLocale() {
+    public @RUntainted Locale getLocale() {
         Locale locale = (Locale) get(LOCALE);
 
         if (locale == null) {

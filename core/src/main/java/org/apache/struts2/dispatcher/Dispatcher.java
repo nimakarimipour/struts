@@ -1028,7 +1028,7 @@ public class Dispatcher {
      * @param e        the Exception that is reported.
      * @since 2.3.17
      */
-    public void sendError(HttpServletRequest request, HttpServletResponse response, int code, Exception e) {
+    public void sendError(HttpServletRequest request, HttpServletResponse response, int code, @RUntainted Exception e) {
         errorHandler.handleError(request, response, code, e);
     }
 

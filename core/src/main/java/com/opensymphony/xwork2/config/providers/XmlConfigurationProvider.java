@@ -139,7 +139,7 @@ public abstract class XmlConfigurationProvider extends XmlDocConfigurationProvid
         LOG.debug("Loading action configurations from: {}", fileName);
         includedFileNames.add(fileName);
 
-        Iterator<URL> urls = getURLs(fileName);
+        Iterator<@RUntainted URL> urls = getURLs(fileName);
         if (urls == null) {
             return emptyList();
         }
@@ -150,8 +150,8 @@ public abstract class XmlConfigurationProvider extends XmlDocConfigurationProvid
         return finalDocs;
     }
 
-    protected Iterator<URL> getURLs(String fileName) {
-        Iterator<URL> urls = null;
+    protected Iterator<@RUntainted URL> getURLs(String fileName) {
+        Iterator<@RUntainted URL> urls = null;
         try {
             urls = getConfigurationUrls(fileName);
         } catch (IOException ex) {
@@ -164,11 +164,11 @@ public abstract class XmlConfigurationProvider extends XmlDocConfigurationProvid
         return urls;
     }
 
-    protected Iterator<URL> getConfigurationUrls(@RUntainted String fileName) throws IOException {
+    protected Iterator<@RUntainted URL> getConfigurationUrls(@RUntainted String fileName) throws IOException {
         return ClassLoaderUtil.getResources(fileName, XmlConfigurationProvider.class, false);
     }
 
-    protected List<Document> getDocs(Iterator<URL> urls, String fileName, Element includeElement) {
+    protected List<Document> getDocs(Iterator<@RUntainted URL> urls, String fileName, Element includeElement) {
         List<Document> docs = new ArrayList<>();
 
         while (urls.hasNext()) {
