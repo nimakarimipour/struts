@@ -144,7 +144,7 @@ public class Dispatcher {
     /**
      * Store state of StrutsConstants.STRUTS_MULTIPART_SAVEDIR setting.
      */
-    private String multipartSaveDir;
+    private @RUntainted String multipartSaveDir;
 
     /**
      * Stores the value of {@link StrutsConstants#STRUTS_MULTIPART_PARSER} setting
@@ -294,7 +294,7 @@ public class Dispatcher {
      * @param val New setting
      */
     @Inject(StrutsConstants.STRUTS_I18N_ENCODING)
-    public void setDefaultEncoding(String val) {
+    public void setDefaultEncoding(@RUntainted String val) {
         defaultEncoding = val;
     }
 
@@ -304,7 +304,7 @@ public class Dispatcher {
      * @param val New setting
      */
     @Inject(StrutsConstants.STRUTS_MULTIPART_SAVEDIR)
-    public void setMultipartSaveDir(String val) {
+    public void setMultipartSaveDir(@RUntainted String val) {
         multipartSaveDir = val;
     }
 
@@ -828,7 +828,7 @@ public class Dispatcher {
         String saveDir = multipartSaveDir.trim();
 
         if (saveDir.equals("")) {
-            File tempdir = (File) servletContext.getAttribute("javax.servlet.context.tempdir");
+            File tempdir = (@RUntainted File) servletContext.getAttribute("javax.servlet.context.tempdir");
             LOG.info("Unable to find 'struts.multipart.saveDir' property setting. Defaulting to javax.servlet.context.tempdir");
 
             if (tempdir != null) {
