@@ -150,7 +150,7 @@ public class ReloadingClassLoader extends ClassLoader {
         return delegate.getResourceAsStream(name);
     }
 
-    public @RPolyTainted @RUntainted Class loadClass(@RPolyTainted @RUntainted String name) throws ClassNotFoundException {
+    public Class loadClass(@RUntainted String name) throws ClassNotFoundException {
         return isAccepted(name) ? delegate.loadClass(name) : parent.loadClass(name);
     }
 
