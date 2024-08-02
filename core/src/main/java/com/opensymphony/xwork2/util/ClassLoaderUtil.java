@@ -174,7 +174,7 @@ public class ClassLoaderUtil {
      * @return class with for the given name
      * @throws ClassNotFoundException If the class cannot be found anywhere.
      */
-    public static Class loadClass(@Untainted String className, Class callingClass) throws ClassNotFoundException {
+    public static Class loadClass(String className, Class callingClass) throws ClassNotFoundException {
         try {
             return Thread.currentThread().getContextClassLoader().loadClass(className);
         } catch (ClassNotFoundException e) {
