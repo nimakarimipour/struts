@@ -44,7 +44,7 @@ public class FilterHostConfig implements HostConfig {
         return MakeIterator.convert(config.getInitParameterNames());
     }
 
-    public ServletContext getServletContext() {
+    public @RUntainted ServletContext getServletContext() {
         return config.getServletContext();
     }
 }

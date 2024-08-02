@@ -34,7 +34,7 @@ class HttpHeaders {
         return this;
     }
 
-    public HttpHeaders add(String name, Long value) {
+    public HttpHeaders add(@RUntainted String name, Long value) {
         dateHeaders.add(new DateHttpHeader(name, value));
         return this;
     }

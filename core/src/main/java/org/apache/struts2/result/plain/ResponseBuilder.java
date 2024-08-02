@@ -55,7 +55,7 @@ public class ResponseBuilder {
         return this;
     }
 
-    public ResponseBuilder withHeader(String name, Long value) {
+    public ResponseBuilder withHeader(@RUntainted String name, Long value) {
         headers.add(name, value);
         return this;
     }

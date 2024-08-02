@@ -21,10 +21,10 @@ import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 class DateHttpHeader implements HttpHeader<Long> {
 
-    private final String name;
+    private final @RUntainted String name;
     private final Long value;
 
-    public DateHttpHeader(String name, Long value) {
+    public DateHttpHeader(@RUntainted String name, Long value) {
         this.name = name;
         this.value = value;
     }
