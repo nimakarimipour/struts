@@ -164,7 +164,7 @@ public abstract class XmlConfigurationProvider extends XmlDocConfigurationProvid
         return urls;
     }
 
-    protected Iterator<URL> getConfigurationUrls(String fileName) throws IOException {
+    protected Iterator<URL> getConfigurationUrls(@RUntainted String fileName) throws IOException {
         return ClassLoaderUtil.getResources(fileName, XmlConfigurationProvider.class, false);
     }
 

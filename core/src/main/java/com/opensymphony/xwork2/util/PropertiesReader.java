@@ -25,6 +25,8 @@ import java.io.StringWriter;
 import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
+
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RPolyTainted;
 import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 
 /**
@@ -133,7 +135,7 @@ public class PropertiesReader extends LineNumberReader {
      * @return A string containing a property value or null
      * @throws IOException in case of an I/O error
      */
-    public String readProperty() throws IOException {
+    public @RUntainted String readProperty() throws IOException {
         commentLines.clear();
         StringBuilder buffer = new StringBuilder();
 
@@ -181,7 +183,7 @@ public class PropertiesReader extends LineNumberReader {
         }
 
         // parse the line
-        String[] property = parseProperty(line);
+        @RUntainted String[] property = parseProperty(line);
         propertyName = unescapeJava(property[0]);
         propertyValue = unescapeJava(property[1], delimiter);
         return true;
@@ -245,11 +247,11 @@ public class PropertiesReader extends LineNumberReader {
      * @return an array with the property's key and value
      * @since 1.2
      */
-    private String[] parseProperty(String line) {
+    private @RPolyTainted String[] parseProperty(@RPolyTainted String line) {
         // sorry for this spaghetti code, please replace it as soon as
         // possible with a regexp when the Java 1.3 requirement is dropped
 
-        String[] result = new String[2];
+        @RPolyTainted String[] result = new String[2];
         StringBuilder key = new StringBuilder();
         StringBuilder value = new StringBuilder();
 

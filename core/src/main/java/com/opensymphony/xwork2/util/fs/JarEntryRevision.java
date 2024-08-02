@@ -19,6 +19,7 @@
 package com.opensymphony.xwork2.util.fs;
 
 import com.opensymphony.xwork2.FileManager;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -31,7 +32,7 @@ public class JarEntryRevision extends Revision {
 
     private static Logger LOG = LogManager.getLogger(JarEntryRevision.class);
 
-    private URL jarFileURL;
+    private @RUntainted URL jarFileURL;
     private long lastModified;
 
     public static Revision build(URL fileUrl, FileManager fileManager) {
@@ -49,7 +50,7 @@ public class JarEntryRevision extends Revision {
         }
     }
 
-    private JarEntryRevision(URL jarFileURL, long lastModified) {
+    private JarEntryRevision(@RUntainted URL jarFileURL, long lastModified) {
         if (jarFileURL == null) {
             throw new IllegalArgumentException("jarFileURL cannot be null");
         }

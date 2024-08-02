@@ -186,7 +186,7 @@ class StrutsJarURLConnection extends URLConnection implements AutoCloseable {
         }
     }
 
-    static StrutsJarURLConnection openConnection(URL url) throws IOException {
+    static StrutsJarURLConnection openConnection(@RUntainted URL url) throws IOException {
         return new StrutsJarURLConnection(url);
     }
 }
