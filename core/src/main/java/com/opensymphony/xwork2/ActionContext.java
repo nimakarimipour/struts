@@ -281,7 +281,7 @@ public class ActionContext implements Serializable {
      * @return the Locale of the current action.
      */
     public @RUntainted Locale getLocale() {
-        Locale locale = (Locale) get(LOCALE);
+        Locale locale = (@RUntainted Locale) get(LOCALE);
 
         if (locale == null) {
             locale = Locale.getDefault();
@@ -464,7 +464,7 @@ public class ActionContext implements Serializable {
      * @return current ServletResponse
      */
     public @RUntainted HttpServletResponse getServletResponse() {
-        return (HttpServletResponse) get(StrutsStatics.HTTP_RESPONSE);
+        return (@RUntainted HttpServletResponse) get(StrutsStatics.HTTP_RESPONSE);
     }
 
     /**
