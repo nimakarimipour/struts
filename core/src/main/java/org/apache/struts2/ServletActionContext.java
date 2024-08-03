@@ -138,7 +138,7 @@ public class ServletActionContext implements StrutsStatics {
      *
      * @return the servlet context.
      */
-    public static ServletContext getServletContext() {
+    public static @RUntainted ServletContext getServletContext() {
         return ActionContext.getContext().getServletContext();
     }
 

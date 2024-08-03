@@ -97,7 +97,7 @@ public class StrutsPrepareFilter implements StrutsStatics, Filter {
 
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
 
-        HttpServletRequest request = (HttpServletRequest) req;
+        HttpServletRequest request = (@RUntainted HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) res;
 
         boolean didWrap = false;

@@ -824,7 +824,7 @@ public class Dispatcher {
      *
      * @return the path to save uploaded files to
      */
-    protected String getSaveDir() {
+    protected @RUntainted String getSaveDir() {
         String saveDir = multipartSaveDir.trim();
 
         if (saveDir.equals("")) {
@@ -932,7 +932,7 @@ public class Dispatcher {
      * @see org.apache.struts2.dispatcher.multipart.MultiPartRequestWrapper
      * @since 2.3.17
      */
-    public HttpServletRequest wrapRequest(HttpServletRequest request) throws IOException {
+    public @RUntainted HttpServletRequest wrapRequest(@RUntainted HttpServletRequest request) throws IOException {
         // don't wrap more than once
         if (request instanceof StrutsRequestWrapper) {
             return request;

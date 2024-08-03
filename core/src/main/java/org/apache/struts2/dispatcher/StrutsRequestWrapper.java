@@ -24,6 +24,7 @@ import com.opensymphony.xwork2.util.ValueStack;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
 
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import static org.apache.commons.lang3.BooleanUtils.isTrue;
 
 /**
@@ -47,7 +48,7 @@ public class StrutsRequestWrapper extends HttpServletRequestWrapper {
      * The constructor
      * @param req The request
      */
-    public StrutsRequestWrapper(HttpServletRequest req) {
+    public StrutsRequestWrapper(@RUntainted HttpServletRequest req) {
         this(req, false);
     }
 
@@ -56,7 +57,7 @@ public class StrutsRequestWrapper extends HttpServletRequestWrapper {
      * @param req The request
      * @param disableRequestAttributeValueStackLookup flag for disabling request attribute value stack lookup (JSTL accessibility)
      */
-    public StrutsRequestWrapper(HttpServletRequest req, boolean disableRequestAttributeValueStackLookup) {
+    public StrutsRequestWrapper(@RUntainted HttpServletRequest req, boolean disableRequestAttributeValueStackLookup) {
         super(req);
         this.disableRequestAttributeValueStackLookup = disableRequestAttributeValueStackLookup;
     }

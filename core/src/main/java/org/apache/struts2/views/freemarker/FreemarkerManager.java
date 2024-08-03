@@ -260,7 +260,7 @@ public class FreemarkerManager {
         return contentType;
     }
 
-    public synchronized Configuration getConfiguration(ServletContext servletContext) {
+    public synchronized Configuration getConfiguration(@RUntainted ServletContext servletContext) {
         if (config == null) {
             try {
                 init(servletContext);

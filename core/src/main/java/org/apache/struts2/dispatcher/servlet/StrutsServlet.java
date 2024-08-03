@@ -63,7 +63,7 @@ public class StrutsServlet extends HttpServlet {
     }
 
     @Override
-    public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    public void service(@RUntainted HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
         try {
             prepare.createActionContext(request, response);

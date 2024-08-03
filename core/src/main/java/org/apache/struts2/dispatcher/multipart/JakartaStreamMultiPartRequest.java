@@ -190,7 +190,7 @@ public class JakartaStreamMultiPartRequest extends AbstractMultiPartRequest {
     /* (non-Javadoc)
      * @see org.apache.struts2.dispatcher.multipart.MultiPartRequest#parse(javax.servlet.http.HttpServletRequest, java.lang.String)
      */
-    public void parse(HttpServletRequest request, @RUntainted String saveDir) throws IOException {
+    public void parse(@RUntainted HttpServletRequest request, @RUntainted String saveDir) throws IOException {
         try {
             setLocale(request);
             processUpload(request, saveDir);
@@ -210,7 +210,7 @@ public class JakartaStreamMultiPartRequest extends AbstractMultiPartRequest {
      * @param saveDir location of the save dir
      * @throws Exception
      */
-    protected void processUpload(HttpServletRequest request, @RUntainted String saveDir) throws Exception {
+    protected void processUpload(@RUntainted HttpServletRequest request, @RUntainted String saveDir) throws Exception {
 
         // Sanity check that the request is a multi-part/form-data request.
         if (ServletFileUpload.isMultipartContent(request)) {

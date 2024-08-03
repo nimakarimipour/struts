@@ -116,7 +116,7 @@ public class StrutsPrepareAndExecuteFilter implements StrutsStatics, Filter {
 
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
 
-        HttpServletRequest request = (HttpServletRequest) req;
+        HttpServletRequest request = (@RUntainted HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) res;
 
         try {
@@ -133,7 +133,7 @@ public class StrutsPrepareAndExecuteFilter implements StrutsStatics, Filter {
         }
     }
 
-    private void tryHandleRequest(FilterChain chain, HttpServletRequest request, HttpServletResponse response, String uri) throws IOException, ServletException {
+    private void tryHandleRequest(FilterChain chain, @RUntainted HttpServletRequest request, HttpServletResponse response, String uri) throws IOException, ServletException {
         LOG.trace("Checking if: {} is a static resource", uri);
         boolean handled = execute.executeStaticResourceRequest(request, response);
         if (!handled) {
@@ -142,7 +142,7 @@ public class StrutsPrepareAndExecuteFilter implements StrutsStatics, Filter {
         }
     }
 
-    private void handleRequest(FilterChain chain, HttpServletRequest request, HttpServletResponse response, String uri) throws ServletException, IOException {
+    private void handleRequest(FilterChain chain, @RUntainted HttpServletRequest request, HttpServletResponse response, String uri) throws ServletException, IOException {
         prepare.setEncodingAndLocale(request, response);
         prepare.createActionContext(request, response);
         prepare.assignDispatcherToThread();

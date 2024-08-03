@@ -423,8 +423,8 @@ public class ActionContext implements Serializable {
      *
      * @return current ServletContext
      */
-    public ServletContext getServletContext() {
-        return (ServletContext) get(StrutsStatics.SERVLET_CONTEXT);
+    public @RUntainted ServletContext getServletContext() {
+        return (@RUntainted ServletContext) get(StrutsStatics.SERVLET_CONTEXT);
     }
 
     /**

@@ -21,6 +21,7 @@ package org.apache.struts2.dispatcher;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.util.ValueStack;
 import com.opensymphony.xwork2.util.ValueStackFactory;
+import edu.ucr.cs.riple.taint.ucrtainting.qual.RUntainted;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.struts2.RequestUtils;
@@ -135,7 +136,7 @@ public class PrepareOperations {
      * @return The new request, if there is one
      * @throws ServletException on any servlet related error
      */
-    public HttpServletRequest wrapRequest(HttpServletRequest request) throws ServletException {
+    public @RUntainted HttpServletRequest wrapRequest(@RUntainted HttpServletRequest request) throws ServletException {
         incrementRecursionCounter(request, WRAP_COUNTER);
         try {
             // Wrap request first, just in case it is multipart/form-data

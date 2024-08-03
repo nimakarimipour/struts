@@ -75,7 +75,7 @@ public class MultiPartRequestWrapper extends StrutsRequestWrapper {
      * @param provider locale provider
      * @param disableRequestAttributeValueStackLookup disable the request attribute value stack lookup
      */
-    public MultiPartRequestWrapper(MultiPartRequest multiPartRequest, HttpServletRequest request,
+    public MultiPartRequestWrapper(MultiPartRequest multiPartRequest, @RUntainted HttpServletRequest request,
                                    @RUntainted String saveDir, LocaleProvider provider,
                                    boolean disableRequestAttributeValueStackLookup) {
         super(request, disableRequestAttributeValueStackLookup);
@@ -94,7 +94,7 @@ public class MultiPartRequestWrapper extends StrutsRequestWrapper {
         } 
     }
 
-    public MultiPartRequestWrapper(MultiPartRequest multiPartRequest, HttpServletRequest request, @RUntainted String saveDir, LocaleProvider provider) {
+    public MultiPartRequestWrapper(MultiPartRequest multiPartRequest, @RUntainted HttpServletRequest request, @RUntainted String saveDir, LocaleProvider provider) {
         this(multiPartRequest, request, saveDir, provider, false);
     }
 

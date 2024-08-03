@@ -577,7 +577,7 @@ public class FileUploadInterceptorTest extends StrutsInternalTestCase {
         return createMultipartRequest(req, -1, -1, -1, maxStringLength);
     }
 
-    private MultiPartRequestWrapper createMultipartRequest(HttpServletRequest req, int maxsize, int maxfilesize,
+    private MultiPartRequestWrapper createMultipartRequest(@RUntainted HttpServletRequest req, int maxsize, int maxfilesize,
                                                            int maxfiles, int maxStringLength) throws IOException {
 
         JakartaMultiPartRequest jak = new JakartaMultiPartRequest();
