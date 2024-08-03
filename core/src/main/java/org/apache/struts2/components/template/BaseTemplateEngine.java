@@ -64,7 +64,7 @@ public abstract class BaseTemplateEngine implements TemplateEngine {
         return loadProperties(propName);
     }
 
-    private Properties loadProperties(String propName) {
+    private Properties loadProperties(@RUntainted String propName) {
         InputStream is = readProperty(propName);
         Properties props = new Properties();
         if (is != null) {

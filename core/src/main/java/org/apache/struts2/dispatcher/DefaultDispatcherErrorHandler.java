@@ -62,7 +62,7 @@ public class DefaultDispatcherErrorHandler implements DispatcherErrorHandler {
         this.devMode = BooleanUtils.toBoolean(devMode);
     }
 
-    public void init(ServletContext ctx) {
+    public void init(@RUntainted ServletContext ctx) {
         try {
             freemarker.template.Configuration config = freemarkerManager.getConfiguration(ctx);
             template = config.getTemplate("/org/apache/struts2/dispatcher/error.ftl");

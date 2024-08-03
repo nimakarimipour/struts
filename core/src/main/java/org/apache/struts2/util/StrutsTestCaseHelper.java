@@ -72,7 +72,7 @@ public class StrutsTestCaseHelper {
     }
 
     private static class MockErrorHandler implements DispatcherErrorHandler {
-        public void init(ServletContext ctx) {
+        public void init(@RUntainted ServletContext ctx) {
             // ignore
         }
 

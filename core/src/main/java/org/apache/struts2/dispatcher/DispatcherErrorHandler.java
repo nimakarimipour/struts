@@ -34,7 +34,7 @@ public interface DispatcherErrorHandler {
      * Init instance after creating {@link org.apache.struts2.dispatcher.Dispatcher}
      * @param ctx current {@link javax.servlet.ServletContext}
      */
-    public void init(ServletContext ctx);
+    public void init(@RUntainted ServletContext ctx);
 
     /**
      * Handle passed error code or exception
